@@ -1,7 +1,6 @@
 #include "Init.h"
 #define Systick_DELAY 100
 
-
 void delayMs (unsigned int delay);
 void toggle_red(void);
 void toggle_blue(void);
