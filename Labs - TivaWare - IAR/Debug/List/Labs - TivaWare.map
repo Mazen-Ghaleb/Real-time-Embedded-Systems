@@ -1,0 +1,254 @@
+###############################################################################
+#
+# IAR ELF Linker V9.10.2.313/W64 for ARM                  06/Mar/2022  08:50:41
+# Copyright 2007-2021 IAR Systems AB.
+#
+#    Output file  =
+#        C:\Users\mazenmoussa\Desktop\Repos\Real-time-Embedded-Systems\Labs -
+#        TivaWare - IAR\Debug\Exe\Labs - TivaWare.out
+#    Map file     =
+#        C:\Users\mazenmoussa\Desktop\Repos\Real-time-Embedded-Systems\Labs -
+#        TivaWare - IAR\Debug\List\Labs - TivaWare.map
+#    Command line =
+#        -f "C:\Users\mazenmoussa\Desktop\Repos\Real-time-Embedded-Systems\Labs
+#        - TivaWare - IAR\Debug\Exe\Labs - TivaWare.out.rsp"
+#        ("C:\Users\mazenmoussa\Desktop\Repos\Real-time-Embedded-Systems\Labs -
+#        TivaWare - IAR\Debug\Obj\Init.o"
+#        "C:\Users\mazenmoussa\Desktop\Repos\Real-time-Embedded-Systems\Labs -
+#        TivaWare - IAR\Debug\Obj\main.o"
+#        "C:\Users\mazenmoussa\Desktop\Repos\Real-time-Embedded-Systems\Labs -
+#        TivaWare - IAR\Debug\Obj\startup_ewarm.o" --no_out_extension -o
+#        "C:\Users\mazenmoussa\Desktop\Repos\Real-time-Embedded-Systems\Labs -
+#        TivaWare - IAR\Debug\Exe\Labs - TivaWare.out" --redirect
+#        _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb --map
+#        "C:\Users\mazenmoussa\Desktop\Repos\Real-time-Embedded-Systems\Labs -
+#        TivaWare - IAR\Debug\List\Labs - TivaWare.map" --config "C:\Program
+#        Files\IAR Systems\Embedded Workbench
+#        9.0\arm\config\linker\TexasInstruments\TM4C123GH6.icf" --semihosting
+#        C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\ewarm\Exe\driverlib.a
+#        --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** MESSAGES
+***
+
+Warning[Lt009]: Inconsistent wchar_t size
+            gpio.o(driverlib.a) and 4 other objects in driverlib.a have wchar_t
+                      size 16 bits
+            Init.o and 15 other objects, some of them in dl7M_tln.a and 11
+                      other libraries have wchar_t size 32 bits
+
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because some modules are built with
+size limitations (and not runtime checking), and --advanced_heap
+was not specified.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x0 { ro section .intvec };
+"P1":  place in [from 0x0 to 0x3'ffff] { ro };
+define block CSTACK with size = 4K, alignment = 8 { };
+define block HEAP with size = 8K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'7fff] {
+          rw, block CSTACK, block HEAP };
+do not initialize { rw section .noinit };
+
+  Section          Kind         Address   Size  Object
+  -------          ----         -------   ----  ------
+"A0":                                    0x26c
+  .intvec          const            0x0  0x26c  startup_ewarm.o [1]
+                                - 0x26c  0x26c
+
+"P1":                                    0x50c
+  .text            ro code        0x26c  0x1f0  gpio.o [3]
+  .text            ro code        0x45c   0xa4  main.o [1]
+  .text            ro code        0x500   0x94  Init.o [1]
+  .text            ro code        0x594   0x44  sysctl.o [3]
+  .text            ro code        0x5d8   0x58  systick.o [3]
+  .text            ro code        0x630   0x30  interrupt.o [3]
+  .text            ro code        0x660   0x38  zero_init3.o [5]
+  .text            ro code        0x698   0x28  data_init.o [5]
+  .text            ro code        0x6c0   0x22  fpinit_M.o [4]
+  .iar.init_table  const          0x6e4   0x10  - Linker created -
+  .text            ro code        0x6f4   0x1e  startup_ewarm.o [1]
+  .text            ro code        0x714   0x1c  cstartup_M.o [5]
+  .text            ro code        0x730   0x1e  cmain.o [5]
+  .text            ro code        0x74e    0x4  low_level_init.o [2]
+  .text            ro code        0x752    0x4  exit.o [2]
+  .text            ro code        0x758    0xa  cexit.o [5]
+  .text            ro code        0x764   0x14  exit.o [6]
+  .rodata          const          0x778    0x0  zero_init3.o [5]
+                                - 0x778  0x50c
+
+"P2", part 1 of 2:                       0x270
+  VTABLE           zero     0x2000'0000  0x26c  interrupt.o [3]
+  .bss             zero     0x2000'026c    0x4  Init.o [1]
+                          - 0x2000'0270  0x270
+
+"P2", part 2 of 2:                       0x200
+  .noinit          uninit   0x2000'0270  0x200  startup_ewarm.o [1]
+                          - 0x2000'0470  0x200
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+        0x778     0x3'ffff  0x3'f888
+  0x2000'0470  0x2000'7fff    0x7b90
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x270:
+          0x2000'0000  0x270
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module            ro code  ro data  rw data
+    ------            -------  -------  -------
+command line/config:
+    -------------------------------------------
+    Total:
+
+C:\Users\mazenmoussa\Desktop\Repos\Real-time-Embedded-Systems\Labs - TivaWare - IAR\Debug\Obj: [1]
+    Init.o                148                 4
+    main.o                164
+    startup_ewarm.o        30      620      512
+    -------------------------------------------
+    Total:                342      620      516
+
+dl7M_tln.a: [2]
+    exit.o                  4
+    low_level_init.o        4
+    -------------------------------------------
+    Total:                  8
+
+driverlib.a: [3]
+    gpio.o                496
+    interrupt.o            48               620
+    sysctl.o               68
+    systick.o              88
+    -------------------------------------------
+    Total:                700               620
+
+m7M_tls.a: [4]
+    fpinit_M.o             34
+    -------------------------------------------
+    Total:                 34
+
+rt7M_tl.a: [5]
+    cexit.o                10
+    cmain.o                30
+    cstartup_M.o           28
+    data_init.o            40
+    zero_init3.o           56
+    -------------------------------------------
+    Total:                164
+
+shb_l.a: [6]
+    exit.o                 20
+    -------------------------------------------
+    Total:                 20
+
+    Gaps                    6        2
+    Linker created                  16
+-----------------------------------------------
+    Grand Total:        1'274      638    1'136
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base         0x6e4          --   Gb  - Linker created -
+.iar.init_table$$Limit        0x6f4          --   Gb  - Linker created -
+?main                         0x731         Code  Gb  cmain.o [5]
+CalcTicks                     0x501    0xa  Code  Gb  Init.o [1]
+FaultISR                      0x70f    0x2  Code  Lc  startup_ewarm.o [1]
+GPIODirModeSet                0x26d   0x28  Code  Gb  gpio.o [3]
+GPIOPadConfigSet              0x295  0x174  Code  Gb  gpio.o [3]
+GPIOPinRead                   0x409    0x6  Code  Gb  gpio.o [3]
+GPIOPinTypeGPIOInput          0x419   0x14  Code  Gb  gpio.o [3]
+GPIOPinTypeGPIOOutput         0x42d    0xa  Code  Gb  gpio.o [3]
+GPIOPinWrite                  0x40f    0x6  Code  Gb  gpio.o [3]
+IntDefaultHandler             0x711    0x2  Code  Lc  startup_ewarm.o [1]
+IntRegister                   0x631   0x26  Code  Gb  interrupt.o [3]
+NmiSR                         0x70d    0x2  Code  Lc  startup_ewarm.o [1]
+PortFInit                     0x517   0x3c  Code  Gb  Init.o [1]
+Region$$Table$$Base           0x6e4          --   Gb  - Linker created -
+Region$$Table$$Limit          0x6f4          --   Gb  - Linker created -
+ResetISR                      0x6f5   0x14  Code  Gb  startup_ewarm.o [1]
+SysCtlPeripheralEnable        0x5b5    0x8  Code  Gb  sysctl.o [3]
+SysCtlPeripheralReady         0x595    0x8  Code  Gb  sysctl.o [3]
+SysTickDisable                0x5e5    0xc  Code  Gb  systick.o [3]
+SysTickEnable                 0x5d9    0xc  Code  Gb  systick.o [3]
+SysTickIntDisable             0x613    0xc  Code  Gb  systick.o [3]
+SysTickIntEnable              0x607    0xc  Code  Gb  systick.o [3]
+SysTickIntRegister            0x5f1   0x16  Code  Gb  systick.o [3]
+SysTickPeriodSet              0x61f    0x8  Code  Gb  systick.o [3]
+Systick_Handler               0x50b    0xc  Code  Gb  Init.o [1]
+Systick_Init                  0x553   0x26  Code  Gb  Init.o [1]
+__cmain                       0x731         Code  Gb  cmain.o [5]
+__exit                        0x765   0x14  Code  Gb  exit.o [6]
+__iar_data_init3              0x699   0x28  Code  Gb  data_init.o [5]
+__iar_init_vfp                0x6c1         Code  Gb  fpinit_M.o [4]
+__iar_program_start           0x715         Code  Gb  cstartup_M.o [5]
+__iar_zero_init3              0x661   0x38  Code  Gb  zero_init3.o [5]
+__low_level_init              0x74f    0x4  Code  Gb  low_level_init.o [2]
+__vector_table                  0x0  0x26c  Data  Gb  startup_ewarm.o [1]
+_call_main                    0x73d         Code  Gb  cmain.o [5]
+_exit                         0x759         Code  Gb  cexit.o [5]
+blink_blue                    0x4f1   0x10  Code  Gb  main.o [1]
+blink_red                     0x4e1   0x10  Code  Gb  main.o [1]
+delayMs                       0x477   0x1a  Code  Gb  main.o [1]
+exit                          0x753    0x4  Code  Gb  exit.o [2]
+g_pfnRAMVectors         0x2000'0000  0x26c  Data  Lc  interrupt.o [3]
+main                          0x45d   0x1a  Code  Gb  main.o [1]
+pui32Stack              0x2000'0270  0x200  Data  Lc  startup_ewarm.o [1]
+tickcounter             0x2000'026c    0x4  Data  Gb  Init.o [1]
+toggle_blue                   0x4b7   0x26  Code  Gb  main.o [1]
+toggle_red                    0x491   0x26  Code  Gb  main.o [1]
+
+
+[1] = C:\Users\mazenmoussa\Desktop\Repos\Real-time-Embedded-Systems\Labs - TivaWare - IAR\Debug\Obj
+[2] = dl7M_tln.a
+[3] = driverlib.a
+[4] = m7M_tls.a
+[5] = rt7M_tl.a
+[6] = shb_l.a
+
+  1'274 bytes of readonly  code memory
+    638 bytes of readonly  data memory
+  1'136 bytes of readwrite data memory
+
+Errors: none
+Warnings: 1

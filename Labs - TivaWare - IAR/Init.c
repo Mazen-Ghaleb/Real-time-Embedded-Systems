@@ -1,7 +1,14 @@
+#include "Init.h"
+
+unsigned int tickcounter	= 0U;
 
 uint32 CalcTicks(uint32 milliseconds){
 return ((milliseconds) * (16 * 1000))-1 ;
 }	
+
+void Systick_Handler(void) {
+    tickcounter++;
+  }
 
 void PortFInit(void) {
   SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOF);
@@ -13,9 +20,10 @@ void PortFInit(void) {
   GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3);
 }
 
-void Systick_Init(int delayMs) {
+void Systick_Init(uint32 delayMs) {
   SysTickDisable();
   SysTickIntDisable();
+	SysTickIntRegister(Systick_Handler);
   SysTickPeriodSet(CalcTicks(delayMs));
   SysTickIntEnable();
   SysTickEnable();

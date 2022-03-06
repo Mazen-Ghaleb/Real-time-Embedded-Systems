@@ -39,7 +39,7 @@
 // Forward declaration of the default fault handlers.
 //
 //*****************************************************************************
-void SystickHandler(void);
+//void SystickHandler(void);
 void ResetISR(void);
 static void NmiSR(void);
 static void FaultISR(void);
@@ -97,7 +97,7 @@ __root const uVectorEntry __vector_table[] @ ".intvec" =
     IntDefaultHandler,                      // Debug monitor handler
     0,                                      // Reserved
     IntDefaultHandler,                      // The PendSV handler
-    SystickHandler,                         // The SysTick handler
+    IntDefaultHandler,                         // The SysTick handler
     IntDefaultHandler,                      // GPIO Port A
     IntDefaultHandler,                      // GPIO Port B
     IntDefaultHandler,                      // GPIO Port C

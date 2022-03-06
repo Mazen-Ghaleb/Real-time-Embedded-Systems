@@ -14,21 +14,40 @@ int main()
   __asm("CPSID I");
   Systick_Init(Systick_DELAY);
   __asm("CPSIE I");
-  blink_red();
+  //GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_2,GPIO_PIN_2);
+	blink_red();
+	blink_blue();
   while(1){}
 }
-	
-void delayMs (unsigned int delay) {
+
+void delayMs (unsigned int delay){
 unsigned int start = tickcounter;
-while (start < tickcounter + (delay/Systick_DELAY)) {}
+while (tickcounter - start < (delay/Systick_DELAY)) {}
+	}
+
+
+//void toggle_red(void){  
+//    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1,~GPIOPinRead(GPIO_PORTF_BASE,GPIO_PIN_1));
+//}
+
+//void toggle_blue(void){  
+//    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_2,GPIOPinRead(GPIO_PORTF_BASE,GPIO_PIN_2));
+//}
+
+void toggle_red()
+{
+  if(GPIOPinRead(GPIO_PORTF_BASE,GPIO_PIN_1) & (1<<1))
+    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1,0);
+  else
+    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1,GPIO_PIN_1);
 }
 
-void toggle_red(void){  
-    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1,!GPIOPinRead(GPIO_PORTF_BASE,GPIO_PIN_1));
-}
-
-void toggle_blue(void){  
-    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_2,!GPIOPinRead(GPIO_PORTF_BASE,GPIO_PIN_2));
+void toggle_blue()
+{
+  if(GPIOPinRead(GPIO_PORTF_BASE,GPIO_PIN_2) & (1<<2))
+    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_2,0);
+  else
+    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_2,GPIO_PIN_2);
 }
 
 void blink_red(void){
@@ -45,10 +64,3 @@ void blink_blue(void){
   }
 }
 
-//void toggle_red()
-//{
-//  if(GPIOPinRead(GPIO_PORTF_BASE,GPIO_PIN_1) & (1<<1))
-//    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1,0);
-//  else
-//    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1,GPIO_PIN_1);
-//}

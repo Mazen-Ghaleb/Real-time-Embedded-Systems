@@ -1,15 +1,15 @@
-"C:\Users\Mazen\Desktop\Mazen\Mazen Mostafa - College\Repos\Real-time-Embedded-Systems\Labs - TivaWare - IAR\startup_ewarm.c"
+"C:\Users\mazenmoussa\Desktop\Repos\Real-time-Embedded-Systems\Labs - TivaWare - IAR\startup_ewarm.c"
 -std=c11
 -ferror-limit=0
 -fbracket-depth=512
 -funsigned-char
 -MD
 -MF
-C:\Users\Mazen\Desktop\Mazen\Mazen Mostafa - College\Repos\Real-time-Embedded-Systems\Labs - TivaWare - IAR\Debug\BrowseInfo\startup_ewarm.pbi.dep
+C:\Users\mazenmoussa\Desktop\Repos\Real-time-Embedded-Systems\Labs - TivaWare - IAR\Debug\BrowseInfo\startup_ewarm.pbi.dep
 -o
-C:\Users\Mazen\Desktop\Mazen\Mazen Mostafa - College\Repos\Real-time-Embedded-Systems\Labs - TivaWare - IAR\Debug\BrowseInfo\startup_ewarm.pbi
+C:\Users\mazenmoussa\Desktop\Repos\Real-time-Embedded-Systems\Labs - TivaWare - IAR\Debug\BrowseInfo\startup_ewarm.pbi
 -I
-C:\Users\Mazen\Desktop\Mazen\Mazen Mostafa - College\Repos\Real-time-Embedded-Systems\Labs - TivaWare - IAR
+C:\Users\mazenmoussa\Desktop\Repos\Real-time-Embedded-Systems\Labs - TivaWare - IAR
 -I
 C:\ti\TivaWare_C_Series-2.2.0.295
 -I

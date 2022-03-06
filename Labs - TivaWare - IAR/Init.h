@@ -14,4 +14,7 @@
 
 uint32 CalcTicks(uint32 milliseconds);
 void PortFInit(void);
-void Systick_Init(int delayMs);
+void Systick_Init(uint32 delayMs);
+void Systick_Handler(void);
+
+extern unsigned int tickcounter;
