@@ -4,8 +4,8 @@
 void delayMs (unsigned int delay);
 void toggle_red(void);
 void toggle_blue(void);
-void blink_red(void) __attribute__((noreturn));
-void blink_blue(void) __attribute__((noreturn));
+void blink_red(void);
+void blink_blue(void);
 int main(void) __attribute__((noreturn));
 
 int main() 
@@ -14,7 +14,6 @@ int main()
   __asm("CPSID I");
   Systick_Init(Systick_DELAY);
   __asm("CPSIE I");
-  //GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_2,GPIO_PIN_2);
 	blink_red();
 	blink_blue();
   while(1){}
@@ -24,15 +23,6 @@ void delayMs (unsigned int delay){
 unsigned int start = tickcounter;
 while (tickcounter - start < (delay/Systick_DELAY)) {}
 	}
-
-
-//void toggle_red(void){  
-//    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1,~GPIOPinRead(GPIO_PORTF_BASE,GPIO_PIN_1));
-//}
-
-//void toggle_blue(void){  
-//    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_2,GPIOPinRead(GPIO_PORTF_BASE,GPIO_PIN_2));
-//}
 
 void toggle_red()
 {
