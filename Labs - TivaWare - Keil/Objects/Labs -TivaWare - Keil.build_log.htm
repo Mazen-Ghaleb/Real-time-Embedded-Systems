@@ -26,19 +26,44 @@ Project File Date:  03/06/2022
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
-Build target 'Project_TivaWare'
+Rebuild target 'Project_TivaWare'
 compiling Init.c...
-main.c(20): warning: code will never be executed [-Wunreachable-code]
-  while(1){}
-        ^
-main.c(53): warning: function 'blink_red' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+main.c(9): warning: no previous extern declaration for non-static variable 'sp_blinkRed' [-Wmissing-variable-declarations]
+uint32_t *sp_blinkRed = &stack_blinkRed[40];
+          ^
+main.c(9): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t *sp_blinkRed = &stack_blinkRed[40];
+^
+main.c(13): warning: no previous extern declaration for non-static variable 'sp_blinkBlue' [-Wmissing-variable-declarations]
+uint32_t *sp_blinkBlue = &stack_blinkBlue[40];
+          ^
+main.c(13): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t *sp_blinkBlue = &stack_blinkBlue[40];
+^
+main.c(71): warning: function 'blink_red' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
 void blink_red(void){
                     ^
-2 warnings generated.
+main.c(78): warning: function 'blink_blue' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+void blink_blue(void){
+                     ^
+main.c(8): warning: no previous extern declaration for non-static variable 'stack_blinkRed' [-Wmissing-variable-declarations]
+uint32_t stack_blinkRed[40];
+         ^
+main.c(8): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t stack_blinkRed[40];
+^
+main.c(12): warning: no previous extern declaration for non-static variable 'stack_blinkBlue' [-Wmissing-variable-declarations]
+uint32_t stack_blinkBlue[40];
+         ^
+main.c(12): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t stack_blinkBlue[40];
+^
+6 warnings generated.
 compiling main.c...
+assembling startup_rvmdk.S...
 linking...
-Program Size: Code=2160 RO-data=32 RW-data=620 ZI-data=364  
-".\Objects\Labs -TivaWare - Keil.axf" - 0 Error(s), 2 Warning(s).
+Program Size: Code=2416 RO-data=32 RW-data=1644 ZI-data=684  
+".\Objects\Labs -TivaWare - Keil.axf" - 0 Error(s), 6 Warning(s).
 
 <h2>Software Packages used:</h2>
 
