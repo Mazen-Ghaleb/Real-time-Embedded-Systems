@@ -1,6 +1,5 @@
 #include "types.h"
-#include <time.h>
-#include "stdint.h"
+#include <stdint.h>
 #include "stdbool.h"
 #include "driverlib/sysctl.h"
 #include "driverlib/gpio.h"
@@ -11,6 +10,9 @@
 #include "inc/hw_gpio.h"
 #include "tm4c123gh6pm.h"
 #include <driverlib/systick.h>
+#include "FreeRTOS.h"
+#include "task.h"
+#include "timers.h"
 
 uint32 CalcTicks(uint32 milliseconds);
 void PortFInit(void);
