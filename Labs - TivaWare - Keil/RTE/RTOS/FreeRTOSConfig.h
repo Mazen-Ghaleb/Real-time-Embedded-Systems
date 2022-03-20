@@ -47,7 +47,7 @@ extern uint32_t SystemCoreClock;
 #endif
 
 /* Constants that describe the hardware and memory usage. */
-#define configCPU_CLOCK_HZ                    (16000000)
+#define configCPU_CLOCK_HZ                    (SystemCoreClock)
 #define configTICK_RATE_HZ                    ((TickType_t)1)
 #define configTOTAL_HEAP_SIZE                 ((size_t)4096)
 #define configMINIMAL_STACK_SIZE              ((uint16_t)126)

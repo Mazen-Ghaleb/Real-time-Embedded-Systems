@@ -32,13 +32,13 @@ void toggle_blue()
 void blink_red(void *pvParameters){
   for(;;){
   toggle_red();
-  vTaskDelay(1000);
+  vTaskDelay(2000/ portTICK_RATE_MS);
   }
 }
 
 void blink_blue(void *pvParameters){
   for(;;){
   toggle_blue();
-  vTaskDelay(1000);
+  vTaskDelay(1000 / portTICK_RATE_MS);
   }
 }
