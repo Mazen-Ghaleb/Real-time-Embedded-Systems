@@ -28,3 +28,25 @@ void Systick_Init(uint32 delayMs) {
   SysTickIntEnable();
   SysTickEnable();
 }
+
+void toggle_red()
+{
+  if(GPIOPinRead(GPIO_PORTF_BASE,GPIO_PIN_1) & (1<<1))
+    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1,0);
+  else
+    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1,GPIO_PIN_1);
+}
+void toggle_blue()
+{
+  if(GPIOPinRead(GPIO_PORTF_BASE,GPIO_PIN_2) & (1<<2))
+    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_2,0);
+  else
+    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_2,GPIO_PIN_2);
+}
+void toggle_green()
+{
+  if(GPIOPinRead(GPIO_PORTF_BASE,GPIO_PIN_3) & (1<<3))
+    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_3,0);
+  else
+    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_3,GPIO_PIN_3);
+}
