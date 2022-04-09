@@ -28,12 +28,6 @@ Project File Date:  03/20/2022
 *** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Rebuild target 'Project_TivaWare'
 compiling freertos_evr.c...
-compiling list.c...
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/MemMang/heap_1.c(139): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-    configASSERT( pv == NULL );
-                              ^
-1 warning generated.
-compiling heap_1.c...
 Init.c(32): warning: no previous prototype for function 'toggle_red' [-Wmissing-prototypes]
 void toggle_red()
      ^
@@ -66,6 +60,7 @@ void toggle_green()
                  ^
 6 warnings generated.
 compiling Init.c...
+compiling list.c...
 main.c(17): warning: unused parameter 'pvParameters' [-Wunused-parameter]
 void blink_red(void *pvParameters){
                      ^
@@ -92,6 +87,46 @@ void blink_green(void *pvParameters){
                                     ^
 8 warnings generated.
 compiling main.c...
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/MemMang/heap_1.c(139): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    configASSERT( pv == NULL );
+                              ^
+1 warning generated.
+compiling heap_1.c...
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(231): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    configASSERT( uxCriticalNesting == ~0UL );
+                                             ^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(297): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    configASSERT( configMAX_SYSCALL_INTERRUPT_PRIORITY );
+                                                        ^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(302): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    configASSERT( portCPUID != portCORTEX_M7_r0p1_ID );
+                                                      ^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(303): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    configASSERT( portCPUID != portCORTEX_M7_r0p0_ID );
+                                                      ^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(353): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                    configASSERT( ( portMAX_PRIGROUP_BITS - ulMaxPRIGROUPValue ) == configPRIO_BITS );
+                                                                                                     ^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(364): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+            *pucFirstUserPriorityRegister = ulOriginalPriority;
+                                          ~ ^~~~~~~~~~~~~~~~~~
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(406): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    configASSERT( uxCriticalNesting == 1000UL );
+                                               ^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(422): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        configASSERT( ( portNVIC_INT_CTRL_REG & portVECTACTIVE_MASK ) == 0 );
+                                                                            ^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(429): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    configASSERT( uxCriticalNesting );
+                                     ^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(766): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+            configASSERT( ucCurrentPriority >= ucMaxSysCallPriority );
+                                                                     ^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(782): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        configASSERT( ( portAIRCR_REG & portPRIORITY_GROUP_MASK ) <= ulMaxPRIGROUPValue );
+                                                                                         ^
+11 warnings generated.
+compiling port.c...
 RTE/Device/TM4C123GH6PM/system_TM4C123.c(13): warning: In file included from...
 C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123\TM4C123.h(98): warning: In file included from...
 C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(298): warning: anonymous unions are a C11 extension [-Wc11-extensions]
@@ -228,42 +263,6 @@ C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C12
   ^
 44 warnings generated.
 compiling system_TM4C123.c...
-assembling startup_TM4C123.s...
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(231): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-    configASSERT( uxCriticalNesting == ~0UL );
-                                             ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(297): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-    configASSERT( configMAX_SYSCALL_INTERRUPT_PRIORITY );
-                                                        ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(302): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-    configASSERT( portCPUID != portCORTEX_M7_r0p1_ID );
-                                                      ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(303): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-    configASSERT( portCPUID != portCORTEX_M7_r0p0_ID );
-                                                      ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(353): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-                    configASSERT( ( portMAX_PRIGROUP_BITS - ulMaxPRIGROUPValue ) == configPRIO_BITS );
-                                                                                                     ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(364): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
-            *pucFirstUserPriorityRegister = ulOriginalPriority;
-                                          ~ ^~~~~~~~~~~~~~~~~~
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(406): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-    configASSERT( uxCriticalNesting == 1000UL );
-                                               ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(422): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-        configASSERT( ( portNVIC_INT_CTRL_REG & portVECTACTIVE_MASK ) == 0 );
-                                                                            ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(429): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-    configASSERT( uxCriticalNesting );
-                                     ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(766): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-            configASSERT( ucCurrentPriority >= ucMaxSysCallPriority );
-                                                                     ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(782): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-        configASSERT( ( portAIRCR_REG & portPRIORITY_GROUP_MASK ) <= ulMaxPRIGROUPValue );
-                                                                                         ^
-11 warnings generated.
-compiling port.c...
 C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(281): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         configASSERT( xReturn );
                                ^
@@ -320,6 +319,7 @@ C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c
                                        ^
 18 warnings generated.
 compiling timers.c...
+assembling startup_TM4C123.s...
 C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(272): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( pxQueue );
                            ^
@@ -845,7 +845,7 @@ C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(
 113 warnings generated.
 compiling tasks.c...
 linking...
-Program Size: Code=12214 RO-data=702 RW-data=8 ZI-data=5056  
+Program Size: Code=12250 RO-data=702 RW-data=8 ZI-data=5056  
 ".\Objects\Labs -TivaWare - Keil.axf" - 0 Error(s), 259 Warning(s).
 
 <h2>Software Packages used:</h2>
@@ -886,13 +886,13 @@ Package Vendor: Keil
       Include file:  Config\ARMCM\FreeRTOSConfig.h
 
    * Component: ARM.FreeRTOS::RTOS:Core:Cortex-M:10.4.6
-      Include file:  Source\include\FreeRTOS.h
-      Include file:  Source\include\queue.h
-      Source file:   Source\tasks.c
-      Include file:  Source\include\semphr.h
       Include file:  Source\include\task.h
+      Include file:  Source\include\FreeRTOS.h
       Source file:   Source\list.c
       Source file:   Source\queue.c
+      Include file:  Source\include\semphr.h
+      Source file:   Source\tasks.c
+      Include file:  Source\include\queue.h
       Source file:   Source\portable\GCC\ARM_CM4F\port.c
       Source file:   CMSIS\RTOS2\FreeRTOS\Source\freertos_evr.c
 
@@ -906,10 +906,10 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.5.0
 
    * Component: Keil::Device:Startup:1.0.1
-      Source file:   Device\Source\system_TM4C123.c
       Include file:  Device\Include\TM4C123\TM4C123.h
       Source file:   Device\Source\ARM\startup_TM4C123.s
-Build Time Elapsed:  00:00:03
+      Source file:   Device\Source\system_TM4C123.c
+Build Time Elapsed:  00:00:04
 </pre>
 </body>
 </html>
