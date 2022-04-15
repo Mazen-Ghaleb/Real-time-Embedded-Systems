@@ -9,6 +9,10 @@ static void blink_green(void *pvParameters);
 int main() 
 { 
   PortFInit();
+	toggle_red();
+	toggle_green();
+	toggle_blue();
+	
 	xTaskCreate(blink_red,"Blink Red", configMINIMAL_STACK_SIZE,NULL , 1, NULL);
 	xTaskCreate(blink_green,"Blink Green", configMINIMAL_STACK_SIZE,NULL , 1, NULL);
 	
@@ -29,5 +33,7 @@ void blink_green(void *pvParameters){
 }
 
 void vApplicationIdleHook(){
+	for(;;){
 	toggle_blue();
-}
+		}
+	}
