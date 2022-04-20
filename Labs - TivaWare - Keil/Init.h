@@ -1,21 +1,27 @@
 #include "types.h"
+#include "tm4c123gh6pm.h"
 #include <stdint.h>
 #include "stdbool.h"
 #include "driverlib/sysctl.h"
 #include "driverlib/gpio.h"
 #include "driverlib/timer.h"
 #include "driverlib/interrupt.h"
+#include "driverlib/uart.h"
+#include <driverlib/systick.h>
 #include "inc/hw_memmap.h"
 #include "inc/hw_types.h"
 #include "inc/hw_gpio.h"
-#include "tm4c123gh6pm.h"
-#include <driverlib/systick.h>
+#include "inc/hw_sysctl.h"
 #include "FreeRTOS.h"
 #include "task.h"
 #include "timers.h"
+#include "queue.h"
+#include "basic_io.h"
 
 uint32 CalcTicks(uint32 milliseconds);
+void PortAInit(void);
 void PortFInit(void);
+void UART0Init(void);
 void Systick_Init(uint32 delayMs);
 void Systick_Handler(void);
 

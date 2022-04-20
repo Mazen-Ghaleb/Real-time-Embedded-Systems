@@ -1,39 +1,80 @@
 #include "Init.h"
 
 void vApplicationIdleHook();
-void toggle_red(void);
-static void blink_red(void *pvParameters);
-static void blink_blue(void *pvParameters);
-static void blink_green(void *pvParameters);
+static void BTN1_CHK_TASK(void *pvParameters);
+static void BTN2_CHK_TASK(void *pvParameters);
+static void UART_TASK(void *pvParameters);
+xQueueHandle xQueue;
+int counter = 0;
 
 int main() 
 { 
+	PortAInit();
   PortFInit();
-	toggle_red();
-	toggle_green();
-	toggle_blue();
+	UART0Init();
+	xQueue = xQueueCreate (5,sizeof(long));
 	
-	xTaskCreate(blink_red,"Blink Red", configMINIMAL_STACK_SIZE,NULL , 1, NULL);
-	xTaskCreate(blink_green,"Blink Green", configMINIMAL_STACK_SIZE,NULL , 1, NULL);
-	
+	if (xQueue != NULL) {
+	xTaskCreate(BTN1_CHK_TASK,"Button 1 Check", configMINIMAL_STACK_SIZE,NULL , 1, NULL);
+	xTaskCreate(BTN2_CHK_TASK,"Button 2 Check", configMINIMAL_STACK_SIZE,NULL , 1, NULL);
+	//xTaskCreate(UART_TASK,"UART", configMINIMAL_STACK_SIZE,NULL , 2, NULL);
+
 	vTaskStartScheduler();
+	}
+	else {
+	// Queue couldn't be created
+	}
 }
 
-void blink_red(void *pvParameters){
+void BTN1_CHK_TASK(void *pvParameters){
   for(;;){
-  toggle_red();
-  vTaskDelay(1000/ portTICK_RATE_MS);
+		//vTaskDelay(200/ portTICK_RATE_MS);
+		if (!GPIOPinRead(GPIO_PORTF_BASE, GPIO_PIN_0)){
+			  //vTaskDelay(200/ portTICK_RATE_MS);
+				for(int i = 0; i < 700000; i++){}
+				if (!GPIOPinRead(GPIO_PORTF_BASE, GPIO_PIN_0)){
+						counter++;
+						//printf("Counter increased to %d. \n",counter);
+				}
+		}
   }
 }
-void blink_green(void *pvParameters){
+void BTN2_CHK_TASK(void *pvParameters){
+  portBASE_TYPE xStatus;
+	for(;;){
+		//vTaskDelay(200/ portTICK_RATE_MS);
+		if (!GPIOPinRead(GPIO_PORTF_BASE, GPIO_PIN_4)){
+			  //vTaskDelay(200/ portTICK_RATE_MS);
+				for(int i = 0; i < 700000; i++){}
+				if (!GPIOPinRead(GPIO_PORTF_BASE, GPIO_PIN_4)){
+						xStatus = xQueueSendToBack(xQueue,&counter ,0);
+						if (xStatus != pdPASS){
+								//vPrintString( "Could not receive from the queue.\r\n" );
+						}
+						else {
+							//printf("Value stored in the Queue is %d. \n",counter);
+							counter = 0 ;
+						}
+				}
+		}
+  }
+}
+void UART_TASK(void *pvParameters){
+	long ReceivedValue;
+	portBASE_TYPE xStatus;
+	const portTickType xTicksToWait = 100/ portTICK_RATE_MS;
   for(;;){
-  toggle_green();
+	xStatus = xQueueReceive(xQueue,ReceivedValue,xTicksToWait);
+	if (xStatus == pdPASS) {
+		//UARTCharPut(UART0_BASE, (unsigned char)* ReceivedValue));
+	}
+	else {
+		vPrintString("Could not receive from the queue. \n");
+	}
   vTaskDelay(2000/ portTICK_RATE_MS);
   }
 }
 
 void vApplicationIdleHook(){
-	for(;;){
-	toggle_blue();
-		}
-	}
+	__asm("wfi\n");
+}

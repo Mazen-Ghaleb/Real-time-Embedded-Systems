@@ -19,7 +19,24 @@ void PortFInit(void) {
   GPIOPadConfigSet(GPIO_PORTF_BASE, GPIO_PIN_0 | GPIO_PIN_4, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_STD_WPU);
   GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3);
 }
+void PortAInit(void) {
+  SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA);
+  while(!SysCtlPeripheralReady(SYSCTL_PERIPH_GPIOA)) {}
+  HWREG(GPIO_PORTA_BASE+GPIO_O_LOCK) = GPIO_LOCK_KEY;
+  HWREG(GPIO_PORTA_BASE+GPIO_O_CR) = GPIO_PIN_0 | GPIO_PIN_1;
+  GPIOPinTypeUART(GPIO_PORTA_BASE , GPIO_PIN_0 | GPIO_PIN_1);
+	//GPIOPinConfigure(GPIO_PA0_U0RX);
+}
 
+void UART0Init(void){
+	SysCtlPeripheralEnable(SYSCTL_PERIPH_UART0);
+	while(!SysCtlPeripheralReady(SYSCTL_PERIPH_UART0)){}
+	UARTDisable(UART0_BASE);
+	UARTConfigSetExpClk(UART0_BASE, SysCtlClockGet(), 38400,
+	(UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE |
+	UART_CONFIG_PAR_NONE));
+	UARTEnable(UART0_BASE);
+}
 void Systick_Init(uint32 delayMs) {
   SysTickDisable();
   SysTickIntDisable();
@@ -27,26 +44,4 @@ void Systick_Init(uint32 delayMs) {
   SysTickPeriodSet(CalcTicks(delayMs));
   SysTickIntEnable();
   SysTickEnable();
-}
-
-void toggle_red()
-{
-  if(GPIOPinRead(GPIO_PORTF_BASE,GPIO_PIN_1) & (1<<1))
-    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1,0);
-  else
-    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1,GPIO_PIN_1);
-}
-void toggle_blue()
-{
-  if(GPIOPinRead(GPIO_PORTF_BASE,GPIO_PIN_2) & (1<<2))
-    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_2,0);
-  else
-    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_2,GPIO_PIN_2);
-}
-void toggle_green()
-{
-  if(GPIOPinRead(GPIO_PORTF_BASE,GPIO_PIN_3) & (1<<3))
-    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_3,0);
-  else
-    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_3,GPIO_PIN_3);
 }
