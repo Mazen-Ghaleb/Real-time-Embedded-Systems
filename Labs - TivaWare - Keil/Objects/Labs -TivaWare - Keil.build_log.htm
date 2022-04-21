@@ -22,18 +22,96 @@ Dialog DLL:      TCM.DLL V1.53.0.0
  
 <h2>Project:</h2>
 C:\Users\Mazen\Desktop\Mazen\Mazen Mostafa - College\Repos\Real-time-Embedded-Systems\Labs - TivaWare - Keil\Labs -TivaWare - Keil.uvprojx
-Project File Date:  04/20/2022
+Project File Date:  04/21/2022
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Rebuild target 'Project_TivaWare'
-compiling freertos_evr.c...
-compiling Init.c...
+main.c(3): warning: this function declaration is not a prototype [-Wstrict-prototypes]
+void vApplicationIdleHook();
+                         ^
+                          void
+main.c(8): warning: no previous extern declaration for non-static variable 'counter' [-Wmissing-variable-declarations]
+long counter = 0;
+     ^
+main.c(8): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+long counter = 0;
+^
+main.c(30): warning: unused parameter 'pvParameters' [-Wunused-parameter]
+void BTN1_CHK_TASK(void *pvParameters){
+                         ^
+main.c(30): warning: function 'BTN1_CHK_TASK' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+void BTN1_CHK_TASK(void *pvParameters){
+                                      ^
+main.c(43): warning: unused parameter 'pvParameters' [-Wunused-parameter]
+void BTN2_CHK_TASK(void *pvParameters){
+                         ^
+main.c(43): warning: function 'BTN2_CHK_TASK' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+void BTN2_CHK_TASK(void *pvParameters){
+                                      ^
+main.c(65): warning: incompatible integer to pointer conversion passing 'long' to parameter of type 'void *' [-Wint-conversion]
+                xStatus = xQueueReceive(xQueue,ReceivedValue,xTicksToWait);
+                                               ^~~~~~~~~~~~~
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/include\queue.h(885): note: passing argument to parameter 'pvBuffer' here
+                          void * const pvBuffer,
+                                       ^
+main.c(60): warning: unused parameter 'pvParameters' [-Wunused-parameter]
+void UART_TASK(void *pvParameters){
+                     ^
+main.c(60): warning: function 'UART_TASK' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+void UART_TASK(void *pvParameters){
+                                  ^
+main.c(65): warning: variable 'ReceivedValue' is uninitialized when used here [-Wuninitialized]
+                xStatus = xQueueReceive(xQueue,ReceivedValue,xTicksToWait);
+                                               ^~~~~~~~~~~~~
+main.c(61): note: initialize the variable 'ReceivedValue' to silence this warning
+        long ReceivedValue;
+                          ^
+                           = 0
+main.c(77): warning: no previous prototype for function 'vApplicationIdleHook' [-Wmissing-prototypes]
+void vApplicationIdleHook(){
+     ^
+main.c(3): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
+void vApplicationIdleHook();
+     ^
+                          void
+main.c(77): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void vApplicationIdleHook(){
+                         ^
+main.c(7): warning: no previous extern declaration for non-static variable 'xQueue' [-Wmissing-variable-declarations]
+xQueueHandle xQueue;
+             ^
+main.c(7): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+xQueueHandle xQueue;
+^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/include\FreeRTOS.h(1003): note: expanded from macro 'xQueueHandle'
+    #define xQueueHandle                  QueueHandle_t
+                                          ^
+13 warnings generated.
+compiling main.c...
+compiling list.c...
 C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/MemMang/heap_1.c(139): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( pv == NULL );
                               ^
 1 warning generated.
 compiling heap_1.c...
+compiling freertos_evr.c...
+basic_io.c(49): warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+                printf( pcString );
+                        ^~~~~~~~
+basic_io.c(49): note: treat the string as an argument to avoid this
+                printf( pcString );
+                        ^
+                        "%s", 
+basic_io.c(61): warning: format specifies type 'unsigned int' but the argument has type 'unsigned long' [-Wformat]
+                printf( "%s %u\n", pcString, ulValue );
+                            ~~               ^~~~~~~
+                            %lu
+basic_io.c(75): warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
+                mainITM_Port8( 0 ) = iChar;
+                                   ~ ^~~~~
+3 warnings generated.
+compiling basic_io.c...
 C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(231): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( uxCriticalNesting == ~0UL );
                                              ^
@@ -69,24 +147,6 @@ C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable
                                                                                          ^
 11 warnings generated.
 compiling port.c...
-compiling list.c...
-assembling startup_TM4C123.s...
-basic_io.c(49): warning: format string is not a string literal (potentially insecure) [-Wformat-security]
-                printf( pcString );
-                        ^~~~~~~~
-basic_io.c(49): note: treat the string as an argument to avoid this
-                printf( pcString );
-                        ^
-                        "%s", 
-basic_io.c(61): warning: format specifies type 'unsigned int' but the argument has type 'unsigned long' [-Wformat]
-                printf( "%s %u\n", pcString, ulValue );
-                            ~~               ^~~~~~~
-                            %lu
-basic_io.c(75): warning: implicit conversion loses integer precision: 'int' to 'unsigned char' [-Wimplicit-int-conversion]
-                mainITM_Port8( 0 ) = iChar;
-                                   ~ ^~~~~
-3 warnings generated.
-compiling basic_io.c...
 RTE/Device/TM4C123GH6PM/system_TM4C123.c(13): warning: In file included from...
 C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123\TM4C123.h(98): warning: In file included from...
 C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(298): warning: anonymous unions are a C11 extension [-Wc11-extensions]
@@ -223,52 +283,8 @@ C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C12
   ^
 44 warnings generated.
 compiling system_TM4C123.c...
-main.c(3): warning: this function declaration is not a prototype [-Wstrict-prototypes]
-void vApplicationIdleHook();
-                         ^
-                          void
-main.c(8): warning: no previous extern declaration for non-static variable 'counter' [-Wmissing-variable-declarations]
-int counter = 0;
-    ^
-main.c(8): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-int counter = 0;
-^
-main.c(29): warning: unused parameter 'pvParameters' [-Wunused-parameter]
-void BTN1_CHK_TASK(void *pvParameters){
-                         ^
-main.c(29): warning: function 'BTN1_CHK_TASK' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
-void BTN1_CHK_TASK(void *pvParameters){
-                                      ^
-main.c(41): warning: unused parameter 'pvParameters' [-Wunused-parameter]
-void BTN2_CHK_TASK(void *pvParameters){
-                         ^
-main.c(41): warning: function 'BTN2_CHK_TASK' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
-void BTN2_CHK_TASK(void *pvParameters){
-                                      ^
-main.c(76): warning: no previous prototype for function 'vApplicationIdleHook' [-Wmissing-prototypes]
-void vApplicationIdleHook(){
-     ^
-main.c(3): note: this declaration is not a prototype; add 'void' to make it a prototype for a zero-parameter function
-void vApplicationIdleHook();
-     ^
-                          void
-main.c(76): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
-void vApplicationIdleHook(){
-                         ^
-main.c(7): warning: no previous extern declaration for non-static variable 'xQueue' [-Wmissing-variable-declarations]
-xQueueHandle xQueue;
-             ^
-main.c(7): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-xQueueHandle xQueue;
-^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/include\FreeRTOS.h(1003): note: expanded from macro 'xQueueHandle'
-    #define xQueueHandle                  QueueHandle_t
-                                          ^
-main.c(6): warning: unused function 'UART_TASK' [-Wunused-function]
-static void UART_TASK(void *pvParameters);
-            ^
-10 warnings generated.
-compiling main.c...
+assembling startup_TM4C123.s...
+compiling Init.c...
 C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(272): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( pxQueue );
                            ^
@@ -445,62 +461,6 @@ C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(
                                                         ^
 58 warnings generated.
 compiling queue.c...
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(281): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-        configASSERT( xReturn );
-                               ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(75): warning: padding size of 'struct tmrTimerControl' with 3 bytes to alignment boundary [-Wpadded]
-    typedef struct tmrTimerControl                  /* The old naming convention is used to prevent breaking kernel aware debuggers. */
-                   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(363): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-        configASSERT( ( xTimerPeriodInTicks > 0 ) );
-                                                   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(395): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-        configASSERT( xTimer );
-                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(437): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-        configASSERT( ( xTimerTaskHandle != NULL ) );
-                                                    ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(446): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-        configASSERT( xTimer );
-                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(456): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-        configASSERT( xTimer );
-                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(477): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-        configASSERT( xTimer );
-                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(502): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-        configASSERT( xTimer );
-                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(512): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-        configASSERT( xTimer );
-                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(564): warning: function 'prvTimerTask' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
-    {
-    ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(645): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-                        portYIELD_WITHIN_API();
-                                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(774): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-                        configASSERT( pxCallback );
-                                                  ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(857): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-                        configASSERT( ( pxTimer->xTimerPeriodInTicks > 0 ) );
-                                                                            ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(984): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-        configASSERT( xTimer );
-                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(1009): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-        configASSERT( xTimer );
-                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(1026): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-        configASSERT( xTimer );
-                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(1076): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-            configASSERT( xTimerQueue );
-                                       ^
-18 warnings generated.
-compiling timers.c...
 C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(340): warning: no previous extern declaration for non-static variable 'pxCurrentTCB' [-Wmissing-variable-declarations]
 PRIVILEGED_DATA TCB_t * volatile pxCurrentTCB = NULL;
                                  ^
@@ -849,9 +809,65 @@ C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(
                                                                                         ^
 113 warnings generated.
 compiling tasks.c...
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(281): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        configASSERT( xReturn );
+                               ^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(75): warning: padding size of 'struct tmrTimerControl' with 3 bytes to alignment boundary [-Wpadded]
+    typedef struct tmrTimerControl                  /* The old naming convention is used to prevent breaking kernel aware debuggers. */
+                   ^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(363): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        configASSERT( ( xTimerPeriodInTicks > 0 ) );
+                                                   ^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(395): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        configASSERT( xTimer );
+                              ^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(437): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        configASSERT( ( xTimerTaskHandle != NULL ) );
+                                                    ^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(446): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        configASSERT( xTimer );
+                              ^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(456): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        configASSERT( xTimer );
+                              ^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(477): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        configASSERT( xTimer );
+                              ^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(502): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        configASSERT( xTimer );
+                              ^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(512): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        configASSERT( xTimer );
+                              ^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(564): warning: function 'prvTimerTask' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+    {
+    ^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(645): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        portYIELD_WITHIN_API();
+                                              ^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(774): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        configASSERT( pxCallback );
+                                                  ^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(857): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        configASSERT( ( pxTimer->xTimerPeriodInTicks > 0 ) );
+                                                                            ^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(984): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        configASSERT( xTimer );
+                              ^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(1009): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        configASSERT( xTimer );
+                              ^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(1026): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        configASSERT( xTimer );
+                              ^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(1076): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+            configASSERT( xTimerQueue );
+                                       ^
+18 warnings generated.
+compiling timers.c...
 linking...
-Program Size: Code=12722 RO-data=702 RW-data=8 ZI-data=5064  
-".\Objects\Labs -TivaWare - Keil.axf" - 0 Error(s), 258 Warning(s).
+Program Size: Code=13736 RO-data=1852 RW-data=8 ZI-data=5064  
+".\Objects\Labs -TivaWare - Keil.axf" - 0 Error(s), 261 Warning(s).
 
 <h2>Software Packages used:</h2>
 

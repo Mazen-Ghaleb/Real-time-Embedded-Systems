@@ -4,6 +4,7 @@
 #include "stdbool.h"
 #include "driverlib/sysctl.h"
 #include "driverlib/gpio.h"
+#include "driverlib/pin_map.h"
 #include "driverlib/timer.h"
 #include "driverlib/interrupt.h"
 #include "driverlib/uart.h"
