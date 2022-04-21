@@ -1,17 +1,17 @@
 #include "Init.h"
 
-void vApplicationIdleHook();
 static void BTN1_CHK_TASK(void *pvParameters);
 static void BTN2_CHK_TASK(void *pvParameters);
 static void UART_TASK(void *pvParameters);
 xQueueHandle xQueue;
-long counter = 0;
+uint32_t counter = 0;
 
 int main() 
 {
-	UART0Init();
 	PortAInit();
   PortFInit();
+	UART0Init();
+
 
 	xQueue = xQueueCreate (5,sizeof(long));
 	
@@ -29,51 +29,47 @@ int main()
 
 void BTN1_CHK_TASK(void *pvParameters){
   for(;;){
-		vTaskDelay(200/ portTICK_RATE_MS);
-		if (!GPIOPinRead(GPIO_PORTF_BASE, GPIO_PIN_0)){
-			  vTaskDelay(200/ portTICK_RATE_MS);
-				if (!GPIOPinRead(GPIO_PORTF_BASE, GPIO_PIN_0)){
+		if (GPIOPinRead(GPIO_PORTF_BASE, GPIO_PIN_0)== 0){
+			  vTaskDelay(400/ portTICK_RATE_MS);
+				if (GPIOPinRead(GPIO_PORTF_BASE, GPIO_PIN_0)== 0){
 						counter++;
-						//printf("Counter increased to %d. \n",counter);
 				}
 			}
-		//taskYIELD();
+		taskYIELD();
   }
 }
 void BTN2_CHK_TASK(void *pvParameters){
 	portBASE_TYPE xStatus;
 	for(;;){
-		vTaskDelay(200/ portTICK_RATE_MS);
-		if (!GPIOPinRead(GPIO_PORTF_BASE, GPIO_PIN_4)){
-			  vTaskDelay(200/ portTICK_RATE_MS);
-				if (!GPIOPinRead(GPIO_PORTF_BASE, GPIO_PIN_4)){
+		if (GPIOPinRead(GPIO_PORTF_BASE, GPIO_PIN_4)== 0){
+			  vTaskDelay(400/ portTICK_RATE_MS);
+					if (GPIOPinRead(GPIO_PORTF_BASE, GPIO_PIN_4)== 0){
 						xStatus = xQueueSendToBack(xQueue,&counter,0);
 						if (xStatus == pdPASS){
-							counter = 0 ;
-						}
+						counter = 0 ;
+					}
 				}
-		}
-		//taskYIELD();
+			}
+		taskYIELD();
   }
 }
 
 void UART_TASK(void *pvParameters){
 	long ReceivedValue;
 	portBASE_TYPE xStatus;
-	const portTickType xTicksToWait = 100/ portTICK_RATE_MS;
+	unsigned char buffer [50];
   for(;;){
-		xStatus = xQueueReceive(xQueue,ReceivedValue,xTicksToWait);
+		xStatus = xQueueReceive(xQueue,&ReceivedValue,100/ portTICK_RATE_MS);
 		if (xStatus == pdPASS) {
-			UARTCharPut(UART0_BASE, 'S');
-			//UARTCharPut(UART0_BASE, *((unsigned char*)&ReceivedValue));
-		}
+					sprintf (buffer, "%ld",ReceivedValue);
+					for(int i = 0; buffer[i] != '\0'; i++){
+						UARTCharPut(UART0_BASE, buffer[i]);
+					}
+					UARTCharPut(UART0_BASE, '\r');
+					UARTCharPut(UART0_BASE, '\n');
+				}
 		else {
-			//vPrintString("Could not receive from the queue. \n");
 		}
 		//vTaskDelay(1000/ portTICK_RATE_MS);
   }
-}
-
-void vApplicationIdleHook(){
-	__asm("wfi\n");
 }

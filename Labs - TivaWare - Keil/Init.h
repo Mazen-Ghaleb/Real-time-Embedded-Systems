@@ -1,6 +1,8 @@
+#define PART_TM4C123GH6PM
 #include "types.h"
 #include "tm4c123gh6pm.h"
 #include <stdint.h>
+#include <math.h>
 #include "stdbool.h"
 #include "driverlib/sysctl.h"
 #include "driverlib/gpio.h"
@@ -17,7 +19,6 @@
 #include "task.h"
 #include "timers.h"
 #include "queue.h"
-#include "basic_io.h"
 
 uint32 CalcTicks(uint32 milliseconds);
 void PortAInit(void);

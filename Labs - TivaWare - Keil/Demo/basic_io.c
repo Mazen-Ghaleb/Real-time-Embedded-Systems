@@ -1,5 +1,5 @@
 /*
-    FreeRTOS V6.0.5 - Copyright (C) 2009 Real Time Engineers Ltd.
+    FreeRTOS V6.1.0 - Copyright (C) 2010 Real Time Engineers Ltd.
 
     This file is part of the FreeRTOS distribution.
 
@@ -29,10 +29,6 @@
     http://www.OpenRTOS.com - Commercial support, development, porting,
     licensing and training services.
 */
-
-#ifndef BASIC_IO_H
-#define BASIC_IO_H
-
 /* Library includes. */
 #include <stdio.h>
 
@@ -40,8 +36,50 @@
 #include "FreeRTOS.h"
 #include "task.h"
 
-void vPrintString( const portCHAR *pcString );
-void vPrintStringAndNumber( const portCHAR *pcString, unsigned portLONG ulValue );
+#include "basic_io.h"
 
-#endif
+/* The ITM port is used to direct the printf() output to the serial window in 
+the Keil simulator IDE. */
+#define mainITM_Port8(n)    (*((volatile unsigned char *)(0xE0000000+4*n)))
+#define mainITM_Port32(n)   (*((volatile unsigned long *)(0xE0000000+4*n)))
+#define mainDEMCR           (*((volatile unsigned long *)(0xE000EDFC)))
+#define mainTRCENA          0x01000000
+
+void vPrintString( const char *pcString )
+{
+	/* Print the string, suspending the scheduler as method of mutual
+	exclusion. */
+	vTaskSuspendAll();
+	{
+		printf( pcString );
+	}
+	xTaskResumeAll();
+}
+/*-----------------------------------------------------------*/
+
+void vPrintStringAndNumber( const char *pcString, unsigned long ulValue )
+{
+	/* Print the string, suspending the scheduler as method of mutual
+	exclusion. */
+	vTaskSuspendAll();
+	{
+		printf( "%s %u\n", pcString, ulValue );
+	}
+	xTaskResumeAll();
+}
+/*-----------------------------------------------------------*/
+
+int fputc( int iChar, FILE *pxNotUsed ) 
+{
+	/* Just to avoid compiler warnings. */
+	( void ) pxNotUsed;
+
+	if( mainDEMCR & mainTRCENA ) 
+	{
+		while( mainITM_Port32( 0 ) == 0 );
+		mainITM_Port8( 0 ) = iChar;
+  	}
+
+  	return( iChar );
+}
 

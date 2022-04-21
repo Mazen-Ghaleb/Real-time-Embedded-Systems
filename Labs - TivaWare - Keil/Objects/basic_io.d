@@ -1,4 +1,4 @@
-./objects/basic_io.o: basic_io.c basic_io.h \
+./objects/basic_io.o: Demo\basic_io.c \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
   C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\Source\include\FreeRTOS.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stddef.h \
@@ -13,4 +13,5 @@
   C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\Source\portable\GCC\ARM_CM4F\portmacro.h \
   C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\Source\include\mpu_wrappers.h \
   C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\Source\include\task.h \
-  C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\Source\include\list.h
+  C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\Source\include\list.h \
+  Demo\basic_io.h

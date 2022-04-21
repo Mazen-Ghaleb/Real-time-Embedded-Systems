@@ -408,16 +408,6 @@
               <FileType>5</FileType>
               <FilePath>.\types.h</FilePath>
             </File>
-            <File>
-              <FileName>basic_io.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\basic_io.c</FilePath>
-            </File>
-            <File>
-              <FileName>basic_io.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\basic_io.h</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
@@ -510,5 +500,14 @@
       </file>
     </files>
   </RTE>
+
+  <LayerInfo>
+    <Layers>
+      <Layer>
+        <LayName>Labs -TivaWare - Keil</LayName>
+        <LayPrjMark>1</LayPrjMark>
+      </Layer>
+    </Layers>
+  </LayerInfo>
 
 </Project>

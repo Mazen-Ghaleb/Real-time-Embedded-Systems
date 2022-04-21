@@ -1,5 +1,6 @@
 ./objects/main.o: main.c Init.h types.h tm4c123gh6pm.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\math.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdbool.h \
   C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\sysctl.h \
   C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\gpio.h \
@@ -27,5 +28,4 @@
   C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\Source\include\list.h \
   C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\Source\include\timers.h \
   C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\Source\include\task.h \
-  C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\Source\include\queue.h \
-  basic_io.h C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h
+  C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\Source\include\queue.h
