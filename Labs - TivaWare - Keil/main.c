@@ -5,7 +5,6 @@ static void BTN2_CHK_TASK(void *pvParameters);
 static void UART_TASK(void *pvParameters);
 
 void delay(int n ){
-	int i , j;
 	for (int i = 0; i<n;i++)
 			for (int j = 0; j<3180;j++);
 }
@@ -48,7 +47,7 @@ void BTN1_CHK_TASK(void *pvParameters){
 				do {
 					delay(20);
 				} while (GPIOPinRead(GPIO_PORTF_BASE, GPIO_PIN_0)== 0);
-				taskYIELD();
+				taskYIELD()
 		}
   }
 }
@@ -71,7 +70,7 @@ void BTN2_CHK_TASK(void *pvParameters){
 				do {
 					delay(20);
 				} while (GPIOPinRead(GPIO_PORTF_BASE, GPIO_PIN_4)== 0);
-					taskYIELD();
+					taskYIELD()
 		}
 	}
 }
