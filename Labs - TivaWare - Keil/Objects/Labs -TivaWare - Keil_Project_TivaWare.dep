@@ -1,6 +1,6 @@
 Dependencies for Project 'Labs -TivaWare - Keil', Target 'Project_TivaWare': (DO NOT MODIFY !)
 CompilerVersion: 6160000::V6.16::ARMCLANG
-F (.\main.c)(0x62615262)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I C:/ti/TivaWare_C_Series-2.2.0.295-I./RTE/RTOS-I./RTE/_Project_TivaWare-IC:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/include-IC:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F-IC:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="536" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/main.o -MD)
+F (.\main.c)(0x62658821)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I C:/ti/TivaWare_C_Series-2.2.0.295-I./RTE/RTOS-I./RTE/_Project_TivaWare-IC:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/include-IC:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F-IC:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="536" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/main.o -MD)
 I (Init.h)(0x6260D4EE)
 I (types.h)(0x6223ECC3)
 I (tm4c123gh6pm.h)(0x61D87701)
@@ -20,7 +20,7 @@ I (C:\ti\TivaWare_C_Series-2.2.0.295\inc\hw_gpio.h)(0x6223EDF5)
 I (C:\ti\TivaWare_C_Series-2.2.0.295\inc\hw_sysctl.h)(0x6223EDF5)
 I (C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\Source\include\FreeRTOS.h)(0x6182D82C)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x60355C30)
-I (RTE\RTOS\FreeRTOSConfig.h)(0x6260D0EA)
+I (RTE\RTOS\FreeRTOSConfig.h)(0x6265884A)
 I (C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x6152F422)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x60355C30)
 I (RTE\_Project_TivaWare\RTE_Components.h)(0x6260D45E)
@@ -33,7 +33,7 @@ I (C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\Source\inclu
 I (C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\Source\include\list.h)(0x6182D82C)
 I (C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\Source\include\timers.h)(0x6182D82C)
 I (C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\Source\include\queue.h)(0x6182D82C)
-F (.\Init.c)(0x6260B5C2)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I C:/ti/TivaWare_C_Series-2.2.0.295-I./RTE/RTOS-I./RTE/_Project_TivaWare-IC:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/include-IC:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F-IC:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="536" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/init.o -MD)
+F (.\Init.c)(0x62656F11)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I C:/ti/TivaWare_C_Series-2.2.0.295-I./RTE/RTOS-I./RTE/_Project_TivaWare-IC:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/include-IC:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F-IC:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-IC:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="536" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/init.o -MD)
 I (Init.h)(0x6260D4EE)
 I (types.h)(0x6223ECC3)
 I (tm4c123gh6pm.h)(0x61D87701)
@@ -53,7 +53,7 @@ I (C:\ti\TivaWare_C_Series-2.2.0.295\inc\hw_gpio.h)(0x6223EDF5)
 I (C:\ti\TivaWare_C_Series-2.2.0.295\inc\hw_sysctl.h)(0x6223EDF5)
 I (C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\Source\include\FreeRTOS.h)(0x6182D82C)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x60355C30)
-I (RTE\RTOS\FreeRTOSConfig.h)(0x6260D0EA)
+I (RTE\RTOS\FreeRTOSConfig.h)(0x6265884A)
 I (C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x6152F422)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x60355C30)
 I (RTE\_Project_TivaWare\RTE_Components.h)(0x6260D45E)
@@ -85,7 +85,7 @@ F (C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\CMSIS\RTOS2\
 I (C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\Source\include\FreeRTOS.h)(0x6182D82C)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x60355C30)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x60355C30)
-I (RTE\RTOS\FreeRTOSConfig.h)(0x6260D0EA)
+I (RTE\RTOS\FreeRTOSConfig.h)(0x6265884A)
 I (C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x6152F422)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x60355C30)
 I (RTE\_Project_TivaWare\RTE_Components.h)(0x6260D45E)
@@ -106,7 +106,7 @@ I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x60355C30)
 I (C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\Source\include\FreeRTOS.h)(0x6182D82C)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x60355C30)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x60355C30)
-I (RTE\RTOS\FreeRTOSConfig.h)(0x6260D0EA)
+I (RTE\RTOS\FreeRTOSConfig.h)(0x6265884A)
 I (C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x6152F422)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x60355C30)
 I (RTE\_Project_TivaWare\RTE_Components.h)(0x6260D45E)
@@ -120,7 +120,7 @@ F (C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\Source\porta
 I (C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\Source\include\FreeRTOS.h)(0x6182D82C)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x60355C30)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x60355C30)
-I (RTE\RTOS\FreeRTOSConfig.h)(0x6260D0EA)
+I (RTE\RTOS\FreeRTOSConfig.h)(0x6265884A)
 I (C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x6152F422)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x60355C30)
 I (RTE\_Project_TivaWare\RTE_Components.h)(0x6260D45E)
@@ -136,7 +136,7 @@ I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x60355C30)
 I (C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\Source\include\FreeRTOS.h)(0x6182D82C)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x60355C30)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x60355C30)
-I (RTE\RTOS\FreeRTOSConfig.h)(0x6260D0EA)
+I (RTE\RTOS\FreeRTOSConfig.h)(0x6265884A)
 I (C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x6152F422)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x60355C30)
 I (RTE\_Project_TivaWare\RTE_Components.h)(0x6260D45E)
@@ -153,7 +153,7 @@ I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x60355C30)
 I (C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\Source\include\FreeRTOS.h)(0x6182D82C)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x60355C30)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x60355C30)
-I (RTE\RTOS\FreeRTOSConfig.h)(0x6260D0EA)
+I (RTE\RTOS\FreeRTOSConfig.h)(0x6265884A)
 I (C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x6152F422)
 I (RTE\_Project_TivaWare\RTE_Components.h)(0x6260D45E)
 I (C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\Source\include\projdefs.h)(0x6182D82C)
@@ -170,7 +170,7 @@ I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x60355C30)
 I (C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\Source\include\FreeRTOS.h)(0x6182D82C)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x60355C30)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x60355C30)
-I (RTE\RTOS\FreeRTOSConfig.h)(0x6260D0EA)
+I (RTE\RTOS\FreeRTOSConfig.h)(0x6265884A)
 I (C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x6152F422)
 I (RTE\_Project_TivaWare\RTE_Components.h)(0x6260D45E)
 I (C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\Source\include\projdefs.h)(0x6182D82C)
@@ -187,7 +187,7 @@ I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x60355C30)
 I (C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\Source\include\FreeRTOS.h)(0x6182D82C)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x60355C30)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x60355C30)
-I (RTE\RTOS\FreeRTOSConfig.h)(0x6260D0EA)
+I (RTE\RTOS\FreeRTOSConfig.h)(0x6265884A)
 I (C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x6152F422)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x60355C30)
 I (RTE\_Project_TivaWare\RTE_Components.h)(0x6260D45E)
@@ -200,4 +200,4 @@ I (C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\Source\inclu
 I (C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\Source\include\list.h)(0x6182D82C)
 I (C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\Source\include\queue.h)(0x6182D82C)
 I (C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\Source\include\timers.h)(0x6182D82C)
-F (RTE\RTOS\FreeRTOSConfig.h)(0x6260D0EA)()
+F (RTE\RTOS\FreeRTOSConfig.h)(0x6265884A)()

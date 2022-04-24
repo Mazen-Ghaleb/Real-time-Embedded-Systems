@@ -1,8 +1,10 @@
 #include "Init.h"
 
+static void INIT_TASK(void *pvParameters);
 static void BTN1_CHK_TASK(void *pvParameters);
 static void BTN2_CHK_TASK(void *pvParameters);
 static void UART_TASK(void *pvParameters);
+void delay (int n);
 
 void delay(int n ){
 	for (int i = 0; i<n;i++)
@@ -19,21 +21,26 @@ uint32_t counter = 0;
 
 int main() 
 {
-	PortAInit();
-  PortFInit();
-	UART0Init();
 	xQueue = xQueueCreate (5,sizeof(long));
-	
+
 	if (xQueue != NULL) {
 	xTaskCreate(BTN1_CHK_TASK,"Button 1 Check", configMINIMAL_STACK_SIZE,NULL , 1, &xBTN1_Handle);
 	xTaskCreate(BTN2_CHK_TASK,"Button 2 Check", configMINIMAL_STACK_SIZE,NULL , 1, &xBTN2_Handle);
 	xTaskCreate(UART_TASK,"UART", configMINIMAL_STACK_SIZE,NULL , 2, &xUART_Handle);
+	xTaskCreate(INIT_TASK,"Intialization Task", configMINIMAL_STACK_SIZE,NULL , 3, NULL);
 	
 	vTaskStartScheduler();
 	}
 	else {
 	// Queue couldn't be created
 	}
+}
+
+void INIT_TASK(void *pvParameters){
+	PortAInit();
+  PortFInit();
+	UART0Init();
+	vTaskDelete(NULL);
 }
 
 void BTN1_CHK_TASK(void *pvParameters){
@@ -89,9 +96,6 @@ void UART_TASK(void *pvParameters){
 					UARTCharPut(UART0_BASE, '\r');
 					UARTCharPut(UART0_BASE, '\n');
 				}
-		else {
-		}
-		//vTaskDelay(1000/ portTICK_RATE_MS);
   }
 }
 
