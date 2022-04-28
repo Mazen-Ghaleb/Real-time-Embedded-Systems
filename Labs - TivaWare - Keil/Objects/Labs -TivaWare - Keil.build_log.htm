@@ -27,122 +27,8 @@ Project File Date:  04/21/2022
 <h2>Output:</h2>
 *** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Rebuild target 'Project_TivaWare'
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(231): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-    configASSERT( uxCriticalNesting == ~0UL );
-                                             ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(297): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-    configASSERT( configMAX_SYSCALL_INTERRUPT_PRIORITY );
-                                                        ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(302): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-    configASSERT( portCPUID != portCORTEX_M7_r0p1_ID );
-                                                      ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(303): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-    configASSERT( portCPUID != portCORTEX_M7_r0p0_ID );
-                                                      ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(353): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-                    configASSERT( ( portMAX_PRIGROUP_BITS - ulMaxPRIGROUPValue ) == configPRIO_BITS );
-                                                                                                     ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(364): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
-            *pucFirstUserPriorityRegister = ulOriginalPriority;
-                                          ~ ^~~~~~~~~~~~~~~~~~
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(406): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-    configASSERT( uxCriticalNesting == 1000UL );
-                                               ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(422): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-        configASSERT( ( portNVIC_INT_CTRL_REG & portVECTACTIVE_MASK ) == 0 );
-                                                                            ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(429): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-    configASSERT( uxCriticalNesting );
-                                     ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(766): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-            configASSERT( ucCurrentPriority >= ucMaxSysCallPriority );
-                                                                     ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(782): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-        configASSERT( ( portAIRCR_REG & portPRIORITY_GROUP_MASK ) <= ulMaxPRIGROUPValue );
-                                                                                         ^
-11 warnings generated.
-compiling port.c...
-main.c(20): warning: no previous extern declaration for non-static variable 'counter' [-Wmissing-variable-declarations]
-uint32_t counter = 0;
-         ^
-main.c(20): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-uint32_t counter = 0;
-^
-main.c(39): warning: unused parameter 'pvParameters' [-Wunused-parameter]
-void INIT_TASK(void *pvParameters){
-                     ^
-main.c(46): warning: unused parameter 'pvParameters' [-Wunused-parameter]
-void BTN1_CHK_TASK(void *pvParameters){
-                         ^
-main.c(46): warning: function 'BTN1_CHK_TASK' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
-void BTN1_CHK_TASK(void *pvParameters){
-                                      ^
-main.c(61): warning: unused parameter 'pvParameters' [-Wunused-parameter]
-void BTN2_CHK_TASK(void *pvParameters){
-                         ^
-main.c(61): warning: function 'BTN2_CHK_TASK' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
-void BTN2_CHK_TASK(void *pvParameters){
-                                      ^
-main.c(92): warning: implicitly declaring library function 'sprintf' with type 'int (char *, const char *, ...)' [-Wimplicit-function-declaration]
-                                        sprintf (buffer, "%ld",ReceivedValue);
-                                        ^
-main.c(92): note: include the header <stdio.h> or explicitly provide a declaration for 'sprintf'
-main.c(92): warning: passing 'unsigned char [50]' to parameter of type 'char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
-                                        sprintf (buffer, "%ld",ReceivedValue);
-                                                 ^~~~~~
-main.c(85): warning: unused parameter 'pvParameters' [-Wunused-parameter]
-void UART_TASK(void *pvParameters){
-                     ^
-main.c(85): warning: function 'UART_TASK' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
-void UART_TASK(void *pvParameters){
-                                  ^
-main.c(14): warning: no previous extern declaration for non-static variable 'xQueue' [-Wmissing-variable-declarations]
-xQueueHandle xQueue;
-             ^
-main.c(14): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-xQueueHandle xQueue;
-^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/include\FreeRTOS.h(1003): note: expanded from macro 'xQueueHandle'
-    #define xQueueHandle                  QueueHandle_t
-                                          ^
-main.c(15): warning: no previous extern declaration for non-static variable 'xBTN1_Handle' [-Wmissing-variable-declarations]
-xTaskHandle xBTN1_Handle;
-            ^
-main.c(15): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-xTaskHandle xBTN1_Handle;
-^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/include\FreeRTOS.h(1002): note: expanded from macro 'xTaskHandle'
-    #define xTaskHandle                   TaskHandle_t
-                                          ^
-main.c(16): warning: no previous extern declaration for non-static variable 'xBTN2_Handle' [-Wmissing-variable-declarations]
-xTaskHandle xBTN2_Handle;
-            ^
-main.c(16): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-xTaskHandle xBTN2_Handle;
-^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/include\FreeRTOS.h(1002): note: expanded from macro 'xTaskHandle'
-    #define xTaskHandle                   TaskHandle_t
-                                          ^
-main.c(17): warning: no previous extern declaration for non-static variable 'xUART_Handle' [-Wmissing-variable-declarations]
-xTaskHandle xUART_Handle;
-            ^
-main.c(17): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-xTaskHandle xUART_Handle;
-^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/include\FreeRTOS.h(1002): note: expanded from macro 'xTaskHandle'
-    #define xTaskHandle                   TaskHandle_t
-                                          ^
-14 warnings generated.
-compiling main.c...
 compiling freertos_evr.c...
 compiling list.c...
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/MemMang/heap_1.c(139): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-    configASSERT( pv == NULL );
-                              ^
-1 warning generated.
-compiling heap_1.c...
-assembling startup_TM4C123.s...
-compiling Init.c...
 RTE/Device/TM4C123GH6PM/system_TM4C123.c(13): warning: In file included from...
 C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123\TM4C123.h(98): warning: In file included from...
 C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(298): warning: anonymous unions are a C11 extension [-Wc11-extensions]
@@ -279,6 +165,125 @@ C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C12
   ^
 44 warnings generated.
 compiling system_TM4C123.c...
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/MemMang/heap_1.c(139): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    configASSERT( pv == NULL );
+                              ^
+1 warning generated.
+compiling heap_1.c...
+compiling Init.c...
+main.c(21): warning: no previous extern declaration for non-static variable 'counter' [-Wmissing-variable-declarations]
+uint32_t counter = 0;
+         ^
+main.c(21): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t counter = 0;
+^
+main.c(46): warning: unused parameter 'pvParameters' [-Wunused-parameter]
+void INIT_TASK(void *pvParameters){
+                     ^
+main.c(53): warning: unused parameter 'pvParameters' [-Wunused-parameter]
+void BTN1_CHK_TASK(void *pvParameters){
+                         ^
+main.c(53): warning: function 'BTN1_CHK_TASK' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+void BTN1_CHK_TASK(void *pvParameters){
+                                      ^
+main.c(83): warning: implicitly declaring library function 'sprintf' with type 'int (char *, const char *, ...)' [-Wimplicit-function-declaration]
+                                        sprintf (buffer, "%ld",ReceivedValue);
+                                        ^
+main.c(83): note: include the header <stdio.h> or explicitly provide a declaration for 'sprintf'
+main.c(83): warning: passing 'unsigned char [50]' to parameter of type 'char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+                                        sprintf (buffer, "%ld",ReceivedValue);
+                                                 ^~~~~~
+main.c(75): warning: unused parameter 'pvParameters' [-Wunused-parameter]
+void UART_TASK(void *pvParameters){
+                     ^
+main.c(75): warning: function 'UART_TASK' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+void UART_TASK(void *pvParameters){
+                                  ^
+main.c(14): warning: no previous extern declaration for non-static variable 'xQueue' [-Wmissing-variable-declarations]
+xQueueHandle xQueue;
+             ^
+main.c(14): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+xQueueHandle xQueue;
+^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/include\FreeRTOS.h(1003): note: expanded from macro 'xQueueHandle'
+    #define xQueueHandle                  QueueHandle_t
+                                          ^
+main.c(15): warning: no previous extern declaration for non-static variable 'xBTN1_Handle' [-Wmissing-variable-declarations]
+xTaskHandle xBTN1_Handle;
+            ^
+main.c(15): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+xTaskHandle xBTN1_Handle;
+^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/include\FreeRTOS.h(1002): note: expanded from macro 'xTaskHandle'
+    #define xTaskHandle                   TaskHandle_t
+                                          ^
+main.c(16): warning: no previous extern declaration for non-static variable 'xBTN2_Handle' [-Wmissing-variable-declarations]
+xTaskHandle xBTN2_Handle;
+            ^
+main.c(16): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+xTaskHandle xBTN2_Handle;
+^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/include\FreeRTOS.h(1002): note: expanded from macro 'xTaskHandle'
+    #define xTaskHandle                   TaskHandle_t
+                                          ^
+main.c(17): warning: no previous extern declaration for non-static variable 'xUART_Handle' [-Wmissing-variable-declarations]
+xTaskHandle xUART_Handle;
+            ^
+main.c(17): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+xTaskHandle xUART_Handle;
+^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/include\FreeRTOS.h(1002): note: expanded from macro 'xTaskHandle'
+    #define xTaskHandle                   TaskHandle_t
+                                          ^
+main.c(19): warning: no previous extern declaration for non-static variable 'xCountingSemaphore' [-Wmissing-variable-declarations]
+xSemaphoreHandle xCountingSemaphore;
+                 ^
+main.c(19): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+xSemaphoreHandle xCountingSemaphore;
+^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/include\FreeRTOS.h(1004): note: expanded from macro 'xSemaphoreHandle'
+    #define xSemaphoreHandle              SemaphoreHandle_t
+                                          ^
+main.c(5): warning: unused function 'BTN2_CHK_TASK' [-Wunused-function]
+static void BTN2_CHK_TASK(void *pvParameters);
+            ^
+14 warnings generated.
+compiling main.c...
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(231): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    configASSERT( uxCriticalNesting == ~0UL );
+                                             ^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(297): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    configASSERT( configMAX_SYSCALL_INTERRUPT_PRIORITY );
+                                                        ^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(302): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    configASSERT( portCPUID != portCORTEX_M7_r0p1_ID );
+                                                      ^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(303): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    configASSERT( portCPUID != portCORTEX_M7_r0p0_ID );
+                                                      ^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(353): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                    configASSERT( ( portMAX_PRIGROUP_BITS - ulMaxPRIGROUPValue ) == configPRIO_BITS );
+                                                                                                     ^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(364): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+            *pucFirstUserPriorityRegister = ulOriginalPriority;
+                                          ~ ^~~~~~~~~~~~~~~~~~
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(406): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    configASSERT( uxCriticalNesting == 1000UL );
+                                               ^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(422): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        configASSERT( ( portNVIC_INT_CTRL_REG & portVECTACTIVE_MASK ) == 0 );
+                                                                            ^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(429): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    configASSERT( uxCriticalNesting );
+                                     ^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(766): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+            configASSERT( ucCurrentPriority >= ucMaxSysCallPriority );
+                                                                     ^
+C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(782): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        configASSERT( ( portAIRCR_REG & portPRIORITY_GROUP_MASK ) <= ulMaxPRIGROUPValue );
+                                                                                         ^
+11 warnings generated.
+compiling port.c...
 C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(281): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         configASSERT( xReturn );
                                ^
@@ -335,6 +340,7 @@ C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c
                                        ^
 18 warnings generated.
 compiling timers.c...
+assembling startup_TM4C123.s...
 C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(272): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( pxQueue );
                            ^
@@ -860,7 +866,7 @@ C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(
 113 warnings generated.
 compiling tasks.c...
 linking...
-Program Size: Code=21384 RO-data=1876 RW-data=8 ZI-data=9168  
+Program Size: Code=22140 RO-data=1860 RW-data=8 ZI-data=9168  
 ".\Objects\Labs -TivaWare - Keil.axf" - 0 Error(s), 259 Warning(s).
 
 <h2>Software Packages used:</h2>
@@ -902,12 +908,12 @@ Package Vendor: Keil
 
    * Component: ARM.FreeRTOS::RTOS:Core:Cortex-M:10.4.6
       Source file:   Source\queue.c
-      Include file:  Source\include\FreeRTOS.h
-      Source file:   Source\tasks.c
-      Include file:  Source\include\task.h
       Source file:   Source\list.c
-      Include file:  Source\include\queue.h
+      Source file:   Source\tasks.c
+      Include file:  Source\include\FreeRTOS.h
       Include file:  Source\include\semphr.h
+      Include file:  Source\include\queue.h
+      Include file:  Source\include\task.h
       Source file:   Source\portable\GCC\ARM_CM4F\port.c
       Source file:   CMSIS\RTOS2\FreeRTOS\Source\freertos_evr.c
 
@@ -915,8 +921,8 @@ Package Vendor: Keil
       Source file:   Source\portable\MemMang\heap_1.c
 
    * Component: ARM.FreeRTOS::RTOS:Timers:10.4.6
-      Source file:   Source\timers.c
       Include file:  Source\include\timers.h
+      Source file:   Source\timers.c
 
    * Component: ARM::CMSIS:CORE:5.5.0
 
@@ -924,7 +930,7 @@ Package Vendor: Keil
       Source file:   Device\Source\ARM\startup_TM4C123.s
       Source file:   Device\Source\system_TM4C123.c
       Include file:  Device\Include\TM4C123\TM4C123.h
-Build Time Elapsed:  00:00:02
+Build Time Elapsed:  00:00:03
 </pre>
 </body>
 </html>

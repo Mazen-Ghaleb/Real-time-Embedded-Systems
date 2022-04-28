@@ -19,6 +19,7 @@
 #include "task.h"
 #include "timers.h"
 #include "queue.h"
+#include "semphr.h"
 
 uint32 CalcTicks(uint32 milliseconds);
 void PortAInit(void);
