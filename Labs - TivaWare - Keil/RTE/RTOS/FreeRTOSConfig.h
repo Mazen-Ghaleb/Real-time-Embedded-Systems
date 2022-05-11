@@ -86,7 +86,7 @@ extern uint32_t SystemCoreClock;
 #define configASSERT( x )                     if( ( x ) == 0 ) { taskDISABLE_INTERRUPTS(); for( ;; ); }
 
 /* Constants that define which hook (callback) functions should be used. */
-#define configUSE_IDLE_HOOK                   0
+#define configUSE_IDLE_HOOK                   1
 #define configUSE_TICK_HOOK                   0
 #define configUSE_DAEMON_TASK_STARTUP_HOOK    0
 #define configUSE_MALLOC_FAILED_HOOK          0

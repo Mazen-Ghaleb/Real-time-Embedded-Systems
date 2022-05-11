@@ -448,7 +448,7 @@
           <targetInfo name="Project_TivaWare"/>
         </targetInfos>
       </component>
-      <component Cbundle="FreeRTOS" Cclass="RTOS" Cgroup="Heap" Cvariant="Heap_1" Cvendor="ARM" Cversion="10.4.6" condition="FreeRTOS Heap">
+      <component Cbundle="FreeRTOS" Cclass="RTOS" Cgroup="Heap" Cvariant="Heap_2" Cvendor="ARM" Cversion="10.4.6" condition="FreeRTOS Heap">
         <package name="CMSIS-FreeRTOS" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="ARM" version="10.4.6"/>
         <targetInfos>
           <targetInfo name="Project_TivaWare"/>

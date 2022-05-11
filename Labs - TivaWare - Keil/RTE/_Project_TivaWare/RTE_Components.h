@@ -20,8 +20,8 @@
 #define RTE_RTOS_FreeRTOS_CONFIG        /* RTOS FreeRTOS Config for FreeRTOS API */
 /* ARM.FreeRTOS::RTOS:Core:Cortex-M:10.4.6 */
 #define RTE_RTOS_FreeRTOS_CORE          /* RTOS FreeRTOS Core */
-/* ARM.FreeRTOS::RTOS:Heap:Heap_1:10.4.6 */
-#define RTE_RTOS_FreeRTOS_HEAP_1        /* RTOS FreeRTOS Heap 1 */
+/* ARM.FreeRTOS::RTOS:Heap:Heap_2:10.4.6 */
+#define RTE_RTOS_FreeRTOS_HEAP_2        /* RTOS FreeRTOS Heap 2 */
 /* ARM.FreeRTOS::RTOS:Timers:10.4.6 */
 #define RTE_RTOS_FreeRTOS_TIMERS        /* RTOS FreeRTOS Timers */
 

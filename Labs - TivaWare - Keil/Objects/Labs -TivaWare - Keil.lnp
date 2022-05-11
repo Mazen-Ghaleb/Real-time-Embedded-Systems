@@ -7,10 +7,10 @@
 ".\objects\freertos_evr.o"
 ".\objects\list.o"
 ".\objects\port.o"
-".\objects\heap_1.o"
 ".\objects\queue.o"
 ".\objects\tasks.o"
 ".\objects\timers.o"
+".\objects\heap_2.o"
 --strict --scatter ".\Objects\Labs -TivaWare - Keil.sct"
 --entry Reset_Handler --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

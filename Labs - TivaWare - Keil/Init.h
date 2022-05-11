@@ -25,7 +25,12 @@ uint32 CalcTicks(uint32 milliseconds);
 void PortAInit(void);
 void PortFInit(void);
 void UART0Init(void);
+void TimerInit0 (void);
+void TimerInit1 (void);
+void Timer0Handler(void);
+void Timer1Handler(void);
 void Systick_Init(uint32 delayMs);
 void Systick_Handler(void);
+
 
 extern unsigned int tickcounter;

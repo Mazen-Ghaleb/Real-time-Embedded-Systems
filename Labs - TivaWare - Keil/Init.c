@@ -44,3 +44,31 @@ void Systick_Init(uint32 delayMs) {
   SysTickIntEnable();
   SysTickEnable();
 }
+
+void TimerInit0 (void){
+  SysCtlPeripheralEnable(SYSCTL_PERIPH_TIMER0);         // Enable timer 0
+  while(!SysCtlPeripheralReady(SYSCTL_PERIPH_TIMER0)){} // Wait for it to be ready
+  TimerDisable(TIMER0_BASE, TIMER_A);                   // Disable it until it is enabled later on
+  
+  TimerIntDisable(TIMER0_BASE,TIMER_TIMA_TIMEOUT);      // Sandwich
+  TimerConfigure(TIMER0_BASE, (TIMER_CFG_PERIODIC));    // Make it a periodic timer
+  TimerIntClear(TIMER0_BASE,TIMER_TIMA_TIMEOUT);        // Clear any existing interrupts
+  IntPrioritySet(INT_TIMER0A , 0xe0);                   // Set priority to 2
+  TimerIntRegister(TIMER0_BASE,TIMER_A,Timer0Handler);  // Register the interrupt handler
+  TimerIntEnable(TIMER0_BASE,TIMER_TIMA_TIMEOUT);       // Sandwich
+}
+
+void TimerInit1 (void){
+  SysCtlPeripheralEnable(SYSCTL_PERIPH_TIMER1);         // Enable timer 1
+  while(!SysCtlPeripheralReady(SYSCTL_PERIPH_TIMER1)){} // Wait for it to be ready
+  TimerDisable(TIMER1_BASE, TIMER_A);                   // Disable it until it is enabled later on
+  
+  TimerIntDisable(TIMER1_BASE,TIMER_TIMA_TIMEOUT);      // Sandwich
+  TimerConfigure(TIMER1_BASE, (TIMER_CFG_PERIODIC));    // Make it a periodic timer
+  TimerIntClear(TIMER1_BASE,TIMER_TIMA_TIMEOUT);        // Clear any existing interrupts
+  IntPrioritySet(INT_TIMER1A , 0xe0);                   // Set priority to 1
+  TimerIntRegister(TIMER1_BASE,TIMER_A,Timer1Handler);  // Register the interrupt handler
+  TimerIntEnable(TIMER1_BASE,TIMER_TIMA_TIMEOUT);       // Sandwich
+}
+
+
