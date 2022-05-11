@@ -66,7 +66,6 @@ void BTN1_CHK_TASK(void *pvParameters){
 				do {
 					delay(20);
 				} while (GPIOPinRead(GPIO_PORTF_BASE, GPIO_PIN_0)== 0);
-				taskYIELD()
 		}
   }
 }
@@ -89,4 +88,3 @@ void UART_TASK(void *pvParameters){
 		}
   }
 }
-
