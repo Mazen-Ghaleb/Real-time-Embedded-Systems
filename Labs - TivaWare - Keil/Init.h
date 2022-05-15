@@ -27,6 +27,8 @@ void PortFInit(void);
 void UART0Init(void);
 void TimerInit0 (void);
 void TimerInit1 (void);
+void SwitchInterruptInit(void);
+void SwitchHandler(void);
 void Timer0Handler(void);
 void Timer1Handler(void);
 void Systick_Init(uint32 delayMs);

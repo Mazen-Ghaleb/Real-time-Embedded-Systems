@@ -1,115 +1,112 @@
 #include "Init.h"
 
 static void INIT_TASK(void *pvParameters);
+void toggle_red(void);
+void toggle_blue(void);
+static void vCounterTask( void *pvParameters );
+static void vLedTogglerTask( void *pvParameters );
 void vApplicationIdleHook(void);
-static void vHandlerTask1( void *pvParameters );
-static void vHandlerTask2( void *pvParameters );
-static void vPeriodicTask( void *pvParameters );
 void delay (int n);
-
-void Timer0delay(uint32 milliseconds){
-  TimerDisable(TIMER0_BASE, TIMER_A);                           // Sandwich
-  TimerLoadSet(TIMER0_BASE, TIMER_A, CalcTicks(milliseconds));  // Load the ticks value
-  TimerIntClear(TIMER0_BASE, TIMER_TIMA_TIMEOUT);               // Clear any existing interrupts
-  TimerEnable(TIMER0_BASE, TIMER_A);                            // Sandwich
-}
-
-void Timer1delay(uint32 milliseconds){
-  TimerDisable(TIMER1_BASE, TIMER_A);                           // Sandwich
-  TimerLoadSet(TIMER1_BASE, TIMER_A, CalcTicks(milliseconds));  // Load the ticks value
-  TimerIntClear(TIMER1_BASE, TIMER_TIMA_TIMEOUT);               // Clear any existing interrupts
-  TimerEnable(TIMER1_BASE, TIMER_A);                            // Sandwich
-}
 
 void delay(int n ){
 	for (int i = 0; i<n;i++)
 			for (int j = 0; j<3180;j++);
 }
 
-xTaskHandle xHandlerTask1_Handle;
-xTaskHandle xHandlerTask2_Handle;
-xTaskHandle xPeriodicTask_Handle;
-xSemaphoreHandle xBinarySemaphore1;
-xSemaphoreHandle xBinarySemaphore2;
-
-
-uint32_t counter1 = 0;
-uint32_t counter2 = 0;
-
+xTaskHandle xCounterTask_Handle;
+xTaskHandle xLedTogglerTask_Handle;
+xSemaphoreHandle xBinarySemaphore;
+xSemaphoreHandle xMutex;
 
 int main() 
 {
-	vSemaphoreCreateBinary(xBinarySemaphore1)
-	vSemaphoreCreateBinary(xBinarySemaphore2)
+	vSemaphoreCreateBinary(xBinarySemaphore)
+	xMutex = xSemaphoreCreateMutex();
 	
-	if( xBinarySemaphore1 != NULL && xBinarySemaphore2!= NULL) {
+	if( xBinarySemaphore != NULL && xMutex!= NULL) {
 
-		xTaskCreate(vHandlerTask1,"Handler Task 1", configMINIMAL_STACK_SIZE,NULL , 1, &xHandlerTask1_Handle);
-		xTaskCreate(vHandlerTask2,"Handler Task 2", configMINIMAL_STACK_SIZE,NULL , 1, &xHandlerTask2_Handle);
-		xTaskCreate(vPeriodicTask,"Periodic Task", configMINIMAL_STACK_SIZE,NULL , 2, &xPeriodicTask_Handle);
+		xTaskCreate(vCounterTask,"CounterTask", configMINIMAL_STACK_SIZE,"This is the CounterTask\n" , 2, &xCounterTask_Handle);
+		xTaskCreate(vLedTogglerTask,"Led Toggler Task", configMINIMAL_STACK_SIZE,"This is LedToggler Task\n" , 2, &xLedTogglerTask_Handle);
 		xTaskCreate(INIT_TASK,"Intialization Task", configMINIMAL_STACK_SIZE,NULL , 4, NULL);
 		
 		vTaskStartScheduler();
 	}
 	else {
-		// Semaphore couldn't be created
+		// Semaphore or Mutex couldn't be created
 	}
 }
 
 void INIT_TASK(void *pvParameters){
+	PortAInit();
 	PortFInit();
-	TimerInit0();
-	TimerInit1();
+	SwitchInterruptInit();
+	UART0Init();
 	
 	vTaskDelete(NULL);
 }
 
-static void vHandlerTask1( void *pvParameters ){
-    xSemaphoreTake( xBinarySemaphore1, 0 );
+static void vCounterTask( void *pvParameters ){
+	//xSemaphoreTake( xMutex, portMAX_DELAY );
+	char *pcStringToPrint;
+	pcStringToPrint = ( char * ) pvParameters;
+		for( ;; )
+		{
+			printf(pcStringToPrint);
+			for (int i =0;i<11;i++)
+			{
+				printf(i);
+			}
+		}
+}
+
+static void vLedTogglerTask( void *pvParameters ){
+    xSemaphoreTake( xBinarySemaphore, 0 );
+		portBASE_TYPE xStatus;
+		unsigned char buffer [50];
     for( ;; )
     {
-        xSemaphoreTake( xBinarySemaphore1, portMAX_DELAY );
-				counter1++;
+      xStatus = xSemaphoreTake( xBinarySemaphore, portMAX_DELAY );
+			if (xStatus == pdPASS) {
+					sprintf (buffer, "%s",(char * ) pvParameters);
+					for(int i = 0; buffer[i] != '\0'; i++){
+						UARTCharPut(UART0_BASE, buffer[i]);
+					}
+					UARTCharPut(UART0_BASE, '\r');
+					UARTCharPut(UART0_BASE, '\n');
+				}
+			toggle_red();
+			vTaskDelay(500/portTICK_RATE_MS);
     }
 }
 
-static void vHandlerTask2( void *pvParameters ){
-    xSemaphoreTake( xBinarySemaphore2, 0 );
-    for( ;; )
-    {
-        xSemaphoreTake( xBinarySemaphore2, portMAX_DELAY );
-				counter2++;
-    }
+// Switch 0 handler
+void SwitchHandler(void) {
+    uint32 switches = GPIOPinRead(GPIO_PORTF_BASE, GPIO_PIN_0|GPIO_PIN_4); // Read the switches
+    // (switches & 0x10) // If switch 2 has been pressed
+		portBASE_TYPE xHigherPriorityTaskWoken = pdFALSE;
+		xSemaphoreGiveFromISR( xBinarySemaphore, &xHigherPriorityTaskWoken );
+		portEND_SWITCHING_ISR( xHigherPriorityTaskWoken );
+    GPIOIntClear(GPIO_PORTF_BASE,GPIO_PIN_0|GPIO_PIN_4); // Clear the Interrupt
 }
 
-static void vPeriodicTask( void *pvParameters ){
-    for( ;; )
-    {
-			*((unsigned long volatile *) (0xE000E200)) |= (0x1<<19) | (0x1<<21);
-			vTaskDelay(1000/portTICK_RATE_MS);
-      //Timer0delay(100);
-			//Timer1delay(100);
-    }
-}
-
-// Timer 0 handler
-void Timer0Handler(void){
-	TimerDisable(TIMER0_BASE, TIMER_A);
-	portBASE_TYPE xHigherPriorityTaskWoken = pdFALSE;
-	xSemaphoreGiveFromISR( xBinarySemaphore1, &xHigherPriorityTaskWoken );
-	portEND_SWITCHING_ISR( xHigherPriorityTaskWoken );
-	TimerIntClear(TIMER0_BASE, TIMER_TIMA_TIMEOUT);               // Clear any existing interrupts
-}
-
-// Timer 1 handler
-void Timer1Handler(void){
-	TimerDisable(TIMER1_BASE, TIMER_A);
-	portBASE_TYPE xHigherPriorityTaskWoken = pdFALSE;
-	xSemaphoreGiveFromISR( xBinarySemaphore2, &xHigherPriorityTaskWoken );
-	portEND_SWITCHING_ISR( xHigherPriorityTaskWoken );
-	TimerIntClear(TIMER1_BASE, TIMER_TIMA_TIMEOUT);               // Clear any existing interrupts
-}
 
 void vApplicationIdleHook(){
 	__asm("wfi\n");
+}
+
+
+void toggle_red()
+{
+  if(GPIOPinRead(GPIO_PORTF_BASE,GPIO_PIN_1) & (1<<1))
+    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1,0);
+  else
+    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1,GPIO_PIN_1);
+}
+
+void toggle_blue()
+{
+  if(GPIOPinRead(GPIO_PORTF_BASE,GPIO_PIN_2) & (1<<2))
+    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_2,0);
+  else
+    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_2,GPIO_PIN_2);
 }

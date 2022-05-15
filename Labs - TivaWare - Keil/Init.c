@@ -45,6 +45,15 @@ void Systick_Init(uint32 delayMs) {
   SysTickEnable();
 }
 
+void SwitchInterruptInit(void){
+  GPIOIntDisable(GPIO_PORTF_BASE,GPIO_PIN_4|GPIO_PIN_0);        // Sandwich
+  GPIOIntClear(GPIO_PORTF_BASE,GPIO_PIN_4|GPIO_PIN_0);          // Clear any existing interrupts
+  IntPrioritySet(INT_GPIOF , 0x00);                             // Set priority to 0
+  GPIOIntRegister(GPIO_PORTF_BASE,SwitchHandler);               // Register the interrupt handler
+  GPIOIntTypeSet(GPIO_PORTF_BASE,GPIO_PIN_4|GPIO_PIN_0,GPIO_FALLING_EDGE); // Set the switches to trigger once pressed (since the switches are configured as Pull-down)
+  GPIOIntEnable(GPIO_PORTF_BASE, GPIO_PIN_4|GPIO_PIN_0);        // Sandwich
+}
+
 void TimerInit0 (void){
   SysCtlPeripheralEnable(SYSCTL_PERIPH_TIMER0);         // Enable timer 0
   while(!SysCtlPeripheralReady(SYSCTL_PERIPH_TIMER0)){} // Wait for it to be ready
