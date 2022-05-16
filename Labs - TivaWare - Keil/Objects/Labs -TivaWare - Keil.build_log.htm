@@ -5,7 +5,7 @@
 <h2>Tool Versions:</h2>
 IDE-Version: µVision V5.36.0.0
 Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: Mazen Ghaleb, Ain Shams University, LIC=----
+License Information: Mazen Ghaleb, ASU, LIC=----
  
 Tool Versions:
 Toolchain:       MDK-Lite  Version: 5.36.0.0
@@ -21,887 +21,856 @@ Target DLL:      lmidk-agdi.dll V???
 Dialog DLL:      TCM.DLL V1.53.0.0
  
 <h2>Project:</h2>
-C:\Users\Mazen\Desktop\Mazen\Mazen Mostafa - College\Repos\Real-time-Embedded-Systems\Labs - TivaWare - Keil\Labs -TivaWare - Keil.uvprojx
-Project File Date:  05/11/2022
+C:\Users\mazenmoussa\Desktop\Repos\Real-time-Embedded-Systems\Labs - TivaWare - Keil\Labs -TivaWare - Keil.uvprojx
+Project File Date:  05/15/2022
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Rebuild target 'Project_TivaWare'
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/MemMang/heap_2.c(82): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
-static const uint16_t heapSTRUCT_SIZE = ( ( sizeof( BlockLink_t ) + ( portBYTE_ALIGNMENT - 1 ) ) & ~portBYTE_ALIGNMENT_MASK );
-                                                                                                 ~ ^~~~~~~~~~~~~~~~~~~~~~~~
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/MemMang/heap_2.c(148): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-                configASSERT( ( xWantedSize & portBYTE_ALIGNMENT_MASK ) == 0 );
-                                                                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/MemMang/heap_2.c(199): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-                    prvInsertBlockIntoFreeList( ( pxNewBlockLink ) );
-                                                                    ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/MemMang/heap_2.c(242): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-            prvInsertBlockIntoFreeList( ( ( BlockLink_t * ) pxLink ) );
-                                                                      ^
-4 warnings generated.
-compiling heap_2.c...
-compiling list.c...
 compiling freertos_evr.c...
+assembling startup_TM4C123.s...
+compiling list.c...
 RTE/Device/TM4C123GH6PM/system_TM4C123.c(13): warning: In file included from...
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123\TM4C123.h(98): warning: In file included from...
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(298): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123\TM4C123.h(98): warning: In file included from...
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(298): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(338): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(338): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(357): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(357): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(713): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(713): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(729): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(729): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(774): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(774): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(779): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(779): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(872): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(872): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(885): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(885): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(892): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(892): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(897): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(897): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(904): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(904): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(910): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(910): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(917): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(917): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(924): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(924): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(929): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(929): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(936): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(936): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(942): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(942): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(949): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(949): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(956): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(956): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(961): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(961): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(968): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(968): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(974): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(974): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(981): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(981): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(988): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(988): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(993): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(993): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1000): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1000): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1006): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1006): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1013): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1013): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1020): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1020): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1025): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1025): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1032): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1032): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1038): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1038): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1045): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1045): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1052): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1052): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1057): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1057): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1064): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1064): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1070): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1070): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1077): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1077): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1084): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1084): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1089): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1089): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1096): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1096): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1102): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1102): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1251): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1251): warning: anonymous unions are a C11 extension [-Wc11-extensions]
   union {
   ^
 44 warnings generated.
 compiling system_TM4C123.c...
 compiling Init.c...
-main.c(10): warning: no previous prototype for function 'Timer0delay' [-Wmissing-prototypes]
-void Timer0delay(uint32 milliseconds){
-     ^
-main.c(10): note: declare 'static' if the function is not intended to be used outside of this translation unit
-void Timer0delay(uint32 milliseconds){
-^
-static 
-main.c(17): warning: no previous prototype for function 'Timer1delay' [-Wmissing-prototypes]
-void Timer1delay(uint32 milliseconds){
-     ^
-main.c(17): note: declare 'static' if the function is not intended to be used outside of this translation unit
-void Timer1delay(uint32 milliseconds){
-^
-static 
-main.c(37): warning: no previous extern declaration for non-static variable 'counter1' [-Wmissing-variable-declarations]
-uint32_t counter1 = 0;
-         ^
-main.c(37): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-uint32_t counter1 = 0;
-^
-main.c(38): warning: no previous extern declaration for non-static variable 'counter2' [-Wmissing-variable-declarations]
-uint32_t counter2 = 0;
-         ^
-main.c(38): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-uint32_t counter2 = 0;
-^
-main.c(60): warning: unused parameter 'pvParameters' [-Wunused-parameter]
-void INIT_TASK(void *pvParameters){
-                     ^
-main.c(68): warning: unused parameter 'pvParameters' [-Wunused-parameter]
-static void vHandlerTask1( void *pvParameters ){
-                                 ^
-main.c(68): warning: function 'vHandlerTask1' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
-static void vHandlerTask1( void *pvParameters ){
-                                               ^
-main.c(77): warning: unused parameter 'pvParameters' [-Wunused-parameter]
-static void vHandlerTask2( void *pvParameters ){
-                                 ^
-main.c(77): warning: function 'vHandlerTask2' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
-static void vHandlerTask2( void *pvParameters ){
-                                               ^
-main.c(86): warning: unused parameter 'pvParameters' [-Wunused-parameter]
-static void vPeriodicTask( void *pvParameters ){
-                                 ^
-main.c(86): warning: function 'vPeriodicTask' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
-static void vPeriodicTask( void *pvParameters ){
-                                               ^
-main.c(29): warning: no previous extern declaration for non-static variable 'xQueue' [-Wmissing-variable-declarations]
-xQueueHandle xQueue;
-             ^
-main.c(29): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-xQueueHandle xQueue;
-^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/include\FreeRTOS.h(1003): note: expanded from macro 'xQueueHandle'
-    #define xQueueHandle                  QueueHandle_t
-                                          ^
-main.c(30): warning: no previous extern declaration for non-static variable 'xHandlerTask1_Handle' [-Wmissing-variable-declarations]
-xTaskHandle xHandlerTask1_Handle;
-            ^
-main.c(30): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-xTaskHandle xHandlerTask1_Handle;
-^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/include\FreeRTOS.h(1002): note: expanded from macro 'xTaskHandle'
-    #define xTaskHandle                   TaskHandle_t
-                                          ^
-main.c(31): warning: no previous extern declaration for non-static variable 'xHandlerTask2_Handle' [-Wmissing-variable-declarations]
-xTaskHandle xHandlerTask2_Handle;
-            ^
-main.c(31): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-xTaskHandle xHandlerTask2_Handle;
-^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/include\FreeRTOS.h(1002): note: expanded from macro 'xTaskHandle'
-    #define xTaskHandle                   TaskHandle_t
-                                          ^
-main.c(32): warning: no previous extern declaration for non-static variable 'xPeriodicTask_Handle' [-Wmissing-variable-declarations]
-xTaskHandle xPeriodicTask_Handle;
-            ^
-main.c(32): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-xTaskHandle xPeriodicTask_Handle;
-^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/include\FreeRTOS.h(1002): note: expanded from macro 'xTaskHandle'
-    #define xTaskHandle                   TaskHandle_t
-                                          ^
-main.c(33): warning: no previous extern declaration for non-static variable 'xBinarySemaphore1' [-Wmissing-variable-declarations]
-xSemaphoreHandle xBinarySemaphore1;
-                 ^
-main.c(33): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-xSemaphoreHandle xBinarySemaphore1;
-^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/include\FreeRTOS.h(1004): note: expanded from macro 'xSemaphoreHandle'
-    #define xSemaphoreHandle              SemaphoreHandle_t
-                                          ^
-main.c(34): warning: no previous extern declaration for non-static variable 'xBinarySemaphore2' [-Wmissing-variable-declarations]
-xSemaphoreHandle xBinarySemaphore2;
-                 ^
-main.c(34): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-xSemaphoreHandle xBinarySemaphore2;
-^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/include\FreeRTOS.h(1004): note: expanded from macro 'xSemaphoreHandle'
-    #define xSemaphoreHandle              SemaphoreHandle_t
-                                          ^
-17 warnings generated.
-compiling main.c...
-assembling startup_TM4C123.s...
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(231): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(231): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( uxCriticalNesting == ~0UL );
                                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(297): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(297): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( configMAX_SYSCALL_INTERRUPT_PRIORITY );
                                                         ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(302): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(302): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( portCPUID != portCORTEX_M7_r0p1_ID );
                                                       ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(303): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(303): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( portCPUID != portCORTEX_M7_r0p0_ID );
                                                       ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(353): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(353): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                     configASSERT( ( portMAX_PRIGROUP_BITS - ulMaxPRIGROUPValue ) == configPRIO_BITS );
                                                                                                      ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(364): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(364): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
             *pucFirstUserPriorityRegister = ulOriginalPriority;
                                           ~ ^~~~~~~~~~~~~~~~~~
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(406): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(406): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( uxCriticalNesting == 1000UL );
                                                ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(422): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(422): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         configASSERT( ( portNVIC_INT_CTRL_REG & portVECTACTIVE_MASK ) == 0 );
                                                                             ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(429): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(429): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( uxCriticalNesting );
                                      ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(766): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(766): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
             configASSERT( ucCurrentPriority >= ucMaxSysCallPriority );
                                                                      ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(782): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/GCC/ARM_CM4F/port.c(782): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         configASSERT( ( portAIRCR_REG & portPRIORITY_GROUP_MASK ) <= ulMaxPRIGROUPValue );
                                                                                          ^
 11 warnings generated.
 compiling port.c...
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(281): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-        configASSERT( xReturn );
-                               ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(75): warning: padding size of 'struct tmrTimerControl' with 3 bytes to alignment boundary [-Wpadded]
-    typedef struct tmrTimerControl                  /* The old naming convention is used to prevent breaking kernel aware debuggers. */
-                   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(363): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-        configASSERT( ( xTimerPeriodInTicks > 0 ) );
-                                                   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(395): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-        configASSERT( xTimer );
-                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(437): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-        configASSERT( ( xTimerTaskHandle != NULL ) );
-                                                    ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(446): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-        configASSERT( xTimer );
-                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(456): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-        configASSERT( xTimer );
-                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(477): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-        configASSERT( xTimer );
-                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(502): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-        configASSERT( xTimer );
-                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(512): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-        configASSERT( xTimer );
-                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(564): warning: function 'prvTimerTask' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
-    {
-    ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(645): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-                        portYIELD_WITHIN_API();
+main.c(40): warning: unused parameter 'pvParameters' [-Wunused-parameter]
+void INIT_TASK(void *pvParameters){
+                     ^
+main.c(53): warning: implicitly declaring library function 'sprintf' with type 'int (char *, const char *, ...)' [-Wimplicit-function-declaration]
+                        sprintf (buffer, "%s",(char * ) pvParameters);
+                        ^
+main.c(53): note: include the header <stdio.h> or explicitly provide a declaration for 'sprintf'
+main.c(53): warning: passing 'unsigned char [50]' to parameter of type 'char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+                        sprintf (buffer, "%s",(char * ) pvParameters);
+                                 ^~~~~~
+main.c(61): warning: passing 'unsigned char [50]' to parameter of type 'char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+                        sprintf (buffer, "%d",i);
+                                 ^~~~~~
+main.c(62): warning: declaration shadows a local variable [-Wshadow]
+                        for(int i = 0; buffer[i] != '\0'; i++){
+                                ^
+main.c(59): note: previous declaration is here
+                        for (int i =0;i<11;i++)
+                                 ^
+main.c(49): warning: function 'vCounterTask' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+static void vCounterTask( void *pvParameters ){
                                               ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(774): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-                        configASSERT( pxCallback );
-                                                  ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(857): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-                        configASSERT( ( pxTimer->xTimerPeriodInTicks > 0 ) );
-                                                                            ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(984): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-        configASSERT( xTimer );
-                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(1009): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-        configASSERT( xTimer );
-                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(1026): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-        configASSERT( xTimer );
-                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(1076): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-            configASSERT( xTimerQueue );
-                                       ^
-18 warnings generated.
-compiling timers.c...
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(272): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+main.c(80): warning: passing 'unsigned char [50]' to parameter of type 'char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+                                sprintf (buffer, "%s",(char * ) pvParameters);
+                                         ^~~~~~
+main.c(72): warning: function 'vLedTogglerTask' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+static void vLedTogglerTask( void *pvParameters ){
+                                                 ^
+main.c(16): warning: no previous extern declaration for non-static variable 'buffer' [-Wmissing-variable-declarations]
+unsigned char buffer [50];
+              ^
+main.c(16): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+unsigned char buffer [50];
+^
+main.c(17): warning: no previous extern declaration for non-static variable 'xCounterTask_Handle' [-Wmissing-variable-declarations]
+xTaskHandle xCounterTask_Handle;
+            ^
+main.c(17): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+xTaskHandle xCounterTask_Handle;
+^
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/include\FreeRTOS.h(1002): note: expanded from macro 'xTaskHandle'
+    #define xTaskHandle                   TaskHandle_t
+                                          ^
+main.c(18): warning: no previous extern declaration for non-static variable 'xLedTogglerTask_Handle' [-Wmissing-variable-declarations]
+xTaskHandle xLedTogglerTask_Handle;
+            ^
+main.c(18): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+xTaskHandle xLedTogglerTask_Handle;
+^
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/include\FreeRTOS.h(1002): note: expanded from macro 'xTaskHandle'
+    #define xTaskHandle                   TaskHandle_t
+                                          ^
+main.c(19): warning: no previous extern declaration for non-static variable 'xBinarySemaphore' [-Wmissing-variable-declarations]
+xSemaphoreHandle xBinarySemaphore;
+                 ^
+main.c(19): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+xSemaphoreHandle xBinarySemaphore;
+^
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/include\FreeRTOS.h(1004): note: expanded from macro 'xSemaphoreHandle'
+    #define xSemaphoreHandle              SemaphoreHandle_t
+                                          ^
+main.c(20): warning: no previous extern declaration for non-static variable 'xMutex' [-Wmissing-variable-declarations]
+xSemaphoreHandle xMutex;
+                 ^
+main.c(20): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+xSemaphoreHandle xMutex;
+^
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/include\FreeRTOS.h(1004): note: expanded from macro 'xSemaphoreHandle'
+    #define xSemaphoreHandle              SemaphoreHandle_t
+                                          ^
+13 warnings generated.
+compiling main.c...
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/MemMang/heap_2.c(82): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+static const uint16_t heapSTRUCT_SIZE = ( ( sizeof( BlockLink_t ) + ( portBYTE_ALIGNMENT - 1 ) ) & ~portBYTE_ALIGNMENT_MASK );
+                                                                                                 ~ ^~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/MemMang/heap_2.c(148): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                configASSERT( ( xWantedSize & portBYTE_ALIGNMENT_MASK ) == 0 );
+                                                                              ^
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/MemMang/heap_2.c(199): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                    prvInsertBlockIntoFreeList( ( pxNewBlockLink ) );
+                                                                    ^
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/MemMang/heap_2.c(242): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+            prvInsertBlockIntoFreeList( ( ( BlockLink_t * ) pxLink ) );
+                                                                      ^
+4 warnings generated.
+compiling heap_2.c...
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(272): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( pxQueue );
                            ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(299): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(299): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                         queueYIELD_IF_USING_PREEMPTION();
                                                         ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(325): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(325): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( xReturn != pdFAIL );
                                      ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(126): warning: padding struct 'struct QueueDefinition' with 2 bytes to align 'pxQueueSetContainer' [-Wpadded]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(126): warning: padding struct 'struct QueueDefinition' with 2 bytes to align 'pxQueueSetContainer' [-Wpadded]
         struct QueueDefinition * pxQueueSetContainer;
                                  ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(100): warning: padding size of 'struct QueueDefinition' with 3 bytes to alignment boundary [-Wpadded]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(100): warning: padding size of 'struct QueueDefinition' with 3 bytes to alignment boundary [-Wpadded]
 typedef struct QueueDefinition /* The old naming convention is used to prevent breaking kernel aware debuggers. */
                ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(454): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(454): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
             configASSERT( pxNewQueue );
                                       ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(584): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(584): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         configASSERT( xSemaphore );
                                   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(616): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(616): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         configASSERT( xSemaphore );
                                   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(643): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(643): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         configASSERT( pxMutex );
                                ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(699): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(699): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         configASSERT( pxMutex );
                                ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(795): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(795): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
             configASSERT( xHandle );
                                    ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(814): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(814): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( pxQueue );
                            ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(815): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(815): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( !( ( pvItemToQueue == NULL ) && ( pxQueue->uxItemSize != ( UBaseType_t ) 0U ) ) );
                                                                                                    ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(816): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(816): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( !( ( xCopyPosition == queueOVERWRITE ) && ( pxQueue->uxLength != 1 ) ) );
                                                                                           ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(819): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(819): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
             configASSERT( !( ( xTaskGetSchedulerState() == taskSCHEDULER_SUSPENDED ) && ( xTicksToWait != 0 ) ) );
                                                                                                                  ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(858): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(858): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                                 queueYIELD_IF_USING_PREEMPTION();
                                                                 ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(877): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(877): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                                     queueYIELD_IF_USING_PREEMPTION();
                                                                     ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(890): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(890): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                                 queueYIELD_IF_USING_PREEMPTION();
                                                                 ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(994): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(994): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                     portYIELD_WITHIN_API();
                                           ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1026): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1026): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( pxQueue );
                            ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1027): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1027): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( !( ( pvItemToQueue == NULL ) && ( pxQueue->uxItemSize != ( UBaseType_t ) 0U ) ) );
                                                                                                    ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1028): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1028): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( !( ( xCopyPosition == queueOVERWRITE ) && ( pxQueue->uxLength != 1 ) ) );
                                                                                           ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1165): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1165): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                 configASSERT( cTxLock != queueINT8_MAX );
                                                         ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1197): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1197): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( pxQueue );
                            ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1201): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1201): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( pxQueue->uxItemSize == 0 );
                                             ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1206): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1206): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( !( ( pxQueue->uxQueueType == queueQUEUE_IS_MUTEX ) && ( pxQueue->u.xSemaphore.xMutexHolder != NULL ) ) );
                                                                                                                           ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1333): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1333): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                 configASSERT( cTxLock != queueINT8_MAX );
                                                         ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1361): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1361): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( ( pxQueue ) );
                                ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1365): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1365): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( !( ( ( pvBuffer ) == NULL ) && ( ( pxQueue )->uxItemSize != ( UBaseType_t ) 0U ) ) );
                                                                                                       ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1370): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1370): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
             configASSERT( !( ( xTaskGetSchedulerState() == taskSCHEDULER_SUSPENDED ) && ( xTicksToWait != 0 ) ) );
                                                                                                                  ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1399): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1399): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                         queueYIELD_IF_USING_PREEMPTION();
                                                         ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1459): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1459): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                     portYIELD_WITHIN_API();
                                           ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1507): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1507): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( ( pxQueue ) );
                                ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1511): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1511): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( pxQueue->uxItemSize == 0 );
                                             ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1516): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1516): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
             configASSERT( !( ( xTaskGetSchedulerState() == taskSCHEDULER_SUSPENDED ) && ( xTicksToWait != 0 ) ) );
                                                                                                                  ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1562): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1562): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                         queueYIELD_IF_USING_PREEMPTION();
                                                         ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1586): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1586): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                             configASSERT( xInheritanceOccurred == pdFALSE );
                                                                            ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1651): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1651): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                     portYIELD_WITHIN_API();
                                           ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1724): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1724): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( ( pxQueue ) );
                                ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1728): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1728): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( !( ( ( pvBuffer ) == NULL ) && ( ( pxQueue )->uxItemSize != ( UBaseType_t ) 0U ) ) );
                                                                                                       ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1733): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1733): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
             configASSERT( !( ( xTaskGetSchedulerState() == taskSCHEDULER_SUSPENDED ) && ( xTicksToWait != 0 ) ) );
                                                                                                                  ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1768): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1768): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                         queueYIELD_IF_USING_PREEMPTION();
                                                         ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1829): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1829): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                     portYIELD_WITHIN_API();
                                           ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1873): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1873): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( pxQueue );
                            ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1874): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1874): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( !( ( pvBuffer == NULL ) && ( pxQueue->uxItemSize != ( UBaseType_t ) 0U ) ) );
                                                                                               ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1941): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1941): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                 configASSERT( cRxLock != queueINT8_MAX );
                                                         ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1968): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1968): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( pxQueue );
                            ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1969): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1969): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( !( ( pvBuffer == NULL ) && ( pxQueue->uxItemSize != ( UBaseType_t ) 0U ) ) );
                                                                                               ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1970): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(1970): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( pxQueue->uxItemSize != 0 ); /* Can't peek a semaphore. */
                                             ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(2019): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(2019): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( xQueue );
                           ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(2036): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(2036): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( pxQueue );
                            ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(2053): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(2053): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( pxQueue );
                            ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(2064): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(2064): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( pxQueue );
                            ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(2410): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(2410): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( pxQueue );
                            ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(2451): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(2451): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( pxQueue );
                            ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(3029): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(3029): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         configASSERT( pxQueueSetContainer ); /* LCOV_EXCL_BR_LINE */
                                            ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(3030): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(3030): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         configASSERT( pxQueueSetContainer->uxMessagesWaiting < pxQueueSetContainer->uxLength );
                                                                                               ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(3062): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/queue.c(3062): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                 configASSERT( cTxLock != queueINT8_MAX );
                                                         ^
 58 warnings generated.
 compiling queue.c...
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(340): warning: no previous extern declaration for non-static variable 'pxCurrentTCB' [-Wmissing-variable-declarations]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(340): warning: no previous extern declaration for non-static variable 'pxCurrentTCB' [-Wmissing-variable-declarations]
 PRIVILEGED_DATA TCB_t * volatile pxCurrentTCB = NULL;
                                  ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(340): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(340): note: declare 'static' if the variable is not intended to be used outside of this translation unit
 PRIVILEGED_DATA TCB_t * volatile pxCurrentTCB = NULL;
                 ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(278): warning: padding struct 'struct tskTaskControlBlock' with 2 bytes to align 'uxTCBNumber' [-Wpadded]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(278): warning: padding struct 'struct tskTaskControlBlock' with 2 bytes to align 'uxTCBNumber' [-Wpadded]
         UBaseType_t uxTCBNumber;  /*< Stores a number that increments each time a TCB is created.  It allows debuggers to determine when a task has been deleted and then recreated. */
                     ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(255): warning: padding size of 'struct tskTaskControlBlock' with 2 bytes to alignment boundary [-Wpadded]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(255): warning: padding size of 'struct tskTaskControlBlock' with 2 bytes to alignment boundary [-Wpadded]
 typedef struct tskTaskControlBlock       /* The old naming convention is used to prevent breaking kernel aware debuggers. */
                ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(387): warning: no previous extern declaration for non-static variable 'uxTopUsedPriority' [-Wmissing-variable-declarations]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(387): warning: no previous extern declaration for non-static variable 'uxTopUsedPriority' [-Wmissing-variable-declarations]
 const volatile UBaseType_t uxTopUsedPriority = configMAX_PRIORITIES - 1U;
                            ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(387): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(387): note: declare 'static' if the variable is not intended to be used outside of this translation unit
 const volatile UBaseType_t uxTopUsedPriority = configMAX_PRIORITIES - 1U;
                ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(864): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(864): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
             configASSERT( ( ( ( portPOINTER_SIZE_TYPE ) pxTopOfStack & ( portPOINTER_SIZE_TYPE ) portBYTE_ALIGNMENT_MASK ) == 0UL ) );
                                                                                                                                      ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(919): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(919): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( uxPriority < configMAX_PRIORITIES );
                                                      ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(986): warning: cast from 'volatile unsigned int *' to 'void *' drops volatile qualifier [-Wcast-qual]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(986): warning: cast from 'volatile unsigned int *' to 'void *' drops volatile qualifier [-Wcast-qual]
             memset( ( void * ) &( pxNewTCB->ulNotifiedValue[ 0 ] ), 0x00, sizeof( pxNewTCB->ulNotifiedValue ) );
                                ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(987): warning: cast from 'volatile unsigned char *' to 'void *' drops volatile qualifier [-Wcast-qual]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(987): warning: cast from 'volatile unsigned char *' to 'void *' drops volatile qualifier [-Wcast-qual]
             memset( ( void * ) &( pxNewTCB->ucNotifyState[ 0 ] ), 0x00, sizeof( pxNewTCB->ucNotifyState ) );
                                ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1129): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1129): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         prvAddTaskToReadyList( pxNewTCB );
                                          ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1141): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1141): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
             taskYIELD_IF_USING_PREEMPTION();
                                            ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1170): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1170): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                 taskRESET_READY_PRIORITY( pxTCB->uxPriority );
                                                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1244): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1244): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                 configASSERT( uxSchedulerSuspended == 0 );
                                                          ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1245): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1245): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                 portYIELD_WITHIN_API();
                                       ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1265): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1265): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         configASSERT( pxPreviousWakeTime );
                                           ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1266): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1266): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         configASSERT( ( xTimeIncrement > 0U ) );
                                                ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1267): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1267): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         configASSERT( uxSchedulerSuspended == 0 );
                                                  ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1331): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1331): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
             portYIELD_WITHIN_API();
                                   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1353): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1353): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
             configASSERT( uxSchedulerSuspended == 0 );
                                                      ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1378): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1378): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
             portYIELD_WITHIN_API();
                                   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1397): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1397): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         configASSERT( pxTCB );
                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1557): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1557): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         configASSERT( uxNewPriority < configMAX_PRIORITIES );
                                                             ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1687): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1687): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                     prvAddTaskToReadyList( pxTCB );
                                                   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1696): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1696): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                     taskYIELD_IF_USING_PREEMPTION();
                                                    ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1732): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1732): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                 taskRESET_READY_PRIORITY( pxTCB->uxPriority );
                                                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1789): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1789): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                 configASSERT( uxSchedulerSuspended == 0 );
                                                          ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1790): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1790): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                 portYIELD_WITHIN_API();
                                       ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1831): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1831): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         configASSERT( xTask );
                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1873): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1873): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         configASSERT( xTaskToResume );
                                      ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1888): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1888): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                     prvAddTaskToReadyList( pxTCB );
                                                   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1896): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1896): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                         taskYIELD_IF_USING_PREEMPTION();
                                                        ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1928): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1928): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         configASSERT( xTaskToResume );
                                      ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1974): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(1974): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                     prvAddTaskToReadyList( pxTCB );
                                                   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2112): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2112): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         configASSERT( xReturn != errCOULD_NOT_ALLOCATE_REQUIRED_MEMORY );
                                                                         ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2227): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2227): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( uxSchedulerSuspended );
                                         ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2247): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2247): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                     listREMOVE_ITEM( &( pxTCB->xEventListItem ) );
                                                                  ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2249): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2249): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                     listREMOVE_ITEM( &( pxTCB->xStateListItem ) );
                                                                  ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2250): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2250): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                     prvAddTaskToReadyList( pxTCB );
                                                   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2313): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2313): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                     taskYIELD_IF_USING_PREEMPTION();
                                                    ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2393): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2393): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( pxTCB );
                          ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2412): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2412): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
             listGET_OWNER_OF_NEXT_ENTRY( pxFirstTCB, pxList ); /*lint !e9079 void * is used as this macro is used with timers and co-routines too.  Alignment is known to be fine as the type of the pointer stored and retrieved is the same. */
                                                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2416): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2416): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                 listGET_OWNER_OF_NEXT_ENTRY( pxNextTCB, pxList ); /*lint !e9079 void * is used as this macro is used with timers and co-routines too.  Alignment is known to be fine as the type of the pointer stored and retrieved is the same. */
                                                                 ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2475): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2475): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         configASSERT( strlen( pcNameToQuery ) < configMAX_TASK_NAME_LEN );
                                                                          ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(40): warning: In file included from...
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/include/task.h(160): warning: padding struct 'struct xTASK_STATUS' with 3 bytes to align 'uxCurrentPriority' [-Wpadded]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(40): warning: In file included from...
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/include/task.h(160): warning: padding struct 'struct xTASK_STATUS' with 3 bytes to align 'uxCurrentPriority' [-Wpadded]
     UBaseType_t uxCurrentPriority;                /* The priority at which the task was running (may be inherited) when the structure was populated. */
                 ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/include/task.h(154): warning: padding size of 'struct xTASK_STATUS' with 2 bytes to alignment boundary [-Wpadded]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/include/task.h(154): warning: padding size of 'struct xTASK_STATUS' with 2 bytes to alignment boundary [-Wpadded]
 typedef struct xTASK_STATUS
                ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2612): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2612): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         configASSERT( ( xIdleTaskHandle != NULL ) );
                                                    ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2630): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2630): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         configASSERT( ( xTickCount + xTicksToJump ) <= xNextTaskUnblockTime );
                                                                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2644): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2644): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( uxSchedulerSuspended == 0 );
                                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2663): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2663): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         configASSERT( pxTCB );
                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2701): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2701): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                 prvAddTaskToReadyList( pxTCB );
                                               ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2759): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2759): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
             taskSWITCH_DELAYED_LISTS();
                                       ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2809): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2809): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                     listREMOVE_ITEM( &( pxTCB->xStateListItem ) );
                                                                  ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2815): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2815): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                         listREMOVE_ITEM( &( pxTCB->xEventListItem ) );
                                                                      ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2824): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(2824): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                     prvAddTaskToReadyList( pxTCB );
                                                   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3074): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3074): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         taskSELECT_HIGHEST_PRIORITY_TASK(); /*lint !e9079 void * is used as this macro is used with timers and co-routines too.  Alignment is known to be fine as the type of the pointer stored and retrieved is the same. */
                                           ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3100): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3100): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( pxEventList );
                                ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3126): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3126): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( pxEventList );
                                ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3130): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3130): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( uxSchedulerSuspended != 0 );
                                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3142): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3142): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     listINSERT_END( pxEventList, &( pxCurrentTCB->xEventListItem ) );
                                                                     ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3154): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3154): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         configASSERT( pxEventList );
                                    ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3166): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3166): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         listINSERT_END( pxEventList, &( pxCurrentTCB->xEventListItem ) );
                                                                         ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3202): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3202): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( pxUnblockedTCB );
                                   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3203): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3203): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     listREMOVE_ITEM( &( pxUnblockedTCB->xEventListItem ) );
                                                           ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3207): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3207): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         listREMOVE_ITEM( &( pxUnblockedTCB->xStateListItem ) );
                                                               ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3208): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3208): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         prvAddTaskToReadyList( pxUnblockedTCB );
                                                ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3228): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3228): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         listINSERT_END( &( xPendingReadyList ), &( pxUnblockedTCB->xEventListItem ) );
                                                                                      ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3258): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3258): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( uxSchedulerSuspended != pdFALSE );
                                                    ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3266): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3266): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( pxUnblockedTCB );
                                   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3267): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3267): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     listREMOVE_ITEM( pxEventListItem );
                                       ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3286): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3286): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     listREMOVE_ITEM( &( pxUnblockedTCB->xStateListItem ) );
                                                           ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3287): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3287): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     prvAddTaskToReadyList( pxUnblockedTCB );
                                            ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3302): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3302): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( pxTimeOut );
                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3325): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3325): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( pxTimeOut );
                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3326): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3326): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
     configASSERT( pxTicksToWait );
                                  ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3483): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3483): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                     taskYIELD();
                                ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3527): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3527): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                         configASSERT( xNextTaskUnblockTime >= xTickCount );
                                                                           ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3442): warning: function 'prvIdleTask' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3442): warning: function 'prvIdleTask' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
 {
 ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3836): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3836): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
             listGET_OWNER_OF_NEXT_ENTRY( pxFirstTCB, pxList ); /*lint !e9079 void * is used as this macro is used with timers and co-routines too.  Alignment is known to be fine as the type of the pointer stored and retrieved is the same. */
                                                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3844): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(3844): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                 listGET_OWNER_OF_NEXT_ENTRY( pxNextTCB, pxList ); /*lint !e9079 void * is used as this macro is used with timers and co-routines too.  Alignment is known to be fine as the type of the pointer stored and retrieved is the same. */
                                                                 ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4119): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4119): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                     prvAddTaskToReadyList( pxMutexHolderTCB );
                                                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4175): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4175): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
             configASSERT( pxTCB == pxCurrentTCB );
                                                  ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4176): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4176): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
             configASSERT( pxTCB->uxMutexesHeld );
                                                 ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4209): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4209): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                     prvAddTaskToReadyList( pxTCB );
                                                   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4255): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4255): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
             configASSERT( pxTCB->uxMutexesHeld );
                                                 ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4282): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4282): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                     configASSERT( pxTCB != pxCurrentTCB );
                                                          ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4322): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4322): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                         prvAddTaskToReadyList( pxTCB );
                                                       ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4710): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4710): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         configASSERT( uxIndexToWait < configTASK_NOTIFICATION_ARRAY_ENTRIES );
                                                                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4729): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4729): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                     portYIELD_WITHIN_API();
                                           ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4784): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4784): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         configASSERT( uxIndexToWait < configTASK_NOTIFICATION_ARRAY_ENTRIES );
                                                                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4808): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4808): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                     portYIELD_WITHIN_API();
                                           ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4872): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4872): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         configASSERT( uxIndexToNotify < configTASK_NOTIFICATION_ARRAY_ENTRIES );
                                                                                ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4873): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4873): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         configASSERT( xTaskToNotify );
                                      ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4926): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4926): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                     configASSERT( xTickCount == ( TickType_t ) 0 );
                                                                   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4921): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4921): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
                 default:
                 ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4937): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4937): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                 listREMOVE_ITEM( &( pxTCB->xStateListItem ) );
                                                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4938): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4938): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                 prvAddTaskToReadyList( pxTCB );
                                               ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4941): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4941): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                 configASSERT( listLIST_ITEM_CONTAINER( &( pxTCB->xEventListItem ) ) == NULL );
                                                                                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4963): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4963): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                     taskYIELD_IF_USING_PREEMPTION();
                                                    ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4997): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4997): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         configASSERT( xTaskToNotify );
                                      ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4998): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(4998): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         configASSERT( uxIndexToNotify < configTASK_NOTIFICATION_ARRAY_ENTRIES );
                                                                                ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(5069): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(5069): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                     configASSERT( xTickCount == ( TickType_t ) 0 );
                                                                   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(5064): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(5064): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
                 default:
                 ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(5080): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(5080): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                 configASSERT( listLIST_ITEM_CONTAINER( &( pxTCB->xEventListItem ) ) == NULL );
                                                                                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(5084): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(5084): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                     listREMOVE_ITEM( &( pxTCB->xStateListItem ) );
                                                                  ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(5085): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(5085): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                     prvAddTaskToReadyList( pxTCB );
                                                   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(5091): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(5091): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                     listINSERT_END( &( xPendingReadyList ), &( pxTCB->xEventListItem ) );
                                                                                         ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(5132): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(5132): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         configASSERT( xTaskToNotify );
                                      ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(5133): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(5133): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         configASSERT( uxIndexToNotify < configTASK_NOTIFICATION_ARRAY_ENTRIES );
                                                                                ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(5171): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(5171): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                 configASSERT( listLIST_ITEM_CONTAINER( &( pxTCB->xEventListItem ) ) == NULL );
                                                                                              ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(5175): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(5175): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                     listREMOVE_ITEM( &( pxTCB->xStateListItem ) );
                                                                  ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(5176): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(5176): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                     prvAddTaskToReadyList( pxTCB );
                                                   ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(5182): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(5182): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                     listINSERT_END( &( xPendingReadyList ), &( pxTCB->xEventListItem ) );
                                                                                         ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(5219): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(5219): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
         configASSERT( uxIndexToClear < configTASK_NOTIFICATION_ARRAY_ENTRIES );
                                                                               ^
-C:/Users/Mazen/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(5345): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/tasks.c(5345): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
                 listINSERT_END( &xSuspendedTaskList, &( pxCurrentTCB->xStateListItem ) );
                                                                                         ^
 113 warnings generated.
 compiling tasks.c...
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(281): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        configASSERT( xReturn );
+                               ^
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(75): warning: padding size of 'struct tmrTimerControl' with 3 bytes to alignment boundary [-Wpadded]
+    typedef struct tmrTimerControl                  /* The old naming convention is used to prevent breaking kernel aware debuggers. */
+                   ^
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(363): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        configASSERT( ( xTimerPeriodInTicks > 0 ) );
+                                                   ^
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(395): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        configASSERT( xTimer );
+                              ^
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(437): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        configASSERT( ( xTimerTaskHandle != NULL ) );
+                                                    ^
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(446): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        configASSERT( xTimer );
+                              ^
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(456): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        configASSERT( xTimer );
+                              ^
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(477): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        configASSERT( xTimer );
+                              ^
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(502): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        configASSERT( xTimer );
+                              ^
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(512): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        configASSERT( xTimer );
+                              ^
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(564): warning: function 'prvTimerTask' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+    {
+    ^
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(645): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        portYIELD_WITHIN_API();
+                                              ^
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(774): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        configASSERT( pxCallback );
+                                                  ^
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(857): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        configASSERT( ( pxTimer->xTimerPeriodInTicks > 0 ) );
+                                                                            ^
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(984): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        configASSERT( xTimer );
+                              ^
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(1009): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        configASSERT( xTimer );
+                              ^
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(1026): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        configASSERT( xTimer );
+                              ^
+C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/timers.c(1076): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+            configASSERT( xTimerQueue );
+                                       ^
+18 warnings generated.
+compiling timers.c...
 linking...
-Program Size: Code=16560 RO-data=1160 RW-data=1644 ZI-data=9196  
-".\Objects\Labs -TivaWare - Keil.axf" - 0 Error(s), 265 Warning(s).
+Program Size: Code=23844 RO-data=2744 RW-data=1644 ZI-data=9236  
+".\Objects\Labs -TivaWare - Keil.axf" - 0 Error(s), 261 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -929,11 +898,11 @@ Package Vendor: Keil
 <h2>Collection of Component include folders:</h2>
   .\RTE\RTOS
   .\RTE\_Project_TivaWare
-  C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\CMSIS\RTOS2\FreeRTOS\Include
-  C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\Source\include
-  C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\Source\portable\GCC\ARM_CM4F
-  C:\Users\Mazen\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include
-  C:\Users\Mazen\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123
+  C:\Users\mazenmoussa\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\CMSIS\RTOS2\FreeRTOS\Include
+  C:\Users\mazenmoussa\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\Source\include
+  C:\Users\mazenmoussa\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.4.6\Source\portable\GCC\ARM_CM4F
+  C:\Users\mazenmoussa\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include
+  C:\Users\mazenmoussa\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123
 
 <h2>Collection of Component Files used:</h2>
 
@@ -941,13 +910,13 @@ Package Vendor: Keil
       Include file:  Config\ARMCM\FreeRTOSConfig.h
 
    * Component: ARM.FreeRTOS::RTOS:Core:Cortex-M:10.4.6
-      Source file:   Source\list.c
-      Include file:  Source\include\queue.h
-      Include file:  Source\include\FreeRTOS.h
-      Source file:   Source\queue.c
-      Include file:  Source\include\semphr.h
-      Include file:  Source\include\task.h
       Source file:   Source\tasks.c
+      Include file:  Source\include\FreeRTOS.h
+      Include file:  Source\include\semphr.h
+      Source file:   Source\queue.c
+      Include file:  Source\include\queue.h
+      Include file:  Source\include\task.h
+      Source file:   Source\list.c
       Source file:   Source\portable\GCC\ARM_CM4F\port.c
       Source file:   CMSIS\RTOS2\FreeRTOS\Source\freertos_evr.c
 
@@ -962,9 +931,9 @@ Package Vendor: Keil
 
    * Component: Keil::Device:Startup:1.0.1
       Include file:  Device\Include\TM4C123\TM4C123.h
-      Source file:   Device\Source\ARM\startup_TM4C123.s
       Source file:   Device\Source\system_TM4C123.c
-Build Time Elapsed:  00:00:02
+      Source file:   Device\Source\ARM\startup_TM4C123.s
+Build Time Elapsed:  00:00:07
 </pre>
 </body>
 </html>
