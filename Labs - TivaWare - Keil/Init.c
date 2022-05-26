@@ -26,6 +26,16 @@ void PortAInit(void) {
 	GPIOPinTypeUART(GPIO_PORTA_BASE , GPIO_PIN_0 | GPIO_PIN_1);
 }
 
+void PortEInit(void) {
+  SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOE);
+  while(!SysCtlPeripheralReady(SYSCTL_PERIPH_GPIOE)) {}
+	//HWREG(GPIO_PORTE_BASE+GPIO_O_LOCK) = GPIO_LOCK_KEY;
+  //HWREG(GPIO_PORTE_BASE+GPIO_O_CR) = GPIO_PIN_3;
+  GPIOPinTypeADC(GPIO_PORTE_BASE, GPIO_PIN_3);
+	//GPIOPadConfigSet(GPIO_PORTE_BASE, GPIO_PIN_3, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_ANALOG);
+}
+
+
 void UART0Init(void){
 	SysCtlPeripheralEnable(SYSCTL_PERIPH_UART0);
 	while(!SysCtlPeripheralReady(SYSCTL_PERIPH_UART0)){}
@@ -44,39 +54,3 @@ void Systick_Init(uint32 delayMs) {
   SysTickIntEnable();
   SysTickEnable();
 }
-
-void SwitchInterruptInit(void){
-  GPIOIntDisable(GPIO_PORTF_BASE,GPIO_PIN_4|GPIO_PIN_0);        // Sandwich
-  GPIOIntClear(GPIO_PORTF_BASE,GPIO_PIN_4|GPIO_PIN_0);          // Clear any existing interrupts
-  NVIC_PRI7_R = 6 << 21;
-	//IntPrioritySet(INT_GPIOF , 0xe0);                             // Set priority to 7
-  GPIOIntRegister(GPIO_PORTF_BASE,SwitchHandler);               // Register the interrupt handler
-  GPIOIntTypeSet(GPIO_PORTF_BASE,GPIO_PIN_4|GPIO_PIN_0,GPIO_FALLING_EDGE); // Set the switches to trigger once pressed (since the switches are configured as Pull-down)
-  GPIOIntEnable(GPIO_PORTF_BASE, GPIO_PIN_4|GPIO_PIN_0);        // Sandwich
-}
-
-//void TimerInit0 (void){
-//  SysCtlPeripheralEnable(SYSCTL_PERIPH_TIMER0);         // Enable timer 0
-//  while(!SysCtlPeripheralReady(SYSCTL_PERIPH_TIMER0)){} // Wait for it to be ready
-//  TimerDisable(TIMER0_BASE, TIMER_A);                   // Disable it until it is enabled later on
-//  
-//  TimerIntDisable(TIMER0_BASE,TIMER_TIMA_TIMEOUT);      // Sandwich
-//  TimerConfigure(TIMER0_BASE, (TIMER_CFG_PERIODIC));    // Make it a periodic timer
-//  TimerIntClear(TIMER0_BASE,TIMER_TIMA_TIMEOUT);        // Clear any existing interrupts
-//  IntPrioritySet(INT_TIMER0A , 0xe0);                   // Set priority to 7
-//  TimerIntRegister(TIMER0_BASE,TIMER_A,Timer0Handler);  // Register the interrupt handler
-//  TimerIntEnable(TIMER0_BASE,TIMER_TIMA_TIMEOUT);       // Sandwich
-//}
-
-//void TimerInit1 (void){
-//  SysCtlPeripheralEnable(SYSCTL_PERIPH_TIMER1);         // Enable timer 1
-//  while(!SysCtlPeripheralReady(SYSCTL_PERIPH_TIMER1)){} // Wait for it to be ready
-//  TimerDisable(TIMER1_BASE, TIMER_A);                   // Disable it until it is enabled later on
-//  
-//  TimerIntDisable(TIMER1_BASE,TIMER_TIMA_TIMEOUT);      // Sandwich
-//  TimerConfigure(TIMER1_BASE, (TIMER_CFG_PERIODIC));    // Make it a periodic timer
-//  TimerIntClear(TIMER1_BASE,TIMER_TIMA_TIMEOUT);        // Clear any existing interrupts
-//  IntPrioritySet(INT_TIMER1A , 0xe0);                   // Set priority to 7
-//  TimerIntRegister(TIMER1_BASE,TIMER_A,Timer1Handler);  // Register the interrupt handler
-//  TimerIntEnable(TIMER1_BASE,TIMER_TIMA_TIMEOUT);       // Sandwich
-//}

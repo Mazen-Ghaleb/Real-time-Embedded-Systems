@@ -408,6 +408,16 @@
               <FileType>5</FileType>
               <FilePath>.\types.h</FilePath>
             </File>
+            <File>
+              <FileName>LCD.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LCD.c</FilePath>
+            </File>
+            <File>
+              <FileName>LCD.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\LCD.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

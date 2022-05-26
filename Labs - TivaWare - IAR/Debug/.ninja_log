@@ -1,6 +1,0 @@
-# ninja log v5
-7	364	6682525952266646	C:/Users/mazenmoussa/Desktop/Repos/Real-time-Embedded-Systems/Labs - TivaWare - IAR/Debug/Obj/startup_ewarm.o	1586fa0d0a9e79eb
-0	374	6682525952266646	C:/Users/mazenmoussa/Desktop/Repos/Real-time-Embedded-Systems/Labs - TivaWare - IAR/Debug/Obj/Init.o	e68b5f2b32a8204a
-15	397	6682525952436191	C:/Users/mazenmoussa/Desktop/Repos/Real-time-Embedded-Systems/Labs - TivaWare - IAR/Debug/Obj/main.o	838d25317bdf63cf
-2	89	6682526417279524	C:/Users/mazenmoussa/Desktop/Repos/Real-time-Embedded-Systems/Labs - TivaWare - IAR/Debug/Obj/startup_ewarm.o	1586fa0d0a9e79eb
-96	170	6682526418117258	C:/Users/mazenmoussa/Desktop/Repos/Real-time-Embedded-Systems/Labs - TivaWare - IAR/Debug/Exe/Labs - TivaWare.out	cbeda0e88b0f543e

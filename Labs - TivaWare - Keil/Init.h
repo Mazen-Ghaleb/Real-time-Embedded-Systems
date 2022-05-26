@@ -10,6 +10,7 @@
 #include "driverlib/timer.h"
 #include "driverlib/interrupt.h"
 #include "driverlib/uart.h"
+#include "driverlib/adc.h"
 #include <driverlib/systick.h>
 #include "inc/hw_memmap.h"
 #include "inc/hw_types.h"
@@ -20,17 +21,14 @@
 #include "timers.h"
 #include "queue.h"
 #include "semphr.h"
+#include "LCD.h"
+
 
 uint32 CalcTicks(uint32 milliseconds);
 void PortAInit(void);
 void PortFInit(void);
+void PortEInit(void);
 void UART0Init(void);
-void TimerInit0 (void);
-void TimerInit1 (void);
-void SwitchInterruptInit(void);
-void SwitchHandler(void);
-void Timer0Handler(void);
-void Timer1Handler(void);
 void Systick_Init(uint32 delayMs);
 void Systick_Handler(void);
 
