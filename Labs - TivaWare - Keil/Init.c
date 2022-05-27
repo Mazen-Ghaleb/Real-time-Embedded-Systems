@@ -35,6 +35,17 @@ void PortEInit(void) {
 	//GPIOPadConfigSet(GPIO_PORTE_BASE, GPIO_PIN_3, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_ANALOG);
 }
 
+void ADCInit(void){
+	SysCtlPeripheralEnable(SYSCTL_PERIPH_ADC0);
+	while(!SysCtlPeripheralReady(SYSCTL_PERIPH_ADC0)){}
+	PortEInit();
+	ADCSequenceConfigure(ADC0_BASE, 3, ADC_TRIGGER_PROCESSOR, 0);
+	ADCSequenceStepConfigure(ADC0_BASE, 3, 0, ADC_CTL_CH0 | ADC_CTL_IE | ADC_CTL_END);
+	ADCSequenceEnable(ADC0_BASE, 3);
+	ADCIntClear(ADC0_BASE, 3);
+	//ADCProcessorTrigger(ADC0_BASE, 3);
+  //while(!ADCIntStatus(ADC0_BASE, 3, false)){}
+}
 
 void UART0Init(void){
 	SysCtlPeripheralEnable(SYSCTL_PERIPH_UART0);

@@ -7,11 +7,10 @@ static void vLCDTask( void *pvParameters );
 static void vADCTask( void *pvParameters );
 void vApplicationIdleHook(void);
 void delay (int n);
-
-void delay(int n ){
-	for (int i = 0; i<n;i++)
-			for (int j = 0; j<3180;j++);
-}
+void threshold_LED(unsigned int ReadTemperature);
+void turn_BlueLED(void);
+void turn_YellowLED(void);
+void turn_RedLED(void);
 
 //unsigned char buffer [50];
 LCD lcd;
@@ -22,19 +21,7 @@ xQueueHandle xQueue;
 xTaskHandle xLCDTask_Handle;
 xTaskHandle xACDTask_Handle;
 
-//uint32_t E2Value;
-
-void ADCInit(void){
-	SysCtlPeripheralEnable(SYSCTL_PERIPH_ADC0);
-	while(!SysCtlPeripheralReady(SYSCTL_PERIPH_ADC0)){}
-	PortEInit();
-	ADCSequenceConfigure(ADC0_BASE, 3, ADC_TRIGGER_PROCESSOR, 0);
-	ADCSequenceStepConfigure(ADC0_BASE, 3, 0, ADC_CTL_CH0 | ADC_CTL_IE | ADC_CTL_END);
-	ADCSequenceEnable(ADC0_BASE, 3);
-	ADCIntClear(ADC0_BASE, 3);
-	//ADCProcessorTrigger(ADC0_BASE, 3);
-  //while(!ADCIntStatus(ADC0_BASE, 3, false)){}
-}
+unsigned int threshold = 30;
 
 int main() 
 {
@@ -93,7 +80,6 @@ static void vADCTask( void *pvParameters ){
 			
 			ADCIntClear(ADC0_BASE, 3);
 			ADCSequenceDataGet(ADC0_BASE, 3, &pui32ADC0Value);
-			//ui32TempValueC = 147.5 - ((75 * 3.3 * pui32ADC0Value[0]) / 4096);
 			ui32TempValueC = (unsigned int) (ceil((( pui32ADC0Value[0] *3.3)/4096)*100)); // Convert to Celcius
 			xStatus = xQueueSendToBack(xQueue,&ui32TempValueC,0);
 			xSemaphoreGive(xMutex);
@@ -103,4 +89,34 @@ static void vADCTask( void *pvParameters ){
 
 void vApplicationIdleHook(){
 	__asm("wfi\n");
+}
+
+void delay(int n ){
+	for (int i = 0; i<n;i++)
+			for (int j = 0; j<3180;j++);
+}
+
+
+void threshold_LED(unsigned int ReadTemperature){
+	if (ReadTemperature > threshold) {
+		turn_RedLED();
+	}
+	else if (ReadTemperature == threshold) {
+		turn_YellowLED();
+	}
+	else if (ReadTemperature < threshold) {
+		turn_BlueLED();
+	}
+}
+	
+void turn_BlueLED(void){
+    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3, GPIO_PIN_2);
+}
+
+void turn_YellowLED(void){
+    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3, GPIO_PIN_1 | GPIO_PIN_3);
+}
+
+void turn_RedLED(void){
+    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3, GPIO_PIN_1);
 }

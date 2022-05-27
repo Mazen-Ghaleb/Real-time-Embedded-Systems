@@ -28,6 +28,7 @@ uint32 CalcTicks(uint32 milliseconds);
 void PortAInit(void);
 void PortFInit(void);
 void PortEInit(void);
+void ADCInit(void);
 void UART0Init(void);
 void Systick_Init(uint32 delayMs);
 void Systick_Handler(void);
