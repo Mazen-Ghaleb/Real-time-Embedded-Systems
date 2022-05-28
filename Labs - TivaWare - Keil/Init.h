@@ -2,8 +2,8 @@
 #include "types.h"
 #include "tm4c123gh6pm.h"
 #include <stdint.h>
-#include <math.h>
 #include "stdbool.h"
+#include <math.h>
 #include "driverlib/sysctl.h"
 #include "driverlib/gpio.h"
 #include "driverlib/pin_map.h"
@@ -30,8 +30,5 @@ void PortFInit(void);
 void PortEInit(void);
 void ADCInit(void);
 void UART0Init(void);
-void Systick_Init(uint32 delayMs);
-void Systick_Handler(void);
-
-
-extern unsigned int tickcounter;
+void SwitchInterruptInit(void);
+void SwitchHandler(void);

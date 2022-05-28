@@ -1,14 +1,8 @@
 #include "Init.h"
 
-unsigned int tickcounter	= 0U;
-
 uint32 CalcTicks(uint32 milliseconds){
 return ((milliseconds) * (16 * 1000))-1 ;
 }	
-
-void Systick_Handler(void) {
-    tickcounter++;
-  }
 
 void PortFInit(void) {
   SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOF);
@@ -23,16 +17,15 @@ void PortFInit(void) {
 void PortAInit(void) {
   SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA);
   while(!SysCtlPeripheralReady(SYSCTL_PERIPH_GPIOA)) {}
+	GPIOPinConfigure(GPIO_PA0_U0RX);
+  GPIOPinConfigure(GPIO_PA1_U0TX);
 	GPIOPinTypeUART(GPIO_PORTA_BASE , GPIO_PIN_0 | GPIO_PIN_1);
 }
 
 void PortEInit(void) {
   SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOE);
   while(!SysCtlPeripheralReady(SYSCTL_PERIPH_GPIOE)) {}
-	//HWREG(GPIO_PORTE_BASE+GPIO_O_LOCK) = GPIO_LOCK_KEY;
-  //HWREG(GPIO_PORTE_BASE+GPIO_O_CR) = GPIO_PIN_3;
   GPIOPinTypeADC(GPIO_PORTE_BASE, GPIO_PIN_3);
-	//GPIOPadConfigSet(GPIO_PORTE_BASE, GPIO_PIN_3, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_ANALOG);
 }
 
 void ADCInit(void){
@@ -57,11 +50,13 @@ void UART0Init(void){
 	UART_CONFIG_PAR_NONE));
 	UARTEnable(UART0_BASE);
 }
-void Systick_Init(uint32 delayMs) {
-  SysTickDisable();
-  SysTickIntDisable();
-	SysTickIntRegister(Systick_Handler);
-  SysTickPeriodSet(CalcTicks(delayMs));
-  SysTickIntEnable();
-  SysTickEnable();
+
+void SwitchInterruptInit(void){
+  GPIOIntDisable(GPIO_PORTF_BASE,GPIO_PIN_4|GPIO_PIN_0);        // Sandwich
+  GPIOIntClear(GPIO_PORTF_BASE,GPIO_PIN_4|GPIO_PIN_0);          // Clear any existing interrupts
+  NVIC_PRI7_R = 6 << 21;
+	//IntPrioritySet(INT_GPIOF , 0xe0);                             // Set priority to 7
+  GPIOIntRegister(GPIO_PORTF_BASE,SwitchHandler);               // Register the interrupt handler
+  GPIOIntTypeSet(GPIO_PORTF_BASE,GPIO_PIN_4|GPIO_PIN_0,GPIO_FALLING_EDGE); // Set the switches to trigger once pressed (since the switches are configured as Pull-down)
+  GPIOIntEnable(GPIO_PORTF_BASE, GPIO_PIN_4|GPIO_PIN_0);        // Sandwich
 }
