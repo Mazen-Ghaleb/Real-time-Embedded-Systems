@@ -91,8 +91,10 @@ static void vDisplayTask( void *pvParameters ){
 			if (xStatus == pdPASS) {
 				xSemaphoreTake( xMutex, portMAX_DELAY );
 				//Display using LCD
+				LCD_clear(&lcd);
 				LCD_setPosition(&lcd, 1, 0);
-				LCD_sendString(&lcd, "Temperature:");
+				LCD_sendString(&lcd, "SetPoint:");
+				LCD_sendNum(&lcd,threshold);
 				LCD_setPosition(&lcd, 2, 0);
 				LCD_sendNum(&lcd,ReceivedValue);
 				LCD_sendString(&lcd, " C");
@@ -143,7 +145,7 @@ void vApplicationIdleHook(){
 
 void threshold_LED(unsigned int ReadTemperature){
 	if (ReadTemperature > threshold) {
-    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3, GPIO_PIN_1); // Turns Red LED
+    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3, GPIO_PIN_1); // Turns Red LED and HEATER
 	}
 	else if (ReadTemperature == threshold) {
 		GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3, GPIO_PIN_1 | GPIO_PIN_3); // Turns Yellow LED
