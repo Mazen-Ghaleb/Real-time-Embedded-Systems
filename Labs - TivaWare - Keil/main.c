@@ -90,14 +90,18 @@ static void vDisplayTask( void *pvParameters ){
 			xStatus = xQueueReceive(xQueue,&ReceivedValue,portMAX_DELAY);
 			if (xStatus == pdPASS) {
 				xSemaphoreTake( xMutex, portMAX_DELAY );
-				//Display using LCD
 				LCD_clear(&lcd);
+				//Display using LCD
 				LCD_setPosition(&lcd, 1, 0);
 				LCD_sendString(&lcd, "SetPoint:");
 				LCD_sendNum(&lcd,threshold);
+				LCD_sendString(&lcd, " C");
+				
 				LCD_setPosition(&lcd, 2, 0);
+				LCD_sendString(&lcd, "Measured:");
 				LCD_sendNum(&lcd,ReceivedValue);
 				LCD_sendString(&lcd, " C");
+				
 				
 				// Display using UART
 				sprintf (buffer, "%s %d%s %.2lf%s %.2lf%s","Temprature is:",ReceivedValue,"C",((double)ReceivedValue * 9/5)+ 32,"F", ReceivedValue + 273.15,"K");
@@ -145,7 +149,7 @@ void vApplicationIdleHook(){
 
 void threshold_LED(unsigned int ReadTemperature){
 	if (ReadTemperature > threshold) {
-    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3, GPIO_PIN_1); // Turns Red LED and HEATER
+    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3, GPIO_PIN_1); // Turns Red LED and turn off Heater
 	}
 	else if (ReadTemperature == threshold) {
 		GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3, GPIO_PIN_1 | GPIO_PIN_3); // Turns Yellow LED
