@@ -1,10 +1,12 @@
 #include "Init.h"
 
 static void INIT_TASK(void *pvParameters);
-void toggle_red(void);
+static void vTask1( void *pvParameters );
+static void vTask2( void *pvParameters );
+void UART_PrintBuffer(void);
 void toggle_blue(void);
-static void vCounterTask( void *pvParameters );
-static void vLedTogglerTask( void *pvParameters );
+void toggle_red(void);
+void toggle_green(void);
 void vApplicationIdleHook(void);
 void delay (int n);
 
@@ -14,20 +16,20 @@ void delay(int n ){
 }
 
 unsigned char buffer [50];
-xTaskHandle xCounterTask_Handle;
-xTaskHandle xLedTogglerTask_Handle;
-xSemaphoreHandle xBinarySemaphore;
+xTaskHandle xTask1_Handle;
+xTaskHandle xTask2_Handle;
 xSemaphoreHandle xMutex;
+xSemaphoreHandle xMutex2;
 
 int main() 
 {
-	vSemaphoreCreateBinary(xBinarySemaphore)
 	xMutex = xSemaphoreCreateMutex();
+	xMutex2 = xSemaphoreCreateMutex();
 	
-	if( xBinarySemaphore != NULL && xMutex!= NULL) {
+	if( xMutex != NULL && xMutex2!= NULL) {
 
-		xTaskCreate(vCounterTask,"CounterTask", configMINIMAL_STACK_SIZE,"This is the CounterTask\n" , 2, &xCounterTask_Handle);
-		xTaskCreate(vLedTogglerTask,"Led Toggler Task", configMINIMAL_STACK_SIZE,"This is LedToggler Task\n" , 3, &xLedTogglerTask_Handle);
+		xTaskCreate(vTask1,"Task 1", configMINIMAL_STACK_SIZE,"Task 1" , 2, &xTask1_Handle);
+		xTaskCreate(vTask2,"Task 2", configMINIMAL_STACK_SIZE,"Task 2" , 2, &xTask2_Handle);
 		xTaskCreate(INIT_TASK,"Intialization Task", configMINIMAL_STACK_SIZE,NULL , 4, NULL);
 		
 		vTaskStartScheduler();
@@ -40,84 +42,61 @@ int main()
 void INIT_TASK(void *pvParameters){
 	PortAInit();
 	PortFInit();
-	SwitchInterruptInit();
 	UART0Init();
 	
 	vTaskDelete(NULL);
 }
 
-static void vCounterTask( void *pvParameters ){
-		for( ;; )
+static void vTask1( void *pvParameters ){
+	portBASE_TYPE xStatus;	
+	for( ;; )
 		{
-			xSemaphoreTake( xMutex, portMAX_DELAY );
-			sprintf (buffer, "%s",(char * ) pvParameters);
-			for(int i = 0; buffer[i] != '\0'; i++){
-						UARTCharPut(UART0_BASE, buffer[i]);
-			}
-			UARTCharPut(UART0_BASE, '\r');
-			UARTCharPut(UART0_BASE, '\n');
-			for (int i =0;i<11;i++)
-			{
-			sprintf (buffer, "%d",i);
-			for(int i = 0; buffer[i] != '\0'; i++){
-						UARTCharPut(UART0_BASE, buffer[i]);
-			}
-			UARTCharPut(UART0_BASE, '\r');
-			UARTCharPut(UART0_BASE, '\n');
-			}
+			xStatus = xSemaphoreTake( xMutex, portMAX_DELAY );
+			if (xStatus == pdPASS) {
+					taskYIELD()
+					sprintf (buffer, "%s","This is Task 1");
+					UART_PrintBuffer();
+					xStatus = xSemaphoreTake( xMutex2, portMAX_DELAY );
+					if (xStatus == pdPASS) {
+						sprintf (buffer, "%s","Deadlock didn't happen");
+						UART_PrintBuffer();
+						xSemaphoreGive(xMutex2);
+					}
+				}
 			xSemaphoreGive(xMutex);
 		}
 }
 
-static void vLedTogglerTask( void *pvParameters ){
-    xSemaphoreTake( xBinarySemaphore, 0 );
+static void vTask2( void *pvParameters ){
 		portBASE_TYPE xStatus;
     for( ;; )
     {
-      xStatus = xSemaphoreTake( xBinarySemaphore, portMAX_DELAY );
+      xStatus = xSemaphoreTake( xMutex2, portMAX_DELAY );
 			if (xStatus == pdPASS) {
-				xSemaphoreTake( xMutex, portMAX_DELAY );
-				sprintf (buffer, "%s",(char * ) pvParameters);
-				for(int i = 0; buffer[i] != '\0'; i++){
-						UARTCharPut(UART0_BASE, buffer[i]);
+					taskYIELD()
+					sprintf (buffer, "%s","This is Task 2");
+					UART_PrintBuffer();
+					xStatus = xSemaphoreTake(xMutex, portMAX_DELAY );
+					if (xStatus == pdPASS) {
+						sprintf (buffer, "%s","Deadlock didn't happen");
+						UART_PrintBuffer();
+						xSemaphoreGive(xMutex);
+					}
 				}
-				UARTCharPut(UART0_BASE, '\r');
-				UARTCharPut(UART0_BASE, '\n');
-				
-				toggle_red();
-				xSemaphoreGive(xMutex);
-				vTaskDelay(500/portTICK_RATE_MS);
-				}
+			xSemaphoreGive(xMutex2);
     }
 }
 
-// Switch 0 handler
-void SwitchHandler(void) {
-    //uint32 switches = GPIOPinRead(GPIO_PORTF_BASE, GPIO_PIN_0|GPIO_PIN_4); // Read the switches
-    // (switches & 0x10) // If switch 2 has been pressed
-		portBASE_TYPE xHigherPriorityTaskWoken = pdFALSE;
-		xSemaphoreGiveFromISR( xBinarySemaphore, &xHigherPriorityTaskWoken );
-		GPIOIntClear(GPIO_PORTF_BASE,GPIO_PIN_0|GPIO_PIN_4); // Clear the Interrupt
-		portEND_SWITCHING_ISR( xHigherPriorityTaskWoken );
-}
-
-
 void vApplicationIdleHook(){
+	sprintf (buffer, "%s","Reached Idle Hook --> Tasks are blocked");
+	UART_PrintBuffer();
 	__asm("wfi\n");
 }
 
-void toggle_red()
-{
-  if(GPIOPinRead(GPIO_PORTF_BASE,GPIO_PIN_1) & (1<<1))
-    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1,0);
-  else
-    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1,GPIO_PIN_1);
-}
-
-void toggle_blue()
-{
-  if(GPIOPinRead(GPIO_PORTF_BASE,GPIO_PIN_2) & (1<<2))
-    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_2,0);
-  else
-    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_2,GPIO_PIN_2);
+void UART_PrintBuffer(void){
+	for(int i = 0; buffer[i] != '\0'; i++){
+				UARTCharPut(UART0_BASE, buffer[i]);
+				}
+				UARTCharPut(UART0_BASE, '\r');
+				UARTCharPut(UART0_BASE, '\n');
 }
