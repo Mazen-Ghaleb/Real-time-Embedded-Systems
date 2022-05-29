@@ -187,10 +187,11 @@ void LCD_setPosition(LCD *lcd, unsigned int line, unsigned int col) //Defines th
 
 void LCD_sendNum(LCD *lcd, unsigned int num)
 {
-    int number = 1000;
+		int count=(num==0)?1:log10(num)+1;  
+    int number = pow(10,count-1);
     int r, q, i;
 
-    for(i=0;i<4;i++)
+    for(i=0;i<count;i++)
     {
         q = num / number;
         r = num % number;
