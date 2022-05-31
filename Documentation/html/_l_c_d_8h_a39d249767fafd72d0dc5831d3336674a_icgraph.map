@@ -1,0 +1,10 @@
+<map id="LCD_sendByte" name="LCD_sendByte">
+<area shape="rect" id="node1" title="Function that sends a byte to LCD." alt="" coords="433,107,544,133"/>
+<area shape="rect" id="node2" href="$_l_c_d_8c.html#a9f4e5a434d4b3835c39c1b410b1af630" title="Function that clear LCD display." alt="" coords="283,5,367,32"/>
+<area shape="rect" id="node3" href="$_l_c_d_8c.html#a7d804124fb7b747aa67d20f7b67f04bd" title="Function that needs to be called before all code to initialize the LCD." alt="" coords="143,31,216,57"/>
+<area shape="rect" id="node5" href="$_l_c_d_8c.html#a85fbfe3c26544ce6a05057bb2127b0c6" title="Function that controls the display cursor." alt="" coords="275,107,374,133"/>
+<area shape="rect" id="node6" href="$_l_c_d_8c.html#a274035d7ec5fee90a312dacc2372df37" title="Function that sends a number to LCD." alt="" coords="269,157,381,184"/>
+<area shape="rect" id="node7" href="$_l_c_d_8c.html#a744319158356a584a341f81cbaa01e47" title="Function that sends a string to LCD." alt="" coords="265,208,384,235"/>
+<area shape="rect" id="node8" href="$_l_c_d_8c.html#a870b7c6f90815a319d890b4655a72e86" title="Function that sets cursor position on LCD." alt="" coords="264,259,385,285"/>
+<area shape="rect" id="node4" href="$main_8c.html#a8642f77148a23556a78a6bdeadbff1f0" title=" " alt="" coords="5,31,95,57"/>
+</map>
