@@ -71,6 +71,8 @@ static void vChangeThresholdTask( void *pvParameters ){
 					j++;
 			}
 			while((buffer[j-1] != '\n') && (buffer[j-1] != '\r') && (j < 50));
+			UARTCharPut(UART0_BASE, '\r');
+			UARTCharPut(UART0_BASE, '\n');
 	//		if (j != 50) {
 	//			buffer[j] = '\0';
 	//		}

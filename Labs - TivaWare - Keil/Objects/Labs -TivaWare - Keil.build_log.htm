@@ -28,8 +28,9 @@ Project File Date:  05/29/2022
 *** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Rebuild target 'Project_TivaWare'
 compiling freertos_evr.c...
-assembling startup_TM4C123.s...
 compiling list.c...
+assembling startup_TM4C123.s...
+compiling Init.c...
 RTE/Device/TM4C123GH6PM/system_TM4C123.c(13): warning: In file included from...
 C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123\TM4C123.h(98): warning: In file included from...
 C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(298): warning: anonymous unions are a C11 extension [-Wc11-extensions]
@@ -166,28 +167,6 @@ C:/Users/mazenmoussa/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/
   ^
 44 warnings generated.
 compiling system_TM4C123.c...
-compiling Init.c...
-LCD.c(1): warning: In file included from...
-./LCD.h(85): warning: padding struct 'struct LCD' with 1 byte to align 'DataPeripheral' [-Wpadded]
-    uint32_t DataPeripheral,    /**< Data peripheral. */
-             ^
-LCD.c(195): warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
-        q = num / number;
-          ~ ~~~~^~~~~~~~
-LCD.c(195): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
-        q = num / number;
-                ~ ^~~~~~
-LCD.c(196): warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
-        r = num % number;
-          ~ ~~~~^~~~~~~~
-LCD.c(196): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
-        r = num % number;
-                ~ ^~~~~~
-LCD.c(199): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
-        num = r;
-            ~ ^
-6 warnings generated.
-compiling LCD.c...
 main.c(41): warning: unused parameter 'pvParameters' [-Wunused-parameter]
 void INIT_TASK(void *pvParameters){
                      ^
@@ -206,10 +185,10 @@ main.c(63): warning: passing 'unsigned char [50]' to parameter of type 'char *' 
 main.c(69): warning: implicit conversion loses integer precision: 'int32_t' (aka 'int') to 'unsigned char' [-Wimplicit-int-conversion]
                                         buffer[j] = UARTCharGet(UART0_BASE);
                                                   ~ ^~~~~~~~~~~~~~~~~~~~~~~
-main.c(77): warning: implicit declaration of function 'atoi' is invalid in C99 [-Wimplicit-function-declaration]
+main.c(79): warning: implicit declaration of function 'atoi' is invalid in C99 [-Wimplicit-function-declaration]
                         threshold = atoi(buffer);
                                     ^
-main.c(77): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+main.c(79): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
                         threshold = atoi(buffer);
                                   ~ ^~~~~~~~~~~~
 main.c(54): warning: unused parameter 'pvParameters' [-Wunused-parameter]
@@ -218,25 +197,25 @@ static void vChangeThresholdTask( void *pvParameters ){
 main.c(54): warning: function 'vChangeThresholdTask' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
 static void vChangeThresholdTask( void *pvParameters ){
                                                       ^
-main.c(107): warning: passing 'unsigned char [50]' to parameter of type 'char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+main.c(109): warning: passing 'unsigned char [50]' to parameter of type 'char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
                                 sprintf (buffer, "%s %d%s %.2lf%s %.2lf%s","Temprature is:",ReceivedValue,"C",((double)ReceivedValue * 9/5)+ 32,"F", ReceivedValue + 273.15,"K");
                                          ^~~~~~
-main.c(85): warning: unused parameter 'pvParameters' [-Wunused-parameter]
+main.c(87): warning: unused parameter 'pvParameters' [-Wunused-parameter]
 static void vDisplayTask( void *pvParameters ){
                                 ^
-main.c(85): warning: function 'vDisplayTask' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+main.c(87): warning: function 'vDisplayTask' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
 static void vDisplayTask( void *pvParameters ){
                                               ^
-main.c(129): warning: incompatible pointer types passing 'uint32_t (*)[1]' to parameter of type 'uint32_t *' (aka 'unsigned int *') [-Wincompatible-pointer-types]
+main.c(131): warning: incompatible pointer types passing 'uint32_t (*)[1]' to parameter of type 'uint32_t *' (aka 'unsigned int *') [-Wincompatible-pointer-types]
                         ADCSequenceDataGet(ADC0_BASE, 3, &pui32ADC0Value);
                                                          ^~~~~~~~~~~~~~~
 C:/ti/TivaWare_C_Series-2.2.0.295\driverlib/adc.h(272): note: passing argument to parameter 'pui32Buffer' here
                                   uint32_t *pui32Buffer);
                                             ^
-main.c(118): warning: unused parameter 'pvParameters' [-Wunused-parameter]
+main.c(120): warning: unused parameter 'pvParameters' [-Wunused-parameter]
 static void vADCTask( void *pvParameters ){
                             ^
-main.c(118): warning: function 'vADCTask' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+main.c(120): warning: function 'vADCTask' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
 static void vADCTask( void *pvParameters ){
                                           ^
 main.c(12): warning: no previous extern declaration for non-static variable 'lcd' [-Wmissing-variable-declarations]
@@ -286,6 +265,27 @@ unsigned char buffer [50];
 ^
 21 warnings generated.
 compiling main.c...
+LCD.c(1): warning: In file included from...
+./LCD.h(85): warning: padding struct 'struct LCD' with 1 byte to align 'DataPeripheral' [-Wpadded]
+    uint32_t DataPeripheral,    /**< Data peripheral. */
+             ^
+LCD.c(195): warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+        q = num / number;
+          ~ ~~~~^~~~~~~~
+LCD.c(195): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        q = num / number;
+                ~ ^~~~~~
+LCD.c(196): warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+        r = num % number;
+          ~ ~~~~^~~~~~~~
+LCD.c(196): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        r = num % number;
+                ~ ^~~~~~
+LCD.c(199): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        num = r;
+            ~ ^
+6 warnings generated.
+compiling LCD.c...
 C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/portable/MemMang/heap_2.c(82): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
 static const uint16_t heapSTRUCT_SIZE = ( ( sizeof( BlockLink_t ) + ( portBYTE_ALIGNMENT - 1 ) ) & ~portBYTE_ALIGNMENT_MASK );
                                                                                                  ~ ^~~~~~~~~~~~~~~~~~~~~~~~
@@ -916,7 +916,7 @@ C:/Users/mazenmoussa/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.4.6/Source/ta
 113 warnings generated.
 compiling tasks.c...
 linking...
-Program Size: Code=23988 RO-data=2524 RW-data=1644 ZI-data=9268  
+Program Size: Code=24004 RO-data=2524 RW-data=1644 ZI-data=9268  
 ".\Objects\Labs -TivaWare - Keil.axf" - 0 Error(s), 275 Warning(s).
 
 <h2>Software Packages used:</h2>
@@ -959,11 +959,11 @@ Package Vendor: Keil
    * Component: ARM.FreeRTOS::RTOS:Core:Cortex-M:10.4.6
       Include file:  Source\include\FreeRTOS.h
       Include file:  Source\include\semphr.h
-      Include file:  Source\include\queue.h
-      Source file:   Source\list.c
-      Source file:   Source\tasks.c
       Include file:  Source\include\task.h
       Source file:   Source\queue.c
+      Source file:   Source\list.c
+      Source file:   Source\tasks.c
+      Include file:  Source\include\queue.h
       Source file:   Source\portable\GCC\ARM_CM4F\port.c
       Source file:   CMSIS\RTOS2\FreeRTOS\Source\freertos_evr.c
 
@@ -978,8 +978,8 @@ Package Vendor: Keil
 
    * Component: Keil::Device:Startup:1.0.1
       Source file:   Device\Source\system_TM4C123.c
-      Source file:   Device\Source\ARM\startup_TM4C123.s
       Include file:  Device\Include\TM4C123\TM4C123.h
+      Source file:   Device\Source\ARM\startup_TM4C123.s
 Build Time Elapsed:  00:00:03
 </pre>
 </body>
