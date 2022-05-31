@@ -1,5 +1,12 @@
+/*******************************************************************************
+ *                                Includes                                     *
+ *******************************************************************************/
 #include "Init.h"
 
+
+/*******************************************************************************
+ *                                Prototypes                                   *
+ *******************************************************************************/
 void INIT_TASK(void *pvParameters);
 static void vDisplayTask( void *pvParameters );
 static void vADCTask( void *pvParameters );
@@ -9,6 +16,10 @@ void vApplicationIdleHook(void);
 void threshold_LED(unsigned int ReadTemperature);
 void UART_PrintBuffer(void);
 
+
+/*******************************************************************************
+ *                                Global variables                             *
+ *******************************************************************************/
 LCD lcd;
 
 xSemaphoreHandle xMutex;
@@ -20,7 +31,13 @@ xQueueHandle xQueue;
 unsigned int threshold;
 unsigned char buffer [50];
 
+/*******************************************************************************/
 
+
+/*
+ * Description :
+ * it handles the mutex and semaphore functions with queue.
+ */
 int main() 
 {
 	vSemaphoreCreateBinary(xBinarySemaphore)
@@ -38,19 +55,30 @@ int main()
 	}
 }
 
+/*
+ * Description :
+ * it initialize the ports and peripherals that's used.
+ */
 void INIT_TASK(void *pvParameters){
-	PortAInit();
-	PortFInit();
-	UART0Init();
-	SwitchInterruptInit();
+	PortAInit();												//Initalize port A
+	PortFInit();												//Initalize port F
+	UART0Init();												//Initalize UART 0
+	SwitchInterruptInit();										//For interrupt
 
-	ADCInit();
+	ADCInit();													//Initalize ADC
 	
 	lcd = LCD_create();
-	LCD_init(&lcd);
+	LCD_init(&lcd);												//Initalize LCD
 	
 	vTaskDelete(NULL);
 }
+
+
+
+/*
+ * Description :
+ * it initialize the threshold temperature for the sensor to control the semaphore and mutex.
+ */
 static void vChangeThresholdTask( void *pvParameters ){
 	xSemaphoreTake( xBinarySemaphore, 0 );
 	portBASE_TYPE xStatus;
@@ -83,7 +111,10 @@ static void vChangeThresholdTask( void *pvParameters ){
 	}
 }
 
-
+/*
+ * Description :
+ * it is used to display the task on LCD  and change the temperature from Fahrenheit to Celsius
+ */
 static void vDisplayTask( void *pvParameters ){
 		unsigned int ReceivedValue;
 		portBASE_TYPE xStatus;
@@ -117,6 +148,10 @@ static void vDisplayTask( void *pvParameters ){
 		}
 }
 
+/*
+ * Description :
+ * it sends and recieve data between the peripherals 
+ */
 static void vADCTask( void *pvParameters ){
 	uint32_t pui32ADC0Value[1];
 	unsigned int ui32TempValueC;
@@ -136,7 +171,10 @@ static void vADCTask( void *pvParameters ){
     }
 }
 
-// Switch 0 and 4 handler
+/*
+ * Description :
+ * Switch 0 and 4 handler.
+ */
 void SwitchHandler(void) {
 		portBASE_TYPE xHigherPriorityTaskWoken = pdFALSE;
 		xSemaphoreGiveFromISR( xBinarySemaphore, &xHigherPriorityTaskWoken );
@@ -144,11 +182,19 @@ void SwitchHandler(void) {
 		portEND_SWITCHING_ISR( xHigherPriorityTaskWoken );
 }
 
+
+/*
+ * Description :
+ * used to create assambly instruction wait for interrupt
+ */
 void vApplicationIdleHook(){
 	__asm("wfi\n");
 }
 
-
+/*
+ * Description :
+ * it used to control the light of the LED according to the temperature
+ */
 void threshold_LED(unsigned int ReadTemperature){
 	if (ReadTemperature > threshold) {
     GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3, GPIO_PIN_1); // Turns Red LED and turn off Heater
@@ -160,7 +206,12 @@ void threshold_LED(unsigned int ReadTemperature){
 		GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3, GPIO_PIN_2); // Turns Blue LED
 	}
 }
-	
+
+
+/*
+ * Description :
+ * it used to print the buffer.
+ */
 void UART_PrintBuffer(void){
 	for(int i = 0; buffer[i] != '\0'; i++){
 				UARTCharPut(UART0_BASE, buffer[i]);
