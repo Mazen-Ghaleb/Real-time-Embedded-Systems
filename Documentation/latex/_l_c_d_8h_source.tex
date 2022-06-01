@@ -1,0 +1,114 @@
+\hypertarget{_l_c_d_8h_source}{}\doxysection{LCD.\+h}
+\mbox{\hyperlink{_l_c_d_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef LCD\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define LCD\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <stdbool.h>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}inc/hw\_types.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}inc/hw\_memmap.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}driverlib/sysctl.h"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}driverlib/gpio.h"{}}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{13 \textcolor{comment}{//|  1   |   2   |   3   |   4   |   5   |   6   |   7   |   8   |   9   |   10   |   11   |   12   |   13   |   14   |   15   |   16   |}}
+\DoxyCodeLine{14 \textcolor{comment}{//| GND  |  VCC  |  V0   |  RS   |  R/W  |   E   |   D0  |   D1  |   D2  |   D3   |   D4   |   D5   |   D6   |   D7   |   A    |   K    |}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{comment}{// CONTROLS PINS     RS  |  R/W  |   E}}
+\DoxyCodeLine{17 \textcolor{comment}{// DATA BUS PINS     D0 -\/ D7}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#define LCD\_CTRL\_PERIPHERAL    SYSCTL\_PERIPH\_GPIOB}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#define LCD\_CTRL\_PORT          GPIO\_PORTB\_BASE}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#define RS\_PIN                 GPIO\_PIN\_0}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#define RW\_PIN                 GPIO\_PIN\_2}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#define ENABLE\_PIN             GPIO\_PIN\_1}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#define LCD\_DATA\_PERIPHERAL    SYSCTL\_PERIPH\_GPIOB}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define LCD\_DATA\_PORT          GPIO\_PORTB\_BASE}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#define LCD\_D7                 GPIO\_PIN\_7}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#define LCD\_D6                 GPIO\_PIN\_6}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#define LCD\_D5                 GPIO\_PIN\_5}}
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#define LCD\_D4                 GPIO\_PIN\_4}}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#define DELAY\_1s       16666667     }\textcolor{comment}{// =(SysCtlClockGet()/3)*1}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#define DELAY\_15ms     250000       }\textcolor{comment}{// =(SysCtlClockGet()/3000)*15}}
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#define DELAY\_12ms     200000       }\textcolor{comment}{// =(SysCtlClockGet()/3000)*12  //for example (50000000/3000)*12=200000}}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#define DELAY\_5ms      83334        }\textcolor{comment}{// =(SysCtlClockGet()/3000)*5}}
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#define DELAY\_2\_5ms    41666        }\textcolor{comment}{// =(SysCtlClockGet()/3000)*2.5}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#define DELAY\_100us    16667        }\textcolor{comment}{// =(SysCtlClockGet()/3000000)*100}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#define DELAY\_40us     667          }\textcolor{comment}{// =(SysCtlClockGet()/3000000)*40}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define DELAY\_12us     200          }\textcolor{comment}{// =(SysCtlClockGet()/3000000)*12}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define DELAY\_0\_6us    10           }\textcolor{comment}{// =(SysCtlClockGet()/3000000)*0.6}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 }
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#define LCD\_CLEAR            0x01   }\textcolor{comment}{// Clear display}}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#define LCD\_CURSOR\_ON        0x0E   }\textcolor{comment}{// Cursor on}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#define LCD\_CURSOR\_OFF       0x0C   }\textcolor{comment}{// Turn off cursor}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#define LCD\_BLINK\_CURSOR\_ON  0x0F   }\textcolor{comment}{// Blink cursor on//Turns on the LCD display and Sets a BLINKING CURSOR}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#define LCD\_BLINK\_CURSOR\_OFF 0x0E   }\textcolor{comment}{// Cursor No Blink}}
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#define LCD\_UNDERLINE\_ON     0xF1   }\textcolor{comment}{// Underline cursor on}}
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#define LCD\_UNDERLINE\_OFF    0x0D}}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#define LCD\_TURN\_ON          0x0C   }\textcolor{comment}{// Turn Lcd display on}}
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#define LCD\_TURN\_OFF         0x08   }\textcolor{comment}{// Turn Lcd display off}}
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#define INCREMENT            0x07   }\textcolor{comment}{// Entry mode increment}}
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#define DECREMENT            0x05   }\textcolor{comment}{// Entry mode decrement}}
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#define SHIFT\_ON             0x07   }\textcolor{comment}{// Display shift on}}
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#define SHIFT\_OFF            0x06   }\textcolor{comment}{// Display shift off}}
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#define SHIFT\_LEFT           0x1C   }\textcolor{comment}{// Text shift Left}}
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#define SHIFT\_RIGHT          0x18   }\textcolor{comment}{// Display shift Right}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#define FOUR\_BIT             0x28  }\textcolor{comment}{// 4-\/bit Interface}}
+\DoxyCodeLine{62 \textcolor{preprocessor}{\#define EIGHT\_BIT            0x3F  }\textcolor{comment}{// 8-\/bit Interface}}
+\DoxyCodeLine{63 \textcolor{preprocessor}{\#define LINE\_5X7             0x33  }\textcolor{comment}{// 5x7 characters, single line}}
+\DoxyCodeLine{64 \textcolor{preprocessor}{\#define LINE\_5X10            0x37  }\textcolor{comment}{// 5x10 characters}}
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#define LINES\_5X7            0x3B  }\textcolor{comment}{// 5x7 characters, multiple line}}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67 \textcolor{comment}{/*******************************************************************}}
+\DoxyCodeLine{68 \textcolor{comment}{*   TYPEDEFS}}
+\DoxyCodeLine{69 \textcolor{comment}{*******************************************************************/}}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{74 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_l_c_d}{LCD}} \{}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76     \textcolor{comment}{//Control}}
+\DoxyCodeLine{77     uint32\_t \mbox{\hyperlink{struct_l_c_d_a545e6bbcfdabff2234e0d3214d2f89b9}{ControlPeripheral}}, }
+\DoxyCodeLine{78              \mbox{\hyperlink{struct_l_c_d_a7261d97873f3c1507aa4a4f298fa7d62}{ControlPortBase}};   }
+\DoxyCodeLine{80     uint8\_t \mbox{\hyperlink{struct_l_c_d_ab0b37e7157c7a85e94b07291e760756d}{rs}},                 }
+\DoxyCodeLine{81             \mbox{\hyperlink{struct_l_c_d_af95e106d76ade9d080f4101055f7cd84}{rw}},                 }
+\DoxyCodeLine{82             \mbox{\hyperlink{struct_l_c_d_a1d31b158278813b8f69572dbd9aba8d0}{en}};                 }
+\DoxyCodeLine{84     \textcolor{comment}{//Data}}
+\DoxyCodeLine{85     uint32\_t \mbox{\hyperlink{struct_l_c_d_a4c211fdf24e9927ed064ed2bb480b2a6}{DataPeripheral}},    }
+\DoxyCodeLine{86              \mbox{\hyperlink{struct_l_c_d_a6ad2d8c7b679fb4d2e8b6799e2cd2b0b}{DataPortBase}};      }
+\DoxyCodeLine{88     uint8\_t \mbox{\hyperlink{struct_l_c_d_af7cceef2c4e7741d9965bc71d0c78ede}{data}}[8];            }
+\DoxyCodeLine{90     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_l_c_d_acb18e5f0278aa48b6631ffc035afa30a}{line}},          }
+\DoxyCodeLine{91                  \mbox{\hyperlink{struct_l_c_d_a8b4c582d2d061ea547c7b3caced611b0}{column}};        }
+\DoxyCodeLine{93 \} \mbox{\hyperlink{_l_c_d_8h_a4e45774da9727a962c704f245b654206}{LCD}};}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95 \mbox{\hyperlink{struct_l_c_d}{LCD}} \mbox{\hyperlink{_l_c_d_8h_ae611079393748058a28d032ee4b0e4a0}{LCD\_create}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{98 uint8\_t \mbox{\hyperlink{_l_c_d_8h_a0baff4e7cdfb7761eca40f7143045ed3}{LCD\_CTRL\_BUS}}(\mbox{\hyperlink{struct_l_c_d}{LCD}} *\mbox{\hyperlink{main_8c_a77998bc7d5e3a78a2591c24bdfb93793}{lcd}});}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{101 uint8\_t \mbox{\hyperlink{_l_c_d_8h_ab7ec12e201d60f76759a61725b537271}{LCD\_DATA\_BUS}}(\mbox{\hyperlink{struct_l_c_d}{LCD}} *\mbox{\hyperlink{main_8c_a77998bc7d5e3a78a2591c24bdfb93793}{lcd}});}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{104 \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d_8h_a172456fdc96609c813c8f930f5ce6545}{LCD\_setup}}(\mbox{\hyperlink{struct_l_c_d}{LCD}} *\mbox{\hyperlink{main_8c_a77998bc7d5e3a78a2591c24bdfb93793}{lcd}});}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{107 \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d_8h_a7d804124fb7b747aa67d20f7b67f04bd}{LCD\_init}}(\mbox{\hyperlink{struct_l_c_d}{LCD}} *\mbox{\hyperlink{main_8c_a77998bc7d5e3a78a2591c24bdfb93793}{lcd}});}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{110 \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d_8h_a9f4e5a434d4b3835c39c1b410b1af630}{LCD\_clear}}(\mbox{\hyperlink{struct_l_c_d}{LCD}} *\mbox{\hyperlink{main_8c_a77998bc7d5e3a78a2591c24bdfb93793}{lcd}});}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{113 \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d_8h_a979587670e78b7ae31d12db5acf95f40}{LCD\_sendNibble}}(\mbox{\hyperlink{struct_l_c_d}{LCD}} *\mbox{\hyperlink{main_8c_a77998bc7d5e3a78a2591c24bdfb93793}{lcd}}, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} data);}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{116 \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d_8h_a39d249767fafd72d0dc5831d3336674a}{LCD\_sendByte}}(\mbox{\hyperlink{struct_l_c_d}{LCD}} *\mbox{\hyperlink{main_8c_a77998bc7d5e3a78a2591c24bdfb93793}{lcd}}, \textcolor{keywordtype}{bool} rs, \textcolor{keywordtype}{char} \textcolor{keywordtype}{byte});}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{119 \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d_8h_a274035d7ec5fee90a312dacc2372df37}{LCD\_sendNum}}(\mbox{\hyperlink{struct_l_c_d}{LCD}} *\mbox{\hyperlink{main_8c_a77998bc7d5e3a78a2591c24bdfb93793}{lcd}}, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} num);}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{122 \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d_8h_a744319158356a584a341f81cbaa01e47}{LCD\_sendString}}(\mbox{\hyperlink{struct_l_c_d}{LCD}} *\mbox{\hyperlink{main_8c_a77998bc7d5e3a78a2591c24bdfb93793}{lcd}}, \textcolor{keywordtype}{char}* word);}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{125 \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d_8h_a85fbfe3c26544ce6a05057bb2127b0c6}{LCD\_inc\_cnt}}(\mbox{\hyperlink{struct_l_c_d}{LCD}} *\mbox{\hyperlink{main_8c_a77998bc7d5e3a78a2591c24bdfb93793}{lcd}});}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{128 \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_c_d_8h_a870b7c6f90815a319d890b4655a72e86}{LCD\_setPosition}}(\mbox{\hyperlink{struct_l_c_d}{LCD}} *\mbox{\hyperlink{main_8c_a77998bc7d5e3a78a2591c24bdfb93793}{lcd}}, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} line, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} col);}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
