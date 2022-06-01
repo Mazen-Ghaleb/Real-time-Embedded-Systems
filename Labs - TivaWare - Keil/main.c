@@ -17,7 +17,8 @@ xSemaphoreHandle xBinarySemaphore;
 xQueueHandle xQueue;
 
 
-unsigned int threshold;
+unsigned int threshold; // Setpoint
+unsigned int alarmThreshold = 50; //Buzzard threshold default 50 C
 unsigned char buffer [50];
 
 
@@ -150,6 +151,7 @@ void vApplicationIdleHook(){
 
 
 void threshold_LED(unsigned int ReadTemperature){
+	// Setpoint threshold
 	if (ReadTemperature > threshold) {
     GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3, GPIO_PIN_1); // Turns Red LED and turn off Heater
 	}
@@ -158,6 +160,13 @@ void threshold_LED(unsigned int ReadTemperature){
 	}
 	else if (ReadTemperature < threshold) {
 		GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3, GPIO_PIN_2); // Turns Blue LED
+	}
+	
+	//Alarm threshold
+	if (ReadTemperature > alarmThreshold) {
+		// Turn on Buzzard alarm
+    sprintf (buffer, "%s","The temperature is higher than alarm threshold, Turn Buzzard ON");
+		UART_PrintBuffer();
 	}
 }
 	
