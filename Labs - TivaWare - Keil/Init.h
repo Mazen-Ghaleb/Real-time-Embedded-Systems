@@ -23,7 +23,9 @@
 #include "semphr.h"
 #include "LCD.h"
 
-
+/*******************************************************************************
+ *                                Prototypes                                   *
+ *******************************************************************************/
 uint32 CalcTicks(uint32 milliseconds);
 void PortAInit(void);
 void PortFInit(void);

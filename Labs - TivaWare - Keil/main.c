@@ -28,7 +28,7 @@ xSemaphoreHandle xBinarySemaphore;
 xQueueHandle xQueue;
 
 
-unsigned int threshold; // Setpoint
+unsigned int threshold; 					// Setpoint
 unsigned int alarmThreshold = 50; //Buzzard threshold default 50 C
 unsigned char buffer [50];
 
@@ -58,23 +58,21 @@ int main()
 
 /*
  * Description :
- * it initialize the ports and peripherals that's used.
+ * it initialize the ports and peripherals that are used.
  */
 void INIT_TASK(void *pvParameters){
 	PortAInit();												//Initalize port A
 	PortFInit();												//Initalize port F
 	UART0Init();												//Initalize UART 0
-	SwitchInterruptInit();										//For interrupt
+	SwitchInterruptInit();							//For interrupt
 
 	ADCInit();													//Initalize ADC
 	
 	lcd = LCD_create();
-	LCD_init(&lcd);												//Initalize LCD
+	LCD_init(&lcd);											//Initalize LCD
 	
 	vTaskDelete(NULL);
 }
-
-
 
 /*
  * Description :
@@ -88,7 +86,7 @@ static void vChangeThresholdTask( void *pvParameters ){
 		xStatus = xSemaphoreTake( xBinarySemaphore, portMAX_DELAY );
 		if (xStatus == pdPASS) {
 			xSemaphoreTake( xMutex, portMAX_DELAY );
-				// Prints on Console to Enter Threshold
+			// Prints on Console to Enter Threshold
 			sprintf (buffer, "%s","\nPlease Enter the threshold Temperature: ");
 			UART_PrintBuffer();
 		
@@ -102,9 +100,7 @@ static void vChangeThresholdTask( void *pvParameters ){
 			while((buffer[j-1] != '\n') && (buffer[j-1] != '\r') && (j < 50));
 			UARTCharPut(UART0_BASE, '\r');
 			UARTCharPut(UART0_BASE, '\n');
-	//		if (j != 50) {
-	//			buffer[j] = '\0';
-	//		}
+
 			threshold = atoi(buffer);
 			xSemaphoreGive(xMutex);
 			vTaskDelay(1000/portTICK_RATE_MS);
@@ -114,7 +110,8 @@ static void vChangeThresholdTask( void *pvParameters ){
 
 /*
  * Description :
- * it is used to display the task on LCD  and change the temperature from Fahrenheit to Celsius
+ * it is used to display the temperature on the LCD. It also converts the temperature 
+ * from Celsius to Fahrenheit and Kelvin to be displayed over UART. This is a continuous task.
  */
 static void vDisplayTask( void *pvParameters ){
 		unsigned int ReceivedValue;
@@ -125,6 +122,7 @@ static void vDisplayTask( void *pvParameters ){
 			if (xStatus == pdPASS) {
 				xSemaphoreTake( xMutex, portMAX_DELAY );
 				LCD_clear(&lcd);
+				
 				//Display using LCD
 				LCD_setPosition(&lcd, 1, 0);
 				LCD_sendString(&lcd, "SetPoint:");
@@ -151,7 +149,7 @@ static void vDisplayTask( void *pvParameters ){
 
 /*
  * Description :
- * it sends and recieve data between the peripherals 
+ * it is used to get the temperature from the sensor.
  */
 static void vADCTask( void *pvParameters ){
 	uint32_t pui32ADC0Value[1];
@@ -174,19 +172,19 @@ static void vADCTask( void *pvParameters ){
 
 /*
  * Description :
- * Switch 0 and 4 handler.
+ * Switch 0 and 4 handler that gives Semaphore upon entering ISR. 
  */
 void SwitchHandler(void) {
 		portBASE_TYPE xHigherPriorityTaskWoken = pdFALSE;
 		xSemaphoreGiveFromISR( xBinarySemaphore, &xHigherPriorityTaskWoken );
-		GPIOIntClear(GPIO_PORTF_BASE,GPIO_PIN_0|GPIO_PIN_4); // Clear the Interrupt
+		GPIOIntClear(GPIO_PORTF_BASE,GPIO_PIN_0|GPIO_PIN_4); 													// Clear the Interrupt
 		portEND_SWITCHING_ISR( xHigherPriorityTaskWoken );
 }
 
 
 /*
  * Description :
- * used to create assambly instruction wait for interrupt
+ * it is used to create assambly instruction wait for interrupt
  */
 void vApplicationIdleHook(){
 	__asm("wfi\n");
@@ -194,28 +192,28 @@ void vApplicationIdleHook(){
 
 /*
  * Description :
- * it used to control the light of the LED according to the temperature
+ * it used to control the light of the LED according to the 
+ * temperature to Simulate Heater and Buzzer
  */
 void threshold_LED(unsigned int ReadTemperature){
 	// Setpoint threshold
 	if (ReadTemperature > threshold) {
-    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3, GPIO_PIN_1); // Turns Red LED and turn off Heater
+    GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3, GPIO_PIN_1); 							// Turns Red LED and turn off Heater
 	}
 	else if (ReadTemperature == threshold) {
-		GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3, GPIO_PIN_1 | GPIO_PIN_3); // Turns Yellow LED
+		GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3, GPIO_PIN_1 | GPIO_PIN_3); 	// Turns Yellow LED
 	}
 	else if (ReadTemperature < threshold) {
-		GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3, GPIO_PIN_2); // Turns Blue LED
+		GPIOPinWrite(GPIO_PORTF_BASE,GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3, GPIO_PIN_2);					 			// Turns Blue LED
 	}
 	
 	//Alarm threshold
 	if (ReadTemperature > alarmThreshold) {
-		// Turn on Buzzard alarm
-    sprintf (buffer, "%s","The temperature is higher than alarm threshold, Turn Buzzard ON");
+		// Turn on Buzzer alarm
+    sprintf (buffer, "%s","The temperature is higher than alarm threshold, Turn Buzzer ON");
 		UART_PrintBuffer();
 	}
 }
-
 
 /*
  * Description :

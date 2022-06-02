@@ -1,4 +1,9 @@
+/*******************************************************************************
+ *                                Includes                                     *
+ *******************************************************************************/
 #include "Init.h"
+
+/*******************************************************************************/
 
 /*
  * Description:
@@ -56,7 +61,6 @@ void PortEInit(void) {
 /*
  * Description:
  * Intializes Port E pins by calling PortEInit() then configures the pin as ADC0.
- *   - 
  */
 void ADCInit(void){
 	SysCtlPeripheralEnable(SYSCTL_PERIPH_ADC0);
@@ -66,8 +70,6 @@ void ADCInit(void){
 	ADCSequenceStepConfigure(ADC0_BASE, 3, 0, ADC_CTL_CH0 | ADC_CTL_IE | ADC_CTL_END);
 	ADCSequenceEnable(ADC0_BASE, 3);
 	ADCIntClear(ADC0_BASE, 3);
-	//ADCProcessorTrigger(ADC0_BASE, 3);
-  //while(!ADCIntStatus(ADC0_BASE, 3, false)){}
 }
 
 /*
@@ -84,16 +86,16 @@ void UART0Init(void){
 	UART_CONFIG_PAR_NONE));
 	UARTEnable(UART0_BASE);
 }
+
 /*
  * Description:
- * Intializes the switches and enables the interrupts with a priority of 7 (to not interfere with FreeRTOS).
+ * Intializes the switches and enables the interrupts with a priority of 6 (to not interfere with FreeRTOS).
  */
 void SwitchInterruptInit(void){
-  GPIOIntDisable(GPIO_PORTF_BASE,GPIO_PIN_4|GPIO_PIN_0);        // Sandwich
-  GPIOIntClear(GPIO_PORTF_BASE,GPIO_PIN_4|GPIO_PIN_0);          // Clear any existing interrupts
-  NVIC_PRI7_R = 6 << 21;
-	//IntPrioritySet(INT_GPIOF , 0xe0);                             // Set priority to 7
-  GPIOIntRegister(GPIO_PORTF_BASE,SwitchHandler);               // Register the interrupt handler
-  GPIOIntTypeSet(GPIO_PORTF_BASE,GPIO_PIN_4|GPIO_PIN_0,GPIO_FALLING_EDGE); // Set the switches to trigger once pressed (since the switches are configured as Pull-down)
-  GPIOIntEnable(GPIO_PORTF_BASE, GPIO_PIN_4|GPIO_PIN_0);        // Sandwich
+  GPIOIntDisable(GPIO_PORTF_BASE,GPIO_PIN_4|GPIO_PIN_0);        						// Sandwich
+  GPIOIntClear(GPIO_PORTF_BASE,GPIO_PIN_4|GPIO_PIN_0);          						// Clear any existing interrupts
+  NVIC_PRI7_R = 6 << 21;						                            						// Set priority to 6
+  GPIOIntRegister(GPIO_PORTF_BASE,SwitchHandler);               						// Register the interrupt handler
+  GPIOIntTypeSet(GPIO_PORTF_BASE,GPIO_PIN_4|GPIO_PIN_0,GPIO_FALLING_EDGE); 	// Set the switches to trigger once pressed (since the switches are configured as Pull-down)
+  GPIOIntEnable(GPIO_PORTF_BASE, GPIO_PIN_4|GPIO_PIN_0);        						// Sandwich
 }
