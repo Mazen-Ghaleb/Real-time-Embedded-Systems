@@ -25,6 +25,8 @@
 var NAVTREE =
 [
   [ "Realtime Embedded Systems - Tempreature Sensor", "index.html", [
+    [ "CMSIS Cortex-M3", "index.html", null ],
+    [ "Modules", "modules.html", "modules" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -40,6 +42,8 @@ var NAVTREE =
         [ "Functions", "globals_func.html", null ],
         [ "Variables", "globals_vars.html", null ],
         [ "Typedefs", "globals_type.html", null ],
+        [ "Enumerations", "globals_enum.html", null ],
+        [ "Enumerator", "globals_eval.html", null ],
         [ "Macros", "globals_defs.html", "globals_defs" ]
       ] ]
     ] ]
@@ -48,34 +52,39 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_init_8c.html",
-"tm4c123gh6pm_8h.html#a0322cbe9fddd91f3543841404f95cb6d",
-"tm4c123gh6pm_8h.html#a0d6c0282872bf7b41fc9510f480dc84e",
-"tm4c123gh6pm_8h.html#a17a29f3bff6b679c1b108df9c3ddbada",
-"tm4c123gh6pm_8h.html#a21fa2d54e44741780f717aaea82e1cec",
-"tm4c123gh6pm_8h.html#a2bbffe334a84385df6de51df987f899c",
-"tm4c123gh6pm_8h.html#a34b7f6b74143408bdd7c27373ffed3e1",
-"tm4c123gh6pm_8h.html#a3d7326b0da8c00601566cf5ba4f76487",
-"tm4c123gh6pm_8h.html#a4844910ea560832d9446b63ef6216bbf",
-"tm4c123gh6pm_8h.html#a520f7b9d031f128adbd3c36a6c3a983c",
-"tm4c123gh6pm_8h.html#a5af768a06dd21f82408b653340bc764a",
-"tm4c123gh6pm_8h.html#a653f02c9d7f800db5aeb57abedafe6f0",
-"tm4c123gh6pm_8h.html#a6eccc068921a2ecd4b1bb9b1ded2298e",
-"tm4c123gh6pm_8h.html#a772612a2cb406c0774cbd00a5b8629d5",
-"tm4c123gh6pm_8h.html#a8148e5b120af0a979d059d9efe1cd047",
-"tm4c123gh6pm_8h.html#a8b662c258167ccbde04ecb8f61c5da5e",
-"tm4c123gh6pm_8h.html#a94e95ea18145915232e8aaf6af875459",
-"tm4c123gh6pm_8h.html#a9e7c8d5fd1a4c0d97e8667a2faf09be0",
-"tm4c123gh6pm_8h.html#aa7a5cb84236f5c8c176ed467c578dbd2",
-"tm4c123gh6pm_8h.html#ab1ace72d9578ecdfad4f8320b7accbf4",
-"tm4c123gh6pm_8h.html#abb1ba3d9343d79190857ef130e35b71a",
-"tm4c123gh6pm_8h.html#ac47dd2a0c33998bb0a574252fa2ead76",
-"tm4c123gh6pm_8h.html#acebac004d6465749723dbd4183d69d91",
-"tm4c123gh6pm_8h.html#ad844611ce7eafe5c87fa527f95ec15b8",
-"tm4c123gh6pm_8h.html#ae12b1fd5f7bf33ed93aedbe984962ad5",
-"tm4c123gh6pm_8h.html#aeac9a463c85364f08f35e588dc827d6f",
-"tm4c123gh6pm_8h.html#af4ab61c6d1eca5a850e941c211b48185",
-"tm4c123gh6pm_8h.html#afe89dc472b3c0c974238d8d021a11ac0"
+"___project___tiva_ware_2_r_t_e___components_8h.html",
+"globals_defs_w.html",
+"group___c_m_s_i_s___s_c_b.html#ga1e40d93efb402763c8c00ddcc56724ff",
+"group___c_m_s_i_s__core___debug_functions.html",
+"group___c_m_s_i_s__core___debug_functions.html#ga7f70161bc2441d430b5c9d55aa7b7b5e",
+"group___c_m_s_i_s__core___debug_functions.html#gafefa84bce7497652353a1b76d405d983",
+"tm4c123gh6pm_8h.html#a02c204255c460e0fa33edbd45d42d96e",
+"tm4c123gh6pm_8h.html#a0cfc5ecc95acc593688122155e65bd3e",
+"tm4c123gh6pm_8h.html#a16f91f946d0c18a98e21e1776153c4cf",
+"tm4c123gh6pm_8h.html#a216f65de33297a5d0f9e8c505cae671f",
+"tm4c123gh6pm_8h.html#a2b5064440bf7a1385a19445f94703592",
+"tm4c123gh6pm_8h.html#a345acd380b150f5fc87775276de29c76",
+"tm4c123gh6pm_8h.html#a3d0eb05da4a7c662fca90c1de7c29cb6",
+"tm4c123gh6pm_8h.html#a47879a1e439ec6cb70e5c2cecf9a6929",
+"tm4c123gh6pm_8h.html#a5179853c89135ad36c28743263059b57",
+"tm4c123gh6pm_8h.html#a5aabd2073ec527254a519773d2f36c58",
+"tm4c123gh6pm_8h.html#a64d5aba8adf1df1e02aa631db2d2c94f",
+"tm4c123gh6pm_8h.html#a6e6987b10f2173d42c6d0e1dc4a896ad",
+"tm4c123gh6pm_8h.html#a76f84ada8fe14f3cbe584ebf9c7afd91",
+"tm4c123gh6pm_8h.html#a80fe2113e3177bc0373afa9c7aee8ae2",
+"tm4c123gh6pm_8h.html#a8aea23ac1dd16e15d1099ee40ea33dd7",
+"tm4c123gh6pm_8h.html#a949ccaab9b927850da47de1ce299a0ab",
+"tm4c123gh6pm_8h.html#a9dff0af83eb8944c42a6d56d9c4d0358",
+"tm4c123gh6pm_8h.html#aa755ca432f6000e3ab4d392da9c87687",
+"tm4c123gh6pm_8h.html#ab1474ffbf91f729220329e0847614416",
+"tm4c123gh6pm_8h.html#abab6888e07c8f0751b3c37abd80666d5",
+"tm4c123gh6pm_8h.html#ac414474a67d745509b5760a7688b77f4",
+"tm4c123gh6pm_8h.html#ace6b310838b4e3c25f2cf9af70249abd",
+"tm4c123gh6pm_8h.html#ad7eb021aeb80d73d66ce10327359c9f5",
+"tm4c123gh6pm_8h.html#ae0f7241df5a8f42046b30178bb37c8eb",
+"tm4c123gh6pm_8h.html#aea6d63aa936d853e568d65e6710b59f7",
+"tm4c123gh6pm_8h.html#af4556f6cf347dc2fbefd9ddb7b87a315",
+"tm4c123gh6pm_8h.html#afe2adba8d8bf206e1ea45fd2e4ce2f70"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

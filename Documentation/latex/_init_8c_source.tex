@@ -1,0 +1,104 @@
+\hypertarget{_init_8c_source}{}\doxysection{Init.\+c}
+\mbox{\hyperlink{_init_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_init_8h}{Init.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00003}00003 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00004}00004 \textcolor{comment}{ * Description:}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00005}00005 \textcolor{comment}{ * Converts the number of milliseconds to ticks (assuming 16Mhz clock speed)}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00006}00006 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00007}\mbox{\hyperlink{_init_8c_ab7b9c02d22e0a1ec8cf235ebbd216661}{00007}} \mbox{\hyperlink{types_8h_a1134b580f8da4de94ca6b1de4d37975e}{uint32}} \mbox{\hyperlink{_init_8c_ab7b9c02d22e0a1ec8cf235ebbd216661}{CalcTicks}}(\mbox{\hyperlink{types_8h_a1134b580f8da4de94ca6b1de4d37975e}{uint32}} milliseconds)\{}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00008}00008 \textcolor{keywordflow}{return} ((milliseconds) * (16 * 1000))-\/1 ;}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00009}00009 \}   }
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00011}00011 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00012}00012 \textcolor{comment}{ * Description:}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00013}00013 \textcolor{comment}{ * Intializes Port F pins. The setup is as follows:}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00014}00014 \textcolor{comment}{ *   -\/ Pin 0: Input (switch)}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00015}00015 \textcolor{comment}{ *   -\/ Pin 1: Output (LED)}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00016}00016 \textcolor{comment}{ *   -\/ Pin 2: Output (LED)}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00017}00017 \textcolor{comment}{ *   -\/ Pin 3: Output (LED)}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00018}00018 \textcolor{comment}{ *   -\/ Pin 4: Input (switch) }}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00019}00019 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00020}\mbox{\hyperlink{_init_8c_adf7aa7200283dceb68f470aa9fe02917}{00020}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_init_8c_adf7aa7200283dceb68f470aa9fe02917}{PortFInit}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00021}00021   SysCtlPeripheralEnable(SYSCTL\_PERIPH\_GPIOF);}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00022}00022   \textcolor{keywordflow}{while}(!SysCtlPeripheralReady(SYSCTL\_PERIPH\_GPIOF)) \{\}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00023}00023   HWREG(GPIO\_PORTF\_BASE+GPIO\_O\_LOCK) = \mbox{\hyperlink{tm4c123gh6pm_8h_ab2f3b972378d6e51b86530c38fa62e24}{GPIO\_LOCK\_KEY}};}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00024}00024   HWREG(GPIO\_PORTF\_BASE+GPIO\_O\_CR) = GPIO\_PIN\_0;}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00025}00025   GPIOPinTypeGPIOInput(GPIO\_PORTF\_BASE, GPIO\_PIN\_0 | GPIO\_PIN\_4);}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00026}00026     GPIOPadConfigSet(GPIO\_PORTF\_BASE, GPIO\_PIN\_0, GPIO\_STRENGTH\_2MA, GPIO\_PIN\_TYPE\_STD\_WPU); }
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00027}00027   GPIOPadConfigSet(GPIO\_PORTF\_BASE, GPIO\_PIN\_4, GPIO\_STRENGTH\_2MA, GPIO\_PIN\_TYPE\_STD\_WPU); }
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00028}00028   GPIOPinTypeGPIOOutput(GPIO\_PORTF\_BASE, GPIO\_PIN\_1 | GPIO\_PIN\_2 | GPIO\_PIN\_3);    }
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00029}00029 \}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00031}00031 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00032}00032 \textcolor{comment}{ * Description:}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00033}00033 \textcolor{comment}{ * Intializes Port A pins. The setup is as follows:}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00034}00034 \textcolor{comment}{ *   -\/ Pin 0: UART0 RX}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00035}00035 \textcolor{comment}{ *   -\/ Pin 1: UART0 TX}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00036}00036 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00037}\mbox{\hyperlink{_init_8c_a5a39eef1d08b26bebb2e6e78d5f3219d}{00037}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_init_8c_a5a39eef1d08b26bebb2e6e78d5f3219d}{PortAInit}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00038}00038   SysCtlPeripheralEnable(SYSCTL\_PERIPH\_GPIOA);}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00039}00039   \textcolor{keywordflow}{while}(!SysCtlPeripheralReady(SYSCTL\_PERIPH\_GPIOA)) \{\}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00040}00040     GPIOPinConfigure(GPIO\_PA0\_U0RX);}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00041}00041   GPIOPinConfigure(GPIO\_PA1\_U0TX);}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00042}00042     GPIOPinTypeUART(GPIO\_PORTA\_BASE , GPIO\_PIN\_0 | GPIO\_PIN\_1);}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00043}00043 \}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00045}00045 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00046}00046 \textcolor{comment}{ * Description:}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00047}00047 \textcolor{comment}{ * Intializes Port E pins. The setup is as follows:}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00048}00048 \textcolor{comment}{ *   -\/ Pin 3: ADC (tempreature sensor)}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00049}00049 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00050}\mbox{\hyperlink{_init_8c_a90588887525a8fd217c315f273132c1e}{00050}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_init_8c_a90588887525a8fd217c315f273132c1e}{PortEInit}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00051}00051   SysCtlPeripheralEnable(SYSCTL\_PERIPH\_GPIOE);}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00052}00052   \textcolor{keywordflow}{while}(!SysCtlPeripheralReady(SYSCTL\_PERIPH\_GPIOE)) \{\}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00053}00053   GPIOPinTypeADC(GPIO\_PORTE\_BASE, GPIO\_PIN\_3);}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00054}00054 \}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00056}00056 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00057}00057 \textcolor{comment}{ * Description:}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00058}00058 \textcolor{comment}{ * Intializes Port E pins by calling PortEInit() then configures the pin as ADC0.}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00059}00059 \textcolor{comment}{ *   -\/ }}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00060}00060 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00061}\mbox{\hyperlink{_init_8c_a39150f192703c8fc5f1885bc21deee7f}{00061}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_init_8c_a39150f192703c8fc5f1885bc21deee7f}{ADCInit}}(\textcolor{keywordtype}{void})\{}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00062}00062     SysCtlPeripheralEnable(SYSCTL\_PERIPH\_ADC0);}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00063}00063     \textcolor{keywordflow}{while}(!SysCtlPeripheralReady(SYSCTL\_PERIPH\_ADC0))\{\}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00064}00064     \mbox{\hyperlink{_init_8c_a90588887525a8fd217c315f273132c1e}{PortEInit}}();}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00065}00065     ADCSequenceConfigure(ADC0\_BASE, 3, ADC\_TRIGGER\_PROCESSOR, 0);}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00066}00066     ADCSequenceStepConfigure(ADC0\_BASE, 3, 0, ADC\_CTL\_CH0 | ADC\_CTL\_IE | ADC\_CTL\_END);}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00067}00067     ADCSequenceEnable(ADC0\_BASE, 3);}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00068}00068     ADCIntClear(ADC0\_BASE, 3);}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00069}00069     \textcolor{comment}{//ADCProcessorTrigger(ADC0\_BASE, 3);}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00070}00070   \textcolor{comment}{//while(!ADCIntStatus(ADC0\_BASE, 3, false))\{\}}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00071}00071 \}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00073}00073 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00074}00074 \textcolor{comment}{ * Description:}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00075}00075 \textcolor{comment}{ * Intializes the UART0 peripheral and enables it with a baud rate of 9600.}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00076}00076 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00077}\mbox{\hyperlink{_init_8c_a91e1182327fc37821e2eea8e93c193ab}{00077}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_init_8c_a91e1182327fc37821e2eea8e93c193ab}{UART0Init}}(\textcolor{keywordtype}{void})\{}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00078}00078     SysCtlPeripheralEnable(SYSCTL\_PERIPH\_UART0);}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00079}00079     \textcolor{keywordflow}{while}(!SysCtlPeripheralReady(SYSCTL\_PERIPH\_UART0))\{\}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00080}00080     UARTDisable(UART0\_BASE);}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00081}00081     UARTClockSourceSet(UART0\_BASE, UART\_CLOCK\_SYSTEM);}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00082}00082     UARTConfigSetExpClk(UART0\_BASE, SysCtlClockGet(), 9600,}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00083}00083     (UART\_CONFIG\_WLEN\_8 | UART\_CONFIG\_STOP\_ONE |}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00084}00084     UART\_CONFIG\_PAR\_NONE));}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00085}00085     UARTEnable(UART0\_BASE);}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00086}00086 \}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00087}00087 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00088}00088 \textcolor{comment}{ * Description:}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00089}00089 \textcolor{comment}{ * Intializes the switches and enables the interrupts with a priority of 7 (to not interfere with FreeRTOS).}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00090}00090 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00091}\mbox{\hyperlink{_init_8c_a2ab7aedf7fcfb7ecdf857e6bf919d7d1}{00091}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_init_8c_a2ab7aedf7fcfb7ecdf857e6bf919d7d1}{SwitchInterruptInit}}(\textcolor{keywordtype}{void})\{}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00092}00092   GPIOIntDisable(GPIO\_PORTF\_BASE,GPIO\_PIN\_4|GPIO\_PIN\_0);        \textcolor{comment}{// Sandwich}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00093}00093   GPIOIntClear(GPIO\_PORTF\_BASE,GPIO\_PIN\_4|GPIO\_PIN\_0);          \textcolor{comment}{// Clear any existing interrupts}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00094}00094   \mbox{\hyperlink{tm4c123gh6pm_8h_a99518c2f441b268bdd8a951931e749a9}{NVIC\_PRI7\_R}} = 6 << 21;}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00095}00095     \textcolor{comment}{//IntPrioritySet(INT\_GPIOF , 0xe0);                             // Set priority to 7}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00096}00096   GPIOIntRegister(GPIO\_PORTF\_BASE,\mbox{\hyperlink{_init_8h_ad72ccb735680d193dcdbde880534749d}{SwitchHandler}});               \textcolor{comment}{// Register the interrupt handler}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00097}00097   GPIOIntTypeSet(GPIO\_PORTF\_BASE,GPIO\_PIN\_4|GPIO\_PIN\_0,GPIO\_FALLING\_EDGE); \textcolor{comment}{// Set the switches to trigger once pressed (since the switches are configured as Pull-\/down)}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00098}00098   GPIOIntEnable(GPIO\_PORTF\_BASE, GPIO\_PIN\_4|GPIO\_PIN\_0);        \textcolor{comment}{// Sandwich}}
+\DoxyCodeLine{\Hypertarget{_init_8c_source_l00099}00099 \}}
+
+\end{DoxyCode}

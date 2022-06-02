@@ -1,8 +1,7 @@
 \hypertarget{main_8c}{}\doxysection{main.\+c File Reference}
 \label{main_8c}\index{main.c@{main.c}}
 {\ttfamily \#include \char`\"{}Init.\+h\char`\"{}}\newline
-Include dependency graph for main.\+c\+:
-\nopagebreak
+Include dependency graph for main.\+c\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -37,6 +36,8 @@ x\+Queue\+Handle \mbox{\hyperlink{main_8c_a6a6228afd9b745efeaead6a1c37efc60}{x\+
 \item 
 unsigned int \mbox{\hyperlink{main_8c_a15de605329c8bf35d7654746687e93d2}{threshold}}
 \item 
+unsigned int \mbox{\hyperlink{main_8c_af1195decc7a82f7a5cc82951e6e64582}{alarm\+Threshold}} = 50
+\item 
 unsigned char \mbox{\hyperlink{main_8c_ab4f98c1bd14207e21f0d213be8788adf}{buffer}} \mbox{[}50\mbox{]}
 \end{DoxyCompactItemize}
 
@@ -48,8 +49,11 @@ unsigned char \mbox{\hyperlink{main_8c_ab4f98c1bd14207e21f0d213be8788adf}{buffer
 \doxysubsubsection{\texorpdfstring{INIT\_TASK()}{INIT\_TASK()}}
 {\footnotesize\ttfamily void INIT\+\_\+\+TASK (\begin{DoxyParamCaption}\item[{void $\ast$}]{pv\+Parameters }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00063}{63}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -62,14 +66,21 @@ Here is the call graph for this function\+:
 \doxysubsubsection{\texorpdfstring{main()}{main()}}
 {\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00042}{42}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
 \mbox{\Hypertarget{main_8c_ad72ccb735680d193dcdbde880534749d}\label{main_8c_ad72ccb735680d193dcdbde880534749d}} 
 \index{main.c@{main.c}!SwitchHandler@{SwitchHandler}}
 \index{SwitchHandler@{SwitchHandler}!main.c@{main.c}}
 \doxysubsubsection{\texorpdfstring{SwitchHandler()}{SwitchHandler()}}
 {\footnotesize\ttfamily void Switch\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00179}{179}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -82,12 +93,36 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{threshold\_LED()}{threshold\_LED()}}
 {\footnotesize\ttfamily void threshold\+\_\+\+LED (\begin{DoxyParamCaption}\item[{unsigned int}]{Read\+Temperature }\end{DoxyParamCaption})}
 
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00199}{199}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{main_8c_a275bbe36b07c73256602e44d0934d7c4_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{main_8c_ab749ad94007b72a859adfa0c69a7dd84}\label{main_8c_ab749ad94007b72a859adfa0c69a7dd84}} 
 \index{main.c@{main.c}!UART\_PrintBuffer@{UART\_PrintBuffer}}
 \index{UART\_PrintBuffer@{UART\_PrintBuffer}!main.c@{main.c}}
 \doxysubsubsection{\texorpdfstring{UART\_PrintBuffer()}{UART\_PrintBuffer()}}
 {\footnotesize\ttfamily void UART\+\_\+\+Print\+Buffer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00224}{224}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{main_8c_ab749ad94007b72a859adfa0c69a7dd84_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{main_8c_a97fd430f36f8b065226e2bff9bad1de5}\label{main_8c_a97fd430f36f8b065226e2bff9bad1de5}} 
 \index{main.c@{main.c}!vApplicationIdleHook@{vApplicationIdleHook}}
 \index{vApplicationIdleHook@{vApplicationIdleHook}!main.c@{main.c}}
@@ -96,12 +131,30 @@ Here is the caller graph for this function\+:
 
 
 
+Definition at line \mbox{\hyperlink{main_8c_source_l00191}{191}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+
+
 \doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{main_8c_af1195decc7a82f7a5cc82951e6e64582}\label{main_8c_af1195decc7a82f7a5cc82951e6e64582}} 
+\index{main.c@{main.c}!alarmThreshold@{alarmThreshold}}
+\index{alarmThreshold@{alarmThreshold}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{alarmThreshold}{alarmThreshold}}
+{\footnotesize\ttfamily unsigned int alarm\+Threshold = 50}
+
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00032}{32}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
 \mbox{\Hypertarget{main_8c_ab4f98c1bd14207e21f0d213be8788adf}\label{main_8c_ab4f98c1bd14207e21f0d213be8788adf}} 
 \index{main.c@{main.c}!buffer@{buffer}}
 \index{buffer@{buffer}!main.c@{main.c}}
 \doxysubsubsection{\texorpdfstring{buffer}{buffer}}
 {\footnotesize\ttfamily unsigned char buffer\mbox{[}50\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00033}{33}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \mbox{\Hypertarget{main_8c_a77998bc7d5e3a78a2591c24bdfb93793}\label{main_8c_a77998bc7d5e3a78a2591c24bdfb93793}} 
 \index{main.c@{main.c}!lcd@{lcd}}
@@ -109,11 +162,19 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{lcd}{lcd}}
 {\footnotesize\ttfamily \mbox{\hyperlink{struct_l_c_d}{LCD}} lcd}
 
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00023}{23}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
 \mbox{\Hypertarget{main_8c_a15de605329c8bf35d7654746687e93d2}\label{main_8c_a15de605329c8bf35d7654746687e93d2}} 
 \index{main.c@{main.c}!threshold@{threshold}}
 \index{threshold@{threshold}!main.c@{main.c}}
 \doxysubsubsection{\texorpdfstring{threshold}{threshold}}
 {\footnotesize\ttfamily unsigned int threshold}
+
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00031}{31}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \mbox{\Hypertarget{main_8c_a4820ee652570cfa2680b87c36930910f}\label{main_8c_a4820ee652570cfa2680b87c36930910f}} 
 \index{main.c@{main.c}!xBinarySemaphore@{xBinarySemaphore}}
@@ -121,15 +182,27 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{xBinarySemaphore}{xBinarySemaphore}}
 {\footnotesize\ttfamily x\+Semaphore\+Handle x\+Binary\+Semaphore}
 
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00026}{26}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
 \mbox{\Hypertarget{main_8c_a1437d87d42bfb45521c4258960c18ac0}\label{main_8c_a1437d87d42bfb45521c4258960c18ac0}} 
 \index{main.c@{main.c}!xMutex@{xMutex}}
 \index{xMutex@{xMutex}!main.c@{main.c}}
 \doxysubsubsection{\texorpdfstring{xMutex}{xMutex}}
 {\footnotesize\ttfamily x\+Semaphore\+Handle x\+Mutex}
 
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00025}{25}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
 \mbox{\Hypertarget{main_8c_a6a6228afd9b745efeaead6a1c37efc60}\label{main_8c_a6a6228afd9b745efeaead6a1c37efc60}} 
 \index{main.c@{main.c}!xQueue@{xQueue}}
 \index{xQueue@{xQueue}!main.c@{main.c}}
 \doxysubsubsection{\texorpdfstring{xQueue}{xQueue}}
 {\footnotesize\ttfamily x\+Queue\+Handle x\+Queue}
+
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00028}{28}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 

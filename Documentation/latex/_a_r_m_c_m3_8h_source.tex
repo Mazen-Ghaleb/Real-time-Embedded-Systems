@@ -1,0 +1,91 @@
+\hypertarget{_a_r_m_c_m3_8h_source}{}\doxysection{ARMCM3.\+h}
+\label{_a_r_m_c_m3_8h_source}\index{Demo/ARMCM3.h@{Demo/ARMCM3.h}}
+\mbox{\hyperlink{_a_r_m_c_m3_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00001}00001 \textcolor{comment}{/**************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00026}00026 \textcolor{preprocessor}{\#ifndef \_\_ARMCM3\_H\_\_}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00027}00027 \textcolor{preprocessor}{\#define \_\_ARMCM3\_H\_\_}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00029}00029 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00030}00030 \textcolor{comment}{ * ==========================================================================}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00031}00031 \textcolor{comment}{ * -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Interrupt Number Definition -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00032}00032 \textcolor{comment}{ * ==========================================================================}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00033}00033 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00035}\mbox{\hyperlink{_a_r_m_c_m3_8h_a666eb0caeb12ec0e281415592ae89083}{00035}} \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \mbox{\hyperlink{_a_r_m_c_m3_8h_a666eb0caeb12ec0e281415592ae89083}{IRQn}}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00036}00036 \{}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00037}00037 \textcolor{comment}{/******  Cortex-\/M3 Processor Exceptions Numbers ***************************************************/}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00038}\mbox{\hyperlink{_a_r_m_c_m3_8h_a666eb0caeb12ec0e281415592ae89083ade177d9c70c89e084093024b932a4e30}{00038}}   \mbox{\hyperlink{_a_r_m_c_m3_8h_a666eb0caeb12ec0e281415592ae89083ade177d9c70c89e084093024b932a4e30}{NonMaskableInt\_IRQn}}         = -\/14,    }
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00039}\mbox{\hyperlink{_a_r_m_c_m3_8h_a666eb0caeb12ec0e281415592ae89083ab1a222a34a32f0ef5ac65e714efc1f85}{00039}}   \mbox{\hyperlink{_a_r_m_c_m3_8h_a666eb0caeb12ec0e281415592ae89083ab1a222a34a32f0ef5ac65e714efc1f85}{HardFault\_IRQn}}              = -\/13,    }
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00040}\mbox{\hyperlink{_a_r_m_c_m3_8h_a666eb0caeb12ec0e281415592ae89083a33ff1cf7098de65d61b6354fee6cd5aa}{00040}}   \mbox{\hyperlink{_a_r_m_c_m3_8h_a666eb0caeb12ec0e281415592ae89083a33ff1cf7098de65d61b6354fee6cd5aa}{MemoryManagement\_IRQn}}       = -\/12,    }
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00041}\mbox{\hyperlink{_a_r_m_c_m3_8h_a666eb0caeb12ec0e281415592ae89083a8693500eff174f16119e96234fee73af}{00041}}   \mbox{\hyperlink{_a_r_m_c_m3_8h_a666eb0caeb12ec0e281415592ae89083a8693500eff174f16119e96234fee73af}{BusFault\_IRQn}}               = -\/11,    }
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00042}\mbox{\hyperlink{_a_r_m_c_m3_8h_a666eb0caeb12ec0e281415592ae89083a6895237c9443601ac832efa635dd8bbf}{00042}}   \mbox{\hyperlink{_a_r_m_c_m3_8h_a666eb0caeb12ec0e281415592ae89083a6895237c9443601ac832efa635dd8bbf}{UsageFault\_IRQn}}             = -\/10,    }
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00043}\mbox{\hyperlink{_a_r_m_c_m3_8h_a666eb0caeb12ec0e281415592ae89083a4ce820b3cc6cf3a796b41aadc0cf1237}{00043}}   \mbox{\hyperlink{_a_r_m_c_m3_8h_a666eb0caeb12ec0e281415592ae89083a4ce820b3cc6cf3a796b41aadc0cf1237}{SVCall\_IRQn}}                 = -\/5,     }
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00044}\mbox{\hyperlink{_a_r_m_c_m3_8h_a666eb0caeb12ec0e281415592ae89083a8e033fcef7aed98a31c60a7de206722c}{00044}}   \mbox{\hyperlink{_a_r_m_c_m3_8h_a666eb0caeb12ec0e281415592ae89083a8e033fcef7aed98a31c60a7de206722c}{DebugMonitor\_IRQn}}           = -\/4,     }
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00045}\mbox{\hyperlink{_a_r_m_c_m3_8h_a666eb0caeb12ec0e281415592ae89083a03c3cc89984928816d81793fc7bce4a2}{00045}}   \mbox{\hyperlink{_a_r_m_c_m3_8h_a666eb0caeb12ec0e281415592ae89083a03c3cc89984928816d81793fc7bce4a2}{PendSV\_IRQn}}                 = -\/2,     }
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00046}\mbox{\hyperlink{_a_r_m_c_m3_8h_a666eb0caeb12ec0e281415592ae89083a6dbff8f8543325f3474cbae2446776e7}{00046}}   \mbox{\hyperlink{_a_r_m_c_m3_8h_a666eb0caeb12ec0e281415592ae89083a6dbff8f8543325f3474cbae2446776e7}{SysTick\_IRQn}}                = -\/1,     }
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00048}00048 \textcolor{comment}{/******  ARMCM3 specific Interrupt Numbers ********************************************************/}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00049}00049   \mbox{\hyperlink{_a_r_m_c_m3_8h_a666eb0caeb12ec0e281415592ae89083a7996f9db7faed08f5e3bdb5eab0f674f}{GPIO\_IRQn}}                   = 0       }
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00050}\mbox{\hyperlink{_a_r_m_c_m3_8h_a666eb0caeb12ec0e281415592ae89083a7996f9db7faed08f5e3bdb5eab0f674f}{00050}} \} \mbox{\hyperlink{_a_r_m_c_m3_8h_a4a0206df9604302e0741c1aa4ca1ded3}{IRQn\_Type}};}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00053}00053 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00054}00054 \textcolor{comment}{ * ==========================================================================}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00055}00055 \textcolor{comment}{ * -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Processor and Core Peripheral Section -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00056}00056 \textcolor{comment}{ * ==========================================================================}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00057}00057 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00059}00059 \textcolor{comment}{/* Configuration of the Cortex-\/M3 Processor and Core Peripherals */}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00060}\mbox{\hyperlink{_a_r_m_c_m3_8h_a4127d1b31aaf336fab3d7329d117f448}{00060}} \textcolor{preprocessor}{\#define \_\_MPU\_PRESENT             1         }}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00061}\mbox{\hyperlink{_a_r_m_c_m3_8h_ae3fe3587d5100c787e02102ce3944460}{00061}} \textcolor{preprocessor}{\#define \_\_NVIC\_PRIO\_BITS          2         }}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00062}\mbox{\hyperlink{_a_r_m_c_m3_8h_ab58771b4ec03f9bdddc84770f7c95c68}{00062}} \textcolor{preprocessor}{\#define \_\_Vendor\_SysTickConfig    0         }}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00065}00065 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{core__cm3_8h}{core\_cm3.h}}"{}}                       \textcolor{comment}{/* Cortex-\/M3 processor and core peripherals           */}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00066}00066 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{system___a_r_m_c_m3_8h}{system\_ARMCM3.h}}"{}}                  \textcolor{comment}{/* System Header                                      */}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00069}00069 \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00070}00070 \textcolor{comment}{/*                Device Specific Peripheral registers structures             */}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00071}00071 \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00073}00073 \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ General Purpose Input and Ouptut -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00074}\mbox{\hyperlink{union_g_p_i_o___data___type_def}{00074}} \textcolor{keyword}{typedef} \textcolor{keyword}{union}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00075}00075 \{}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00076}\mbox{\hyperlink{union_g_p_i_o___data___type_def_accf2182243d2281d570e3abbf6825187}{00076}}   \mbox{\hyperlink{group___c_m_s_i_s__core__definitions_gaec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t \mbox{\hyperlink{union_g_p_i_o___data___type_def_accf2182243d2281d570e3abbf6825187}{WORD}};  }
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00077}\mbox{\hyperlink{union_g_p_i_o___data___type_def_a2e100379aba44cbdcc600f7d417e630e}{00077}}   \mbox{\hyperlink{group___c_m_s_i_s__core__definitions_gaec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint8\_t  BYTE[4];}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00078}00078 \} \mbox{\hyperlink{union_g_p_i_o___data___type_def}{GPIO\_Data\_TypeDef}};}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00080}\mbox{\hyperlink{struct_g_p_i_o___type_def}{00080}} \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00081}00081 \{}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00082}\mbox{\hyperlink{struct_g_p_i_o___type_def_a7fc98c35ceb06e224f717a513464e1a3}{00082}}   \mbox{\hyperlink{union_g_p_i_o___data___type_def}{GPIO\_Data\_TypeDef}} DATA [256];}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00083}\mbox{\hyperlink{struct_g_p_i_o___type_def_aac190896b710208792ecdda026c48b09}{00083}}   \mbox{\hyperlink{group___c_m_s_i_s__core__definitions_ga7e25d9380f9ef903923964322e71f2f6}{\_\_O}} uint32\_t  \mbox{\hyperlink{struct_g_p_i_o___type_def_aac190896b710208792ecdda026c48b09}{DIR}};}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00084}\mbox{\hyperlink{struct_g_p_i_o___type_def_a4fb72ed5a368f74f4b2a7f1a4a5561a0}{00084}}   uint32\_t      RESERVED[3];}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00085}\mbox{\hyperlink{struct_g_p_i_o___type_def_a63d23ce6979f3fbbe8d4b0183aa7bfbe}{00085}}   \mbox{\hyperlink{group___c_m_s_i_s__core__definitions_ga7e25d9380f9ef903923964322e71f2f6}{\_\_O}} uint32\_t  \mbox{\hyperlink{struct_g_p_i_o___type_def_a63d23ce6979f3fbbe8d4b0183aa7bfbe}{IE}};}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00086}00086 \} \mbox{\hyperlink{struct_g_p_i_o___type_def}{GPIO\_TypeDef}};}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00089}00089 \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00090}00090 \textcolor{comment}{/*                         Peripheral memory map                              */}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00091}00091 \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00092}00092 \textcolor{comment}{/* Peripheral and SRAM base address */}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00093}\mbox{\hyperlink{_a_r_m_c_m3_8h_a05e8f3d2e5868754a7cd88614955aecc}{00093}} \textcolor{preprocessor}{\#define SRAM\_BASE             ((     uint32\_t)0x20000000UL)}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00094}\mbox{\hyperlink{_a_r_m_c_m3_8h_a9171f49478fa86d932f89e78e73b88b0}{00094}} \textcolor{preprocessor}{\#define PERIPH\_BASE           ((     uint32\_t)0x40000000UL)}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00096}00096 \textcolor{comment}{/* Peripheral memory map */}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00097}\mbox{\hyperlink{_a_r_m_c_m3_8h_acce3b8a909ed8b957b4e411dfb7cbd91}{00097}} \textcolor{preprocessor}{\#define GPIO\_BASE             PERIPH\_BASE}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00098}00098 }
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00099}\mbox{\hyperlink{_a_r_m_c_m3_8h_a7edb64d1b018e3ec702dab0ce1827ab9}{00099}} \textcolor{preprocessor}{\#define GPIO0\_BASE            (GPIO\_BASE)}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00100}\mbox{\hyperlink{_a_r_m_c_m3_8h_a71a0388786436dd4ef099ac30405d368}{00100}} \textcolor{preprocessor}{\#define GPIO1\_BASE            (GPIO\_BASE       + 0x0800UL)}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00101}\mbox{\hyperlink{_a_r_m_c_m3_8h_ab9b2dd5df90f7c82c45b89c5cfbd60ac}{00101}} \textcolor{preprocessor}{\#define GPIO2\_BASE            (GPIO\_BASE       + 0x1000UL)}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00102}00102 }
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00103}00103 }
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00104}00104 \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00105}00105 \textcolor{comment}{/*                         Peripheral declaration                             */}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00106}00106 \textcolor{comment}{/******************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00107}\mbox{\hyperlink{_a_r_m_c_m3_8h_a20f88dbc839eb32b5fec903474befdd7}{00107}} \textcolor{preprocessor}{\#define GPIO0                 ((GPIO\_TypeDef *) GPIO0\_BASE)}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00108}\mbox{\hyperlink{_a_r_m_c_m3_8h_abe59d3a7ce7a18e9440bd54cae1f3fc8}{00108}} \textcolor{preprocessor}{\#define GPIO1                 ((GPIO\_TypeDef *) GPIO1\_BASE)}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00109}\mbox{\hyperlink{_a_r_m_c_m3_8h_a88a95401ea8409c83cbda42f31450cd0}{00109}} \textcolor{preprocessor}{\#define GPIO2                 ((GPIO\_TypeDef *) GPIO2\_BASE)}}
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00110}00110 }
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00111}00111 }
+\DoxyCodeLine{\Hypertarget{_a_r_m_c_m3_8h_source_l00112}00112 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{/* \_\_ARMCM3\_H\_\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

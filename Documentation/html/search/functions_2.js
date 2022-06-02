@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['init_5ftask_0',['INIT_TASK',['../main_8c.html#a8642f77148a23556a78a6bdeadbff1f0',1,'main.c']]]
+  ['fputc_0',['fputc',['../basic__io_8c.html#af9494b99d18a2cd68d0b3b79534da530',1,'basic_io.c']]]
 ];

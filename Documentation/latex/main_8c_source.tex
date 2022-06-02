@@ -1,0 +1,235 @@
+\hypertarget{main_8c_source}{}\doxysection{main.\+c}
+\mbox{\hyperlink{main_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00001}00001 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00002}00002 \textcolor{comment}{ *                                Includes                                     *}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00003}00003 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00004}00004 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_init_8h}{Init.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00007}00007 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00008}00008 \textcolor{comment}{ *                                Prototypes                                   *}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00009}00009 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00010}00010 \textcolor{keywordtype}{void} \mbox{\hyperlink{main_8c_a8642f77148a23556a78a6bdeadbff1f0}{INIT\_TASK}}(\textcolor{keywordtype}{void} *pvParameters);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00011}00011 \textcolor{keyword}{static} \textcolor{keywordtype}{void} vDisplayTask( \textcolor{keywordtype}{void} *pvParameters );}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00012}00012 \textcolor{keyword}{static} \textcolor{keywordtype}{void} vADCTask( \textcolor{keywordtype}{void} *pvParameters );}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00013}00013 \textcolor{keyword}{static} \textcolor{keywordtype}{void} vChangeThresholdTask( \textcolor{keywordtype}{void} *pvParameters );}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00014}00014 \textcolor{keywordtype}{void} \mbox{\hyperlink{main_8c_a97fd430f36f8b065226e2bff9bad1de5}{vApplicationIdleHook}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00016}00016 \textcolor{keywordtype}{void} \mbox{\hyperlink{main_8c_a275bbe36b07c73256602e44d0934d7c4}{threshold\_LED}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} ReadTemperature);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00017}00017 \textcolor{keywordtype}{void} \mbox{\hyperlink{main_8c_ab749ad94007b72a859adfa0c69a7dd84}{UART\_PrintBuffer}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00020}00020 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00021}00021 \textcolor{comment}{ *                                Global variables                             *}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00022}00022 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00023}\mbox{\hyperlink{main_8c_a77998bc7d5e3a78a2591c24bdfb93793}{00023}} \mbox{\hyperlink{struct_l_c_d}{LCD}} \mbox{\hyperlink{main_8c_a77998bc7d5e3a78a2591c24bdfb93793}{lcd}};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00025}\mbox{\hyperlink{main_8c_a1437d87d42bfb45521c4258960c18ac0}{00025}} xSemaphoreHandle \mbox{\hyperlink{main_8c_a1437d87d42bfb45521c4258960c18ac0}{xMutex}};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00026}\mbox{\hyperlink{main_8c_a4820ee652570cfa2680b87c36930910f}{00026}} xSemaphoreHandle \mbox{\hyperlink{main_8c_a4820ee652570cfa2680b87c36930910f}{xBinarySemaphore}};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00028}\mbox{\hyperlink{main_8c_a6a6228afd9b745efeaead6a1c37efc60}{00028}} xQueueHandle \mbox{\hyperlink{main_8c_a6a6228afd9b745efeaead6a1c37efc60}{xQueue}};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00031}\mbox{\hyperlink{main_8c_a15de605329c8bf35d7654746687e93d2}{00031}} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{main_8c_a15de605329c8bf35d7654746687e93d2}{threshold}}; \textcolor{comment}{// Setpoint}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00032}\mbox{\hyperlink{main_8c_af1195decc7a82f7a5cc82951e6e64582}{00032}} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{main_8c_af1195decc7a82f7a5cc82951e6e64582}{alarmThreshold}} = 50; \textcolor{comment}{//Buzzard threshold default 50 C}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00033}\mbox{\hyperlink{main_8c_ab4f98c1bd14207e21f0d213be8788adf}{00033}} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{main_8c_ab4f98c1bd14207e21f0d213be8788adf}{buffer}} [50];}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00035}00035 \textcolor{comment}{/*******************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00038}00038 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00039}00039 \textcolor{comment}{ * Description :}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00040}00040 \textcolor{comment}{ * it handles the mutex and semaphore functions with queue.}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00041}00041 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00042}\mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{00042}} \textcolor{keywordtype}{int} \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}() }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00043}00043 \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00044}00044     vSemaphoreCreateBinary(\mbox{\hyperlink{main_8c_a4820ee652570cfa2680b87c36930910f}{xBinarySemaphore}})}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00045}00045     \mbox{\hyperlink{main_8c_a1437d87d42bfb45521c4258960c18ac0}{xMutex}} = xSemaphoreCreateMutex();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00046}00046     \mbox{\hyperlink{main_8c_a6a6228afd9b745efeaead6a1c37efc60}{xQueue}} = xQueueCreate (5,\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}));}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00047}00047     \textcolor{keywordflow}{if} (\mbox{\hyperlink{main_8c_a6a6228afd9b745efeaead6a1c37efc60}{xQueue}} != NULL \&\& \mbox{\hyperlink{main_8c_a1437d87d42bfb45521c4258960c18ac0}{xMutex}}!= NULL \&\& \mbox{\hyperlink{main_8c_a4820ee652570cfa2680b87c36930910f}{xBinarySemaphore}} != NULL)  \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00048}00048         xTaskCreate(vADCTask,\textcolor{stringliteral}{"{}ADC Task"{}}, \mbox{\hyperlink{_free_r_t_o_s_config_8h_a6c534a6cf8a00528fe0be42083484f9a}{configMINIMAL\_STACK\_SIZE}},NULL , 1, NULL);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00049}00049         xTaskCreate(vDisplayTask,\textcolor{stringliteral}{"{}Display Task"{}}, \mbox{\hyperlink{_free_r_t_o_s_config_8h_a6c534a6cf8a00528fe0be42083484f9a}{configMINIMAL\_STACK\_SIZE}},NULL , 2, NULL);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00050}00050         xTaskCreate(vChangeThresholdTask,\textcolor{stringliteral}{"{}Change Threshold Task"{}}, \mbox{\hyperlink{_free_r_t_o_s_config_8h_a6c534a6cf8a00528fe0be42083484f9a}{configMINIMAL\_STACK\_SIZE}},NULL , 3, NULL);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00051}00051         xTaskCreate(\mbox{\hyperlink{main_8c_a8642f77148a23556a78a6bdeadbff1f0}{INIT\_TASK}},\textcolor{stringliteral}{"{}Intialization Task"{}}, \mbox{\hyperlink{_free_r_t_o_s_config_8h_a6c534a6cf8a00528fe0be42083484f9a}{configMINIMAL\_STACK\_SIZE}},NULL , 4, NULL);      }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00052}00052         vTaskStartScheduler();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00053}00053     \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00054}00054     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00055}00055     \textcolor{comment}{//Semaphore or Queue or Mutex couldn't be created }}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00056}00056     \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00057}00057 \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00059}00059 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00060}00060 \textcolor{comment}{ * Description :}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00061}00061 \textcolor{comment}{ * it initialize the ports and peripherals that's used.}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00062}00062 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00063}\mbox{\hyperlink{main_8c_a8642f77148a23556a78a6bdeadbff1f0}{00063}} \textcolor{keywordtype}{void} \mbox{\hyperlink{main_8c_a8642f77148a23556a78a6bdeadbff1f0}{INIT\_TASK}}(\textcolor{keywordtype}{void} *pvParameters)\{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00064}00064     \mbox{\hyperlink{_init_8c_a5a39eef1d08b26bebb2e6e78d5f3219d}{PortAInit}}();                                               \textcolor{comment}{//Initalize port A}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00065}00065     \mbox{\hyperlink{_init_8c_adf7aa7200283dceb68f470aa9fe02917}{PortFInit}}();                                               \textcolor{comment}{//Initalize port F}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00066}00066     \mbox{\hyperlink{_init_8c_a91e1182327fc37821e2eea8e93c193ab}{UART0Init}}();                                               \textcolor{comment}{//Initalize UART 0}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00067}00067     \mbox{\hyperlink{_init_8c_a2ab7aedf7fcfb7ecdf857e6bf919d7d1}{SwitchInterruptInit}}();                                       \textcolor{comment}{//For interrupt}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00069}00069     \mbox{\hyperlink{_init_8c_a39150f192703c8fc5f1885bc21deee7f}{ADCInit}}();                                                   \textcolor{comment}{//Initalize ADC}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00070}00070     }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00071}00071     \mbox{\hyperlink{main_8c_a77998bc7d5e3a78a2591c24bdfb93793}{lcd}} = \mbox{\hyperlink{_l_c_d_8c_ae611079393748058a28d032ee4b0e4a0}{LCD\_create}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00072}00072     \mbox{\hyperlink{_l_c_d_8c_a7d804124fb7b747aa67d20f7b67f04bd}{LCD\_init}}(\&\mbox{\hyperlink{main_8c_a77998bc7d5e3a78a2591c24bdfb93793}{lcd}});                                              \textcolor{comment}{//Initalize LCD}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00073}00073     }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00074}00074     vTaskDelete(NULL);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00075}00075 \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00079}00079 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00080}00080 \textcolor{comment}{ * Description :}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00081}00081 \textcolor{comment}{ * it initialize the threshold temperature for the sensor to control the semaphore and mutex.}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00082}00082 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00083}00083 \textcolor{keyword}{static} \textcolor{keywordtype}{void} vChangeThresholdTask( \textcolor{keywordtype}{void} *pvParameters )\{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00084}00084     xSemaphoreTake( \mbox{\hyperlink{main_8c_a4820ee652570cfa2680b87c36930910f}{xBinarySemaphore}}, 0 );}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00085}00085     portBASE\_TYPE xStatus;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00086}00086     \mbox{\hyperlink{main_8c_a15de605329c8bf35d7654746687e93d2}{threshold}} = 30; \textcolor{comment}{//default}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00087}00087     \textcolor{keywordflow}{for}(;;)\{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00088}00088         xStatus = xSemaphoreTake( \mbox{\hyperlink{main_8c_a4820ee652570cfa2680b87c36930910f}{xBinarySemaphore}}, portMAX\_DELAY );}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00089}00089         \textcolor{keywordflow}{if} (xStatus == pdPASS) \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00090}00090             xSemaphoreTake( \mbox{\hyperlink{main_8c_a1437d87d42bfb45521c4258960c18ac0}{xMutex}}, portMAX\_DELAY );}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00091}00091                 \textcolor{comment}{// Prints on Console to Enter Threshold}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00092}00092             sprintf (\mbox{\hyperlink{main_8c_ab4f98c1bd14207e21f0d213be8788adf}{buffer}}, \textcolor{stringliteral}{"{}\%s"{}},\textcolor{stringliteral}{"{}\(\backslash\)nPlease Enter the threshold Temperature: "{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00093}00093             \mbox{\hyperlink{main_8c_ab749ad94007b72a859adfa0c69a7dd84}{UART\_PrintBuffer}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00094}00094         }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00095}00095             \textcolor{comment}{//Reads Threshold}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00096}00096             \textcolor{keywordtype}{int} j = 0;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00097}00097             \textcolor{keywordflow}{do} \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00098}00098                     \mbox{\hyperlink{main_8c_ab4f98c1bd14207e21f0d213be8788adf}{buffer}}[j] = UARTCharGet(UART0\_BASE);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00099}00099                     UARTCharPut(UART0\_BASE, \mbox{\hyperlink{main_8c_ab4f98c1bd14207e21f0d213be8788adf}{buffer}}[j]);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00100}00100                     j++;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00101}00101             \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00102}00102             \textcolor{keywordflow}{while}((\mbox{\hyperlink{main_8c_ab4f98c1bd14207e21f0d213be8788adf}{buffer}}[j-\/1] != \textcolor{charliteral}{'\(\backslash\)n'}) \&\& (\mbox{\hyperlink{main_8c_ab4f98c1bd14207e21f0d213be8788adf}{buffer}}[j-\/1] != \textcolor{charliteral}{'\(\backslash\)r'}) \&\& (j < 50));}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00103}00103             UARTCharPut(UART0\_BASE, \textcolor{charliteral}{'\(\backslash\)r'});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00104}00104             UARTCharPut(UART0\_BASE, \textcolor{charliteral}{'\(\backslash\)n'});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00105}00105     \textcolor{comment}{//      if (j != 50) \{}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00106}00106     \textcolor{comment}{//          buffer[j] = '\(\backslash\)0';}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00107}00107     \textcolor{comment}{//      \}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00108}00108             \mbox{\hyperlink{main_8c_a15de605329c8bf35d7654746687e93d2}{threshold}} = atoi(\mbox{\hyperlink{main_8c_ab4f98c1bd14207e21f0d213be8788adf}{buffer}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00109}00109             xSemaphoreGive(\mbox{\hyperlink{main_8c_a1437d87d42bfb45521c4258960c18ac0}{xMutex}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00110}00110             vTaskDelay(1000/portTICK\_RATE\_MS);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00111}00111         \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00112}00112     \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00113}00113 \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00114}00114 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00115}00115 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00116}00116 \textcolor{comment}{ * Description :}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00117}00117 \textcolor{comment}{ * it is used to display the task on LCD  and change the temperature from Fahrenheit to Celsius}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00118}00118 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00119}00119 \textcolor{keyword}{static} \textcolor{keywordtype}{void} vDisplayTask( \textcolor{keywordtype}{void} *pvParameters )\{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00120}00120         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} ReceivedValue;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00121}00121         portBASE\_TYPE xStatus;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00122}00122         \textcolor{keywordflow}{for}( ;; )}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00123}00123         \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00124}00124             xStatus = xQueueReceive(\mbox{\hyperlink{main_8c_a6a6228afd9b745efeaead6a1c37efc60}{xQueue}},\&ReceivedValue,portMAX\_DELAY);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00125}00125             \textcolor{keywordflow}{if} (xStatus == pdPASS) \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00126}00126                 xSemaphoreTake( \mbox{\hyperlink{main_8c_a1437d87d42bfb45521c4258960c18ac0}{xMutex}}, portMAX\_DELAY );}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00127}00127                 \mbox{\hyperlink{_l_c_d_8c_a9f4e5a434d4b3835c39c1b410b1af630}{LCD\_clear}}(\&\mbox{\hyperlink{main_8c_a77998bc7d5e3a78a2591c24bdfb93793}{lcd}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00128}00128                 \textcolor{comment}{//Display using LCD}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00129}00129                 \mbox{\hyperlink{_l_c_d_8c_a870b7c6f90815a319d890b4655a72e86}{LCD\_setPosition}}(\&\mbox{\hyperlink{main_8c_a77998bc7d5e3a78a2591c24bdfb93793}{lcd}}, 1, 0);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00130}00130                 \mbox{\hyperlink{_l_c_d_8c_a744319158356a584a341f81cbaa01e47}{LCD\_sendString}}(\&\mbox{\hyperlink{main_8c_a77998bc7d5e3a78a2591c24bdfb93793}{lcd}}, \textcolor{stringliteral}{"{}SetPoint:"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00131}00131                 \mbox{\hyperlink{_l_c_d_8c_a274035d7ec5fee90a312dacc2372df37}{LCD\_sendNum}}(\&\mbox{\hyperlink{main_8c_a77998bc7d5e3a78a2591c24bdfb93793}{lcd}},\mbox{\hyperlink{main_8c_a15de605329c8bf35d7654746687e93d2}{threshold}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00132}00132                 \mbox{\hyperlink{_l_c_d_8c_a744319158356a584a341f81cbaa01e47}{LCD\_sendString}}(\&\mbox{\hyperlink{main_8c_a77998bc7d5e3a78a2591c24bdfb93793}{lcd}}, \textcolor{stringliteral}{"{} C"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00133}00133                 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00134}00134                 \mbox{\hyperlink{_l_c_d_8c_a870b7c6f90815a319d890b4655a72e86}{LCD\_setPosition}}(\&\mbox{\hyperlink{main_8c_a77998bc7d5e3a78a2591c24bdfb93793}{lcd}}, 2, 0);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00135}00135                 \mbox{\hyperlink{_l_c_d_8c_a744319158356a584a341f81cbaa01e47}{LCD\_sendString}}(\&\mbox{\hyperlink{main_8c_a77998bc7d5e3a78a2591c24bdfb93793}{lcd}}, \textcolor{stringliteral}{"{}Measured:"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00136}00136                 \mbox{\hyperlink{_l_c_d_8c_a274035d7ec5fee90a312dacc2372df37}{LCD\_sendNum}}(\&\mbox{\hyperlink{main_8c_a77998bc7d5e3a78a2591c24bdfb93793}{lcd}},ReceivedValue);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00137}00137                 \mbox{\hyperlink{_l_c_d_8c_a744319158356a584a341f81cbaa01e47}{LCD\_sendString}}(\&\mbox{\hyperlink{main_8c_a77998bc7d5e3a78a2591c24bdfb93793}{lcd}}, \textcolor{stringliteral}{"{} C"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00138}00138                 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00139}00139                 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00140}00140                 \textcolor{comment}{// Display using UART}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00141}00141                 sprintf (\mbox{\hyperlink{main_8c_ab4f98c1bd14207e21f0d213be8788adf}{buffer}}, \textcolor{stringliteral}{"{}\%s \%d\%s \%.2lf\%s \%.2lf\%s"{}},\textcolor{stringliteral}{"{}Temprature is:"{}},ReceivedValue,\textcolor{stringliteral}{"{}C"{}},((\textcolor{keywordtype}{double})ReceivedValue * 9/5)+ 32,\textcolor{stringliteral}{"{}F"{}}, ReceivedValue + 273.15,\textcolor{stringliteral}{"{}K"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00142}00142               \mbox{\hyperlink{main_8c_ab749ad94007b72a859adfa0c69a7dd84}{UART\_PrintBuffer}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00143}00143                 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00144}00144                 \textcolor{comment}{//Changing LED}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00145}00145                 \mbox{\hyperlink{main_8c_a275bbe36b07c73256602e44d0934d7c4}{threshold\_LED}}(ReceivedValue);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00146}00146                 xSemaphoreGive(\mbox{\hyperlink{main_8c_a1437d87d42bfb45521c4258960c18ac0}{xMutex}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00147}00147                 vTaskDelay(1000/portTICK\_RATE\_MS);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00148}00148                 \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00149}00149         \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00150}00150 \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00151}00151 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00152}00152 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00153}00153 \textcolor{comment}{ * Description :}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00154}00154 \textcolor{comment}{ * it sends and recieve data between the peripherals }}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00155}00155 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00156}00156 \textcolor{keyword}{static} \textcolor{keywordtype}{void} vADCTask( \textcolor{keywordtype}{void} *pvParameters )\{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00157}00157     uint32\_t pui32ADC0Value[1];}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00158}00158     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} ui32TempValueC;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00159}00159     portBASE\_TYPE xStatus;  }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00160}00160     \textcolor{keywordflow}{for}( ;; )}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00161}00161     \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00162}00162             xSemaphoreTake( \mbox{\hyperlink{main_8c_a1437d87d42bfb45521c4258960c18ac0}{xMutex}}, portMAX\_DELAY );}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00163}00163             ADCProcessorTrigger(ADC0\_BASE, 3);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00164}00164             \textcolor{keywordflow}{while}(!ADCIntStatus(ADC0\_BASE, 3, \textcolor{keyword}{false}))\{\}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00165}00165             }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00166}00166             ADCIntClear(ADC0\_BASE, 3);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00167}00167             ADCSequenceDataGet(ADC0\_BASE, 3, \&pui32ADC0Value);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00168}00168             ui32TempValueC = (\textcolor{keywordtype}{unsigned} int) (ceil((( pui32ADC0Value[0] *3.3)/4096)*100)); \textcolor{comment}{// Convert to Celcius}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00169}00169             xStatus = xQueueSendToBack(\mbox{\hyperlink{main_8c_a6a6228afd9b745efeaead6a1c37efc60}{xQueue}},\&ui32TempValueC,0);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00170}00170             xSemaphoreGive(\mbox{\hyperlink{main_8c_a1437d87d42bfb45521c4258960c18ac0}{xMutex}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00171}00171             vTaskDelay(1000/portTICK\_RATE\_MS);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00172}00172     \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00173}00173 \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00174}00174 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00175}00175 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00176}00176 \textcolor{comment}{ * Description :}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00177}00177 \textcolor{comment}{ * Switch 0 and 4 handler.}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00178}00178 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00179}\mbox{\hyperlink{_init_8h_ad72ccb735680d193dcdbde880534749d}{00179}} \textcolor{keywordtype}{void} \mbox{\hyperlink{main_8c_ad72ccb735680d193dcdbde880534749d}{SwitchHandler}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00180}00180         portBASE\_TYPE xHigherPriorityTaskWoken = pdFALSE;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00181}00181         xSemaphoreGiveFromISR( \mbox{\hyperlink{main_8c_a4820ee652570cfa2680b87c36930910f}{xBinarySemaphore}}, \&xHigherPriorityTaskWoken );}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00182}00182         GPIOIntClear(GPIO\_PORTF\_BASE,GPIO\_PIN\_0|GPIO\_PIN\_4); \textcolor{comment}{// Clear the Interrupt}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00183}00183         portEND\_SWITCHING\_ISR( xHigherPriorityTaskWoken );}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00184}00184 \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00185}00185 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00186}00186 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00187}00187 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00188}00188 \textcolor{comment}{ * Description :}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00189}00189 \textcolor{comment}{ * used to create assambly instruction wait for interrupt}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00190}00190 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00191}\mbox{\hyperlink{main_8c_a97fd430f36f8b065226e2bff9bad1de5}{00191}} \textcolor{keywordtype}{void} \mbox{\hyperlink{main_8c_a97fd430f36f8b065226e2bff9bad1de5}{vApplicationIdleHook}}()\{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00192}00192     \_\_asm(\textcolor{stringliteral}{"{}wfi\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00193}00193 \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00194}00194 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00195}00195 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00196}00196 \textcolor{comment}{ * Description :}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00197}00197 \textcolor{comment}{ * it used to control the light of the LED according to the temperature}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00198}00198 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00199}\mbox{\hyperlink{main_8c_a275bbe36b07c73256602e44d0934d7c4}{00199}} \textcolor{keywordtype}{void} \mbox{\hyperlink{main_8c_a275bbe36b07c73256602e44d0934d7c4}{threshold\_LED}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} ReadTemperature)\{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00200}00200     \textcolor{comment}{// Setpoint threshold}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00201}00201     \textcolor{keywordflow}{if} (ReadTemperature > \mbox{\hyperlink{main_8c_a15de605329c8bf35d7654746687e93d2}{threshold}}) \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00202}00202     GPIOPinWrite(GPIO\_PORTF\_BASE,GPIO\_PIN\_1 | GPIO\_PIN\_2 | GPIO\_PIN\_3, GPIO\_PIN\_1); \textcolor{comment}{// Turns Red LED and turn off Heater}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00203}00203     \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00204}00204     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ReadTemperature == \mbox{\hyperlink{main_8c_a15de605329c8bf35d7654746687e93d2}{threshold}}) \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00205}00205         GPIOPinWrite(GPIO\_PORTF\_BASE,GPIO\_PIN\_1 | GPIO\_PIN\_2 | GPIO\_PIN\_3, GPIO\_PIN\_1 | GPIO\_PIN\_3); \textcolor{comment}{// Turns Yellow LED}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00206}00206     \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00207}00207     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ReadTemperature < \mbox{\hyperlink{main_8c_a15de605329c8bf35d7654746687e93d2}{threshold}}) \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00208}00208         GPIOPinWrite(GPIO\_PORTF\_BASE,GPIO\_PIN\_1 | GPIO\_PIN\_2 | GPIO\_PIN\_3, GPIO\_PIN\_2); \textcolor{comment}{// Turns Blue LED}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00209}00209     \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00210}00210     }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00211}00211     \textcolor{comment}{//Alarm threshold}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00212}00212     \textcolor{keywordflow}{if} (ReadTemperature > \mbox{\hyperlink{main_8c_af1195decc7a82f7a5cc82951e6e64582}{alarmThreshold}}) \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00213}00213         \textcolor{comment}{// Turn on Buzzard alarm}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00214}00214     sprintf (\mbox{\hyperlink{main_8c_ab4f98c1bd14207e21f0d213be8788adf}{buffer}}, \textcolor{stringliteral}{"{}\%s"{}},\textcolor{stringliteral}{"{}The temperature is higher than alarm threshold, Turn Buzzard ON"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00215}00215         \mbox{\hyperlink{main_8c_ab749ad94007b72a859adfa0c69a7dd84}{UART\_PrintBuffer}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00216}00216     \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00217}00217 \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00218}00218 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00219}00219 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00220}00220 \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00221}00221 \textcolor{comment}{ * Description :}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00222}00222 \textcolor{comment}{ * it used to print the buffer.}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00223}00223 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00224}\mbox{\hyperlink{main_8c_ab749ad94007b72a859adfa0c69a7dd84}{00224}} \textcolor{keywordtype}{void} \mbox{\hyperlink{main_8c_ab749ad94007b72a859adfa0c69a7dd84}{UART\_PrintBuffer}}(\textcolor{keywordtype}{void})\{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00225}00225     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; \mbox{\hyperlink{main_8c_ab4f98c1bd14207e21f0d213be8788adf}{buffer}}[i] != \textcolor{charliteral}{'\(\backslash\)0'}; i++)\{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00226}00226                 UARTCharPut(UART0\_BASE, \mbox{\hyperlink{main_8c_ab4f98c1bd14207e21f0d213be8788adf}{buffer}}[i]);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00227}00227                 \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00228}00228                 UARTCharPut(UART0\_BASE, \textcolor{charliteral}{'\(\backslash\)r'});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00229}00229                 UARTCharPut(UART0\_BASE, \textcolor{charliteral}{'\(\backslash\)n'});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00230}00230 \}}
+
+\end{DoxyCode}

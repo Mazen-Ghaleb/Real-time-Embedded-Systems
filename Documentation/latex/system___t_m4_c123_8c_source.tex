@@ -1,0 +1,595 @@
+\hypertarget{system___t_m4_c123_8c_source}{}\doxysection{system\+\_\+\+TM4\+C123.\+c}
+\label{system___t_m4_c123_8c_source}\index{RTE/Device/TM4C123GH6PM/system\_TM4C123.c@{RTE/Device/TM4C123GH6PM/system\_TM4C123.c}}
+\mbox{\hyperlink{system___t_m4_c123_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00001}00001 \textcolor{comment}{/**************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00012}00012 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00013}00013 \textcolor{preprocessor}{\#include "{}TM4C123.h"{}}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00016}00016 \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00017}00017 \textcolor{comment}{  DEFINES}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00018}00018 \textcolor{comment}{ *-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00019}00019 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/ <<< Use Configuration Wizard in Context Menu >>> -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00020}00020 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00021}00021 \textcolor{comment}{// This file can be used by the Keil uVision configuration wizard to set}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00022}00022 \textcolor{comment}{// the following system clock configuration values.  Or the value of the}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00023}00023 \textcolor{comment}{// macros can be directly edited below if not using the uVision configuration}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00024}00024 \textcolor{comment}{// wizard.}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00025}00025 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00026}00026 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Clock Configuration -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00027}00027 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00028}00028 \textcolor{comment}{//  <e> Clock Configuration}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00029}00029 \textcolor{comment}{//          <i> Uncheck this box to skip the clock configuration.}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00030}00030 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00031}00031 \textcolor{comment}{// The following controls whether the system clock is configured in the}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00032}00032 \textcolor{comment}{// SystemInit() function.  If it is defined to be 1 then the system clock}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00033}00033 \textcolor{comment}{// will be configured according to the macros in the rest of this file.}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00034}00034 \textcolor{comment}{// If it is defined to be 0, then the system clock configuration is bypassed.}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00035}00035 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00036}\mbox{\hyperlink{system___t_m4_c123_8c_aee2245fb4caf68f0fc571d8b24ff5626}{00036}} \textcolor{preprocessor}{\#define CLOCK\_SETUP 1}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00038}00038 \textcolor{comment}{//********************************* RCC ***************************************}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00039}00039 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00040}00040 \textcolor{comment}{//  <h> Run-\/Mode Clock Configuration (RCC)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00042}00042 \textcolor{comment}{//      <o> SYSDIV: System Clock Divisor <2-\/16>}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00043}00043 \textcolor{comment}{//          <i> Specifies the divisor used to generate the system clock from}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00044}00044 \textcolor{comment}{//          <i> either the PLL output of 200 MHz, or the chosen oscillator.}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00045}00045 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00046}00046 \textcolor{comment}{// The following value is the system clock divisor.  This will be applied if}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00047}00047 \textcolor{comment}{// USESYSDIV (see below) is enabled.  The valid range of dividers is 2-\/16.}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00048}00048 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00049}\mbox{\hyperlink{system___t_m4_c123_8c_a78d0489c7eb4a419d85a79a84812c810}{00049}} \textcolor{preprocessor}{\#define CFG\_RCC\_SYSDIV 4}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00051}00051 \textcolor{comment}{//      <q> USESYSDIV: Enable System Clock Divider}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00052}00052 \textcolor{comment}{//          <i> Check this box to use the System Clock Divider}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00053}00053 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00054}00054 \textcolor{comment}{// The following controls whether the system clock divider is used.  If the}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00055}00055 \textcolor{comment}{// value is 1, then the system clock divider is used, and the value of the}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00056}00056 \textcolor{comment}{// system divider is defined by SYSDIV (see above).  If the value is 0, then}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00057}00057 \textcolor{comment}{// the system clock divider is not used.}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00058}00058 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00059}\mbox{\hyperlink{system___t_m4_c123_8c_a085be77c1cc51f3bdba0a38d48fb5ebe}{00059}} \textcolor{preprocessor}{\#define CFG\_RCC\_USESYSDIV 1}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00061}00061 \textcolor{comment}{//      <q> USEPWMDIV: Enable PWM Clock Divider}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00062}00062 \textcolor{comment}{//          <i> Check this box to use the PWM Clock Divider}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00063}00063 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00064}00064 \textcolor{comment}{// The following controls whether the PWM clock divider is used.  If the}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00065}00065 \textcolor{comment}{// value is 1, then the PWM clock divider is used, and the value of the}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00066}00066 \textcolor{comment}{// PWM divider is defined by PWMDIV (see below).  If the value is 0, then}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00067}00067 \textcolor{comment}{// the PWM clock divider is not used.}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00068}00068 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00069}\mbox{\hyperlink{system___t_m4_c123_8c_a61c13da8877b3d7140d15524e523dbe1}{00069}} \textcolor{preprocessor}{\#define CFG\_RCC\_USEPWMDIV 1}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00071}00071 \textcolor{comment}{//      <o> PWMDIV: PWM Unit Clock Divisor}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00072}00072 \textcolor{comment}{//              <0=> 0: SysClk / 2}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00073}00073 \textcolor{comment}{//              <1=> 1: SysClk / 4}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00074}00074 \textcolor{comment}{//              <2=> 2: SysClk / 8}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00075}00075 \textcolor{comment}{//              <3=> 3: SysClk / 16}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00076}00076 \textcolor{comment}{//              <4=> 4: SysClk / 32}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00077}00077 \textcolor{comment}{//              <5=> 5: SysClk / 64}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00078}00078 \textcolor{comment}{//              <6=> 6: SysClk / 64}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00079}00079 \textcolor{comment}{//              <7=> 7: SysClk / 64 (default)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00080}00080 \textcolor{comment}{//          <i> Specifies the divisor used to generate the PWM time base,}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00081}00081 \textcolor{comment}{//          <i> from the System Clock}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00082}00082 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00083}00083 \textcolor{comment}{// The following value determines the PWM clock divider.  It is used if}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00084}00084 \textcolor{comment}{// USEPWMDIV is enabled (see above).  Otherwise the PWM clock is the same as}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00085}00085 \textcolor{comment}{// the system clock.  The value of the divider is determined by the table}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00086}00086 \textcolor{comment}{// above.}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00087}00087 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00088}\mbox{\hyperlink{system___t_m4_c123_8c_ab58c20222ce61e60bd05c93a6c4e811e}{00088}} \textcolor{preprocessor}{\#define CFG\_RCC\_PWMDIV 7}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00089}00089 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00090}00090 \textcolor{comment}{//      <q> PWRDN: PLL Power Down}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00091}00091 \textcolor{comment}{//          <i> Check this box to disable the PLL.  You must also choose}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00092}00092 \textcolor{comment}{//          <i> PLL Bypass.}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00093}00093 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00094}00094 \textcolor{comment}{// If the following value is 1, then the PLL is powered down.  Keep this value}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00095}00095 \textcolor{comment}{// as 1 if you do not need to use the PLL.  In this case, BYPASS (see below)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00096}00096 \textcolor{comment}{// must also be set to 1.  If you are using the PLL, then this value must be}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00097}00097 \textcolor{comment}{// set to 0.}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00098}00098 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00099}\mbox{\hyperlink{system___t_m4_c123_8c_a8ce828bfea671b5a9cecf2177b760d2c}{00099}} \textcolor{preprocessor}{\#define CFG\_RCC\_PWRDN 0}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00101}00101 \textcolor{comment}{//      <q> BYPASS: PLL Bypass}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00102}00102 \textcolor{comment}{//          <i> Check this box to not use the PLL for the System Clock}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00103}00103 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00104}00104 \textcolor{comment}{// Set the following value to 1 to bypass the PLL and not use it for the}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00105}00105 \textcolor{comment}{// system clock.  You must set this to 1 if PWRDN (above) is set to 1.  Set}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00106}00106 \textcolor{comment}{// this to 0 if you are using the PLL.}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00107}00107 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00108}\mbox{\hyperlink{system___t_m4_c123_8c_aab51ddb2bf33cb9d920e1ff45708423c}{00108}} \textcolor{preprocessor}{\#define CFG\_RCC\_BYPASS 0}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00109}00109 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00110}00110 \textcolor{comment}{//      <o> XTAL: Crystal Value}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00111}00111 \textcolor{comment}{//              < 0=>  0: 1.0000 MHz  (can not be used with PLL)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00112}00112 \textcolor{comment}{//              < 1=>  1: 1.8432 MHz  (can not be used with PLL)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00113}00113 \textcolor{comment}{//              < 2=>  2: 2.0000 MHz  (can not be used with PLL)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00114}00114 \textcolor{comment}{//              < 3=>  3: 2.4576 MHz  (can not be used with PLL)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00115}00115 \textcolor{comment}{//              < 4=>  4: 3.579545 MHz}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00116}00116 \textcolor{comment}{//              < 5=>  5: 3.6864 MHz}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00117}00117 \textcolor{comment}{//              < 6=>  6: 4.0000 MHz}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00118}00118 \textcolor{comment}{//              < 7=>  7: 4.096 MHz}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00119}00119 \textcolor{comment}{//              < 8=>  8: 4.9152 MHz}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00120}00120 \textcolor{comment}{//              < 9=>  9: 5.0000 MHz}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00121}00121 \textcolor{comment}{//              <10=> 10: 5.12 MHz}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00122}00122 \textcolor{comment}{//              <11=> 11: 6.0000 MHz (default)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00123}00123 \textcolor{comment}{//              <12=> 12: 6.144 MHz}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00124}00124 \textcolor{comment}{//              <13=> 13: 7.3728 MHz}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00125}00125 \textcolor{comment}{//              <14=> 14: 8.0000 MHz}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00126}00126 \textcolor{comment}{//              <15=> 15: 8.192 MHz}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00127}00127 \textcolor{comment}{//              <16=> 16: 10.0 MHz}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00128}00128 \textcolor{comment}{//              <17=> 17: 12.0 MHz}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00129}00129 \textcolor{comment}{//              <18=> 18: 12.288 MHz}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00130}00130 \textcolor{comment}{//              <19=> 19: 13.56 MHz}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00131}00131 \textcolor{comment}{//              <20=> 20: 14.31818 MHz}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00132}00132 \textcolor{comment}{//              <21=> 21: 16.0 MHz}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00133}00133 \textcolor{comment}{//              <22=> 22: 16.384 MHz}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00134}00134 \textcolor{comment}{//          <i> This is the crystal frequency used for the main oscillator}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00135}00135 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00136}00136 \textcolor{comment}{// This value defines the crystal frequency for the main oscillator, according}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00137}00137 \textcolor{comment}{// to the table in the comments above.  If an external crystal is used, then}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00138}00138 \textcolor{comment}{// this value must be set to match the value of the crystal.}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00139}00139 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00140}\mbox{\hyperlink{system___t_m4_c123_8c_a841798846eeeaaa0fbfee391c33619fe}{00140}} \textcolor{preprocessor}{\#define CFG\_RCC\_XTAL 21}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00141}00141 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00142}00142 \textcolor{comment}{//      <o> OSCSRC: Oscillator Source}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00143}00143 \textcolor{comment}{//              <0=> 0: MOSC Main oscillator}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00144}00144 \textcolor{comment}{//              <1=> 1: IOSC Internal oscillator (default)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00145}00145 \textcolor{comment}{//              <2=> 2: IOSC/4 Internal oscillator / 4 (this is necessary if used as input to PLL)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00146}00146 \textcolor{comment}{//              <3=> 3: 30kHz 30-\/KHz internal oscillator}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00147}00147 \textcolor{comment}{//          <i> Chooses the oscillator that is used for the system clock,}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00148}00148 \textcolor{comment}{//          <i> or the PLL input.}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00149}00149 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00150}00150 \textcolor{comment}{// The following value chooses the oscillator source according to the table in}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00151}00151 \textcolor{comment}{// the comments above.}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00152}00152 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00153}\mbox{\hyperlink{system___t_m4_c123_8c_a6f92252911092c4fc470497c51dc4802}{00153}} \textcolor{preprocessor}{\#define CFG\_RCC\_OSCSRC 0}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00154}00154 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00155}00155 \textcolor{comment}{//      <q> IOSCDIS: Internal Oscillator Disable}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00156}00156 \textcolor{comment}{//          <i> Check this box to turn off the internal oscillator}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00157}00157 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00158}00158 \textcolor{comment}{// Set the following value to 1 to turn off the internal oscillator.  This}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00159}00159 \textcolor{comment}{// value can be set to 1 if you are not using the internal oscillator.}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00160}00160 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00161}\mbox{\hyperlink{system___t_m4_c123_8c_afa3742a3064864b0042579aa0163506b}{00161}} \textcolor{preprocessor}{\#define CFG\_RCC\_IOSCDIS 1}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00162}00162 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00163}00163 \textcolor{comment}{//      <q> MOSCDIS: Main Oscillator Disable}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00164}00164 \textcolor{comment}{//          <i> Check this box to turn off the main oscillator}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00165}00165 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00166}00166 \textcolor{comment}{// Set the following value to 1 to turn off the main oscillator.  This}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00167}00167 \textcolor{comment}{// value can be set to 1 if you are not using the main oscillator.}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00168}00168 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00169}\mbox{\hyperlink{system___t_m4_c123_8c_a9453d18fad1c95a2f08299227730cb16}{00169}} \textcolor{preprocessor}{\#define CFG\_RCC\_MOSCDIS 0}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00170}00170 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00171}00171 \textcolor{comment}{//  </h>}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00172}00172 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00173}00173 \textcolor{comment}{//********************************* RCC2 **************************************}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00174}00174 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00175}00175 \textcolor{comment}{//   <h> Run-\/Mode Clock Configuration 2 (RCC2)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00176}00176 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00177}00177 \textcolor{comment}{//      <q> USERCC2: Use RCC2}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00178}00178 \textcolor{comment}{//          <i> Check this box to override some fields in RCC.  RCC2 provides}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00179}00179 \textcolor{comment}{//          <i> more bits for the system clock divider, and provides an}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00180}00180 \textcolor{comment}{//          <i> additional oscillator source.  If you do not need these}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00181}00181 \textcolor{comment}{//          <i> additional features, then leave this box unchecked.}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00182}00182 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00183}00183 \textcolor{comment}{// Set the following value to 1 to use the RCC2 register.  The RCC2 register}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00184}00184 \textcolor{comment}{// overrides some of the fields in the RCC register if it is used.}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00185}00185 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00186}\mbox{\hyperlink{system___t_m4_c123_8c_a5c549aff528563ff7ce2580824b9c113}{00186}} \textcolor{preprocessor}{\#define CFG\_RCC2\_USERCC2 0}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00187}00187 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00188}00188 \textcolor{comment}{//      <o> SYSDIV2: System Clock Divisor <2-\/64>}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00189}00189 \textcolor{comment}{//          <i> Specifies the divisor used to generate the system clock from}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00190}00190 \textcolor{comment}{//          <i> either the PLL output of 200 MHz, or the oscillator.}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00191}00191 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00192}00192 \textcolor{comment}{// The following value is the system clock divisor.  This will be applied if}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00193}00193 \textcolor{comment}{// USESYSDIV in RCC is enabled.  The valid range of dividers is 2-\/64.}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00194}00194 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00195}\mbox{\hyperlink{system___t_m4_c123_8c_ac7ed623916abbf3b77a688092dc6f840}{00195}} \textcolor{preprocessor}{\#define CFG\_RCC\_SYSDIV2 4}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00196}00196 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00197}00197 \textcolor{comment}{//      <q> PWRDN2: Power Down PLL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00198}00198 \textcolor{comment}{//          <i> Check this box to disable the PLL.  You must also choose}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00199}00199 \textcolor{comment}{//          <i> PLL Bypass.}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00200}00200 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00201}00201 \textcolor{comment}{// If the following value is 1, then the PLL is powered down.  Keep this value}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00202}00202 \textcolor{comment}{// as 1 if you do not need to use the PLL.  In this case, BYPASS2 (see below)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00203}00203 \textcolor{comment}{// must also be set to 1.  If you are using the PLL, then this value must be}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00204}00204 \textcolor{comment}{// set to 0.}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00205}00205 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00206}\mbox{\hyperlink{system___t_m4_c123_8c_a35f721008a8705b55c61b4474e5e3d05}{00206}} \textcolor{preprocessor}{\#define CFG\_RCC\_PWRDN2 0}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00207}00207 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00208}00208 \textcolor{comment}{//      <q> BYPASS2: Bypass PLL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00209}00209 \textcolor{comment}{//          <i> Check this box to not use the PLL for the System Clock}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00210}00210 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00211}00211 \textcolor{comment}{// Set the following value to 1 to bypass the PLL and not use it for the}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00212}00212 \textcolor{comment}{// system clock.  You must set this to 1 if PWRDN2 (above) is set to 1.  Set}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00213}00213 \textcolor{comment}{// this to 0 if you are using the PLL.}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00214}00214 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00215}\mbox{\hyperlink{system___t_m4_c123_8c_ab12e47f6f1bb2a2959b9e6db46567b5b}{00215}} \textcolor{preprocessor}{\#define CFG\_RCC\_BYPASS2 0}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00216}00216 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00217}00217 \textcolor{comment}{//      <o> OSCSRC2: Oscillator Source}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00218}00218 \textcolor{comment}{//              <0=> 0: MOSC Main oscillator}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00219}00219 \textcolor{comment}{//              <1=> 1: IOSC Internal oscillator (default)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00220}00220 \textcolor{comment}{//              <2=> 2: IOSC/4 Internal oscillator / 4 (this is necessary if used as input to PLL)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00221}00221 \textcolor{comment}{//              <3=> 3: 30kHz 30-\/kHz internal oscillator}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00222}00222 \textcolor{comment}{//              <7=> 7: 32kHz 32.768-\/kHz external oscillator}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00223}00223 \textcolor{comment}{//          <i> The oscillator that is used for the system clock, or the PLL input.}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00224}00224 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00225}00225 \textcolor{comment}{// The following value chooses the oscillator source according to the table in}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00226}00226 \textcolor{comment}{// the comments above.}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00227}00227 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00228}\mbox{\hyperlink{system___t_m4_c123_8c_ab513852f4a8967752d372e011badcfc2}{00228}} \textcolor{preprocessor}{\#define CFG\_RCC\_OSCSRC2 0}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00229}00229 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00230}00230 \textcolor{comment}{//  </h>}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00231}00231 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00232}00232 \textcolor{comment}{//  </e>}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00233}00233 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00234}00234 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/ <<< end of configuration section >>> -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00235}00235 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00236}00236 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00237}00237 \textcolor{comment}{// The following macros are used to program the RCC and RCC2 registers in}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00238}00238 \textcolor{comment}{// the SystemInit() function.  Edit the macros above to change these values.}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00239}00239 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00240}\mbox{\hyperlink{system___t_m4_c123_8c_a6365581ad94c923afd0d1e7e591f0c76}{00240}} \textcolor{preprocessor}{\#define RCC\_Val                                                               \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00241}00241 \textcolor{preprocessor}{(                                                                             \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00242}00242 \textcolor{preprocessor}{    ((CFG\_RCC\_SYSDIV -\/ 1)   << 23) |                                          \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00243}00243 \textcolor{preprocessor}{    (CFG\_RCC\_USESYSDIV      << 22) |                                          \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00244}00244 \textcolor{preprocessor}{    (CFG\_RCC\_USEPWMDIV      << 20) |                                          \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00245}00245 \textcolor{preprocessor}{    (CFG\_RCC\_PWMDIV         << 17) |                                          \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00246}00246 \textcolor{preprocessor}{    (CFG\_RCC\_PWRDN          << 13) |                                          \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00247}00247 \textcolor{preprocessor}{    (CFG\_RCC\_BYPASS         << 11) |                                          \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00248}00248 \textcolor{preprocessor}{    (CFG\_RCC\_XTAL           << 6)  |                                          \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00249}00249 \textcolor{preprocessor}{    (CFG\_RCC\_OSCSRC         << 4)  |                                          \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00250}00250 \textcolor{preprocessor}{    (CFG\_RCC\_IOSCDIS        << 1)  |                                          \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00251}00251 \textcolor{preprocessor}{    (CFG\_RCC\_MOSCDIS        << 1)\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00252}00252 \textcolor{preprocessor}{)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00253}00253 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00254}\mbox{\hyperlink{system___t_m4_c123_8c_afd4d4cb07db4562632da94cb7cf9c173}{00254}} \textcolor{preprocessor}{\#define RCC2\_Val                                                              \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00255}00255 \textcolor{preprocessor}{(                                                                             \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00256}00256 \textcolor{preprocessor}{    (CFG\_RCC2\_USERCC2      << 31) |                                           \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00257}00257 \textcolor{preprocessor}{    ((CFG\_RCC\_SYSDIV2 -\/ 1)  << 23) |                                          \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00258}00258 \textcolor{preprocessor}{    (CFG\_RCC\_PWRDN2         << 13) |                                          \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00259}00259 \textcolor{preprocessor}{    (CFG\_RCC\_BYPASS2        << 11) |                                          \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00260}00260 \textcolor{preprocessor}{    (CFG\_RCC\_OSCSRC2        << 4)\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00261}00261 \textcolor{preprocessor}{)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00262}00262 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00263}00263 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00264}00264 \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00265}00265 \textcolor{comment}{  Define clocks}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00266}00266 \textcolor{comment}{ *-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00267}\mbox{\hyperlink{system___t_m4_c123_8c_a2257a737607a717c24541af4e55abf03}{00267}} \textcolor{preprocessor}{\#define XTALM       (16000000UL)            }\textcolor{comment}{/* Main         oscillator freq */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00268}\mbox{\hyperlink{system___t_m4_c123_8c_aed5b0da9b247340ab65170e44a0e079f}{00268}} \textcolor{preprocessor}{\#define XTALI       (16000000UL)            }\textcolor{comment}{/* Internal     oscillator freq */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00269}\mbox{\hyperlink{system___t_m4_c123_8c_aae873e6b41dc2b7665b1a312cb062b4a}{00269}} \textcolor{preprocessor}{\#define XTAL30K     (   30000UL)            }\textcolor{comment}{/* Internal 30K oscillator freq */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00270}\mbox{\hyperlink{system___t_m4_c123_8c_a7981be1ae1f32cdfc7b1681860d440be}{00270}} \textcolor{preprocessor}{\#define XTAL32K     (   32768UL)            }\textcolor{comment}{/* external 32K oscillator freq */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00271}00271 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00272}\mbox{\hyperlink{system___t_m4_c123_8c_ae895cd58a49e14437e6c959517d4af3b}{00272}} \textcolor{preprocessor}{\#define PLL\_CLK    (400000000UL)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00273}\mbox{\hyperlink{system___t_m4_c123_8c_a44d38ab4d4e88e679184bbbffdac00dd}{00273}} \textcolor{preprocessor}{\#define ADC\_CLK     (PLL\_CLK/25)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00274}\mbox{\hyperlink{system___t_m4_c123_8c_a7d63b246369d4f296ba8c3008164a387}{00274}} \textcolor{preprocessor}{\#define CAN\_CLK     (PLL\_CLK/50)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00275}00275 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00276}00276  \textcolor{comment}{/* Determine clock frequency according to clock register values */}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00277}00277 \textcolor{preprocessor}{  \#if (RCC2\_Val \& (1UL<<31))                              }\textcolor{comment}{/* is rcc2 used ? */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00278}00278 \textcolor{preprocessor}{    \#if (RCC2\_Val \& (1UL<<11))                           }\textcolor{comment}{/* check BYPASS */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00279}00279 \textcolor{preprocessor}{              \#if   (((RCC2\_Val>>4) \& 0x07) == 0x0)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00280}00280 \textcolor{preprocessor}{                \#if   (((RCC\_Val>>6) \& 0x1F) == 0x0)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00281}00281 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  1000000UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00282}00282 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0x1)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00283}00283 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  1843200UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00284}00284 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0x2)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00285}00285 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  2000000UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00286}00286 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0x3)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00287}00287 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  2457600UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00288}00288 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0x4)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00289}00289 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  3579545UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00290}00290 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0x5)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00291}00291 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  3686400UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00292}00292 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0x6)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00293}00293 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  4000000UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00294}00294 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0x7)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00295}00295 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  4096000UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00296}00296 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0x8)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00297}00297 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  4915200UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00298}00298 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0x9)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00299}00299 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  5000000UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00300}00300 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0xA)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00301}00301 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  5120000UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00302}00302 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0xB)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00303}00303 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  6000000UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00304}00304 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0xC)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00305}00305 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  6144000UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00306}00306 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0xD)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00307}00307 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  7372800UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00308}00308 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0xE)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00309}00309 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  8000000UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00310}00310 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0xF)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00311}00311 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  8192000UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00312}00312 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0x10)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00313}00313 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  10000000UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00314}00314 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0x11)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00315}00315 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  12000000UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00316}00316 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0x12)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00317}00317 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  12288000UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00318}00318 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0x13)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00319}00319 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  13560000UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00320}00320 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0x14)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00321}00321 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  14318180UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00322}00322 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0x15)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00323}00323 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  16000000UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00324}00324 \textcolor{preprocessor}{                \#else}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00325}00325 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  16384000UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00326}00326 \textcolor{preprocessor}{                \#endif}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00327}00327 \textcolor{preprocessor}{              \#elif (((RCC2\_Val>>4) \& 0x07) == 0x1)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00328}00328 \textcolor{preprocessor}{                  \#define \_\_CORE\_CLK\_PRE  XTALI}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00329}00329 \textcolor{preprocessor}{              \#elif (((RCC2\_Val>>4) \& 0x07) == 0x2)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00330}00330 \textcolor{preprocessor}{                  \#define \_\_CORE\_CLK\_PRE  (XTALI/4)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00331}00331 \textcolor{preprocessor}{              \#else}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00332}00332 \textcolor{preprocessor}{                  \#define \_\_CORE\_CLK\_PRE  XTAL30K}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00333}00333 \textcolor{preprocessor}{              \#endif}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00334}00334 \textcolor{preprocessor}{    \#else}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00335}00335 \textcolor{preprocessor}{      \#define \_\_CORE\_CLK\_PRE   PLL\_CLK}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00336}00336 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00337}00337 \textcolor{preprocessor}{    \#if (RCC\_Val \& (1UL<<22))                            }\textcolor{comment}{/* check USESYSDIV */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00338}00338 \textcolor{preprocessor}{      \#if (RCC2\_Val \& (1UL<<11))}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00339}00339 \textcolor{preprocessor}{        \#define \_\_CORE\_CLK  (\_\_CORE\_CLK\_PRE / (((RCC2\_Val>>23) \& (0x3F)) + 1))}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00340}00340 \textcolor{preprocessor}{      \#else}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00341}00341 \textcolor{preprocessor}{        \#define \_\_CORE\_CLK  (\_\_CORE\_CLK\_PRE / (((RCC2\_Val>>23) \& (0x3F)) + 1) / 2)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00342}00342 \textcolor{preprocessor}{      \#endif}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00343}00343 \textcolor{preprocessor}{    \#else}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00344}00344 \textcolor{preprocessor}{      \#define \_\_CORE\_CLK  \_\_CORE\_CLK\_PRE}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00345}00345 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00346}00346 \textcolor{preprocessor}{  \#else}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00347}00347 \textcolor{preprocessor}{    \#if (RCC\_Val \& (1UL<<11))                           }\textcolor{comment}{/* check BYPASS */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00348}00348 \textcolor{preprocessor}{              \#if   (((RCC\_Val>>4) \& 0x03) == 0x0)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00349}00349 \textcolor{preprocessor}{                \#if   (((RCC\_Val>>6) \& 0x1F) == 0x0)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00350}00350 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  1000000UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00351}00351 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0x1)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00352}00352 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  1843200UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00353}00353 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0x2)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00354}00354 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  2000000UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00355}00355 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0x3)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00356}00356 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  2457600UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00357}00357 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0x4)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00358}00358 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  3579545UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00359}00359 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0x5)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00360}00360 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  3686400UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00361}00361 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0x6)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00362}00362 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  4000000UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00363}00363 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0x7)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00364}00364 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  4096000UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00365}00365 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0x8)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00366}00366 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  4915200UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00367}00367 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0x9)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00368}00368 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  5000000UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00369}00369 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0xA)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00370}00370 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  5120000UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00371}00371 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0xB)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00372}00372 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  6000000UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00373}00373 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0xC)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00374}00374 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  6144000UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00375}00375 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0xD)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00376}00376 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  7372800UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00377}00377 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0xE)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00378}00378 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  8000000UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00379}00379 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0xF)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00380}00380 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  8192000UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00381}00381 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0x10)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00382}00382 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  10000000UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00383}00383 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0x11)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00384}00384 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  12000000UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00385}00385 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0x12)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00386}00386 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  12288000UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00387}00387 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0x13)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00388}00388 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  13560000UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00389}00389 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0x14)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00390}00390 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  14318180UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00391}00391 \textcolor{preprocessor}{                \#elif (((RCC\_Val>>6) \& 0x1F) == 0x15)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00392}00392 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  16000000UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00393}00393 \textcolor{preprocessor}{                \#else}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00394}00394 \textcolor{preprocessor}{                      \#define \_\_CORE\_CLK\_PRE  16384000UL}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00395}00395 \textcolor{preprocessor}{                \#endif}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00396}00396 \textcolor{preprocessor}{              \#elif (((RCC\_Val>>4) \& 0x03) == 0x1)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00397}00397 \textcolor{preprocessor}{                  \#define \_\_CORE\_CLK\_PRE  XTALI}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00398}00398 \textcolor{preprocessor}{              \#elif (((RCC\_Val>>4) \& 0x03) == 0x2)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00399}00399 \textcolor{preprocessor}{                  \#define \_\_CORE\_CLK\_PRE  (XTALI/4)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00400}00400 \textcolor{preprocessor}{              \#else}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00401}00401 \textcolor{preprocessor}{                  \#define \_\_CORE\_CLK\_PRE  XTAL30K}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00402}00402 \textcolor{preprocessor}{              \#endif}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00403}00403 \textcolor{preprocessor}{    \#else}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00404}\mbox{\hyperlink{system___t_m4_c123_8c_a2a6fa051f5efc13b65f66bf689b61946}{00404}} \textcolor{preprocessor}{      \#define \_\_CORE\_CLK\_PRE   PLL\_CLK}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00405}00405 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00406}00406 \textcolor{preprocessor}{    \#if (RCC\_Val \& (1UL<<22))                            }\textcolor{comment}{/* check USESYSDIV */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00407}00407 \textcolor{preprocessor}{      \#if (RCC\_Val \& (1UL<<11))                          }\textcolor{comment}{/* check BYPASS */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00408}00408 \textcolor{preprocessor}{        \#define \_\_CORE\_CLK  (\_\_CORE\_CLK\_PRE / (((RCC\_Val>>23) \& (0x0F)) + 1))}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00409}00409 \textcolor{preprocessor}{      \#else}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00410}\mbox{\hyperlink{system___t_m4_c123_8c_ab40b7b139fc425dbd3f7adece2e14478}{00410}} \textcolor{preprocessor}{        \#define \_\_CORE\_CLK  (\_\_CORE\_CLK\_PRE / (((RCC\_Val>>23) \& (0x0F)) + 1) / 2)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00411}00411 \textcolor{preprocessor}{      \#endif}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00412}00412 \textcolor{preprocessor}{    \#else}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00413}00413 \textcolor{preprocessor}{      \#define \_\_CORE\_CLK  \_\_CORE\_CLK\_PRE}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00414}00414 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00415}00415 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00416}00416 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00417}00417 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00418}00418 \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00419}00419 \textcolor{comment}{  Clock Variable definitions}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00420}00420 \textcolor{comment}{ *-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00421}\mbox{\hyperlink{system___a_r_m_c_m3_8h_aa3cd3e43291e81e795d642b79b6088e6}{00421}} uint32\_t \mbox{\hyperlink{system___t_m4_c123_8c_aa3cd3e43291e81e795d642b79b6088e6}{SystemCoreClock}} = \mbox{\hyperlink{system___t_m4_c123_8c_ab40b7b139fc425dbd3f7adece2e14478}{\_\_CORE\_CLK}};  }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00424}00424 \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00425}00425 \textcolor{comment}{  Clock functions}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00426}00426 \textcolor{comment}{ *-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00427}00427 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00428}00428 \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00429}00429 \textcolor{comment}{  Get the OSC clock}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00430}00430 \textcolor{comment}{ *-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00431}00431 \_\_INLINE \textcolor{keyword}{static} uint32\_t getOscClk (uint32\_t xtal, uint32\_t oscSrc) \{}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00432}00432   uint32\_t oscClk = \mbox{\hyperlink{system___t_m4_c123_8c_aed5b0da9b247340ab65170e44a0e079f}{XTALI}};}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00433}00433 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00434}00434   \textcolor{keywordflow}{switch} (oscSrc) \{                      \textcolor{comment}{/* switch OSCSRC */}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00435}00435     \textcolor{keywordflow}{case} 0:                              \textcolor{comment}{/* MOSC Main oscillator */}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00436}00436       \textcolor{keywordflow}{switch} (xtal) \{                    \textcolor{comment}{/* switch XTAL */}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00437}00437         \textcolor{keywordflow}{case} 0x0:}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00438}00438           oscClk = 1000000UL;}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00439}00439           \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00440}00440         \textcolor{keywordflow}{case} 0x1:}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00441}00441           oscClk = 1843200UL;}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00442}00442           \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00443}00443         \textcolor{keywordflow}{case} 0x2:}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00444}00444           oscClk = 2000000UL;}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00445}00445           \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00446}00446         \textcolor{keywordflow}{case} 0x3:}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00447}00447           oscClk = 2457600UL;}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00448}00448           \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00449}00449         \textcolor{keywordflow}{case} 0x4:}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00450}00450           oscClk = 3579545UL;}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00451}00451           \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00452}00452         \textcolor{keywordflow}{case} 0x5:}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00453}00453           oscClk = 3686400UL;}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00454}00454           \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00455}00455         \textcolor{keywordflow}{case} 0x6:}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00456}00456           oscClk = 4000000UL;}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00457}00457           \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00458}00458         \textcolor{keywordflow}{case} 0x7:}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00459}00459           oscClk = 4096000UL;}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00460}00460           \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00461}00461         \textcolor{keywordflow}{case} 0x8:}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00462}00462           oscClk = 4915200UL;}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00463}00463           \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00464}00464         \textcolor{keywordflow}{case} 0x9:}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00465}00465           oscClk = 5000000UL;}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00466}00466           \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00467}00467         \textcolor{keywordflow}{case} 0xA:}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00468}00468           oscClk = 5120000UL;}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00469}00469           \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00470}00470         \textcolor{keywordflow}{case} 0xB:}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00471}00471           oscClk = 6000000UL;}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00472}00472           \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00473}00473         \textcolor{keywordflow}{case} 0xC:}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00474}00474           oscClk = 6144000UL;}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00475}00475           \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00476}00476         \textcolor{keywordflow}{case} 0xD:}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00477}00477           oscClk = 7372800UL;}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00478}00478           \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00479}00479         \textcolor{keywordflow}{case} 0xE:}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00480}00480           oscClk = 8000000UL;}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00481}00481           \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00482}00482         \textcolor{keywordflow}{case} 0xF:}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00483}00483           oscClk = 8192000UL;}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00484}00484           \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00485}00485         \textcolor{keywordflow}{case} 0x10:}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00486}00486           oscClk = 10000000UL;}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00487}00487           \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00488}00488         \textcolor{keywordflow}{case} 0x11:}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00489}00489           oscClk = 12000000UL;}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00490}00490           \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00491}00491         \textcolor{keywordflow}{case} 0x12:}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00492}00492           oscClk = 12288000UL;}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00493}00493           \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00494}00494         \textcolor{keywordflow}{case} 0x13:}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00495}00495           oscClk = 13560000UL;}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00496}00496           \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00497}00497         \textcolor{keywordflow}{case} 0x14:}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00498}00498           oscClk = 14318180UL;}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00499}00499           \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00500}00500         \textcolor{keywordflow}{case} 0x15:}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00501}00501           oscClk = 16000000UL;}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00502}00502           \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00503}00503         \textcolor{keywordflow}{case} 0x16:}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00504}00504           oscClk = 16384000UL;}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00505}00505           \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00506}00506        \}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00507}00507       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00508}00508     \textcolor{keywordflow}{case} 1:                         \textcolor{comment}{/* IOSC Internal oscillator */}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00509}00509       oscClk = \mbox{\hyperlink{system___t_m4_c123_8c_aed5b0da9b247340ab65170e44a0e079f}{XTALI}};}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00510}00510       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00511}00511     \textcolor{keywordflow}{case} 2:                         \textcolor{comment}{/* IOSC/4 Internal oscillator/4 */}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00512}00512       oscClk = \mbox{\hyperlink{system___t_m4_c123_8c_aed5b0da9b247340ab65170e44a0e079f}{XTALI}}/4;}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00513}00513       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00514}00514     \textcolor{keywordflow}{case} 3:                         \textcolor{comment}{/* 30kHz internal oscillator  */}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00515}00515       oscClk = \mbox{\hyperlink{system___t_m4_c123_8c_aae873e6b41dc2b7665b1a312cb062b4a}{XTAL30K}};}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00516}00516       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00517}00517   \}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00518}00518 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00519}00519   \textcolor{keywordflow}{return} oscClk;}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00520}00520 \}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00521}00521 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00522}\mbox{\hyperlink{system___a_r_m_c_m3_8h_ae0c36a9591fe6e9c45ecb21a794f0f0f}{00522}} \textcolor{keywordtype}{void} \mbox{\hyperlink{system___t_m4_c123_8c_ae0c36a9591fe6e9c45ecb21a794f0f0f}{SystemCoreClockUpdate}} (\textcolor{keywordtype}{void})            \textcolor{comment}{/* Get Core Clock Frequency      */}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00523}00523 \{}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00524}00524     uint32\_t rcc, rcc2;}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00525}00525 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00526}00526     \textcolor{comment}{/* Determine clock frequency according to clock register values */}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00527}00527     rcc  = SYSCTL-\/>RCC;}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00528}00528     rcc2 = SYSCTL-\/>RCC2;}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00529}00529 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00530}00530   \textcolor{comment}{//if (rcc2 \& SYSCTL\_RCC2\_USERCC2)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00531}00531     \textcolor{keywordflow}{if} (rcc2 \& (1UL<<31)) \{                             \textcolor{comment}{/* is rcc2 is used ? */}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00532}00532   \textcolor{comment}{//  if (rcc2 \& SYSCTL\_RCC2\_BYPASS2)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00533}00533       \textcolor{keywordflow}{if} (rcc2 \& (1UL<<11)) \{                           \textcolor{comment}{/* check BYPASS */}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00534}00534         \mbox{\hyperlink{system___t_m4_c123_8c_aa3cd3e43291e81e795d642b79b6088e6}{SystemCoreClock}} = getOscClk (((rcc>>6) \& 0x0F),((rcc2>>4) \& 0x07));}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00535}00535       \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00536}00536         \mbox{\hyperlink{system___t_m4_c123_8c_aa3cd3e43291e81e795d642b79b6088e6}{SystemCoreClock}} = \mbox{\hyperlink{system___t_m4_c123_8c_ae895cd58a49e14437e6c959517d4af3b}{PLL\_CLK}};}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00537}00537       \}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00538}00538       \textcolor{keywordflow}{if} (rcc \& (1UL<<22)) \{                            \textcolor{comment}{/* check USESYSDIV */}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00539}00539         \textcolor{keywordflow}{if} (rcc2 \& (1UL<<11)) \{}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00540}00540           \mbox{\hyperlink{system___t_m4_c123_8c_aa3cd3e43291e81e795d642b79b6088e6}{SystemCoreClock}} = \mbox{\hyperlink{system___t_m4_c123_8c_aa3cd3e43291e81e795d642b79b6088e6}{SystemCoreClock}} / (((rcc2>>23) \& (0x3F)) + 1);}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00541}00541         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00542}00542           \mbox{\hyperlink{system___t_m4_c123_8c_aa3cd3e43291e81e795d642b79b6088e6}{SystemCoreClock}} = \mbox{\hyperlink{system___t_m4_c123_8c_aa3cd3e43291e81e795d642b79b6088e6}{SystemCoreClock}} / (((rcc2>>23) \& (0x3F)) + 1) / 2;}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00543}00543         \}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00544}00544       \}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00545}00545     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00546}00546   \textcolor{comment}{//    if (RCC\_Val \& (1UL<<11)) \{                            /* check BYPASS */}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00547}00547       \textcolor{keywordflow}{if} (rcc \& (1UL<<11)) \{                            \textcolor{comment}{/* check BYPASS */} \textcolor{comment}{/* Simulation does not work at this point */}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00548}00548         \mbox{\hyperlink{system___t_m4_c123_8c_aa3cd3e43291e81e795d642b79b6088e6}{SystemCoreClock}} = getOscClk (((rcc>>6) \& 0x1F),((rcc>>4) \& 0x03));}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00549}00549       \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00550}00550         \mbox{\hyperlink{system___t_m4_c123_8c_aa3cd3e43291e81e795d642b79b6088e6}{SystemCoreClock}} = \mbox{\hyperlink{system___t_m4_c123_8c_ae895cd58a49e14437e6c959517d4af3b}{PLL\_CLK}};}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00551}00551       \}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00552}00552   \textcolor{comment}{//  if (rcc \& SYSCTL\_RCC\_USE\_SYSDIV)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00553}00553       \textcolor{keywordflow}{if} (rcc \& (1UL<<22)) \{                            \textcolor{comment}{/* check USESYSDIV */}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00554}00554   \textcolor{comment}{//    if (rcc2 \& SYSCTL\_RCC\_BYPASS)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00555}00555         \textcolor{keywordflow}{if} (rcc \& (1UL<<11)) \{                          \textcolor{comment}{/* check BYPASS */} \textcolor{comment}{/* Simulation does not work at this point */}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00556}00556   \textcolor{comment}{//      if (RCC\_Val \& (1UL<<11)) \{                          /* check BYPASS */}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00557}00557           \mbox{\hyperlink{system___t_m4_c123_8c_aa3cd3e43291e81e795d642b79b6088e6}{SystemCoreClock}} = \mbox{\hyperlink{system___t_m4_c123_8c_aa3cd3e43291e81e795d642b79b6088e6}{SystemCoreClock}} / (((rcc>>23) \& (0x0F)) + 1);}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00558}00558         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00559}00559           \mbox{\hyperlink{system___t_m4_c123_8c_aa3cd3e43291e81e795d642b79b6088e6}{SystemCoreClock}} = \mbox{\hyperlink{system___t_m4_c123_8c_aa3cd3e43291e81e795d642b79b6088e6}{SystemCoreClock}} / (((rcc>>23) \& (0x0F)) + 1) / 2;}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00560}00560         \}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00561}00561       \}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00562}00562     \}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00563}00563 \}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00564}00564 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00574}\mbox{\hyperlink{system___a_r_m_c_m3_8h_a93f514700ccf00d08dbdcff7f1224eb2}{00574}} \textcolor{keywordtype}{void} \mbox{\hyperlink{system___t_m4_c123_8c_a93f514700ccf00d08dbdcff7f1224eb2}{SystemInit}} (\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00575}00575 \{}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00576}00576 \textcolor{preprocessor}{\#if(CLOCK\_SETUP)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00577}00577     uint32\_t i;}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00578}00578 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00579}00579 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00580}00580   \textcolor{comment}{/* FPU settings -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00581}00581 \textcolor{preprocessor}{  \#if (\_\_FPU\_USED == 1)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00582}00582     \mbox{\hyperlink{group___c_m_s_i_s__core__register_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>CPACR |= ((3UL << 10*2) |                 \textcolor{comment}{/* set CP10 Full Access */}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00583}00583                    (3UL << 11*2)  );               \textcolor{comment}{/* set CP11 Full Access */}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00584}00584 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00585}00585 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00586}00586 \textcolor{preprocessor}{\#if(CLOCK\_SETUP)}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00587}00587     SYSCTL-\/>RCC2 = 0x07802810;    \textcolor{comment}{/* set default value */}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00588}00588     SYSCTL-\/>RCC  = 0x078E3AD1;    \textcolor{comment}{/* set default value */}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00589}00589 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00590}00590     SYSCTL-\/>RCC  = (\mbox{\hyperlink{system___t_m4_c123_8c_a6365581ad94c923afd0d1e7e591f0c76}{RCC\_Val}}  | (1UL<<11) | (1UL<<13)) \& \string~(1UL<<22); \textcolor{comment}{/* set value with BYPASS, PWRDN set, USESYSDIV reset */}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00591}00591     SYSCTL-\/>RCC2 = (\mbox{\hyperlink{system___t_m4_c123_8c_afd4d4cb07db4562632da94cb7cf9c173}{RCC2\_Val}} | (1UL<<11) | (1UL<<13));              \textcolor{comment}{/* set value with BYPASS, PWRDN set */}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00592}00592     \textcolor{keywordflow}{for} (i = 0; i < 1000; i++);   \textcolor{comment}{/* wait a while */}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00593}00593 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00594}00594     SYSCTL-\/>RCC  = (\mbox{\hyperlink{system___t_m4_c123_8c_a6365581ad94c923afd0d1e7e591f0c76}{RCC\_Val}}  | (1UL<<11)) \& \string~(1UL<<22);             \textcolor{comment}{/* set value with BYPASS, USESYSDIV reset */}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00595}00595     SYSCTL-\/>RCC2 = (\mbox{\hyperlink{system___t_m4_c123_8c_afd4d4cb07db4562632da94cb7cf9c173}{RCC2\_Val}} | (1UL<<11));                          \textcolor{comment}{/* set value with BYPASS */}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00596}00596     \textcolor{keywordflow}{for} (i = 0; i < 1000; i++);   \textcolor{comment}{/* wait a while */}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00597}00597 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00598}00598     SYSCTL-\/>RCC  = (\mbox{\hyperlink{system___t_m4_c123_8c_a6365581ad94c923afd0d1e7e591f0c76}{RCC\_Val}}  | (1<<11));                            \textcolor{comment}{/* set value with BYPASS */}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00599}00599 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00600}00600     \textcolor{keywordflow}{if} ( (((\mbox{\hyperlink{system___t_m4_c123_8c_a6365581ad94c923afd0d1e7e591f0c76}{RCC\_Val}}  \& (1UL<<13)) == 0) \&\& ((\mbox{\hyperlink{system___t_m4_c123_8c_afd4d4cb07db4562632da94cb7cf9c173}{RCC2\_Val}} \& (1UL<<31)) == 0)) ||}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00601}00601          (((\mbox{\hyperlink{system___t_m4_c123_8c_afd4d4cb07db4562632da94cb7cf9c173}{RCC2\_Val}} \& (1UL<<13)) == 0) \&\& ((\mbox{\hyperlink{system___t_m4_c123_8c_afd4d4cb07db4562632da94cb7cf9c173}{RCC2\_Val}} \& (1UL<<31)) != 0))   ) \{}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00602}00602       \textcolor{keywordflow}{while} ((SYSCTL-\/>RIS \& (1UL<<6)) != (1UL<<6));                 \textcolor{comment}{/* wait until PLL is locked */}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00603}00603     \}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00604}00604 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00605}00605     SYSCTL-\/>RCC  = (\mbox{\hyperlink{system___t_m4_c123_8c_a6365581ad94c923afd0d1e7e591f0c76}{RCC\_Val}});                                       \textcolor{comment}{/* set value */}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00606}00606     SYSCTL-\/>RCC2 = (\mbox{\hyperlink{system___t_m4_c123_8c_afd4d4cb07db4562632da94cb7cf9c173}{RCC2\_Val}});                                      \textcolor{comment}{/* set value */}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00607}00607     \textcolor{keywordflow}{for} (i = 0; i < 10000; i++);   \textcolor{comment}{/* wait a while */}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00608}00608 }
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00609}00609 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{system___t_m4_c123_8c_source_l00610}00610 \}}
+
+\end{DoxyCode}

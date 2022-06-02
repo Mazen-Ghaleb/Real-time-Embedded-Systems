@@ -1,39 +1,39 @@
 \hypertarget{_init_8h_source}{}\doxysection{Init.\+h}
 \mbox{\hyperlink{_init_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{1 \textcolor{preprocessor}{\#define PART\_TM4C123GH6PM}}
-\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{types_8h}{types.h}}"{}}}
-\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{tm4c123gh6pm_8h}{tm4c123gh6pm.h}}"{}}}
-\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <stdint.h>}}
-\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}stdbool.h"{}}}
-\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <math.h>}}
-\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}driverlib/sysctl.h"{}}}
-\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}driverlib/gpio.h"{}}}
-\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}driverlib/pin\_map.h"{}}}
-\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}driverlib/timer.h"{}}}
-\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}driverlib/interrupt.h"{}}}
-\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}driverlib/uart.h"{}}}
-\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}driverlib/adc.h"{}}}
-\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <driverlib/systick.h>}}
-\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}inc/hw\_memmap.h"{}}}
-\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}inc/hw\_types.h"{}}}
-\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}inc/hw\_gpio.h"{}}}
-\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}inc/hw\_sysctl.h"{}}}
-\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}FreeRTOS.h"{}}}
-\DoxyCodeLine{20 \textcolor{preprocessor}{\#include "{}task.h"{}}}
-\DoxyCodeLine{21 \textcolor{preprocessor}{\#include "{}timers.h"{}}}
-\DoxyCodeLine{22 \textcolor{preprocessor}{\#include "{}queue.h"{}}}
-\DoxyCodeLine{23 \textcolor{preprocessor}{\#include "{}semphr.h"{}}}
-\DoxyCodeLine{24 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_l_c_d_8h}{LCD.h}}"{}}}
-\DoxyCodeLine{25 }
-\DoxyCodeLine{26 }
-\DoxyCodeLine{27 \mbox{\hyperlink{types_8h_a1134b580f8da4de94ca6b1de4d37975e}{uint32}} \mbox{\hyperlink{_init_8h_ab7b9c02d22e0a1ec8cf235ebbd216661}{CalcTicks}}(\mbox{\hyperlink{types_8h_a1134b580f8da4de94ca6b1de4d37975e}{uint32}} milliseconds);}
-\DoxyCodeLine{28 \textcolor{keywordtype}{void} \mbox{\hyperlink{_init_8h_a5a39eef1d08b26bebb2e6e78d5f3219d}{PortAInit}}(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{29 \textcolor{keywordtype}{void} \mbox{\hyperlink{_init_8h_adf7aa7200283dceb68f470aa9fe02917}{PortFInit}}(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{30 \textcolor{keywordtype}{void} \mbox{\hyperlink{_init_8h_a90588887525a8fd217c315f273132c1e}{PortEInit}}(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{31 \textcolor{keywordtype}{void} \mbox{\hyperlink{_init_8h_a39150f192703c8fc5f1885bc21deee7f}{ADCInit}}(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{32 \textcolor{keywordtype}{void} \mbox{\hyperlink{_init_8h_a91e1182327fc37821e2eea8e93c193ab}{UART0Init}}(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{33 \textcolor{keywordtype}{void} \mbox{\hyperlink{_init_8h_a2ab7aedf7fcfb7ecdf857e6bf919d7d1}{SwitchInterruptInit}}(\textcolor{keywordtype}{void});}
-\DoxyCodeLine{34 \textcolor{keywordtype}{void} \mbox{\hyperlink{_init_8h_ad72ccb735680d193dcdbde880534749d}{SwitchHandler}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{_init_8h_source_l00001}\mbox{\hyperlink{_init_8h_ad8c5a1103f750c5c7936a46d466a1b27}{00001}} \textcolor{preprocessor}{\#define PART\_TM4C123GH6PM}}
+\DoxyCodeLine{\Hypertarget{_init_8h_source_l00002}00002 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{types_8h}{types.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_init_8h_source_l00003}00003 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{tm4c123gh6pm_8h}{tm4c123gh6pm.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_init_8h_source_l00004}00004 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{\Hypertarget{_init_8h_source_l00005}00005 \textcolor{preprocessor}{\#include "{}stdbool.h"{}}}
+\DoxyCodeLine{\Hypertarget{_init_8h_source_l00006}00006 \textcolor{preprocessor}{\#include <math.h>}}
+\DoxyCodeLine{\Hypertarget{_init_8h_source_l00007}00007 \textcolor{preprocessor}{\#include "{}driverlib/sysctl.h"{}}}
+\DoxyCodeLine{\Hypertarget{_init_8h_source_l00008}00008 \textcolor{preprocessor}{\#include "{}driverlib/gpio.h"{}}}
+\DoxyCodeLine{\Hypertarget{_init_8h_source_l00009}00009 \textcolor{preprocessor}{\#include "{}driverlib/pin\_map.h"{}}}
+\DoxyCodeLine{\Hypertarget{_init_8h_source_l00010}00010 \textcolor{preprocessor}{\#include "{}driverlib/timer.h"{}}}
+\DoxyCodeLine{\Hypertarget{_init_8h_source_l00011}00011 \textcolor{preprocessor}{\#include "{}driverlib/interrupt.h"{}}}
+\DoxyCodeLine{\Hypertarget{_init_8h_source_l00012}00012 \textcolor{preprocessor}{\#include "{}driverlib/uart.h"{}}}
+\DoxyCodeLine{\Hypertarget{_init_8h_source_l00013}00013 \textcolor{preprocessor}{\#include "{}driverlib/adc.h"{}}}
+\DoxyCodeLine{\Hypertarget{_init_8h_source_l00014}00014 \textcolor{preprocessor}{\#include <driverlib/systick.h>}}
+\DoxyCodeLine{\Hypertarget{_init_8h_source_l00015}00015 \textcolor{preprocessor}{\#include "{}inc/hw\_memmap.h"{}}}
+\DoxyCodeLine{\Hypertarget{_init_8h_source_l00016}00016 \textcolor{preprocessor}{\#include "{}inc/hw\_types.h"{}}}
+\DoxyCodeLine{\Hypertarget{_init_8h_source_l00017}00017 \textcolor{preprocessor}{\#include "{}inc/hw\_gpio.h"{}}}
+\DoxyCodeLine{\Hypertarget{_init_8h_source_l00018}00018 \textcolor{preprocessor}{\#include "{}inc/hw\_sysctl.h"{}}}
+\DoxyCodeLine{\Hypertarget{_init_8h_source_l00019}00019 \textcolor{preprocessor}{\#include "{}FreeRTOS.h"{}}}
+\DoxyCodeLine{\Hypertarget{_init_8h_source_l00020}00020 \textcolor{preprocessor}{\#include "{}task.h"{}}}
+\DoxyCodeLine{\Hypertarget{_init_8h_source_l00021}00021 \textcolor{preprocessor}{\#include "{}timers.h"{}}}
+\DoxyCodeLine{\Hypertarget{_init_8h_source_l00022}00022 \textcolor{preprocessor}{\#include "{}queue.h"{}}}
+\DoxyCodeLine{\Hypertarget{_init_8h_source_l00023}00023 \textcolor{preprocessor}{\#include "{}semphr.h"{}}}
+\DoxyCodeLine{\Hypertarget{_init_8h_source_l00024}00024 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_l_c_d_8h}{LCD.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_init_8h_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{_init_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_init_8h_source_l00027}00027 \mbox{\hyperlink{types_8h_a1134b580f8da4de94ca6b1de4d37975e}{uint32}} \mbox{\hyperlink{_init_8h_ab7b9c02d22e0a1ec8cf235ebbd216661}{CalcTicks}}(\mbox{\hyperlink{types_8h_a1134b580f8da4de94ca6b1de4d37975e}{uint32}} milliseconds);}
+\DoxyCodeLine{\Hypertarget{_init_8h_source_l00028}00028 \textcolor{keywordtype}{void} \mbox{\hyperlink{_init_8h_a5a39eef1d08b26bebb2e6e78d5f3219d}{PortAInit}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{_init_8h_source_l00029}00029 \textcolor{keywordtype}{void} \mbox{\hyperlink{_init_8h_adf7aa7200283dceb68f470aa9fe02917}{PortFInit}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{_init_8h_source_l00030}00030 \textcolor{keywordtype}{void} \mbox{\hyperlink{_init_8h_a90588887525a8fd217c315f273132c1e}{PortEInit}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{_init_8h_source_l00031}00031 \textcolor{keywordtype}{void} \mbox{\hyperlink{_init_8h_a39150f192703c8fc5f1885bc21deee7f}{ADCInit}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{_init_8h_source_l00032}00032 \textcolor{keywordtype}{void} \mbox{\hyperlink{_init_8h_a91e1182327fc37821e2eea8e93c193ab}{UART0Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{_init_8h_source_l00033}00033 \textcolor{keywordtype}{void} \mbox{\hyperlink{_init_8h_a2ab7aedf7fcfb7ecdf857e6bf919d7d1}{SwitchInterruptInit}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{_init_8h_source_l00034}00034 \textcolor{keywordtype}{void} \mbox{\hyperlink{_init_8h_ad72ccb735680d193dcdbde880534749d}{SwitchHandler}}(\textcolor{keywordtype}{void});}
 
 \end{DoxyCode}

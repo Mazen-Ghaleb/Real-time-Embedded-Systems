@@ -1,0 +1,825 @@
+\hypertarget{group___c_m_s_i_s___core_debug}{}\doxysection{CMSIS Core Debug}
+\label{group___c_m_s_i_s___core_debug}\index{CMSIS Core Debug@{CMSIS Core Debug}}
+Collaboration diagram for CMSIS Core Debug\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___c_m_s_i_s___core_debug}
+\end{center}
+\end{figure}
+\doxysubsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_m_s_i_s___core___function_interface}{CMSIS Core Function Interface}}
+\item 
+\mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions}{CMSIS Core NVIC Functions}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_core_debug___type}{Core\+Debug\+\_\+\+Type}}
+\begin{DoxyCompactList}\small\item\em Structure type to access the Core Debug Register (Core\+Debug). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_gac91280edd0ce932665cf75a23d11d842}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+DBGKEY\+\_\+\+Pos}}~16
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga1ce997cee15edaafe4aed77751816ffc}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+DBGKEY\+\_\+\+Msk}}~(0x\+FFFFUL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_gac91280edd0ce932665cf75a23d11d842}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+DBGKEY\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga6f934c5427ea057394268e541fa97753}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+RESET\+\_\+\+ST\+\_\+\+Pos}}~25
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_gac474394bcceb31a8e09566c90b3f8922}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+RESET\+\_\+\+ST\+\_\+\+Msk}}~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga6f934c5427ea057394268e541fa97753}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+RESET\+\_\+\+ST\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga2328118f8b3574c871a53605eb17e730}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+RETIRE\+\_\+\+ST\+\_\+\+Pos}}~24
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga89dceb5325f6bcb36a0473d65fbfcfa6}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+RETIRE\+\_\+\+ST\+\_\+\+Msk}}~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga2328118f8b3574c871a53605eb17e730}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+RETIRE\+\_\+\+ST\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga2900dd56a988a4ed27ad664d5642807e}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+LOCKUP\+\_\+\+Pos}}~19
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga7b67e4506d7f464ef5dafd6219739756}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+LOCKUP\+\_\+\+Msk}}~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga2900dd56a988a4ed27ad664d5642807e}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+LOCKUP\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga349ccea33accc705595624c2d334fbcb}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+SLEEP\+\_\+\+Pos}}~18
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga98d51538e645c2c1a422279cd85a0a25}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+SLEEP\+\_\+\+Msk}}~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga349ccea33accc705595624c2d334fbcb}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+SLEEP\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga760a9a0d7f39951dc3f07d01f1f64772}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+HALT\+\_\+\+Pos}}~17
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga9f881ade3151a73bc5b02b73fe6473ca}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+HALT\+\_\+\+Msk}}~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga760a9a0d7f39951dc3f07d01f1f64772}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+HALT\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga20a71871ca8768019c51168c70c3f41d}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+REGRDY\+\_\+\+Pos}}~16
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_gac4cd6f3178de48f473d8903e8c847c07}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+REGRDY\+\_\+\+Msk}}~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga20a71871ca8768019c51168c70c3f41d}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+REGRDY\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga85747214e2656df6b05ec72e4d22bd6d}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+SNAPSTALL\+\_\+\+Pos}}~5
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga53aa99b2e39a67622f3b9973e079c2b4}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+SNAPSTALL\+\_\+\+Msk}}~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga85747214e2656df6b05ec72e4d22bd6d}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+SNAPSTALL\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga0d2907400eb948a4ea3886ca083ec8e3}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+MASKINTS\+\_\+\+Pos}}~3
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga77fe1ef3c4a729c1c82fb62a94a51c31}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+MASKINTS\+\_\+\+Msk}}~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga0d2907400eb948a4ea3886ca083ec8e3}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+MASKINTS\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_gae1fc39e80de54c0339cbb1b298a9f0f9}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+STEP\+\_\+\+Pos}}~2
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_gae6bda72fbd32cc5734ff3542170dc00d}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+STEP\+\_\+\+Msk}}~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_gae1fc39e80de54c0339cbb1b298a9f0f9}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+STEP\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_gaddf1d43f8857e4efc3dc4e6b15509692}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+HALT\+\_\+\+Pos}}~1
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga1d905a3aa594eb2e8bb78bcc4da05b3f}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+HALT\+\_\+\+Msk}}~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_gaddf1d43f8857e4efc3dc4e6b15509692}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+HALT\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_gab557abb5b172b74d2cf44efb9d824e4e}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+DEBUGEN\+\_\+\+Pos}}~0
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_gab815c741a4fc2a61988cd2fb7594210b}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+DEBUGEN\+\_\+\+Msk}}~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_gab557abb5b172b74d2cf44efb9d824e4e}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+DEBUGEN\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga51e75942fc0614bc9bb2c0e96fcdda9a}{Core\+Debug\+\_\+\+DCRSR\+\_\+\+REGWn\+R\+\_\+\+Pos}}~16
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga1eef4992d8f84bc6c0dffed1c87f90a5}{Core\+Debug\+\_\+\+DCRSR\+\_\+\+REGWn\+R\+\_\+\+Msk}}~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga51e75942fc0614bc9bb2c0e96fcdda9a}{Core\+Debug\+\_\+\+DCRSR\+\_\+\+REGWn\+R\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga52182c8a9f63a52470244c0bc2064f7b}{Core\+Debug\+\_\+\+DCRSR\+\_\+\+REGSEL\+\_\+\+Pos}}~0
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga17cafbd72b55030219ce5609baa7c01d}{Core\+Debug\+\_\+\+DCRSR\+\_\+\+REGSEL\+\_\+\+Msk}}~(0x1\+FUL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga52182c8a9f63a52470244c0bc2064f7b}{Core\+Debug\+\_\+\+DCRSR\+\_\+\+REGSEL\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga6ff2102b98f86540224819a1b767ba39}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+TRCENA\+\_\+\+Pos}}~24
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga5e99652c1df93b441257389f49407834}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+TRCENA\+\_\+\+Msk}}~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga6ff2102b98f86540224819a1b767ba39}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+TRCENA\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga341020a3b7450416d72544eaf8e57a64}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+MON\+\_\+\+REQ\+\_\+\+Pos}}~19
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_gae6384cbe8045051186d13ef9cdeace95}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+MON\+\_\+\+REQ\+\_\+\+Msk}}~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga341020a3b7450416d72544eaf8e57a64}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+MON\+\_\+\+REQ\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga9ae10710684e14a1a534e785ef390e1b}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+MON\+\_\+\+STEP\+\_\+\+Pos}}~18
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga2ded814556de96fc369de7ae9a7ceb98}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+MON\+\_\+\+STEP\+\_\+\+Msk}}~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga9ae10710684e14a1a534e785ef390e1b}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+MON\+\_\+\+STEP\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga1e2f706a59e0d8131279af1c7e152f8d}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+MON\+\_\+\+PEND\+\_\+\+Pos}}~17
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga68ec55930269fab78e733dcfa32392f8}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+MON\+\_\+\+PEND\+\_\+\+Msk}}~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga1e2f706a59e0d8131279af1c7e152f8d}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+MON\+\_\+\+PEND\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga802829678f6871863ae9ecf60a10425c}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+MON\+\_\+\+EN\+\_\+\+Pos}}~16
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_gac2b46b9b65bf8d23027f255fc9641977}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+MON\+\_\+\+EN\+\_\+\+Msk}}~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga802829678f6871863ae9ecf60a10425c}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+MON\+\_\+\+EN\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_gaed9f42053031a9a30cd8054623304c0a}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+HARDERR\+\_\+\+Pos}}~10
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga803fc98c5bb85f10f0347b23794847d1}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+HARDERR\+\_\+\+Msk}}~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_gaed9f42053031a9a30cd8054623304c0a}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+HARDERR\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga22079a6e436f23b90308be97e19cf07e}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+INTERR\+\_\+\+Pos}}~9
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_gad6815d8e3df302d2f0ff2c2c734ed29a}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+INTERR\+\_\+\+Msk}}~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga22079a6e436f23b90308be97e19cf07e}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+INTERR\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_gab8e3d8f0f9590a51bbf10f6da3ad6933}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+BUSERR\+\_\+\+Pos}}~8
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga9d29546aefe3ca8662a7fe48dd4a5b2b}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+BUSERR\+\_\+\+Msk}}~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_gab8e3d8f0f9590a51bbf10f6da3ad6933}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+BUSERR\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga16f0d3d2ce1e1e8cd762d938ac56c4ac}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+STATERR\+\_\+\+Pos}}~7
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_gaa38b947d77672c48bba1280c0a642e19}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+STATERR\+\_\+\+Msk}}~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga16f0d3d2ce1e1e8cd762d938ac56c4ac}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+STATERR\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga10fc7c53bca904c128bc8e1a03072d50}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+CHKERR\+\_\+\+Pos}}~6
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga2f98b461d19746ab2febfddebb73da6f}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+CHKERR\+\_\+\+Msk}}~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga10fc7c53bca904c128bc8e1a03072d50}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+CHKERR\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_gac9d13eb2add61f610d5ced1f7ad2adf8}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+NOCPERR\+\_\+\+Pos}}~5
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga03ee58b1b02fdbf21612809034562f1c}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+NOCPERR\+\_\+\+Msk}}~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_gac9d13eb2add61f610d5ced1f7ad2adf8}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+NOCPERR\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga444454f7c7748e76cd76c3809c887c41}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+MMERR\+\_\+\+Pos}}~4
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_gad420a9b60620584faaca6289e83d3a87}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+MMERR\+\_\+\+Msk}}~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga444454f7c7748e76cd76c3809c887c41}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+MMERR\+\_\+\+Pos}})
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga9fcf09666f7063a7303117aa32a85d5a}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+CORERESET\+\_\+\+Pos}}~0
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga906476e53c1e1487c30f3a1181df9e30}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+CORERESET\+\_\+\+Msk}}~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga9fcf09666f7063a7303117aa32a85d5a}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+CORERESET\+\_\+\+Pos}})
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s__core__register_gadd76251e412a195ec0a8f47227a8359e}{ITM\+\_\+\+BASE}}~(0x\+E0000000\+UL)
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s__core__register_ga680604dbcda9e9b31a1639fcffe5230b}{Core\+Debug\+\_\+\+BASE}}~(0x\+E000\+EDF0\+UL)
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s__core__register_ga58effaac0b93006b756d33209e814646}{Sys\+Tick\+\_\+\+BASE}}~(\mbox{\hyperlink{group___c_m_s_i_s__core__register_ga3c14ed93192c8d9143322bbf77ebf770}{SCS\+\_\+\+BASE}} +  0x0010\+UL)
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s__core__register_gaa0288691785a5f868238e0468b39523d}{NVIC\+\_\+\+BASE}}~(\mbox{\hyperlink{group___c_m_s_i_s__core__register_ga3c14ed93192c8d9143322bbf77ebf770}{SCS\+\_\+\+BASE}} +  0x0100\+UL)
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s__core__register_gad55a7ddb8d4b2398b0c1cfec76c0d9fd}{SCB\+\_\+\+BASE}}~(\mbox{\hyperlink{group___c_m_s_i_s__core__register_ga3c14ed93192c8d9143322bbf77ebf770}{SCS\+\_\+\+BASE}} +  0x0\+D00\+UL)
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s__core__register_ga164238adbad56f07c7dd4e912af748dd}{Interrupt\+Type}}~((\mbox{\hyperlink{struct_interrupt_type___type}{Interrupt\+Type\+\_\+\+Type}} $\ast$) \mbox{\hyperlink{group___c_m_s_i_s__core__register_ga3c14ed93192c8d9143322bbf77ebf770}{SCS\+\_\+\+BASE}})
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s__core__register_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}~((\mbox{\hyperlink{struct_s_c_b___type}{SCB\+\_\+\+Type}} $\ast$)           \mbox{\hyperlink{group___c_m_s_i_s__core__register_gad55a7ddb8d4b2398b0c1cfec76c0d9fd}{SCB\+\_\+\+BASE}})
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s__core__register_gacd96c53beeaff8f603fcda425eb295de}{Sys\+Tick}}~((\mbox{\hyperlink{struct_sys_tick___type}{Sys\+Tick\+\_\+\+Type}} $\ast$)       \mbox{\hyperlink{group___c_m_s_i_s__core__register_ga58effaac0b93006b756d33209e814646}{Sys\+Tick\+\_\+\+BASE}})
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s__core__register_gac8e97e8ce56ae9f57da1363a937f8a17}{NVIC}}~((\mbox{\hyperlink{struct_n_v_i_c___type}{NVIC\+\_\+\+Type}} $\ast$)          \mbox{\hyperlink{group___c_m_s_i_s__core__register_gaa0288691785a5f868238e0468b39523d}{NVIC\+\_\+\+BASE}})
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s__core__register_gabae7cdf882def602cb787bb039ff6a43}{ITM}}~((\mbox{\hyperlink{struct_i_t_m___type}{ITM\+\_\+\+Type}} $\ast$)           \mbox{\hyperlink{group___c_m_s_i_s__core__register_gadd76251e412a195ec0a8f47227a8359e}{ITM\+\_\+\+BASE}})
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s__core__register_gab6e30a2b802d9021619dbb0be7f5d63d}{Core\+Debug}}~((\mbox{\hyperlink{struct_core_debug___type}{Core\+Debug\+\_\+\+Type}} $\ast$)     \mbox{\hyperlink{group___c_m_s_i_s__core__register_ga680604dbcda9e9b31a1639fcffe5230b}{Core\+Debug\+\_\+\+BASE}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\texorpdfstring{$<$}{<}\texorpdfstring{$>$}{>}
+
+Type definitions for the Cortex-\/M Core Debug Registers 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___c_m_s_i_s__core__register_gab6e30a2b802d9021619dbb0be7f5d63d}\label{group___c_m_s_i_s__core__register_gab6e30a2b802d9021619dbb0be7f5d63d}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug@{CoreDebug}}
+\index{CoreDebug@{CoreDebug}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug}{CoreDebug}}
+{\footnotesize\ttfamily \#define Core\+Debug~((\mbox{\hyperlink{struct_core_debug___type}{Core\+Debug\+\_\+\+Type}} $\ast$)     \mbox{\hyperlink{group___c_m_s_i_s__core__register_ga680604dbcda9e9b31a1639fcffe5230b}{Core\+Debug\+\_\+\+BASE}})}
+
+Core Debug configuration struct ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00855}{855}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s__core__register_ga680604dbcda9e9b31a1639fcffe5230b}\label{group___c_m_s_i_s__core__register_ga680604dbcda9e9b31a1639fcffe5230b}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_BASE@{CoreDebug\_BASE}}
+\index{CoreDebug\_BASE@{CoreDebug\_BASE}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_BASE}{CoreDebug\_BASE}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+BASE~(0x\+E000\+EDF0\+UL)}
+
+Core Debug Base Address ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00845}{845}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga17cafbd72b55030219ce5609baa7c01d}\label{group___c_m_s_i_s___core_debug_ga17cafbd72b55030219ce5609baa7c01d}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DCRSR\_REGSEL\_Msk@{CoreDebug\_DCRSR\_REGSEL\_Msk}}
+\index{CoreDebug\_DCRSR\_REGSEL\_Msk@{CoreDebug\_DCRSR\_REGSEL\_Msk}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DCRSR\_REGSEL\_Msk}{CoreDebug\_DCRSR\_REGSEL\_Msk}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DCRSR\+\_\+\+REGSEL\+\_\+\+Msk~(0x1\+FUL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga52182c8a9f63a52470244c0bc2064f7b}{Core\+Debug\+\_\+\+DCRSR\+\_\+\+REGSEL\+\_\+\+Pos}})}
+
+Core\+Debug DCRSR\+: REGSEL Mask 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00793}{793}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga52182c8a9f63a52470244c0bc2064f7b}\label{group___c_m_s_i_s___core_debug_ga52182c8a9f63a52470244c0bc2064f7b}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DCRSR\_REGSEL\_Pos@{CoreDebug\_DCRSR\_REGSEL\_Pos}}
+\index{CoreDebug\_DCRSR\_REGSEL\_Pos@{CoreDebug\_DCRSR\_REGSEL\_Pos}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DCRSR\_REGSEL\_Pos}{CoreDebug\_DCRSR\_REGSEL\_Pos}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DCRSR\+\_\+\+REGSEL\+\_\+\+Pos~0}
+
+Core\+Debug DCRSR\+: REGSEL Position 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00792}{792}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga1eef4992d8f84bc6c0dffed1c87f90a5}\label{group___c_m_s_i_s___core_debug_ga1eef4992d8f84bc6c0dffed1c87f90a5}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DCRSR\_REGWnR\_Msk@{CoreDebug\_DCRSR\_REGWnR\_Msk}}
+\index{CoreDebug\_DCRSR\_REGWnR\_Msk@{CoreDebug\_DCRSR\_REGWnR\_Msk}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DCRSR\_REGWnR\_Msk}{CoreDebug\_DCRSR\_REGWnR\_Msk}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DCRSR\+\_\+\+REGWn\+R\+\_\+\+Msk~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga51e75942fc0614bc9bb2c0e96fcdda9a}{Core\+Debug\+\_\+\+DCRSR\+\_\+\+REGWn\+R\+\_\+\+Pos}})}
+
+Core\+Debug DCRSR\+: REGWnR Mask 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00790}{790}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga51e75942fc0614bc9bb2c0e96fcdda9a}\label{group___c_m_s_i_s___core_debug_ga51e75942fc0614bc9bb2c0e96fcdda9a}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DCRSR\_REGWnR\_Pos@{CoreDebug\_DCRSR\_REGWnR\_Pos}}
+\index{CoreDebug\_DCRSR\_REGWnR\_Pos@{CoreDebug\_DCRSR\_REGWnR\_Pos}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DCRSR\_REGWnR\_Pos}{CoreDebug\_DCRSR\_REGWnR\_Pos}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DCRSR\+\_\+\+REGWn\+R\+\_\+\+Pos~16}
+
+Core\+Debug DCRSR\+: REGWnR Position 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00789}{789}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_gac2b46b9b65bf8d23027f255fc9641977}\label{group___c_m_s_i_s___core_debug_gac2b46b9b65bf8d23027f255fc9641977}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DEMCR\_MON\_EN\_Msk@{CoreDebug\_DEMCR\_MON\_EN\_Msk}}
+\index{CoreDebug\_DEMCR\_MON\_EN\_Msk@{CoreDebug\_DEMCR\_MON\_EN\_Msk}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DEMCR\_MON\_EN\_Msk}{CoreDebug\_DEMCR\_MON\_EN\_Msk}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DEMCR\+\_\+\+MON\+\_\+\+EN\+\_\+\+Msk~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga802829678f6871863ae9ecf60a10425c}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+MON\+\_\+\+EN\+\_\+\+Pos}})}
+
+Core\+Debug DEMCR\+: MON\+\_\+\+EN Mask 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00809}{809}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga802829678f6871863ae9ecf60a10425c}\label{group___c_m_s_i_s___core_debug_ga802829678f6871863ae9ecf60a10425c}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DEMCR\_MON\_EN\_Pos@{CoreDebug\_DEMCR\_MON\_EN\_Pos}}
+\index{CoreDebug\_DEMCR\_MON\_EN\_Pos@{CoreDebug\_DEMCR\_MON\_EN\_Pos}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DEMCR\_MON\_EN\_Pos}{CoreDebug\_DEMCR\_MON\_EN\_Pos}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DEMCR\+\_\+\+MON\+\_\+\+EN\+\_\+\+Pos~16}
+
+Core\+Debug DEMCR\+: MON\+\_\+\+EN Position 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00808}{808}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga68ec55930269fab78e733dcfa32392f8}\label{group___c_m_s_i_s___core_debug_ga68ec55930269fab78e733dcfa32392f8}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DEMCR\_MON\_PEND\_Msk@{CoreDebug\_DEMCR\_MON\_PEND\_Msk}}
+\index{CoreDebug\_DEMCR\_MON\_PEND\_Msk@{CoreDebug\_DEMCR\_MON\_PEND\_Msk}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DEMCR\_MON\_PEND\_Msk}{CoreDebug\_DEMCR\_MON\_PEND\_Msk}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DEMCR\+\_\+\+MON\+\_\+\+PEND\+\_\+\+Msk~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga1e2f706a59e0d8131279af1c7e152f8d}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+MON\+\_\+\+PEND\+\_\+\+Pos}})}
+
+Core\+Debug DEMCR\+: MON\+\_\+\+PEND Mask 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00806}{806}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga1e2f706a59e0d8131279af1c7e152f8d}\label{group___c_m_s_i_s___core_debug_ga1e2f706a59e0d8131279af1c7e152f8d}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DEMCR\_MON\_PEND\_Pos@{CoreDebug\_DEMCR\_MON\_PEND\_Pos}}
+\index{CoreDebug\_DEMCR\_MON\_PEND\_Pos@{CoreDebug\_DEMCR\_MON\_PEND\_Pos}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DEMCR\_MON\_PEND\_Pos}{CoreDebug\_DEMCR\_MON\_PEND\_Pos}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DEMCR\+\_\+\+MON\+\_\+\+PEND\+\_\+\+Pos~17}
+
+Core\+Debug DEMCR\+: MON\+\_\+\+PEND Position 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00805}{805}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_gae6384cbe8045051186d13ef9cdeace95}\label{group___c_m_s_i_s___core_debug_gae6384cbe8045051186d13ef9cdeace95}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DEMCR\_MON\_REQ\_Msk@{CoreDebug\_DEMCR\_MON\_REQ\_Msk}}
+\index{CoreDebug\_DEMCR\_MON\_REQ\_Msk@{CoreDebug\_DEMCR\_MON\_REQ\_Msk}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DEMCR\_MON\_REQ\_Msk}{CoreDebug\_DEMCR\_MON\_REQ\_Msk}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DEMCR\+\_\+\+MON\+\_\+\+REQ\+\_\+\+Msk~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga341020a3b7450416d72544eaf8e57a64}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+MON\+\_\+\+REQ\+\_\+\+Pos}})}
+
+Core\+Debug DEMCR\+: MON\+\_\+\+REQ Mask 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00800}{800}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga341020a3b7450416d72544eaf8e57a64}\label{group___c_m_s_i_s___core_debug_ga341020a3b7450416d72544eaf8e57a64}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DEMCR\_MON\_REQ\_Pos@{CoreDebug\_DEMCR\_MON\_REQ\_Pos}}
+\index{CoreDebug\_DEMCR\_MON\_REQ\_Pos@{CoreDebug\_DEMCR\_MON\_REQ\_Pos}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DEMCR\_MON\_REQ\_Pos}{CoreDebug\_DEMCR\_MON\_REQ\_Pos}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DEMCR\+\_\+\+MON\+\_\+\+REQ\+\_\+\+Pos~19}
+
+Core\+Debug DEMCR\+: MON\+\_\+\+REQ Position 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00799}{799}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga2ded814556de96fc369de7ae9a7ceb98}\label{group___c_m_s_i_s___core_debug_ga2ded814556de96fc369de7ae9a7ceb98}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DEMCR\_MON\_STEP\_Msk@{CoreDebug\_DEMCR\_MON\_STEP\_Msk}}
+\index{CoreDebug\_DEMCR\_MON\_STEP\_Msk@{CoreDebug\_DEMCR\_MON\_STEP\_Msk}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DEMCR\_MON\_STEP\_Msk}{CoreDebug\_DEMCR\_MON\_STEP\_Msk}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DEMCR\+\_\+\+MON\+\_\+\+STEP\+\_\+\+Msk~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga9ae10710684e14a1a534e785ef390e1b}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+MON\+\_\+\+STEP\+\_\+\+Pos}})}
+
+Core\+Debug DEMCR\+: MON\+\_\+\+STEP Mask 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00803}{803}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga9ae10710684e14a1a534e785ef390e1b}\label{group___c_m_s_i_s___core_debug_ga9ae10710684e14a1a534e785ef390e1b}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DEMCR\_MON\_STEP\_Pos@{CoreDebug\_DEMCR\_MON\_STEP\_Pos}}
+\index{CoreDebug\_DEMCR\_MON\_STEP\_Pos@{CoreDebug\_DEMCR\_MON\_STEP\_Pos}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DEMCR\_MON\_STEP\_Pos}{CoreDebug\_DEMCR\_MON\_STEP\_Pos}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DEMCR\+\_\+\+MON\+\_\+\+STEP\+\_\+\+Pos~18}
+
+Core\+Debug DEMCR\+: MON\+\_\+\+STEP Position 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00802}{802}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga5e99652c1df93b441257389f49407834}\label{group___c_m_s_i_s___core_debug_ga5e99652c1df93b441257389f49407834}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DEMCR\_TRCENA\_Msk@{CoreDebug\_DEMCR\_TRCENA\_Msk}}
+\index{CoreDebug\_DEMCR\_TRCENA\_Msk@{CoreDebug\_DEMCR\_TRCENA\_Msk}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DEMCR\_TRCENA\_Msk}{CoreDebug\_DEMCR\_TRCENA\_Msk}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DEMCR\+\_\+\+TRCENA\+\_\+\+Msk~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga6ff2102b98f86540224819a1b767ba39}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+TRCENA\+\_\+\+Pos}})}
+
+Core\+Debug DEMCR\+: TRCENA Mask 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00797}{797}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga6ff2102b98f86540224819a1b767ba39}\label{group___c_m_s_i_s___core_debug_ga6ff2102b98f86540224819a1b767ba39}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DEMCR\_TRCENA\_Pos@{CoreDebug\_DEMCR\_TRCENA\_Pos}}
+\index{CoreDebug\_DEMCR\_TRCENA\_Pos@{CoreDebug\_DEMCR\_TRCENA\_Pos}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DEMCR\_TRCENA\_Pos}{CoreDebug\_DEMCR\_TRCENA\_Pos}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DEMCR\+\_\+\+TRCENA\+\_\+\+Pos~24}
+
+Core\+Debug DEMCR\+: TRCENA Position 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00796}{796}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga9d29546aefe3ca8662a7fe48dd4a5b2b}\label{group___c_m_s_i_s___core_debug_ga9d29546aefe3ca8662a7fe48dd4a5b2b}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DEMCR\_VC\_BUSERR\_Msk@{CoreDebug\_DEMCR\_VC\_BUSERR\_Msk}}
+\index{CoreDebug\_DEMCR\_VC\_BUSERR\_Msk@{CoreDebug\_DEMCR\_VC\_BUSERR\_Msk}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DEMCR\_VC\_BUSERR\_Msk}{CoreDebug\_DEMCR\_VC\_BUSERR\_Msk}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+BUSERR\+\_\+\+Msk~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_gab8e3d8f0f9590a51bbf10f6da3ad6933}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+BUSERR\+\_\+\+Pos}})}
+
+Core\+Debug DEMCR\+: VC\+\_\+\+BUSERR Mask 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00818}{818}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_gab8e3d8f0f9590a51bbf10f6da3ad6933}\label{group___c_m_s_i_s___core_debug_gab8e3d8f0f9590a51bbf10f6da3ad6933}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DEMCR\_VC\_BUSERR\_Pos@{CoreDebug\_DEMCR\_VC\_BUSERR\_Pos}}
+\index{CoreDebug\_DEMCR\_VC\_BUSERR\_Pos@{CoreDebug\_DEMCR\_VC\_BUSERR\_Pos}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DEMCR\_VC\_BUSERR\_Pos}{CoreDebug\_DEMCR\_VC\_BUSERR\_Pos}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+BUSERR\+\_\+\+Pos~8}
+
+Core\+Debug DEMCR\+: VC\+\_\+\+BUSERR Position 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00817}{817}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga2f98b461d19746ab2febfddebb73da6f}\label{group___c_m_s_i_s___core_debug_ga2f98b461d19746ab2febfddebb73da6f}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DEMCR\_VC\_CHKERR\_Msk@{CoreDebug\_DEMCR\_VC\_CHKERR\_Msk}}
+\index{CoreDebug\_DEMCR\_VC\_CHKERR\_Msk@{CoreDebug\_DEMCR\_VC\_CHKERR\_Msk}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DEMCR\_VC\_CHKERR\_Msk}{CoreDebug\_DEMCR\_VC\_CHKERR\_Msk}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+CHKERR\+\_\+\+Msk~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga10fc7c53bca904c128bc8e1a03072d50}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+CHKERR\+\_\+\+Pos}})}
+
+Core\+Debug DEMCR\+: VC\+\_\+\+CHKERR Mask 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00824}{824}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga10fc7c53bca904c128bc8e1a03072d50}\label{group___c_m_s_i_s___core_debug_ga10fc7c53bca904c128bc8e1a03072d50}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DEMCR\_VC\_CHKERR\_Pos@{CoreDebug\_DEMCR\_VC\_CHKERR\_Pos}}
+\index{CoreDebug\_DEMCR\_VC\_CHKERR\_Pos@{CoreDebug\_DEMCR\_VC\_CHKERR\_Pos}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DEMCR\_VC\_CHKERR\_Pos}{CoreDebug\_DEMCR\_VC\_CHKERR\_Pos}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+CHKERR\+\_\+\+Pos~6}
+
+Core\+Debug DEMCR\+: VC\+\_\+\+CHKERR Position 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00823}{823}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga906476e53c1e1487c30f3a1181df9e30}\label{group___c_m_s_i_s___core_debug_ga906476e53c1e1487c30f3a1181df9e30}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DEMCR\_VC\_CORERESET\_Msk@{CoreDebug\_DEMCR\_VC\_CORERESET\_Msk}}
+\index{CoreDebug\_DEMCR\_VC\_CORERESET\_Msk@{CoreDebug\_DEMCR\_VC\_CORERESET\_Msk}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DEMCR\_VC\_CORERESET\_Msk}{CoreDebug\_DEMCR\_VC\_CORERESET\_Msk}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+CORERESET\+\_\+\+Msk~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga9fcf09666f7063a7303117aa32a85d5a}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+CORERESET\+\_\+\+Pos}})}
+
+Core\+Debug DEMCR\+: VC\+\_\+\+CORERESET Mask 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00833}{833}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga9fcf09666f7063a7303117aa32a85d5a}\label{group___c_m_s_i_s___core_debug_ga9fcf09666f7063a7303117aa32a85d5a}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DEMCR\_VC\_CORERESET\_Pos@{CoreDebug\_DEMCR\_VC\_CORERESET\_Pos}}
+\index{CoreDebug\_DEMCR\_VC\_CORERESET\_Pos@{CoreDebug\_DEMCR\_VC\_CORERESET\_Pos}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DEMCR\_VC\_CORERESET\_Pos}{CoreDebug\_DEMCR\_VC\_CORERESET\_Pos}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+CORERESET\+\_\+\+Pos~0}
+
+Core\+Debug DEMCR\+: VC\+\_\+\+CORERESET Position 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00832}{832}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga803fc98c5bb85f10f0347b23794847d1}\label{group___c_m_s_i_s___core_debug_ga803fc98c5bb85f10f0347b23794847d1}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DEMCR\_VC\_HARDERR\_Msk@{CoreDebug\_DEMCR\_VC\_HARDERR\_Msk}}
+\index{CoreDebug\_DEMCR\_VC\_HARDERR\_Msk@{CoreDebug\_DEMCR\_VC\_HARDERR\_Msk}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DEMCR\_VC\_HARDERR\_Msk}{CoreDebug\_DEMCR\_VC\_HARDERR\_Msk}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+HARDERR\+\_\+\+Msk~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_gaed9f42053031a9a30cd8054623304c0a}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+HARDERR\+\_\+\+Pos}})}
+
+Core\+Debug DEMCR\+: VC\+\_\+\+HARDERR Mask 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00812}{812}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_gaed9f42053031a9a30cd8054623304c0a}\label{group___c_m_s_i_s___core_debug_gaed9f42053031a9a30cd8054623304c0a}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DEMCR\_VC\_HARDERR\_Pos@{CoreDebug\_DEMCR\_VC\_HARDERR\_Pos}}
+\index{CoreDebug\_DEMCR\_VC\_HARDERR\_Pos@{CoreDebug\_DEMCR\_VC\_HARDERR\_Pos}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DEMCR\_VC\_HARDERR\_Pos}{CoreDebug\_DEMCR\_VC\_HARDERR\_Pos}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+HARDERR\+\_\+\+Pos~10}
+
+Core\+Debug DEMCR\+: VC\+\_\+\+HARDERR Position 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00811}{811}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_gad6815d8e3df302d2f0ff2c2c734ed29a}\label{group___c_m_s_i_s___core_debug_gad6815d8e3df302d2f0ff2c2c734ed29a}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DEMCR\_VC\_INTERR\_Msk@{CoreDebug\_DEMCR\_VC\_INTERR\_Msk}}
+\index{CoreDebug\_DEMCR\_VC\_INTERR\_Msk@{CoreDebug\_DEMCR\_VC\_INTERR\_Msk}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DEMCR\_VC\_INTERR\_Msk}{CoreDebug\_DEMCR\_VC\_INTERR\_Msk}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+INTERR\+\_\+\+Msk~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga22079a6e436f23b90308be97e19cf07e}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+INTERR\+\_\+\+Pos}})}
+
+Core\+Debug DEMCR\+: VC\+\_\+\+INTERR Mask 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00815}{815}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga22079a6e436f23b90308be97e19cf07e}\label{group___c_m_s_i_s___core_debug_ga22079a6e436f23b90308be97e19cf07e}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DEMCR\_VC\_INTERR\_Pos@{CoreDebug\_DEMCR\_VC\_INTERR\_Pos}}
+\index{CoreDebug\_DEMCR\_VC\_INTERR\_Pos@{CoreDebug\_DEMCR\_VC\_INTERR\_Pos}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DEMCR\_VC\_INTERR\_Pos}{CoreDebug\_DEMCR\_VC\_INTERR\_Pos}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+INTERR\+\_\+\+Pos~9}
+
+Core\+Debug DEMCR\+: VC\+\_\+\+INTERR Position 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00814}{814}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_gad420a9b60620584faaca6289e83d3a87}\label{group___c_m_s_i_s___core_debug_gad420a9b60620584faaca6289e83d3a87}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DEMCR\_VC\_MMERR\_Msk@{CoreDebug\_DEMCR\_VC\_MMERR\_Msk}}
+\index{CoreDebug\_DEMCR\_VC\_MMERR\_Msk@{CoreDebug\_DEMCR\_VC\_MMERR\_Msk}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DEMCR\_VC\_MMERR\_Msk}{CoreDebug\_DEMCR\_VC\_MMERR\_Msk}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+MMERR\+\_\+\+Msk~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga444454f7c7748e76cd76c3809c887c41}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+MMERR\+\_\+\+Pos}})}
+
+Core\+Debug DEMCR\+: VC\+\_\+\+MMERR Mask 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00830}{830}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga444454f7c7748e76cd76c3809c887c41}\label{group___c_m_s_i_s___core_debug_ga444454f7c7748e76cd76c3809c887c41}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DEMCR\_VC\_MMERR\_Pos@{CoreDebug\_DEMCR\_VC\_MMERR\_Pos}}
+\index{CoreDebug\_DEMCR\_VC\_MMERR\_Pos@{CoreDebug\_DEMCR\_VC\_MMERR\_Pos}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DEMCR\_VC\_MMERR\_Pos}{CoreDebug\_DEMCR\_VC\_MMERR\_Pos}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+MMERR\+\_\+\+Pos~4}
+
+Core\+Debug DEMCR\+: VC\+\_\+\+MMERR Position 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00829}{829}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga03ee58b1b02fdbf21612809034562f1c}\label{group___c_m_s_i_s___core_debug_ga03ee58b1b02fdbf21612809034562f1c}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DEMCR\_VC\_NOCPERR\_Msk@{CoreDebug\_DEMCR\_VC\_NOCPERR\_Msk}}
+\index{CoreDebug\_DEMCR\_VC\_NOCPERR\_Msk@{CoreDebug\_DEMCR\_VC\_NOCPERR\_Msk}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DEMCR\_VC\_NOCPERR\_Msk}{CoreDebug\_DEMCR\_VC\_NOCPERR\_Msk}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+NOCPERR\+\_\+\+Msk~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_gac9d13eb2add61f610d5ced1f7ad2adf8}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+NOCPERR\+\_\+\+Pos}})}
+
+Core\+Debug DEMCR\+: VC\+\_\+\+NOCPERR Mask 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00827}{827}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_gac9d13eb2add61f610d5ced1f7ad2adf8}\label{group___c_m_s_i_s___core_debug_gac9d13eb2add61f610d5ced1f7ad2adf8}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DEMCR\_VC\_NOCPERR\_Pos@{CoreDebug\_DEMCR\_VC\_NOCPERR\_Pos}}
+\index{CoreDebug\_DEMCR\_VC\_NOCPERR\_Pos@{CoreDebug\_DEMCR\_VC\_NOCPERR\_Pos}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DEMCR\_VC\_NOCPERR\_Pos}{CoreDebug\_DEMCR\_VC\_NOCPERR\_Pos}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+NOCPERR\+\_\+\+Pos~5}
+
+Core\+Debug DEMCR\+: VC\+\_\+\+NOCPERR Position 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00826}{826}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_gaa38b947d77672c48bba1280c0a642e19}\label{group___c_m_s_i_s___core_debug_gaa38b947d77672c48bba1280c0a642e19}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DEMCR\_VC\_STATERR\_Msk@{CoreDebug\_DEMCR\_VC\_STATERR\_Msk}}
+\index{CoreDebug\_DEMCR\_VC\_STATERR\_Msk@{CoreDebug\_DEMCR\_VC\_STATERR\_Msk}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DEMCR\_VC\_STATERR\_Msk}{CoreDebug\_DEMCR\_VC\_STATERR\_Msk}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+STATERR\+\_\+\+Msk~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga16f0d3d2ce1e1e8cd762d938ac56c4ac}{Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+STATERR\+\_\+\+Pos}})}
+
+Core\+Debug DEMCR\+: VC\+\_\+\+STATERR Mask 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00821}{821}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga16f0d3d2ce1e1e8cd762d938ac56c4ac}\label{group___c_m_s_i_s___core_debug_ga16f0d3d2ce1e1e8cd762d938ac56c4ac}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DEMCR\_VC\_STATERR\_Pos@{CoreDebug\_DEMCR\_VC\_STATERR\_Pos}}
+\index{CoreDebug\_DEMCR\_VC\_STATERR\_Pos@{CoreDebug\_DEMCR\_VC\_STATERR\_Pos}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DEMCR\_VC\_STATERR\_Pos}{CoreDebug\_DEMCR\_VC\_STATERR\_Pos}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DEMCR\+\_\+\+VC\+\_\+\+STATERR\+\_\+\+Pos~7}
+
+Core\+Debug DEMCR\+: VC\+\_\+\+STATERR Position 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00820}{820}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_gab815c741a4fc2a61988cd2fb7594210b}\label{group___c_m_s_i_s___core_debug_gab815c741a4fc2a61988cd2fb7594210b}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DHCSR\_C\_DEBUGEN\_Msk@{CoreDebug\_DHCSR\_C\_DEBUGEN\_Msk}}
+\index{CoreDebug\_DHCSR\_C\_DEBUGEN\_Msk@{CoreDebug\_DHCSR\_C\_DEBUGEN\_Msk}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DHCSR\_C\_DEBUGEN\_Msk}{CoreDebug\_DHCSR\_C\_DEBUGEN\_Msk}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+DEBUGEN\+\_\+\+Msk~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_gab557abb5b172b74d2cf44efb9d824e4e}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+DEBUGEN\+\_\+\+Pos}})}
+
+Core\+Debug DHCSR\+: C\+\_\+\+DEBUGEN Mask 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00786}{786}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_gab557abb5b172b74d2cf44efb9d824e4e}\label{group___c_m_s_i_s___core_debug_gab557abb5b172b74d2cf44efb9d824e4e}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DHCSR\_C\_DEBUGEN\_Pos@{CoreDebug\_DHCSR\_C\_DEBUGEN\_Pos}}
+\index{CoreDebug\_DHCSR\_C\_DEBUGEN\_Pos@{CoreDebug\_DHCSR\_C\_DEBUGEN\_Pos}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DHCSR\_C\_DEBUGEN\_Pos}{CoreDebug\_DHCSR\_C\_DEBUGEN\_Pos}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+DEBUGEN\+\_\+\+Pos~0}
+
+Core\+Debug DHCSR\+: C\+\_\+\+DEBUGEN Position 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00785}{785}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga1d905a3aa594eb2e8bb78bcc4da05b3f}\label{group___c_m_s_i_s___core_debug_ga1d905a3aa594eb2e8bb78bcc4da05b3f}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DHCSR\_C\_HALT\_Msk@{CoreDebug\_DHCSR\_C\_HALT\_Msk}}
+\index{CoreDebug\_DHCSR\_C\_HALT\_Msk@{CoreDebug\_DHCSR\_C\_HALT\_Msk}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DHCSR\_C\_HALT\_Msk}{CoreDebug\_DHCSR\_C\_HALT\_Msk}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+HALT\+\_\+\+Msk~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_gaddf1d43f8857e4efc3dc4e6b15509692}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+HALT\+\_\+\+Pos}})}
+
+Core\+Debug DHCSR\+: C\+\_\+\+HALT Mask 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00783}{783}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_gaddf1d43f8857e4efc3dc4e6b15509692}\label{group___c_m_s_i_s___core_debug_gaddf1d43f8857e4efc3dc4e6b15509692}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DHCSR\_C\_HALT\_Pos@{CoreDebug\_DHCSR\_C\_HALT\_Pos}}
+\index{CoreDebug\_DHCSR\_C\_HALT\_Pos@{CoreDebug\_DHCSR\_C\_HALT\_Pos}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DHCSR\_C\_HALT\_Pos}{CoreDebug\_DHCSR\_C\_HALT\_Pos}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+HALT\+\_\+\+Pos~1}
+
+Core\+Debug DHCSR\+: C\+\_\+\+HALT Position 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00782}{782}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga77fe1ef3c4a729c1c82fb62a94a51c31}\label{group___c_m_s_i_s___core_debug_ga77fe1ef3c4a729c1c82fb62a94a51c31}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DHCSR\_C\_MASKINTS\_Msk@{CoreDebug\_DHCSR\_C\_MASKINTS\_Msk}}
+\index{CoreDebug\_DHCSR\_C\_MASKINTS\_Msk@{CoreDebug\_DHCSR\_C\_MASKINTS\_Msk}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DHCSR\_C\_MASKINTS\_Msk}{CoreDebug\_DHCSR\_C\_MASKINTS\_Msk}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+MASKINTS\+\_\+\+Msk~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga0d2907400eb948a4ea3886ca083ec8e3}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+MASKINTS\+\_\+\+Pos}})}
+
+Core\+Debug DHCSR\+: C\+\_\+\+MASKINTS Mask 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00777}{777}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga0d2907400eb948a4ea3886ca083ec8e3}\label{group___c_m_s_i_s___core_debug_ga0d2907400eb948a4ea3886ca083ec8e3}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DHCSR\_C\_MASKINTS\_Pos@{CoreDebug\_DHCSR\_C\_MASKINTS\_Pos}}
+\index{CoreDebug\_DHCSR\_C\_MASKINTS\_Pos@{CoreDebug\_DHCSR\_C\_MASKINTS\_Pos}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DHCSR\_C\_MASKINTS\_Pos}{CoreDebug\_DHCSR\_C\_MASKINTS\_Pos}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+MASKINTS\+\_\+\+Pos~3}
+
+Core\+Debug DHCSR\+: C\+\_\+\+MASKINTS Position 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00776}{776}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga53aa99b2e39a67622f3b9973e079c2b4}\label{group___c_m_s_i_s___core_debug_ga53aa99b2e39a67622f3b9973e079c2b4}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DHCSR\_C\_SNAPSTALL\_Msk@{CoreDebug\_DHCSR\_C\_SNAPSTALL\_Msk}}
+\index{CoreDebug\_DHCSR\_C\_SNAPSTALL\_Msk@{CoreDebug\_DHCSR\_C\_SNAPSTALL\_Msk}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DHCSR\_C\_SNAPSTALL\_Msk}{CoreDebug\_DHCSR\_C\_SNAPSTALL\_Msk}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+SNAPSTALL\+\_\+\+Msk~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga85747214e2656df6b05ec72e4d22bd6d}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+SNAPSTALL\+\_\+\+Pos}})}
+
+Core\+Debug DHCSR\+: C\+\_\+\+SNAPSTALL Mask 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00774}{774}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga85747214e2656df6b05ec72e4d22bd6d}\label{group___c_m_s_i_s___core_debug_ga85747214e2656df6b05ec72e4d22bd6d}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DHCSR\_C\_SNAPSTALL\_Pos@{CoreDebug\_DHCSR\_C\_SNAPSTALL\_Pos}}
+\index{CoreDebug\_DHCSR\_C\_SNAPSTALL\_Pos@{CoreDebug\_DHCSR\_C\_SNAPSTALL\_Pos}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DHCSR\_C\_SNAPSTALL\_Pos}{CoreDebug\_DHCSR\_C\_SNAPSTALL\_Pos}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+SNAPSTALL\+\_\+\+Pos~5}
+
+Core\+Debug DHCSR\+: C\+\_\+\+SNAPSTALL Position 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00773}{773}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_gae6bda72fbd32cc5734ff3542170dc00d}\label{group___c_m_s_i_s___core_debug_gae6bda72fbd32cc5734ff3542170dc00d}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DHCSR\_C\_STEP\_Msk@{CoreDebug\_DHCSR\_C\_STEP\_Msk}}
+\index{CoreDebug\_DHCSR\_C\_STEP\_Msk@{CoreDebug\_DHCSR\_C\_STEP\_Msk}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DHCSR\_C\_STEP\_Msk}{CoreDebug\_DHCSR\_C\_STEP\_Msk}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+STEP\+\_\+\+Msk~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_gae1fc39e80de54c0339cbb1b298a9f0f9}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+STEP\+\_\+\+Pos}})}
+
+Core\+Debug DHCSR\+: C\+\_\+\+STEP Mask 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00780}{780}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_gae1fc39e80de54c0339cbb1b298a9f0f9}\label{group___c_m_s_i_s___core_debug_gae1fc39e80de54c0339cbb1b298a9f0f9}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DHCSR\_C\_STEP\_Pos@{CoreDebug\_DHCSR\_C\_STEP\_Pos}}
+\index{CoreDebug\_DHCSR\_C\_STEP\_Pos@{CoreDebug\_DHCSR\_C\_STEP\_Pos}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DHCSR\_C\_STEP\_Pos}{CoreDebug\_DHCSR\_C\_STEP\_Pos}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DHCSR\+\_\+\+C\+\_\+\+STEP\+\_\+\+Pos~2}
+
+Core\+Debug DHCSR\+: C\+\_\+\+STEP Position 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00779}{779}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga1ce997cee15edaafe4aed77751816ffc}\label{group___c_m_s_i_s___core_debug_ga1ce997cee15edaafe4aed77751816ffc}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DHCSR\_DBGKEY\_Msk@{CoreDebug\_DHCSR\_DBGKEY\_Msk}}
+\index{CoreDebug\_DHCSR\_DBGKEY\_Msk@{CoreDebug\_DHCSR\_DBGKEY\_Msk}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DHCSR\_DBGKEY\_Msk}{CoreDebug\_DHCSR\_DBGKEY\_Msk}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DHCSR\+\_\+\+DBGKEY\+\_\+\+Msk~(0x\+FFFFUL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_gac91280edd0ce932665cf75a23d11d842}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+DBGKEY\+\_\+\+Pos}})}
+
+Core\+Debug DHCSR\+: DBGKEY Mask 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00753}{753}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_gac91280edd0ce932665cf75a23d11d842}\label{group___c_m_s_i_s___core_debug_gac91280edd0ce932665cf75a23d11d842}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DHCSR\_DBGKEY\_Pos@{CoreDebug\_DHCSR\_DBGKEY\_Pos}}
+\index{CoreDebug\_DHCSR\_DBGKEY\_Pos@{CoreDebug\_DHCSR\_DBGKEY\_Pos}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DHCSR\_DBGKEY\_Pos}{CoreDebug\_DHCSR\_DBGKEY\_Pos}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DHCSR\+\_\+\+DBGKEY\+\_\+\+Pos~16}
+
+Core\+Debug DHCSR\+: DBGKEY Position 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00752}{752}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga9f881ade3151a73bc5b02b73fe6473ca}\label{group___c_m_s_i_s___core_debug_ga9f881ade3151a73bc5b02b73fe6473ca}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DHCSR\_S\_HALT\_Msk@{CoreDebug\_DHCSR\_S\_HALT\_Msk}}
+\index{CoreDebug\_DHCSR\_S\_HALT\_Msk@{CoreDebug\_DHCSR\_S\_HALT\_Msk}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DHCSR\_S\_HALT\_Msk}{CoreDebug\_DHCSR\_S\_HALT\_Msk}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+HALT\+\_\+\+Msk~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga760a9a0d7f39951dc3f07d01f1f64772}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+HALT\+\_\+\+Pos}})}
+
+Core\+Debug DHCSR\+: S\+\_\+\+HALT Mask 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00768}{768}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga760a9a0d7f39951dc3f07d01f1f64772}\label{group___c_m_s_i_s___core_debug_ga760a9a0d7f39951dc3f07d01f1f64772}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DHCSR\_S\_HALT\_Pos@{CoreDebug\_DHCSR\_S\_HALT\_Pos}}
+\index{CoreDebug\_DHCSR\_S\_HALT\_Pos@{CoreDebug\_DHCSR\_S\_HALT\_Pos}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DHCSR\_S\_HALT\_Pos}{CoreDebug\_DHCSR\_S\_HALT\_Pos}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+HALT\+\_\+\+Pos~17}
+
+Core\+Debug DHCSR\+: S\+\_\+\+HALT Position 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00767}{767}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga7b67e4506d7f464ef5dafd6219739756}\label{group___c_m_s_i_s___core_debug_ga7b67e4506d7f464ef5dafd6219739756}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DHCSR\_S\_LOCKUP\_Msk@{CoreDebug\_DHCSR\_S\_LOCKUP\_Msk}}
+\index{CoreDebug\_DHCSR\_S\_LOCKUP\_Msk@{CoreDebug\_DHCSR\_S\_LOCKUP\_Msk}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DHCSR\_S\_LOCKUP\_Msk}{CoreDebug\_DHCSR\_S\_LOCKUP\_Msk}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+LOCKUP\+\_\+\+Msk~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga2900dd56a988a4ed27ad664d5642807e}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+LOCKUP\+\_\+\+Pos}})}
+
+Core\+Debug DHCSR\+: S\+\_\+\+LOCKUP Mask 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00762}{762}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga2900dd56a988a4ed27ad664d5642807e}\label{group___c_m_s_i_s___core_debug_ga2900dd56a988a4ed27ad664d5642807e}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DHCSR\_S\_LOCKUP\_Pos@{CoreDebug\_DHCSR\_S\_LOCKUP\_Pos}}
+\index{CoreDebug\_DHCSR\_S\_LOCKUP\_Pos@{CoreDebug\_DHCSR\_S\_LOCKUP\_Pos}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DHCSR\_S\_LOCKUP\_Pos}{CoreDebug\_DHCSR\_S\_LOCKUP\_Pos}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+LOCKUP\+\_\+\+Pos~19}
+
+Core\+Debug DHCSR\+: S\+\_\+\+LOCKUP Position 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00761}{761}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_gac4cd6f3178de48f473d8903e8c847c07}\label{group___c_m_s_i_s___core_debug_gac4cd6f3178de48f473d8903e8c847c07}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DHCSR\_S\_REGRDY\_Msk@{CoreDebug\_DHCSR\_S\_REGRDY\_Msk}}
+\index{CoreDebug\_DHCSR\_S\_REGRDY\_Msk@{CoreDebug\_DHCSR\_S\_REGRDY\_Msk}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DHCSR\_S\_REGRDY\_Msk}{CoreDebug\_DHCSR\_S\_REGRDY\_Msk}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+REGRDY\+\_\+\+Msk~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga20a71871ca8768019c51168c70c3f41d}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+REGRDY\+\_\+\+Pos}})}
+
+Core\+Debug DHCSR\+: S\+\_\+\+REGRDY Mask 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00771}{771}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga20a71871ca8768019c51168c70c3f41d}\label{group___c_m_s_i_s___core_debug_ga20a71871ca8768019c51168c70c3f41d}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DHCSR\_S\_REGRDY\_Pos@{CoreDebug\_DHCSR\_S\_REGRDY\_Pos}}
+\index{CoreDebug\_DHCSR\_S\_REGRDY\_Pos@{CoreDebug\_DHCSR\_S\_REGRDY\_Pos}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DHCSR\_S\_REGRDY\_Pos}{CoreDebug\_DHCSR\_S\_REGRDY\_Pos}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+REGRDY\+\_\+\+Pos~16}
+
+Core\+Debug DHCSR\+: S\+\_\+\+REGRDY Position 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00770}{770}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_gac474394bcceb31a8e09566c90b3f8922}\label{group___c_m_s_i_s___core_debug_gac474394bcceb31a8e09566c90b3f8922}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DHCSR\_S\_RESET\_ST\_Msk@{CoreDebug\_DHCSR\_S\_RESET\_ST\_Msk}}
+\index{CoreDebug\_DHCSR\_S\_RESET\_ST\_Msk@{CoreDebug\_DHCSR\_S\_RESET\_ST\_Msk}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DHCSR\_S\_RESET\_ST\_Msk}{CoreDebug\_DHCSR\_S\_RESET\_ST\_Msk}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+RESET\+\_\+\+ST\+\_\+\+Msk~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga6f934c5427ea057394268e541fa97753}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+RESET\+\_\+\+ST\+\_\+\+Pos}})}
+
+Core\+Debug DHCSR\+: S\+\_\+\+RESET\+\_\+\+ST Mask 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00756}{756}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga6f934c5427ea057394268e541fa97753}\label{group___c_m_s_i_s___core_debug_ga6f934c5427ea057394268e541fa97753}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DHCSR\_S\_RESET\_ST\_Pos@{CoreDebug\_DHCSR\_S\_RESET\_ST\_Pos}}
+\index{CoreDebug\_DHCSR\_S\_RESET\_ST\_Pos@{CoreDebug\_DHCSR\_S\_RESET\_ST\_Pos}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DHCSR\_S\_RESET\_ST\_Pos}{CoreDebug\_DHCSR\_S\_RESET\_ST\_Pos}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+RESET\+\_\+\+ST\+\_\+\+Pos~25}
+
+Core\+Debug DHCSR\+: S\+\_\+\+RESET\+\_\+\+ST Position 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00755}{755}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga89dceb5325f6bcb36a0473d65fbfcfa6}\label{group___c_m_s_i_s___core_debug_ga89dceb5325f6bcb36a0473d65fbfcfa6}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DHCSR\_S\_RETIRE\_ST\_Msk@{CoreDebug\_DHCSR\_S\_RETIRE\_ST\_Msk}}
+\index{CoreDebug\_DHCSR\_S\_RETIRE\_ST\_Msk@{CoreDebug\_DHCSR\_S\_RETIRE\_ST\_Msk}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DHCSR\_S\_RETIRE\_ST\_Msk}{CoreDebug\_DHCSR\_S\_RETIRE\_ST\_Msk}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+RETIRE\+\_\+\+ST\+\_\+\+Msk~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga2328118f8b3574c871a53605eb17e730}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+RETIRE\+\_\+\+ST\+\_\+\+Pos}})}
+
+Core\+Debug DHCSR\+: S\+\_\+\+RETIRE\+\_\+\+ST Mask 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00759}{759}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga2328118f8b3574c871a53605eb17e730}\label{group___c_m_s_i_s___core_debug_ga2328118f8b3574c871a53605eb17e730}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DHCSR\_S\_RETIRE\_ST\_Pos@{CoreDebug\_DHCSR\_S\_RETIRE\_ST\_Pos}}
+\index{CoreDebug\_DHCSR\_S\_RETIRE\_ST\_Pos@{CoreDebug\_DHCSR\_S\_RETIRE\_ST\_Pos}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DHCSR\_S\_RETIRE\_ST\_Pos}{CoreDebug\_DHCSR\_S\_RETIRE\_ST\_Pos}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+RETIRE\+\_\+\+ST\+\_\+\+Pos~24}
+
+Core\+Debug DHCSR\+: S\+\_\+\+RETIRE\+\_\+\+ST Position 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00758}{758}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga98d51538e645c2c1a422279cd85a0a25}\label{group___c_m_s_i_s___core_debug_ga98d51538e645c2c1a422279cd85a0a25}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DHCSR\_S\_SLEEP\_Msk@{CoreDebug\_DHCSR\_S\_SLEEP\_Msk}}
+\index{CoreDebug\_DHCSR\_S\_SLEEP\_Msk@{CoreDebug\_DHCSR\_S\_SLEEP\_Msk}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DHCSR\_S\_SLEEP\_Msk}{CoreDebug\_DHCSR\_S\_SLEEP\_Msk}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+SLEEP\+\_\+\+Msk~(1UL $<$$<$ \mbox{\hyperlink{group___c_m_s_i_s___core_debug_ga349ccea33accc705595624c2d334fbcb}{Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+SLEEP\+\_\+\+Pos}})}
+
+Core\+Debug DHCSR\+: S\+\_\+\+SLEEP Mask 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00765}{765}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s___core_debug_ga349ccea33accc705595624c2d334fbcb}\label{group___c_m_s_i_s___core_debug_ga349ccea33accc705595624c2d334fbcb}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!CoreDebug\_DHCSR\_S\_SLEEP\_Pos@{CoreDebug\_DHCSR\_S\_SLEEP\_Pos}}
+\index{CoreDebug\_DHCSR\_S\_SLEEP\_Pos@{CoreDebug\_DHCSR\_S\_SLEEP\_Pos}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{CoreDebug\_DHCSR\_S\_SLEEP\_Pos}{CoreDebug\_DHCSR\_S\_SLEEP\_Pos}}
+{\footnotesize\ttfamily \#define Core\+Debug\+\_\+\+DHCSR\+\_\+\+S\+\_\+\+SLEEP\+\_\+\+Pos~18}
+
+Core\+Debug DHCSR\+: S\+\_\+\+SLEEP Position 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00764}{764}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s__core__register_ga164238adbad56f07c7dd4e912af748dd}\label{group___c_m_s_i_s__core__register_ga164238adbad56f07c7dd4e912af748dd}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!InterruptType@{InterruptType}}
+\index{InterruptType@{InterruptType}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{InterruptType}{InterruptType}}
+{\footnotesize\ttfamily \#define Interrupt\+Type~((\mbox{\hyperlink{struct_interrupt_type___type}{Interrupt\+Type\+\_\+\+Type}} $\ast$) \mbox{\hyperlink{group___c_m_s_i_s__core__register_ga3c14ed93192c8d9143322bbf77ebf770}{SCS\+\_\+\+BASE}})}
+
+Interrupt Type Register ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00850}{850}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s__core__register_gabae7cdf882def602cb787bb039ff6a43}\label{group___c_m_s_i_s__core__register_gabae7cdf882def602cb787bb039ff6a43}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!ITM@{ITM}}
+\index{ITM@{ITM}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{ITM}{ITM}}
+{\footnotesize\ttfamily \#define ITM~((\mbox{\hyperlink{struct_i_t_m___type}{ITM\+\_\+\+Type}} $\ast$)           \mbox{\hyperlink{group___c_m_s_i_s__core__register_gadd76251e412a195ec0a8f47227a8359e}{ITM\+\_\+\+BASE}})}
+
+ITM configuration struct ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00854}{854}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s__core__register_gadd76251e412a195ec0a8f47227a8359e}\label{group___c_m_s_i_s__core__register_gadd76251e412a195ec0a8f47227a8359e}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!ITM\_BASE@{ITM\_BASE}}
+\index{ITM\_BASE@{ITM\_BASE}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{ITM\_BASE}{ITM\_BASE}}
+{\footnotesize\ttfamily \#define ITM\+\_\+\+BASE~(0x\+E0000000\+UL)}
+
+ITM Base Address ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00844}{844}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s__core__register_gac8e97e8ce56ae9f57da1363a937f8a17}\label{group___c_m_s_i_s__core__register_gac8e97e8ce56ae9f57da1363a937f8a17}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!NVIC@{NVIC}}
+\index{NVIC@{NVIC}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{NVIC}{NVIC}}
+{\footnotesize\ttfamily \#define NVIC~((\mbox{\hyperlink{struct_n_v_i_c___type}{NVIC\+\_\+\+Type}} $\ast$)          \mbox{\hyperlink{group___c_m_s_i_s__core__register_gaa0288691785a5f868238e0468b39523d}{NVIC\+\_\+\+BASE}})}
+
+NVIC configuration struct ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00853}{853}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s__core__register_gaa0288691785a5f868238e0468b39523d}\label{group___c_m_s_i_s__core__register_gaa0288691785a5f868238e0468b39523d}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!NVIC\_BASE@{NVIC\_BASE}}
+\index{NVIC\_BASE@{NVIC\_BASE}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{NVIC\_BASE}{NVIC\_BASE}}
+{\footnotesize\ttfamily \#define NVIC\+\_\+\+BASE~(\mbox{\hyperlink{group___c_m_s_i_s__core__register_ga3c14ed93192c8d9143322bbf77ebf770}{SCS\+\_\+\+BASE}} +  0x0100\+UL)}
+
+NVIC Base Address ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00847}{847}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s__core__register_gaaaf6477c2bde2f00f99e3c2fd1060b01}\label{group___c_m_s_i_s__core__register_gaaaf6477c2bde2f00f99e3c2fd1060b01}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!SCB@{SCB}}
+\index{SCB@{SCB}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{SCB}{SCB}}
+{\footnotesize\ttfamily \#define SCB~((\mbox{\hyperlink{struct_s_c_b___type}{SCB\+\_\+\+Type}} $\ast$)           \mbox{\hyperlink{group___c_m_s_i_s__core__register_gad55a7ddb8d4b2398b0c1cfec76c0d9fd}{SCB\+\_\+\+BASE}})}
+
+SCB configuration struct ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00851}{851}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s__core__register_gad55a7ddb8d4b2398b0c1cfec76c0d9fd}\label{group___c_m_s_i_s__core__register_gad55a7ddb8d4b2398b0c1cfec76c0d9fd}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!SCB\_BASE@{SCB\_BASE}}
+\index{SCB\_BASE@{SCB\_BASE}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{SCB\_BASE}{SCB\_BASE}}
+{\footnotesize\ttfamily \#define SCB\+\_\+\+BASE~(\mbox{\hyperlink{group___c_m_s_i_s__core__register_ga3c14ed93192c8d9143322bbf77ebf770}{SCS\+\_\+\+BASE}} +  0x0\+D00\+UL)}
+
+System Control Block Base Address 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00848}{848}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s__core__register_gacd96c53beeaff8f603fcda425eb295de}\label{group___c_m_s_i_s__core__register_gacd96c53beeaff8f603fcda425eb295de}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!SysTick@{SysTick}}
+\index{SysTick@{SysTick}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{SysTick}{SysTick}}
+{\footnotesize\ttfamily \#define Sys\+Tick~((\mbox{\hyperlink{struct_sys_tick___type}{Sys\+Tick\+\_\+\+Type}} $\ast$)       \mbox{\hyperlink{group___c_m_s_i_s__core__register_ga58effaac0b93006b756d33209e814646}{Sys\+Tick\+\_\+\+BASE}})}
+
+Sys\+Tick configuration struct ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00852}{852}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
+\mbox{\Hypertarget{group___c_m_s_i_s__core__register_ga58effaac0b93006b756d33209e814646}\label{group___c_m_s_i_s__core__register_ga58effaac0b93006b756d33209e814646}} 
+\index{CMSIS Core Debug@{CMSIS Core Debug}!SysTick\_BASE@{SysTick\_BASE}}
+\index{SysTick\_BASE@{SysTick\_BASE}!CMSIS Core Debug@{CMSIS Core Debug}}
+\doxysubsubsection{\texorpdfstring{SysTick\_BASE}{SysTick\_BASE}}
+{\footnotesize\ttfamily \#define Sys\+Tick\+\_\+\+BASE~(\mbox{\hyperlink{group___c_m_s_i_s__core__register_ga3c14ed93192c8d9143322bbf77ebf770}{SCS\+\_\+\+BASE}} +  0x0010\+UL)}
+
+Sys\+Tick Base Address ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{core__cm3_8h_source_l00846}{846}} of file \mbox{\hyperlink{core__cm3_8h_source}{core\+\_\+cm3.\+h}}.
+
