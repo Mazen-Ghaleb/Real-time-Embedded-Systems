@@ -1,5 +1,0 @@
-<map id="LCD_inc_cnt" name="LCD_inc_cnt">
-<area shape="rect" id="node1" title="Function that controls the display cursor." alt="" coords="5,5,104,32"/>
-<area shape="rect" id="node2" href="$_l_c_d_8c.html#a39d249767fafd72d0dc5831d3336674a" title="Function that sends a byte to LCD." alt="" coords="152,5,263,32"/>
-<area shape="rect" id="node3" href="$_l_c_d_8c.html#a979587670e78b7ae31d12db5acf95f40" title="Function that sends a nibble to LCD." alt="" coords="311,5,432,32"/>
-</map>

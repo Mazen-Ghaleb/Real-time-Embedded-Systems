@@ -1,6 +1,0 @@
-<map id="LCD_setPosition" name="LCD_setPosition">
-<area shape="rect" id="node1" title="Function that sets cursor position on LCD." alt="" coords="5,5,127,32"/>
-<area shape="rect" id="node2" href="$_l_c_d_8c.html#a39d249767fafd72d0dc5831d3336674a" title="Function that sends a byte to LCD." alt="" coords="175,5,285,32"/>
-<area shape="rect" id="node3" href="$_l_c_d_8c.html#a85fbfe3c26544ce6a05057bb2127b0c6" title="Function that controls the display cursor." alt="" coords="345,5,443,32"/>
-<area shape="rect" id="node4" href="$_l_c_d_8c.html#a979587670e78b7ae31d12db5acf95f40" title="Function that sends a nibble to LCD." alt="" coords="333,56,455,83"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="LCD_sendByte" name="LCD_sendByte">
-<area shape="rect" id="node1" title="Function that sends a byte to LCD." alt="" coords="5,5,116,32"/>
-<area shape="rect" id="node2" href="$_l_c_d_8c.html#a85fbfe3c26544ce6a05057bb2127b0c6" title="Function that controls the display cursor." alt="" coords="175,5,274,32"/>
-<area shape="rect" id="node3" href="$_l_c_d_8c.html#a979587670e78b7ae31d12db5acf95f40" title="Function that sends a nibble to LCD." alt="" coords="164,56,285,83"/>
-</map>

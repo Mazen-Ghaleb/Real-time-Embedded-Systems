@@ -1,6 +1,0 @@
-<map id="LCD_DATA_BUS" name="LCD_DATA_BUS">
-<area shape="rect" id="node1" title="Function that returns all data pins." alt="" coords="400,5,524,32"/>
-<area shape="rect" id="node2" href="$_l_c_d_8c.html#a7d804124fb7b747aa67d20f7b67f04bd" title="Function that needs to be called before all code to initialize the LCD." alt="" coords="143,5,216,32"/>
-<area shape="rect" id="node4" href="$_l_c_d_8c.html#a172456fdc96609c813c8f930f5ce6545" title="Function that configures LCD peripheral and pins on Tiva TM4C123GH." alt="" coords="264,31,352,57"/>
-<area shape="rect" id="node3" href="$main_8c.html#a8642f77148a23556a78a6bdeadbff1f0" title=" " alt="" coords="5,5,95,32"/>
-</map>
