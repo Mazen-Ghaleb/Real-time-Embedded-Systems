@@ -1,0 +1,327 @@
+\hypertarget{system___t_m4_c123_8c}{}\doxysection{Labs -\/ Tiva\+Ware -\/ Keil/\+RTE/\+Device/\+TM4\+C123\+GH6\+PM/system\+\_\+\+TM4\+C123.c File Reference}
+\label{system___t_m4_c123_8c}\index{Labs -\/ TivaWare -\/ Keil/RTE/Device/TM4C123GH6PM/system\_TM4C123.c@{Labs -\/ TivaWare -\/ Keil/RTE/Device/TM4C123GH6PM/system\_TM4C123.c}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}TM4\+C123.\+h\char`\"{}}\newline
+Include dependency graph for system\+\_\+\+TM4\+C123.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{system___t_m4_c123_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{system___t_m4_c123_8c_aee2245fb4caf68f0fc571d8b24ff5626}{CLOCK\+\_\+\+SETUP}}~1
+\item 
+\#define \mbox{\hyperlink{system___t_m4_c123_8c_a78d0489c7eb4a419d85a79a84812c810}{CFG\+\_\+\+RCC\+\_\+\+SYSDIV}}~4
+\item 
+\#define \mbox{\hyperlink{system___t_m4_c123_8c_a085be77c1cc51f3bdba0a38d48fb5ebe}{CFG\+\_\+\+RCC\+\_\+\+USESYSDIV}}~1
+\item 
+\#define \mbox{\hyperlink{system___t_m4_c123_8c_a61c13da8877b3d7140d15524e523dbe1}{CFG\+\_\+\+RCC\+\_\+\+USEPWMDIV}}~1
+\item 
+\#define \mbox{\hyperlink{system___t_m4_c123_8c_ab58c20222ce61e60bd05c93a6c4e811e}{CFG\+\_\+\+RCC\+\_\+\+PWMDIV}}~7
+\item 
+\#define \mbox{\hyperlink{system___t_m4_c123_8c_a8ce828bfea671b5a9cecf2177b760d2c}{CFG\+\_\+\+RCC\+\_\+\+PWRDN}}~0
+\item 
+\#define \mbox{\hyperlink{system___t_m4_c123_8c_aab51ddb2bf33cb9d920e1ff45708423c}{CFG\+\_\+\+RCC\+\_\+\+BYPASS}}~0
+\item 
+\#define \mbox{\hyperlink{system___t_m4_c123_8c_a841798846eeeaaa0fbfee391c33619fe}{CFG\+\_\+\+RCC\+\_\+\+XTAL}}~21
+\item 
+\#define \mbox{\hyperlink{system___t_m4_c123_8c_a6f92252911092c4fc470497c51dc4802}{CFG\+\_\+\+RCC\+\_\+\+OSCSRC}}~0
+\item 
+\#define \mbox{\hyperlink{system___t_m4_c123_8c_afa3742a3064864b0042579aa0163506b}{CFG\+\_\+\+RCC\+\_\+\+IOSCDIS}}~1
+\item 
+\#define \mbox{\hyperlink{system___t_m4_c123_8c_a9453d18fad1c95a2f08299227730cb16}{CFG\+\_\+\+RCC\+\_\+\+MOSCDIS}}~0
+\item 
+\#define \mbox{\hyperlink{system___t_m4_c123_8c_a5c549aff528563ff7ce2580824b9c113}{CFG\+\_\+\+RCC2\+\_\+\+USERCC2}}~0
+\item 
+\#define \mbox{\hyperlink{system___t_m4_c123_8c_ac7ed623916abbf3b77a688092dc6f840}{CFG\+\_\+\+RCC\+\_\+\+SYSDIV2}}~4
+\item 
+\#define \mbox{\hyperlink{system___t_m4_c123_8c_a35f721008a8705b55c61b4474e5e3d05}{CFG\+\_\+\+RCC\+\_\+\+PWRDN2}}~0
+\item 
+\#define \mbox{\hyperlink{system___t_m4_c123_8c_ab12e47f6f1bb2a2959b9e6db46567b5b}{CFG\+\_\+\+RCC\+\_\+\+BYPASS2}}~0
+\item 
+\#define \mbox{\hyperlink{system___t_m4_c123_8c_ab513852f4a8967752d372e011badcfc2}{CFG\+\_\+\+RCC\+\_\+\+OSCSRC2}}~0
+\item 
+\#define \mbox{\hyperlink{system___t_m4_c123_8c_a6365581ad94c923afd0d1e7e591f0c76}{RCC\+\_\+\+Val}}
+\item 
+\#define \mbox{\hyperlink{system___t_m4_c123_8c_afd4d4cb07db4562632da94cb7cf9c173}{RCC2\+\_\+\+Val}}
+\item 
+\#define \mbox{\hyperlink{system___t_m4_c123_8c_a2257a737607a717c24541af4e55abf03}{XTALM}}~(16000000\+UL)            /$\ast$ Main         oscillator freq $\ast$/
+\item 
+\#define \mbox{\hyperlink{system___t_m4_c123_8c_aed5b0da9b247340ab65170e44a0e079f}{XTALI}}~(16000000\+UL)            /$\ast$ Internal     oscillator freq $\ast$/
+\item 
+\#define \mbox{\hyperlink{system___t_m4_c123_8c_aae873e6b41dc2b7665b1a312cb062b4a}{XTAL30K}}~(   30000\+UL)            /$\ast$ Internal 30K oscillator freq $\ast$/
+\item 
+\#define \mbox{\hyperlink{system___t_m4_c123_8c_a7981be1ae1f32cdfc7b1681860d440be}{XTAL32K}}~(   32768UL)            /$\ast$ external 32K oscillator freq $\ast$/
+\item 
+\#define \mbox{\hyperlink{system___t_m4_c123_8c_ae895cd58a49e14437e6c959517d4af3b}{PLL\+\_\+\+CLK}}~(400000000\+UL)
+\item 
+\#define \mbox{\hyperlink{system___t_m4_c123_8c_a44d38ab4d4e88e679184bbbffdac00dd}{ADC\+\_\+\+CLK}}~(\mbox{\hyperlink{system___t_m4_c123_8c_ae895cd58a49e14437e6c959517d4af3b}{PLL\+\_\+\+CLK}}/25)
+\item 
+\#define \mbox{\hyperlink{system___t_m4_c123_8c_a7d63b246369d4f296ba8c3008164a387}{CAN\+\_\+\+CLK}}~(\mbox{\hyperlink{system___t_m4_c123_8c_ae895cd58a49e14437e6c959517d4af3b}{PLL\+\_\+\+CLK}}/50)
+\item 
+\#define \mbox{\hyperlink{system___t_m4_c123_8c_a2a6fa051f5efc13b65f66bf689b61946}{\+\_\+\+\_\+\+CORE\+\_\+\+CLK\+\_\+\+PRE}}~\mbox{\hyperlink{system___t_m4_c123_8c_ae895cd58a49e14437e6c959517d4af3b}{PLL\+\_\+\+CLK}}
+\item 
+\#define \mbox{\hyperlink{system___t_m4_c123_8c_ab40b7b139fc425dbd3f7adece2e14478}{\+\_\+\+\_\+\+CORE\+\_\+\+CLK}}~(\mbox{\hyperlink{system___t_m4_c123_8c_a2a6fa051f5efc13b65f66bf689b61946}{\+\_\+\+\_\+\+CORE\+\_\+\+CLK\+\_\+\+PRE}} / (((\mbox{\hyperlink{system___t_m4_c123_8c_a6365581ad94c923afd0d1e7e591f0c76}{RCC\+\_\+\+Val}}$>$$>$23) \& (0x0F)) + 1) / 2)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{system___t_m4_c123_8c_ae0c36a9591fe6e9c45ecb21a794f0f0f}{System\+Core\+Clock\+Update}} (void)
+\begin{DoxyCompactList}\small\item\em Updates the System\+Core\+Clock with current core Clock retrieved from cpu registers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{system___t_m4_c123_8c_a93f514700ccf00d08dbdcff7f1224eb2}{System\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Setup the microcontroller system. Initialize the System. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{system___t_m4_c123_8c_aa3cd3e43291e81e795d642b79b6088e6}{System\+Core\+Clock}} = \mbox{\hyperlink{system___t_m4_c123_8c_ab40b7b139fc425dbd3f7adece2e14478}{\+\_\+\+\_\+\+CORE\+\_\+\+CLK}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{system___t_m4_c123_8c_ab40b7b139fc425dbd3f7adece2e14478}\label{system___t_m4_c123_8c_ab40b7b139fc425dbd3f7adece2e14478}} 
+\index{system\_TM4C123.c@{system\_TM4C123.c}!\_\_CORE\_CLK@{\_\_CORE\_CLK}}
+\index{\_\_CORE\_CLK@{\_\_CORE\_CLK}!system\_TM4C123.c@{system\_TM4C123.c}}
+\doxysubsubsection{\texorpdfstring{\_\_CORE\_CLK}{\_\_CORE\_CLK}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+CORE\+\_\+\+CLK~(\mbox{\hyperlink{system___t_m4_c123_8c_a2a6fa051f5efc13b65f66bf689b61946}{\+\_\+\+\_\+\+CORE\+\_\+\+CLK\+\_\+\+PRE}} / (((\mbox{\hyperlink{system___t_m4_c123_8c_a6365581ad94c923afd0d1e7e591f0c76}{RCC\+\_\+\+Val}}$>$$>$23) \& (0x0F)) + 1) / 2)}
+
+\mbox{\Hypertarget{system___t_m4_c123_8c_a2a6fa051f5efc13b65f66bf689b61946}\label{system___t_m4_c123_8c_a2a6fa051f5efc13b65f66bf689b61946}} 
+\index{system\_TM4C123.c@{system\_TM4C123.c}!\_\_CORE\_CLK\_PRE@{\_\_CORE\_CLK\_PRE}}
+\index{\_\_CORE\_CLK\_PRE@{\_\_CORE\_CLK\_PRE}!system\_TM4C123.c@{system\_TM4C123.c}}
+\doxysubsubsection{\texorpdfstring{\_\_CORE\_CLK\_PRE}{\_\_CORE\_CLK\_PRE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+CORE\+\_\+\+CLK\+\_\+\+PRE~\mbox{\hyperlink{system___t_m4_c123_8c_ae895cd58a49e14437e6c959517d4af3b}{PLL\+\_\+\+CLK}}}
+
+\mbox{\Hypertarget{system___t_m4_c123_8c_a44d38ab4d4e88e679184bbbffdac00dd}\label{system___t_m4_c123_8c_a44d38ab4d4e88e679184bbbffdac00dd}} 
+\index{system\_TM4C123.c@{system\_TM4C123.c}!ADC\_CLK@{ADC\_CLK}}
+\index{ADC\_CLK@{ADC\_CLK}!system\_TM4C123.c@{system\_TM4C123.c}}
+\doxysubsubsection{\texorpdfstring{ADC\_CLK}{ADC\_CLK}}
+{\footnotesize\ttfamily \#define ADC\+\_\+\+CLK~(\mbox{\hyperlink{system___t_m4_c123_8c_ae895cd58a49e14437e6c959517d4af3b}{PLL\+\_\+\+CLK}}/25)}
+
+\mbox{\Hypertarget{system___t_m4_c123_8c_a7d63b246369d4f296ba8c3008164a387}\label{system___t_m4_c123_8c_a7d63b246369d4f296ba8c3008164a387}} 
+\index{system\_TM4C123.c@{system\_TM4C123.c}!CAN\_CLK@{CAN\_CLK}}
+\index{CAN\_CLK@{CAN\_CLK}!system\_TM4C123.c@{system\_TM4C123.c}}
+\doxysubsubsection{\texorpdfstring{CAN\_CLK}{CAN\_CLK}}
+{\footnotesize\ttfamily \#define CAN\+\_\+\+CLK~(\mbox{\hyperlink{system___t_m4_c123_8c_ae895cd58a49e14437e6c959517d4af3b}{PLL\+\_\+\+CLK}}/50)}
+
+\mbox{\Hypertarget{system___t_m4_c123_8c_a5c549aff528563ff7ce2580824b9c113}\label{system___t_m4_c123_8c_a5c549aff528563ff7ce2580824b9c113}} 
+\index{system\_TM4C123.c@{system\_TM4C123.c}!CFG\_RCC2\_USERCC2@{CFG\_RCC2\_USERCC2}}
+\index{CFG\_RCC2\_USERCC2@{CFG\_RCC2\_USERCC2}!system\_TM4C123.c@{system\_TM4C123.c}}
+\doxysubsubsection{\texorpdfstring{CFG\_RCC2\_USERCC2}{CFG\_RCC2\_USERCC2}}
+{\footnotesize\ttfamily \#define CFG\+\_\+\+RCC2\+\_\+\+USERCC2~0}
+
+\mbox{\Hypertarget{system___t_m4_c123_8c_aab51ddb2bf33cb9d920e1ff45708423c}\label{system___t_m4_c123_8c_aab51ddb2bf33cb9d920e1ff45708423c}} 
+\index{system\_TM4C123.c@{system\_TM4C123.c}!CFG\_RCC\_BYPASS@{CFG\_RCC\_BYPASS}}
+\index{CFG\_RCC\_BYPASS@{CFG\_RCC\_BYPASS}!system\_TM4C123.c@{system\_TM4C123.c}}
+\doxysubsubsection{\texorpdfstring{CFG\_RCC\_BYPASS}{CFG\_RCC\_BYPASS}}
+{\footnotesize\ttfamily \#define CFG\+\_\+\+RCC\+\_\+\+BYPASS~0}
+
+\mbox{\Hypertarget{system___t_m4_c123_8c_ab12e47f6f1bb2a2959b9e6db46567b5b}\label{system___t_m4_c123_8c_ab12e47f6f1bb2a2959b9e6db46567b5b}} 
+\index{system\_TM4C123.c@{system\_TM4C123.c}!CFG\_RCC\_BYPASS2@{CFG\_RCC\_BYPASS2}}
+\index{CFG\_RCC\_BYPASS2@{CFG\_RCC\_BYPASS2}!system\_TM4C123.c@{system\_TM4C123.c}}
+\doxysubsubsection{\texorpdfstring{CFG\_RCC\_BYPASS2}{CFG\_RCC\_BYPASS2}}
+{\footnotesize\ttfamily \#define CFG\+\_\+\+RCC\+\_\+\+BYPASS2~0}
+
+\mbox{\Hypertarget{system___t_m4_c123_8c_afa3742a3064864b0042579aa0163506b}\label{system___t_m4_c123_8c_afa3742a3064864b0042579aa0163506b}} 
+\index{system\_TM4C123.c@{system\_TM4C123.c}!CFG\_RCC\_IOSCDIS@{CFG\_RCC\_IOSCDIS}}
+\index{CFG\_RCC\_IOSCDIS@{CFG\_RCC\_IOSCDIS}!system\_TM4C123.c@{system\_TM4C123.c}}
+\doxysubsubsection{\texorpdfstring{CFG\_RCC\_IOSCDIS}{CFG\_RCC\_IOSCDIS}}
+{\footnotesize\ttfamily \#define CFG\+\_\+\+RCC\+\_\+\+IOSCDIS~1}
+
+\mbox{\Hypertarget{system___t_m4_c123_8c_a9453d18fad1c95a2f08299227730cb16}\label{system___t_m4_c123_8c_a9453d18fad1c95a2f08299227730cb16}} 
+\index{system\_TM4C123.c@{system\_TM4C123.c}!CFG\_RCC\_MOSCDIS@{CFG\_RCC\_MOSCDIS}}
+\index{CFG\_RCC\_MOSCDIS@{CFG\_RCC\_MOSCDIS}!system\_TM4C123.c@{system\_TM4C123.c}}
+\doxysubsubsection{\texorpdfstring{CFG\_RCC\_MOSCDIS}{CFG\_RCC\_MOSCDIS}}
+{\footnotesize\ttfamily \#define CFG\+\_\+\+RCC\+\_\+\+MOSCDIS~0}
+
+\mbox{\Hypertarget{system___t_m4_c123_8c_a6f92252911092c4fc470497c51dc4802}\label{system___t_m4_c123_8c_a6f92252911092c4fc470497c51dc4802}} 
+\index{system\_TM4C123.c@{system\_TM4C123.c}!CFG\_RCC\_OSCSRC@{CFG\_RCC\_OSCSRC}}
+\index{CFG\_RCC\_OSCSRC@{CFG\_RCC\_OSCSRC}!system\_TM4C123.c@{system\_TM4C123.c}}
+\doxysubsubsection{\texorpdfstring{CFG\_RCC\_OSCSRC}{CFG\_RCC\_OSCSRC}}
+{\footnotesize\ttfamily \#define CFG\+\_\+\+RCC\+\_\+\+OSCSRC~0}
+
+\mbox{\Hypertarget{system___t_m4_c123_8c_ab513852f4a8967752d372e011badcfc2}\label{system___t_m4_c123_8c_ab513852f4a8967752d372e011badcfc2}} 
+\index{system\_TM4C123.c@{system\_TM4C123.c}!CFG\_RCC\_OSCSRC2@{CFG\_RCC\_OSCSRC2}}
+\index{CFG\_RCC\_OSCSRC2@{CFG\_RCC\_OSCSRC2}!system\_TM4C123.c@{system\_TM4C123.c}}
+\doxysubsubsection{\texorpdfstring{CFG\_RCC\_OSCSRC2}{CFG\_RCC\_OSCSRC2}}
+{\footnotesize\ttfamily \#define CFG\+\_\+\+RCC\+\_\+\+OSCSRC2~0}
+
+\mbox{\Hypertarget{system___t_m4_c123_8c_ab58c20222ce61e60bd05c93a6c4e811e}\label{system___t_m4_c123_8c_ab58c20222ce61e60bd05c93a6c4e811e}} 
+\index{system\_TM4C123.c@{system\_TM4C123.c}!CFG\_RCC\_PWMDIV@{CFG\_RCC\_PWMDIV}}
+\index{CFG\_RCC\_PWMDIV@{CFG\_RCC\_PWMDIV}!system\_TM4C123.c@{system\_TM4C123.c}}
+\doxysubsubsection{\texorpdfstring{CFG\_RCC\_PWMDIV}{CFG\_RCC\_PWMDIV}}
+{\footnotesize\ttfamily \#define CFG\+\_\+\+RCC\+\_\+\+PWMDIV~7}
+
+\mbox{\Hypertarget{system___t_m4_c123_8c_a8ce828bfea671b5a9cecf2177b760d2c}\label{system___t_m4_c123_8c_a8ce828bfea671b5a9cecf2177b760d2c}} 
+\index{system\_TM4C123.c@{system\_TM4C123.c}!CFG\_RCC\_PWRDN@{CFG\_RCC\_PWRDN}}
+\index{CFG\_RCC\_PWRDN@{CFG\_RCC\_PWRDN}!system\_TM4C123.c@{system\_TM4C123.c}}
+\doxysubsubsection{\texorpdfstring{CFG\_RCC\_PWRDN}{CFG\_RCC\_PWRDN}}
+{\footnotesize\ttfamily \#define CFG\+\_\+\+RCC\+\_\+\+PWRDN~0}
+
+\mbox{\Hypertarget{system___t_m4_c123_8c_a35f721008a8705b55c61b4474e5e3d05}\label{system___t_m4_c123_8c_a35f721008a8705b55c61b4474e5e3d05}} 
+\index{system\_TM4C123.c@{system\_TM4C123.c}!CFG\_RCC\_PWRDN2@{CFG\_RCC\_PWRDN2}}
+\index{CFG\_RCC\_PWRDN2@{CFG\_RCC\_PWRDN2}!system\_TM4C123.c@{system\_TM4C123.c}}
+\doxysubsubsection{\texorpdfstring{CFG\_RCC\_PWRDN2}{CFG\_RCC\_PWRDN2}}
+{\footnotesize\ttfamily \#define CFG\+\_\+\+RCC\+\_\+\+PWRDN2~0}
+
+\mbox{\Hypertarget{system___t_m4_c123_8c_a78d0489c7eb4a419d85a79a84812c810}\label{system___t_m4_c123_8c_a78d0489c7eb4a419d85a79a84812c810}} 
+\index{system\_TM4C123.c@{system\_TM4C123.c}!CFG\_RCC\_SYSDIV@{CFG\_RCC\_SYSDIV}}
+\index{CFG\_RCC\_SYSDIV@{CFG\_RCC\_SYSDIV}!system\_TM4C123.c@{system\_TM4C123.c}}
+\doxysubsubsection{\texorpdfstring{CFG\_RCC\_SYSDIV}{CFG\_RCC\_SYSDIV}}
+{\footnotesize\ttfamily \#define CFG\+\_\+\+RCC\+\_\+\+SYSDIV~4}
+
+\mbox{\Hypertarget{system___t_m4_c123_8c_ac7ed623916abbf3b77a688092dc6f840}\label{system___t_m4_c123_8c_ac7ed623916abbf3b77a688092dc6f840}} 
+\index{system\_TM4C123.c@{system\_TM4C123.c}!CFG\_RCC\_SYSDIV2@{CFG\_RCC\_SYSDIV2}}
+\index{CFG\_RCC\_SYSDIV2@{CFG\_RCC\_SYSDIV2}!system\_TM4C123.c@{system\_TM4C123.c}}
+\doxysubsubsection{\texorpdfstring{CFG\_RCC\_SYSDIV2}{CFG\_RCC\_SYSDIV2}}
+{\footnotesize\ttfamily \#define CFG\+\_\+\+RCC\+\_\+\+SYSDIV2~4}
+
+\mbox{\Hypertarget{system___t_m4_c123_8c_a61c13da8877b3d7140d15524e523dbe1}\label{system___t_m4_c123_8c_a61c13da8877b3d7140d15524e523dbe1}} 
+\index{system\_TM4C123.c@{system\_TM4C123.c}!CFG\_RCC\_USEPWMDIV@{CFG\_RCC\_USEPWMDIV}}
+\index{CFG\_RCC\_USEPWMDIV@{CFG\_RCC\_USEPWMDIV}!system\_TM4C123.c@{system\_TM4C123.c}}
+\doxysubsubsection{\texorpdfstring{CFG\_RCC\_USEPWMDIV}{CFG\_RCC\_USEPWMDIV}}
+{\footnotesize\ttfamily \#define CFG\+\_\+\+RCC\+\_\+\+USEPWMDIV~1}
+
+\mbox{\Hypertarget{system___t_m4_c123_8c_a085be77c1cc51f3bdba0a38d48fb5ebe}\label{system___t_m4_c123_8c_a085be77c1cc51f3bdba0a38d48fb5ebe}} 
+\index{system\_TM4C123.c@{system\_TM4C123.c}!CFG\_RCC\_USESYSDIV@{CFG\_RCC\_USESYSDIV}}
+\index{CFG\_RCC\_USESYSDIV@{CFG\_RCC\_USESYSDIV}!system\_TM4C123.c@{system\_TM4C123.c}}
+\doxysubsubsection{\texorpdfstring{CFG\_RCC\_USESYSDIV}{CFG\_RCC\_USESYSDIV}}
+{\footnotesize\ttfamily \#define CFG\+\_\+\+RCC\+\_\+\+USESYSDIV~1}
+
+\mbox{\Hypertarget{system___t_m4_c123_8c_a841798846eeeaaa0fbfee391c33619fe}\label{system___t_m4_c123_8c_a841798846eeeaaa0fbfee391c33619fe}} 
+\index{system\_TM4C123.c@{system\_TM4C123.c}!CFG\_RCC\_XTAL@{CFG\_RCC\_XTAL}}
+\index{CFG\_RCC\_XTAL@{CFG\_RCC\_XTAL}!system\_TM4C123.c@{system\_TM4C123.c}}
+\doxysubsubsection{\texorpdfstring{CFG\_RCC\_XTAL}{CFG\_RCC\_XTAL}}
+{\footnotesize\ttfamily \#define CFG\+\_\+\+RCC\+\_\+\+XTAL~21}
+
+\mbox{\Hypertarget{system___t_m4_c123_8c_aee2245fb4caf68f0fc571d8b24ff5626}\label{system___t_m4_c123_8c_aee2245fb4caf68f0fc571d8b24ff5626}} 
+\index{system\_TM4C123.c@{system\_TM4C123.c}!CLOCK\_SETUP@{CLOCK\_SETUP}}
+\index{CLOCK\_SETUP@{CLOCK\_SETUP}!system\_TM4C123.c@{system\_TM4C123.c}}
+\doxysubsubsection{\texorpdfstring{CLOCK\_SETUP}{CLOCK\_SETUP}}
+{\footnotesize\ttfamily \#define CLOCK\+\_\+\+SETUP~1}
+
+\mbox{\Hypertarget{system___t_m4_c123_8c_ae895cd58a49e14437e6c959517d4af3b}\label{system___t_m4_c123_8c_ae895cd58a49e14437e6c959517d4af3b}} 
+\index{system\_TM4C123.c@{system\_TM4C123.c}!PLL\_CLK@{PLL\_CLK}}
+\index{PLL\_CLK@{PLL\_CLK}!system\_TM4C123.c@{system\_TM4C123.c}}
+\doxysubsubsection{\texorpdfstring{PLL\_CLK}{PLL\_CLK}}
+{\footnotesize\ttfamily \#define PLL\+\_\+\+CLK~(400000000\+UL)}
+
+\mbox{\Hypertarget{system___t_m4_c123_8c_afd4d4cb07db4562632da94cb7cf9c173}\label{system___t_m4_c123_8c_afd4d4cb07db4562632da94cb7cf9c173}} 
+\index{system\_TM4C123.c@{system\_TM4C123.c}!RCC2\_Val@{RCC2\_Val}}
+\index{RCC2\_Val@{RCC2\_Val}!system\_TM4C123.c@{system\_TM4C123.c}}
+\doxysubsubsection{\texorpdfstring{RCC2\_Val}{RCC2\_Val}}
+{\footnotesize\ttfamily \#define RCC2\+\_\+\+Val}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(                                                                             \(\backslash\)}
+\DoxyCodeLine{    (\mbox{\hyperlink{system___t_m4_c123_8c_a5c549aff528563ff7ce2580824b9c113}{CFG\_RCC2\_USERCC2}}      << 31) |                                           \(\backslash\)}
+\DoxyCodeLine{    ((\mbox{\hyperlink{system___t_m4_c123_8c_ac7ed623916abbf3b77a688092dc6f840}{CFG\_RCC\_SYSDIV2}} -\/ 1)  << 23) |                                          \(\backslash\)}
+\DoxyCodeLine{    (\mbox{\hyperlink{system___t_m4_c123_8c_a35f721008a8705b55c61b4474e5e3d05}{CFG\_RCC\_PWRDN2}}         << 13) |                                          \(\backslash\)}
+\DoxyCodeLine{    (\mbox{\hyperlink{system___t_m4_c123_8c_ab12e47f6f1bb2a2959b9e6db46567b5b}{CFG\_RCC\_BYPASS2}}        << 11) |                                          \(\backslash\)}
+\DoxyCodeLine{    (\mbox{\hyperlink{system___t_m4_c123_8c_ab513852f4a8967752d372e011badcfc2}{CFG\_RCC\_OSCSRC2}}        << 4)\(\backslash\)}
+\DoxyCodeLine{)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{system___t_m4_c123_8c_a6365581ad94c923afd0d1e7e591f0c76}\label{system___t_m4_c123_8c_a6365581ad94c923afd0d1e7e591f0c76}} 
+\index{system\_TM4C123.c@{system\_TM4C123.c}!RCC\_Val@{RCC\_Val}}
+\index{RCC\_Val@{RCC\_Val}!system\_TM4C123.c@{system\_TM4C123.c}}
+\doxysubsubsection{\texorpdfstring{RCC\_Val}{RCC\_Val}}
+{\footnotesize\ttfamily \#define RCC\+\_\+\+Val}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{(                                                                             \(\backslash\)}
+\DoxyCodeLine{    ((\mbox{\hyperlink{system___t_m4_c123_8c_a78d0489c7eb4a419d85a79a84812c810}{CFG\_RCC\_SYSDIV}} -\/ 1)   << 23) |                                          \(\backslash\)}
+\DoxyCodeLine{    (\mbox{\hyperlink{system___t_m4_c123_8c_a085be77c1cc51f3bdba0a38d48fb5ebe}{CFG\_RCC\_USESYSDIV}}      << 22) |                                          \(\backslash\)}
+\DoxyCodeLine{    (\mbox{\hyperlink{system___t_m4_c123_8c_a61c13da8877b3d7140d15524e523dbe1}{CFG\_RCC\_USEPWMDIV}}      << 20) |                                          \(\backslash\)}
+\DoxyCodeLine{    (\mbox{\hyperlink{system___t_m4_c123_8c_ab58c20222ce61e60bd05c93a6c4e811e}{CFG\_RCC\_PWMDIV}}         << 17) |                                          \(\backslash\)}
+\DoxyCodeLine{    (\mbox{\hyperlink{system___t_m4_c123_8c_a8ce828bfea671b5a9cecf2177b760d2c}{CFG\_RCC\_PWRDN}}          << 13) |                                          \(\backslash\)}
+\DoxyCodeLine{    (\mbox{\hyperlink{system___t_m4_c123_8c_aab51ddb2bf33cb9d920e1ff45708423c}{CFG\_RCC\_BYPASS}}         << 11) |                                          \(\backslash\)}
+\DoxyCodeLine{    (\mbox{\hyperlink{system___t_m4_c123_8c_a841798846eeeaaa0fbfee391c33619fe}{CFG\_RCC\_XTAL}}           << 6)  |                                          \(\backslash\)}
+\DoxyCodeLine{    (\mbox{\hyperlink{system___t_m4_c123_8c_a6f92252911092c4fc470497c51dc4802}{CFG\_RCC\_OSCSRC}}         << 4)  |                                          \(\backslash\)}
+\DoxyCodeLine{    (\mbox{\hyperlink{system___t_m4_c123_8c_afa3742a3064864b0042579aa0163506b}{CFG\_RCC\_IOSCDIS}}        << 1)  |                                          \(\backslash\)}
+\DoxyCodeLine{    (\mbox{\hyperlink{system___t_m4_c123_8c_a9453d18fad1c95a2f08299227730cb16}{CFG\_RCC\_MOSCDIS}}        << 1)\(\backslash\)}
+\DoxyCodeLine{)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{system___t_m4_c123_8c_aae873e6b41dc2b7665b1a312cb062b4a}\label{system___t_m4_c123_8c_aae873e6b41dc2b7665b1a312cb062b4a}} 
+\index{system\_TM4C123.c@{system\_TM4C123.c}!XTAL30K@{XTAL30K}}
+\index{XTAL30K@{XTAL30K}!system\_TM4C123.c@{system\_TM4C123.c}}
+\doxysubsubsection{\texorpdfstring{XTAL30K}{XTAL30K}}
+{\footnotesize\ttfamily \#define XTAL30K~(   30000\+UL)            /$\ast$ Internal 30K oscillator freq $\ast$/}
+
+\mbox{\Hypertarget{system___t_m4_c123_8c_a7981be1ae1f32cdfc7b1681860d440be}\label{system___t_m4_c123_8c_a7981be1ae1f32cdfc7b1681860d440be}} 
+\index{system\_TM4C123.c@{system\_TM4C123.c}!XTAL32K@{XTAL32K}}
+\index{XTAL32K@{XTAL32K}!system\_TM4C123.c@{system\_TM4C123.c}}
+\doxysubsubsection{\texorpdfstring{XTAL32K}{XTAL32K}}
+{\footnotesize\ttfamily \#define XTAL32K~(   32768UL)            /$\ast$ external 32K oscillator freq $\ast$/}
+
+\mbox{\Hypertarget{system___t_m4_c123_8c_aed5b0da9b247340ab65170e44a0e079f}\label{system___t_m4_c123_8c_aed5b0da9b247340ab65170e44a0e079f}} 
+\index{system\_TM4C123.c@{system\_TM4C123.c}!XTALI@{XTALI}}
+\index{XTALI@{XTALI}!system\_TM4C123.c@{system\_TM4C123.c}}
+\doxysubsubsection{\texorpdfstring{XTALI}{XTALI}}
+{\footnotesize\ttfamily \#define XTALI~(16000000\+UL)            /$\ast$ Internal     oscillator freq $\ast$/}
+
+\mbox{\Hypertarget{system___t_m4_c123_8c_a2257a737607a717c24541af4e55abf03}\label{system___t_m4_c123_8c_a2257a737607a717c24541af4e55abf03}} 
+\index{system\_TM4C123.c@{system\_TM4C123.c}!XTALM@{XTALM}}
+\index{XTALM@{XTALM}!system\_TM4C123.c@{system\_TM4C123.c}}
+\doxysubsubsection{\texorpdfstring{XTALM}{XTALM}}
+{\footnotesize\ttfamily \#define XTALM~(16000000\+UL)            /$\ast$ Main         oscillator freq $\ast$/}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{system___t_m4_c123_8c_ae0c36a9591fe6e9c45ecb21a794f0f0f}\label{system___t_m4_c123_8c_ae0c36a9591fe6e9c45ecb21a794f0f0f}} 
+\index{system\_TM4C123.c@{system\_TM4C123.c}!SystemCoreClockUpdate@{SystemCoreClockUpdate}}
+\index{SystemCoreClockUpdate@{SystemCoreClockUpdate}!system\_TM4C123.c@{system\_TM4C123.c}}
+\doxysubsubsection{\texorpdfstring{SystemCoreClockUpdate()}{SystemCoreClockUpdate()}}
+{\footnotesize\ttfamily void System\+Core\+Clock\+Update (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Updates the System\+Core\+Clock with current core Clock retrieved from cpu registers. 
+
+Update System\+Core\+Clock variable
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{system___t_m4_c123_8c_a93f514700ccf00d08dbdcff7f1224eb2}\label{system___t_m4_c123_8c_a93f514700ccf00d08dbdcff7f1224eb2}} 
+\index{system\_TM4C123.c@{system\_TM4C123.c}!SystemInit@{SystemInit}}
+\index{SystemInit@{SystemInit}!system\_TM4C123.c@{system\_TM4C123.c}}
+\doxysubsubsection{\texorpdfstring{SystemInit()}{SystemInit()}}
+{\footnotesize\ttfamily void System\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Setup the microcontroller system. Initialize the System. 
+
+Setup the microcontroller system. Initialize the System and update the System\+Core\+Clock variable.
+
+Initialize the system
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{system___t_m4_c123_8c_aa3cd3e43291e81e795d642b79b6088e6}\label{system___t_m4_c123_8c_aa3cd3e43291e81e795d642b79b6088e6}} 
+\index{system\_TM4C123.c@{system\_TM4C123.c}!SystemCoreClock@{SystemCoreClock}}
+\index{SystemCoreClock@{SystemCoreClock}!system\_TM4C123.c@{system\_TM4C123.c}}
+\doxysubsubsection{\texorpdfstring{SystemCoreClock}{SystemCoreClock}}
+{\footnotesize\ttfamily uint32\+\_\+t System\+Core\+Clock = \mbox{\hyperlink{system___t_m4_c123_8c_ab40b7b139fc425dbd3f7adece2e14478}{\+\_\+\+\_\+\+CORE\+\_\+\+CLK}}}
+
+System Clock Frequency (Core Clock) 

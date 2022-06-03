@@ -1,0 +1,10 @@
+<map id="LCD_init" name="LCD_init">
+<area shape="rect" id="node1" title="Function that needs to be called before all code to initialize the LCD." alt="" coords="5,132,79,159"/>
+<area shape="rect" id="node2" href="$_l_c_d_8c.html#a9f4e5a434d4b3835c39c1b410b1af630" title="Function that clear LCD display." alt="" coords="129,5,213,32"/>
+<area shape="rect" id="node3" href="$_l_c_d_8c.html#a39d249767fafd72d0dc5831d3336674a" title="Function that sends a byte to LCD." alt="" coords="271,56,381,83"/>
+<area shape="rect" id="node5" href="$_l_c_d_8c.html#a979587670e78b7ae31d12db5acf95f40" title="Function that sends a nibble to LCD." alt="" coords="437,107,559,133"/>
+<area shape="rect" id="node6" href="$_l_c_d_8c.html#a0baff4e7cdfb7761eca40f7143045ed3" title="Function that returns all control pins." alt="" coords="263,169,389,196"/>
+<area shape="rect" id="node7" href="$_l_c_d_8c.html#ab7ec12e201d60f76759a61725b537271" title="Function that returns all data pins." alt="" coords="264,245,388,272"/>
+<area shape="rect" id="node8" href="$_l_c_d_8c.html#a172456fdc96609c813c8f930f5ce6545" title="Function that configures LCD peripheral and pins on Tiva TM4C123GH." alt="" coords="127,208,215,235"/>
+<area shape="rect" id="node4" href="$_l_c_d_8c.html#a85fbfe3c26544ce6a05057bb2127b0c6" title="Function that controls the display cursor." alt="" coords="449,56,547,83"/>
+</map>

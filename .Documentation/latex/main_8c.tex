@@ -1,0 +1,154 @@
+\hypertarget{main_8c}{}\doxysection{Labs -\/ Tiva\+Ware -\/ Keil/main.c File Reference}
+\label{main_8c}\index{Labs -\/ TivaWare -\/ Keil/main.c@{Labs -\/ TivaWare -\/ Keil/main.c}}
+{\ttfamily \#include \char`\"{}Init.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8c_a8642f77148a23556a78a6bdeadbff1f0}{INIT\+\_\+\+TASK}} (void $\ast$pv\+Parameters)
+\item 
+void \mbox{\hyperlink{main_8c_a97fd430f36f8b065226e2bff9bad1de5}{v\+Application\+Idle\+Hook}} (void)
+\item 
+void \mbox{\hyperlink{main_8c_a275bbe36b07c73256602e44d0934d7c4}{threshold\+\_\+\+LED}} (unsigned int Read\+Temperature)
+\item 
+void \mbox{\hyperlink{main_8c_ab749ad94007b72a859adfa0c69a7dd84}{UART\+\_\+\+Print\+Buffer}} (void)
+\item 
+int \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\item 
+void \mbox{\hyperlink{main_8c_ad72ccb735680d193dcdbde880534749d}{Switch\+Handler}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_l_c_d}{LCD}} \mbox{\hyperlink{main_8c_a77998bc7d5e3a78a2591c24bdfb93793}{lcd}}
+\item 
+x\+Semaphore\+Handle \mbox{\hyperlink{main_8c_a1437d87d42bfb45521c4258960c18ac0}{x\+Mutex}}
+\item 
+x\+Semaphore\+Handle \mbox{\hyperlink{main_8c_a4820ee652570cfa2680b87c36930910f}{x\+Binary\+Semaphore}}
+\item 
+x\+Queue\+Handle \mbox{\hyperlink{main_8c_a6a6228afd9b745efeaead6a1c37efc60}{x\+Queue}}
+\item 
+unsigned int \mbox{\hyperlink{main_8c_a15de605329c8bf35d7654746687e93d2}{threshold}}
+\item 
+unsigned int \mbox{\hyperlink{main_8c_af1195decc7a82f7a5cc82951e6e64582}{alarm\+Threshold}} = 50
+\item 
+unsigned char \mbox{\hyperlink{main_8c_ab4f98c1bd14207e21f0d213be8788adf}{buffer}} \mbox{[}50\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_a8642f77148a23556a78a6bdeadbff1f0}\label{main_8c_a8642f77148a23556a78a6bdeadbff1f0}} 
+\index{main.c@{main.c}!INIT\_TASK@{INIT\_TASK}}
+\index{INIT\_TASK@{INIT\_TASK}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{INIT\_TASK()}{INIT\_TASK()}}
+{\footnotesize\ttfamily void INIT\+\_\+\+TASK (\begin{DoxyParamCaption}\item[{void $\ast$}]{pv\+Parameters }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c_a8642f77148a23556a78a6bdeadbff1f0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8c_ad72ccb735680d193dcdbde880534749d}\label{main_8c_ad72ccb735680d193dcdbde880534749d}} 
+\index{main.c@{main.c}!SwitchHandler@{SwitchHandler}}
+\index{SwitchHandler@{SwitchHandler}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{SwitchHandler()}{SwitchHandler()}}
+{\footnotesize\ttfamily void Switch\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c_ad72ccb735680d193dcdbde880534749d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8c_a275bbe36b07c73256602e44d0934d7c4}\label{main_8c_a275bbe36b07c73256602e44d0934d7c4}} 
+\index{main.c@{main.c}!threshold\_LED@{threshold\_LED}}
+\index{threshold\_LED@{threshold\_LED}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{threshold\_LED()}{threshold\_LED()}}
+{\footnotesize\ttfamily void threshold\+\_\+\+LED (\begin{DoxyParamCaption}\item[{unsigned int}]{Read\+Temperature }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{main_8c_a275bbe36b07c73256602e44d0934d7c4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8c_ab749ad94007b72a859adfa0c69a7dd84}\label{main_8c_ab749ad94007b72a859adfa0c69a7dd84}} 
+\index{main.c@{main.c}!UART\_PrintBuffer@{UART\_PrintBuffer}}
+\index{UART\_PrintBuffer@{UART\_PrintBuffer}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{UART\_PrintBuffer()}{UART\_PrintBuffer()}}
+{\footnotesize\ttfamily void UART\+\_\+\+Print\+Buffer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{main_8c_ab749ad94007b72a859adfa0c69a7dd84_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8c_a97fd430f36f8b065226e2bff9bad1de5}\label{main_8c_a97fd430f36f8b065226e2bff9bad1de5}} 
+\index{main.c@{main.c}!vApplicationIdleHook@{vApplicationIdleHook}}
+\index{vApplicationIdleHook@{vApplicationIdleHook}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{vApplicationIdleHook()}{vApplicationIdleHook()}}
+{\footnotesize\ttfamily void v\+Application\+Idle\+Hook (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{main_8c_af1195decc7a82f7a5cc82951e6e64582}\label{main_8c_af1195decc7a82f7a5cc82951e6e64582}} 
+\index{main.c@{main.c}!alarmThreshold@{alarmThreshold}}
+\index{alarmThreshold@{alarmThreshold}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{alarmThreshold}{alarmThreshold}}
+{\footnotesize\ttfamily unsigned int alarm\+Threshold = 50}
+
+\mbox{\Hypertarget{main_8c_ab4f98c1bd14207e21f0d213be8788adf}\label{main_8c_ab4f98c1bd14207e21f0d213be8788adf}} 
+\index{main.c@{main.c}!buffer@{buffer}}
+\index{buffer@{buffer}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{buffer}{buffer}}
+{\footnotesize\ttfamily unsigned char buffer\mbox{[}50\mbox{]}}
+
+\mbox{\Hypertarget{main_8c_a77998bc7d5e3a78a2591c24bdfb93793}\label{main_8c_a77998bc7d5e3a78a2591c24bdfb93793}} 
+\index{main.c@{main.c}!lcd@{lcd}}
+\index{lcd@{lcd}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{lcd}{lcd}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_l_c_d}{LCD}} lcd}
+
+\mbox{\Hypertarget{main_8c_a15de605329c8bf35d7654746687e93d2}\label{main_8c_a15de605329c8bf35d7654746687e93d2}} 
+\index{main.c@{main.c}!threshold@{threshold}}
+\index{threshold@{threshold}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{threshold}{threshold}}
+{\footnotesize\ttfamily unsigned int threshold}
+
+\mbox{\Hypertarget{main_8c_a4820ee652570cfa2680b87c36930910f}\label{main_8c_a4820ee652570cfa2680b87c36930910f}} 
+\index{main.c@{main.c}!xBinarySemaphore@{xBinarySemaphore}}
+\index{xBinarySemaphore@{xBinarySemaphore}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{xBinarySemaphore}{xBinarySemaphore}}
+{\footnotesize\ttfamily x\+Semaphore\+Handle x\+Binary\+Semaphore}
+
+\mbox{\Hypertarget{main_8c_a1437d87d42bfb45521c4258960c18ac0}\label{main_8c_a1437d87d42bfb45521c4258960c18ac0}} 
+\index{main.c@{main.c}!xMutex@{xMutex}}
+\index{xMutex@{xMutex}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{xMutex}{xMutex}}
+{\footnotesize\ttfamily x\+Semaphore\+Handle x\+Mutex}
+
+\mbox{\Hypertarget{main_8c_a6a6228afd9b745efeaead6a1c37efc60}\label{main_8c_a6a6228afd9b745efeaead6a1c37efc60}} 
+\index{main.c@{main.c}!xQueue@{xQueue}}
+\index{xQueue@{xQueue}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{xQueue}{xQueue}}
+{\footnotesize\ttfamily x\+Queue\+Handle x\+Queue}
+

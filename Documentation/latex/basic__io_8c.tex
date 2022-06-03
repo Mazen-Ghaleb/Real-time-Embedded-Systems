@@ -1,5 +1,5 @@
-\hypertarget{basic__io_8c}{}\doxysection{Demo/basic\+\_\+io.c File Reference}
-\label{basic__io_8c}\index{Demo/basic\_io.c@{Demo/basic\_io.c}}
+\hypertarget{basic__io_8c}{}\doxysection{Labs -\/ Tiva\+Ware -\/ Keil/\+Demo/basic\+\_\+io.c File Reference}
+\label{basic__io_8c}\index{Labs -\/ TivaWare -\/ Keil/Demo/basic\_io.c@{Labs -\/ TivaWare -\/ Keil/Demo/basic\_io.c}}
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include \char`\"{}Free\+RTOS.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}task.\+h\char`\"{}}\newline
@@ -41,19 +41,11 @@ int \mbox{\hyperlink{basic__io_8c_af9494b99d18a2cd68d0b3b79534da530}{fputc}} (in
 \doxysubsubsection{\texorpdfstring{mainDEMCR}{mainDEMCR}}
 {\footnotesize\ttfamily \#define main\+DEMCR~($\ast$((volatile unsigned long $\ast$)(0x\+E000\+EDFC)))}
 
-
-
-Definition at line \mbox{\hyperlink{basic__io_8c_source_l00045}{45}} of file \mbox{\hyperlink{basic__io_8c_source}{basic\+\_\+io.\+c}}.
-
 \mbox{\Hypertarget{basic__io_8c_a239b08d605edf374116a78a2fc58cb5e}\label{basic__io_8c_a239b08d605edf374116a78a2fc58cb5e}} 
 \index{basic\_io.c@{basic\_io.c}!mainITM\_Port32@{mainITM\_Port32}}
 \index{mainITM\_Port32@{mainITM\_Port32}!basic\_io.c@{basic\_io.c}}
 \doxysubsubsection{\texorpdfstring{mainITM\_Port32}{mainITM\_Port32}}
 {\footnotesize\ttfamily \#define main\+ITM\+\_\+\+Port32(\begin{DoxyParamCaption}\item[{}]{n }\end{DoxyParamCaption})~($\ast$((volatile unsigned long $\ast$)(0x\+E0000000+4$\ast$n)))}
-
-
-
-Definition at line \mbox{\hyperlink{basic__io_8c_source_l00044}{44}} of file \mbox{\hyperlink{basic__io_8c_source}{basic\+\_\+io.\+c}}.
 
 \mbox{\Hypertarget{basic__io_8c_abbb29677f6bff529a134ebb8d8599461}\label{basic__io_8c_abbb29677f6bff529a134ebb8d8599461}} 
 \index{basic\_io.c@{basic\_io.c}!mainITM\_Port8@{mainITM\_Port8}}
@@ -61,19 +53,11 @@ Definition at line \mbox{\hyperlink{basic__io_8c_source_l00044}{44}} of file \mb
 \doxysubsubsection{\texorpdfstring{mainITM\_Port8}{mainITM\_Port8}}
 {\footnotesize\ttfamily \#define main\+ITM\+\_\+\+Port8(\begin{DoxyParamCaption}\item[{}]{n }\end{DoxyParamCaption})~($\ast$((volatile unsigned char $\ast$)(0x\+E0000000+4$\ast$n)))}
 
-
-
-Definition at line \mbox{\hyperlink{basic__io_8c_source_l00043}{43}} of file \mbox{\hyperlink{basic__io_8c_source}{basic\+\_\+io.\+c}}.
-
 \mbox{\Hypertarget{basic__io_8c_a34db7408b97e46181fd419a4f34528ab}\label{basic__io_8c_a34db7408b97e46181fd419a4f34528ab}} 
 \index{basic\_io.c@{basic\_io.c}!mainTRCENA@{mainTRCENA}}
 \index{mainTRCENA@{mainTRCENA}!basic\_io.c@{basic\_io.c}}
 \doxysubsubsection{\texorpdfstring{mainTRCENA}{mainTRCENA}}
 {\footnotesize\ttfamily \#define main\+TRCENA~0x01000000}
-
-
-
-Definition at line \mbox{\hyperlink{basic__io_8c_source_l00046}{46}} of file \mbox{\hyperlink{basic__io_8c_source}{basic\+\_\+io.\+c}}.
 
 
 
@@ -84,27 +68,15 @@ Definition at line \mbox{\hyperlink{basic__io_8c_source_l00046}{46}} of file \mb
 \doxysubsubsection{\texorpdfstring{fputc()}{fputc()}}
 {\footnotesize\ttfamily int fputc (\begin{DoxyParamCaption}\item[{int}]{i\+Char,  }\item[{FILE $\ast$}]{px\+Not\+Used }\end{DoxyParamCaption})}
 
-
-
-Definition at line \mbox{\hyperlink{basic__io_8c_source_l00072}{72}} of file \mbox{\hyperlink{basic__io_8c_source}{basic\+\_\+io.\+c}}.
-
 \mbox{\Hypertarget{basic__io_8c_aa885c8413183b313ba8fed8cb2a21173}\label{basic__io_8c_aa885c8413183b313ba8fed8cb2a21173}} 
 \index{basic\_io.c@{basic\_io.c}!vPrintString@{vPrintString}}
 \index{vPrintString@{vPrintString}!basic\_io.c@{basic\_io.c}}
 \doxysubsubsection{\texorpdfstring{vPrintString()}{vPrintString()}}
 {\footnotesize\ttfamily void v\+Print\+String (\begin{DoxyParamCaption}\item[{const char $\ast$}]{pc\+String }\end{DoxyParamCaption})}
 
-
-
-Definition at line \mbox{\hyperlink{basic__io_8c_source_l00048}{48}} of file \mbox{\hyperlink{basic__io_8c_source}{basic\+\_\+io.\+c}}.
-
 \mbox{\Hypertarget{basic__io_8c_a725bf3d7df051957ebebffcf3ec96837}\label{basic__io_8c_a725bf3d7df051957ebebffcf3ec96837}} 
 \index{basic\_io.c@{basic\_io.c}!vPrintStringAndNumber@{vPrintStringAndNumber}}
 \index{vPrintStringAndNumber@{vPrintStringAndNumber}!basic\_io.c@{basic\_io.c}}
 \doxysubsubsection{\texorpdfstring{vPrintStringAndNumber()}{vPrintStringAndNumber()}}
 {\footnotesize\ttfamily void v\+Print\+String\+And\+Number (\begin{DoxyParamCaption}\item[{const char $\ast$}]{pc\+String,  }\item[{unsigned long}]{ul\+Value }\end{DoxyParamCaption})}
-
-
-
-Definition at line \mbox{\hyperlink{basic__io_8c_source_l00060}{60}} of file \mbox{\hyperlink{basic__io_8c_source}{basic\+\_\+io.\+c}}.
 

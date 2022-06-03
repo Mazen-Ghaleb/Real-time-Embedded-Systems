@@ -1,0 +1,186 @@
+\hypertarget{_init_8h}{}\doxysection{Labs -\/ Tiva\+Ware -\/ Keil/\+Init.h File Reference}
+\label{_init_8h}\index{Labs -\/ TivaWare -\/ Keil/Init.h@{Labs -\/ TivaWare -\/ Keil/Init.h}}
+{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tm4c123gh6pm.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}stdbool.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}driverlib/sysctl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/gpio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/pin\+\_\+map.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/timer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/interrupt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/uart.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driverlib/adc.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$driverlib/systick.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+memmap.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+gpio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inc/hw\+\_\+sysctl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Free\+RTOS.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}task.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}timers.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}queue.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}semphr.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}LCD.\+h\char`\"{}}\newline
+Include dependency graph for Init.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_init_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{_init_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_init_8h_ad8c5a1103f750c5c7936a46d466a1b27}{PART\+\_\+\+TM4\+C123\+GH6\+PM}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{types_8h_a1134b580f8da4de94ca6b1de4d37975e}{uint32}} \mbox{\hyperlink{_init_8h_ab7b9c02d22e0a1ec8cf235ebbd216661}{Calc\+Ticks}} (\mbox{\hyperlink{types_8h_a1134b580f8da4de94ca6b1de4d37975e}{uint32}} milliseconds)
+\item 
+void \mbox{\hyperlink{_init_8h_a5a39eef1d08b26bebb2e6e78d5f3219d}{Port\+AInit}} (void)
+\item 
+void \mbox{\hyperlink{_init_8h_adf7aa7200283dceb68f470aa9fe02917}{Port\+FInit}} (void)
+\item 
+void \mbox{\hyperlink{_init_8h_a90588887525a8fd217c315f273132c1e}{Port\+EInit}} (void)
+\item 
+void \mbox{\hyperlink{_init_8h_a39150f192703c8fc5f1885bc21deee7f}{ADCInit}} (void)
+\item 
+void \mbox{\hyperlink{_init_8h_a91e1182327fc37821e2eea8e93c193ab}{UART0\+Init}} (void)
+\item 
+void \mbox{\hyperlink{_init_8h_a2ab7aedf7fcfb7ecdf857e6bf919d7d1}{Switch\+Interrupt\+Init}} (void)
+\item 
+void \mbox{\hyperlink{_init_8h_ad72ccb735680d193dcdbde880534749d}{Switch\+Handler}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_init_8h_ad8c5a1103f750c5c7936a46d466a1b27}\label{_init_8h_ad8c5a1103f750c5c7936a46d466a1b27}} 
+\index{Init.h@{Init.h}!PART\_TM4C123GH6PM@{PART\_TM4C123GH6PM}}
+\index{PART\_TM4C123GH6PM@{PART\_TM4C123GH6PM}!Init.h@{Init.h}}
+\doxysubsubsection{\texorpdfstring{PART\_TM4C123GH6PM}{PART\_TM4C123GH6PM}}
+{\footnotesize\ttfamily \#define PART\+\_\+\+TM4\+C123\+GH6\+PM}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_init_8h_a39150f192703c8fc5f1885bc21deee7f}\label{_init_8h_a39150f192703c8fc5f1885bc21deee7f}} 
+\index{Init.h@{Init.h}!ADCInit@{ADCInit}}
+\index{ADCInit@{ADCInit}!Init.h@{Init.h}}
+\doxysubsubsection{\texorpdfstring{ADCInit()}{ADCInit()}}
+{\footnotesize\ttfamily void ADCInit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{_init_8h_a39150f192703c8fc5f1885bc21deee7f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{_init_8h_a39150f192703c8fc5f1885bc21deee7f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_init_8h_ab7b9c02d22e0a1ec8cf235ebbd216661}\label{_init_8h_ab7b9c02d22e0a1ec8cf235ebbd216661}} 
+\index{Init.h@{Init.h}!CalcTicks@{CalcTicks}}
+\index{CalcTicks@{CalcTicks}!Init.h@{Init.h}}
+\doxysubsubsection{\texorpdfstring{CalcTicks()}{CalcTicks()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{types_8h_a1134b580f8da4de94ca6b1de4d37975e}{uint32}} Calc\+Ticks (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{types_8h_a1134b580f8da4de94ca6b1de4d37975e}{uint32}}}]{milliseconds }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_init_8h_a5a39eef1d08b26bebb2e6e78d5f3219d}\label{_init_8h_a5a39eef1d08b26bebb2e6e78d5f3219d}} 
+\index{Init.h@{Init.h}!PortAInit@{PortAInit}}
+\index{PortAInit@{PortAInit}!Init.h@{Init.h}}
+\doxysubsubsection{\texorpdfstring{PortAInit()}{PortAInit()}}
+{\footnotesize\ttfamily void Port\+AInit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{_init_8h_a5a39eef1d08b26bebb2e6e78d5f3219d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_init_8h_a90588887525a8fd217c315f273132c1e}\label{_init_8h_a90588887525a8fd217c315f273132c1e}} 
+\index{Init.h@{Init.h}!PortEInit@{PortEInit}}
+\index{PortEInit@{PortEInit}!Init.h@{Init.h}}
+\doxysubsubsection{\texorpdfstring{PortEInit()}{PortEInit()}}
+{\footnotesize\ttfamily void Port\+EInit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{_init_8h_a90588887525a8fd217c315f273132c1e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_init_8h_adf7aa7200283dceb68f470aa9fe02917}\label{_init_8h_adf7aa7200283dceb68f470aa9fe02917}} 
+\index{Init.h@{Init.h}!PortFInit@{PortFInit}}
+\index{PortFInit@{PortFInit}!Init.h@{Init.h}}
+\doxysubsubsection{\texorpdfstring{PortFInit()}{PortFInit()}}
+{\footnotesize\ttfamily void Port\+FInit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{_init_8h_adf7aa7200283dceb68f470aa9fe02917_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_init_8h_ad72ccb735680d193dcdbde880534749d}\label{_init_8h_ad72ccb735680d193dcdbde880534749d}} 
+\index{Init.h@{Init.h}!SwitchHandler@{SwitchHandler}}
+\index{SwitchHandler@{SwitchHandler}!Init.h@{Init.h}}
+\doxysubsubsection{\texorpdfstring{SwitchHandler()}{SwitchHandler()}}
+{\footnotesize\ttfamily void Switch\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_init_8h_ad72ccb735680d193dcdbde880534749d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_init_8h_a2ab7aedf7fcfb7ecdf857e6bf919d7d1}\label{_init_8h_a2ab7aedf7fcfb7ecdf857e6bf919d7d1}} 
+\index{Init.h@{Init.h}!SwitchInterruptInit@{SwitchInterruptInit}}
+\index{SwitchInterruptInit@{SwitchInterruptInit}!Init.h@{Init.h}}
+\doxysubsubsection{\texorpdfstring{SwitchInterruptInit()}{SwitchInterruptInit()}}
+{\footnotesize\ttfamily void Switch\+Interrupt\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{_init_8h_a2ab7aedf7fcfb7ecdf857e6bf919d7d1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{_init_8h_a2ab7aedf7fcfb7ecdf857e6bf919d7d1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_init_8h_a91e1182327fc37821e2eea8e93c193ab}\label{_init_8h_a91e1182327fc37821e2eea8e93c193ab}} 
+\index{Init.h@{Init.h}!UART0Init@{UART0Init}}
+\index{UART0Init@{UART0Init}!Init.h@{Init.h}}
+\doxysubsubsection{\texorpdfstring{UART0Init()}{UART0Init()}}
+{\footnotesize\ttfamily void UART0\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{_init_8h_a91e1182327fc37821e2eea8e93c193ab_icgraph}
+\end{center}
+\end{figure}
